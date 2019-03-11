@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {WeaponsComponent} from './weapons/weapons.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material';
+import {MatFormFieldModule, MatInputModule, MatTableModule} from '@angular/material';
 import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
@@ -16,9 +16,11 @@ import {MatSortModule} from '@angular/material/sort';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     MatTableModule,
     MatSortModule,
-    BrowserAnimationsModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
