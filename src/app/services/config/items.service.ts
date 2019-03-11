@@ -21,6 +21,10 @@ export class ItemsService {
       return itemXml ? new Item(itemXml) : undefined;
     });
   }
+
+  getAll(): Item[] {
+    return xmlFile.items.item.map(xmlElement => new Item(xmlElement));
+  }
 }
 
 export class XmlObjectsCache<T> {
@@ -81,17 +85,24 @@ export class XmlObject {
 
   private firstCache = new XmlObjectsCache2<XmlObject>();
 
-  constructor(private xmlElement: any) { }
+  constructor(protected xmlElement: any) { }
 
   getFirst(xmlTag: string, name: string): XmlObject {
     return this.firstCache.getOrPut(xmlTag, name, () => {
-      const firstChild = this.xmlElement[xmlTag].find(child => child.$.name === name);
+      if (!(xmlTag in this.xmlElement)) {
+        return undefined;
+      }
+      const firstChild = this.xmlElement[xmlTag].find(child => child.$ && child.$.name === name);
       return firstChild ? new XmlObject(firstChild) : undefined;
     });
   }
 
   get $() {
     return this.xmlElement.$;
+  }
+
+  get name() {
+    return this.$.name;
   }
 
 }
@@ -102,9 +113,20 @@ export class Item extends XmlObject {
   }
 
   get DamageFalloffRange(): number {
-    return +this
-      .getFirst('effect_group', 'Base Effects')
-      .getFirst('passive_effect', 'DamageFalloffRange')
-      .$.value;
+    const effectGroup = this
+      .getFirst('effect_group', 'Base Effects');
+    if (!effectGroup) {
+      console.error('no effect_group for ' + this.name);
+      return undefined;
+    }
+
+    const passiveEffect = effectGroup
+      .getFirst('passive_effect', 'DamageFalloffRange');
+    if (!passiveEffect) {
+      console.error('no passive_effect for ' + this.name);
+      return undefined;
+    }
+
+    return +passiveEffect.$.value;
   }
 }

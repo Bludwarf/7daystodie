@@ -16,6 +16,13 @@ describe('ItemsService', () => {
     expect(item.DamageFalloffRange).toEqual(18);
   });
 
+  it('should get all', () => {
+    const items: ItemsService = TestBed.get(ItemsService);
+    const all = items.getAll();
+    expect(all).toBeDefined();
+    expect(all.length).toBe(676);
+  });
+
   it('should not take too long to find gunPistol and get DamageFalloffRange', () => {
     const items: ItemsService = TestBed.get(ItemsService);
     const startTime = new Date();
@@ -24,6 +31,7 @@ describe('ItemsService', () => {
     for (let i = 0; i < loops; ++i) {
       const item = items.get('gunPistol');
       expect(item).toBeDefined();
+      expect(item.name).toEqual('gunPistol');
       expect(item.DamageFalloffRange).toEqual(18);
     }
 
