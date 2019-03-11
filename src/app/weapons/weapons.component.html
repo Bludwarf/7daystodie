@@ -3,19 +3,19 @@
 </p>
 
 <mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtre">
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Name filter">
 </mat-form-field>
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
   <!-- Name -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-    <td mat-cell *matCellDef="let weapon"> {{weapon.name}} </td>
+    <td mat-cell *matCellDef="let weapon" [title]="weapon.name"> {{weapon.name | translate}} </td>
   </ng-container>
 
   <!-- Name -->
   <ng-container matColumnDef="DamageFalloffRange">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> DamageFalloffRange </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'statDamageFalloffRange' | translate }} </th>
     <td mat-cell *matCellDef="let weapon"> {{weapon.DamageFalloffRange}} </td>
   </ng-container>
 

@@ -7,11 +7,15 @@ import {WeaponsComponent} from './weapons/weapons.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatFormFieldModule, MatInputModule, MatTableModule} from '@angular/material';
 import {MatSortModule} from '@angular/material/sort';
+import { TranslatePipe } from './pipes/translate.pipe';
+import {ItemsService} from './services/config/items.service';
+import {LocalizationService} from './services/config/localization.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeaponsComponent
+    WeaponsComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,10 @@ import {MatSortModule} from '@angular/material/sort';
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [
+    ItemsService,
+    LocalizationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
