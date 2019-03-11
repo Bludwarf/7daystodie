@@ -8,7 +8,7 @@ const files = [
 Promise
   .all(files.map(file => generateJsonFromXml(file)))
   .then(results => {
-    console.log('FINISH'.green);
+    console.log('FINISHED'.green);
   });
 
 function generateJsonFromXml(input) {
