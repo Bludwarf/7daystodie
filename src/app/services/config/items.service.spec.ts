@@ -40,4 +40,21 @@ describe('ItemsService', () => {
     console.log(`Get gunPistol.DamageFalloffRange ${loops} times took ${duration} ms`);
     expect(duration).toBeLessThanOrEqual(30 /* ms */);
   });
+
+  it('should not take too long to get all items', () => {
+    const items: ItemsService = TestBed.get(ItemsService);
+    const startTime = new Date();
+
+    const loops = 1e3;
+    for (let i = 0; i < loops; ++i) {
+      const allItems = items.getAll();
+      expect(allItems).toBeDefined();
+      expect(allItems.length).toEqual(676);
+    }
+
+    const endTime = new Date();
+    const duration = endTime.getTime() - startTime.getTime();
+    console.log(`Get all items ${loops} times took ${duration} ms`);
+    expect(duration).toBeLessThanOrEqual(30 /* ms */);
+  });
 });

@@ -22,13 +22,20 @@ export class ItemsService {
     });
   }
 
-  getAll(): Item[] {
-    return xmlFile.items.item.map(xmlElement => new Item(xmlElement));
+  getAll(filter: (item: Item) => boolean = undefined): Item[] {
+    return this.itemsByName.getOrPutAll(item => item.name, () => {
+      return xmlFile.items.item
+        .map(xmlElement => new Item(xmlElement))
+        .filter(item => !filter || filter(item));
+    });
   }
 }
 
 export class XmlObjectsCache<T> {
   cache = {};
+
+  /** all items have been read ? */
+  hasAll = false;
 
   has(key: string): boolean {
     return key in this.cache;
@@ -44,6 +51,19 @@ export class XmlObjectsCache<T> {
       this.cache[key] = createItem();
     }
     return this.cache[key];
+  }
+
+  put(key: string, item: T): void {
+    this.cache[key] = item;
+  }
+
+  getOrPutAll(getKey: (T) => string, createAllItems: () => T[]): T[] {
+    if (!this.hasAll) {
+      console.log(`CACHE : create all elements`);
+      createAllItems().forEach(item => this.put(getKey(item), item));
+    }
+    return Object.keys(this.cache)
+      .map(key => this.cache[key]);
   }
 }
 
@@ -110,6 +130,11 @@ export class XmlObject {
 export class Item extends XmlObject {
   constructor(xml: any) {
     super(xml);
+  }
+
+  get Groups(): string[] {
+    const group = this.getFirst('property', 'Group');
+    return group ? group.$.value.split(',') : undefined;
   }
 
   get DamageFalloffRange(): number {

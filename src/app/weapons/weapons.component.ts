@@ -3,6 +3,8 @@ import {MatSort, MatTableDataSource} from '@angular/material';
 import {Item, ItemsService} from '../services/config/items.service';
 import {LocalizationService} from '../services/config/localization.service';
 
+const WEAPONS_GROUP = 'Ammo/Weapons';
+
 @Component({
   selector: 'app-weapons',
   templateUrl: './weapons.component.html',
@@ -17,7 +19,10 @@ export class WeaponsComponent implements OnInit {
   constructor(private items: ItemsService, private localization: LocalizationService) { }
 
   ngOnInit() {
-    this.dataSource = new MatTableDataSource(this.items.getAll());
+    this.dataSource = new MatTableDataSource(this.items.getAll(item => {
+      const groups = item.Groups;
+      return groups && groups.includes(WEAPONS_GROUP);
+    }));
     this.dataSource.sort = this.sort;
     this.dataSource.filterPredicate = (data, filter) => {
       return data.name.toLowerCase().indexOf(filter) !== -1 // Without translation
