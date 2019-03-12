@@ -15,8 +15,7 @@ branches:
   - master
 
 script:
-  - ng test --watch false -cc
-#  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
   - ng build --prod --base-href /7daystodie/
 
 deploy:
