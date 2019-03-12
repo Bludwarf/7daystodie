@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
-  title = 'SevenDaysToDie';
+  title = '7 Days to Die';
 
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
