@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - "10"
+sudo: true
+dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+branches:
+  only:
+  - master
+
+script:
+  - ng lint
+  - ng test --watch false -cc
+#  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - ng build --prod --base-href /7daystodie/
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local_dir: dist
+  on:
+    branch: master
