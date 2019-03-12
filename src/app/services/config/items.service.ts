@@ -141,14 +141,14 @@ export class Item extends XmlObject {
     const effectGroup = this
       .getFirst('effect_group', 'Base Effects');
     if (!effectGroup) {
-      console.error('no effect_group for ' + this.name);
+      // console.error('no effect_group for ' + this.name);
       return undefined;
     }
 
     const passiveEffect = effectGroup
       .getFirst('passive_effect', 'DamageFalloffRange');
     if (!passiveEffect) {
-      console.error('no passive_effect for ' + this.name);
+      // console.error('no passive_effect for ' + this.name);
       return undefined;
     }
 

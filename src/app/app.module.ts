@@ -5,9 +5,19 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {WeaponsComponent} from './weapons/weapons.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatFormFieldModule, MatInputModule, MatTableModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatSidenavModule,
+  MatTableModule,
+  MatToolbarModule
+} from '@angular/material';
 import {MatSortModule} from '@angular/material/sort';
-import { TranslatePipe } from './pipes/translate.pipe';
+import {ForFilterPipe} from './pipes/for-filter.pipe';
+import {TranslatePipe} from './pipes/translate.pipe';
 import {ItemsService} from './services/config/items.service';
 import {LocalizationService} from './services/config/localization.service';
 
@@ -15,7 +25,8 @@ import {LocalizationService} from './services/config/localization.service';
   declarations: [
     AppComponent,
     WeaponsComponent,
-    TranslatePipe
+    TranslatePipe,
+    ForFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -24,7 +35,12 @@ import {LocalizationService} from './services/config/localization.service';
     MatTableModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [
     ItemsService,
