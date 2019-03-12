@@ -28,6 +28,12 @@
           </td>
         </ng-container>
 
+        <!-- RoundsPerMinute -->
+        <ng-container matColumnDef="RoundsPerMinute">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'statRoundsPerMinute' | translate }} </th>
+          <td mat-cell *matCellDef="let weapon"> {{weapon.RoundsPerMinute | roundPerMinute}} </td>
+        </ng-container>
+
         <!-- MaxRange -->
         <ng-container matColumnDef="MaxRange">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'statMaxRange' | translate }} </th>

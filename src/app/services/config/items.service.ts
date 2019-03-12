@@ -196,6 +196,10 @@ export class Item extends XmlObject {
     return this.getPassiveEffectValue('DegradationPerUse');
   }
 
+  get RoundsPerMinute(): number {
+    return this.getPassiveEffectValue('RoundsPerMinute');
+  }
+
   getDegradationMax(tier: number): number {
     const degradationMax = this.getPassiveEffect('DegradationMax');
     if (!degradationMax) {

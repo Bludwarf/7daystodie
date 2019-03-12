@@ -22,13 +22,15 @@ import {ItemsService} from './services/config/items.service';
 import {LocalizationService} from './services/config/localization.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {CommonModule} from '@angular/common';
+import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeaponsComponent,
     TranslatePipe,
-    ForFilterPipe
+    ForFilterPipe,
+    RoundPerMinutePipe
   ],
   imports: [
     BrowserModule,
