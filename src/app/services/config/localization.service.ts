@@ -16,7 +16,10 @@ export class LocalizationService {
 
   translate(key: string, lang = DEFAULT_LANG): string {
     const translations = TOKENS[key];
-    return translations && lang in translations ? translations[lang] : key;
+    if (!translations) {
+      return key;
+    }
+    return translations[lang] || translations[ENGLISH_LANG] || key;
   }
 
   getWikiUrl(item: Item): string {

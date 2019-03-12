@@ -1,5 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import { ItemsService } from './items.service';
+import {ItemCombo, ItemsService} from './items.service';
+
+const ITEMS_COUNT = 579; // TODO 676 !!!
 
 describe('ItemsService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
@@ -20,7 +22,7 @@ describe('ItemsService', () => {
     const items: ItemsService = TestBed.get(ItemsService);
     const all = items.getAll();
     expect(all).toBeDefined();
-    expect(all.length).toBe(676);
+    expect(all.length).toBe(ITEMS_COUNT);
   });
 
   it('should not take too long to find gunPistol and get DamageFalloffRange', () => {
@@ -49,12 +51,26 @@ describe('ItemsService', () => {
     for (let i = 0; i < loops; ++i) {
       const allItems = items.getAll();
       expect(allItems).toBeDefined();
-      expect(allItems.length).toEqual(676);
+      expect(allItems.length).toEqual(ITEMS_COUNT);
     }
 
     const endTime = new Date();
     const duration = endTime.getTime() - startTime.getTime();
     console.log(`Get all items ${loops} times took ${duration} ms`);
     expect(duration).toBeLessThanOrEqual(30 /* ms */);
+  });
+
+  it('should get Pistol with 9 mm entity damage', () => {
+    const items: ItemsService = TestBed.get(ItemsService);
+    const item = items.get('gunPistol');
+    const ammo = items.get('ammo9mmBullet');
+    expect(item.getEntityDamage(ammo)).toBe(32); /* 32 + 0 */
+  });
+
+  it('should get SMG-5 with 9 mm entity damage', () => {
+    const items: ItemsService = TestBed.get(ItemsService);
+    const item = items.get('gunSMG5');
+    const ammo = items.get('ammo9mmBullet');
+    expect(item.getEntityDamage(ammo)).toBe(26); /* 32 - 6 */
   });
 });

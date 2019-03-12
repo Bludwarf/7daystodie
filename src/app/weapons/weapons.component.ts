@@ -12,8 +12,8 @@ const WEAPONS_GROUP = 'Ammo/Weapons';
 })
 export class WeaponsComponent implements OnInit {
 
-  public displayedColumns = ['name', 'RoundsPerMinute', 'DamageFalloffRange', 'MaxRange', 'MaxUses'];
-  dataSource: MatTableDataSource<Item>;
+  public displayedColumns = ['name', 'MagazineSize', 'RoundsPerMinute', 'DamageFalloffRange', 'MaxRange', 'EntityDamage', 'MaxUses'];
+  dataSource: MatTableDataSource<ItemWithMagazineItem>;
   @ViewChild(MatSort) sort: MatSort;
   tiers = Array.from({length: 6}, (v, k) => k + 1);
   selectedTier = 1;
@@ -21,22 +21,37 @@ export class WeaponsComponent implements OnInit {
   constructor(private items: ItemsService, private localization: LocalizationService) { }
 
   ngOnInit() {
-    this.dataSource = new MatTableDataSource(this.items.getAll(item => {
-      const groups = item.Groups;
-      return groups && groups.includes(WEAPONS_GROUP);
-    }));
 
-    this.dataSource.sortingDataAccessor = (item: Item, property: string) => {
+    // Filter Weapons with magazine
+    const items = this.items.getAll(item => {
+      const groups = item.Groups;
+      return groups && groups.includes(WEAPONS_GROUP) && item.MagazineSize > 0;
+    });
+
+    let combos = [];
+    items.forEach(item => {
+      combos = combos.concat(item.MagazineItemNames
+        .map(magazineItemName => new ItemWithMagazineItem(item, this.items.get(magazineItemName))));
+    });
+    console.log('combos', combos);
+
+    this.dataSource = new MatTableDataSource(combos);
+
+    this.dataSource.sortingDataAccessor = (combo: ItemWithMagazineItem, property: string) => {
       switch (property) {
-        case 'MaxUses': return item.getMaxUses(this.selectedTier);
-        default: return item[property];
+        case 'name': return this.localization.translate(combo.item.name) + ' + ' + this.localization.translate(combo.magazineItem.name);
+        case 'DamageFalloffRange': return combo.item.getDamageFalloffRange(combo.magazineItem);
+        case 'MaxRange': return combo.item.getMaxRange(combo.magazineItem);
+        case 'MaxUses': return combo.item.getMaxUses(this.selectedTier);
+        case 'EntityDamage': return combo.item.getEntityDamage(combo.magazineItem);
+        default: return combo.item[property];
       }
     };
     this.dataSource.sort = this.sort;
 
-    this.dataSource.filterPredicate = (data, filter) => {
-      return data.name.toLowerCase().indexOf(filter) !== -1 // Without translation
-        || this.localization.translate(data.name).toLowerCase().indexOf(filter) !== -1;  // With translation
+    this.dataSource.filterPredicate = (combo: ItemWithMagazineItem, filter) => {
+      return combo.item.name.toLowerCase().indexOf(filter) !== -1 // Without translation
+        || this.localization.translate(combo.item.name).toLowerCase().indexOf(filter) !== -1;  // With translation
     };
   }
 
@@ -44,4 +59,10 @@ export class WeaponsComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+}
+
+class ItemWithMagazineItem {
+  constructor(public item: Item, public magazineItem: Item) {
+
+  }
 }

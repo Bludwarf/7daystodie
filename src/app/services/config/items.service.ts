@@ -107,6 +107,7 @@ export class XmlObjectsCache2<T> {
 export class XmlObject {
 
   private firstCache = new XmlObjectsCache2<XmlObject>();
+  private firstWithClassCache = new XmlObjectsCache2<XmlObject>();
 
   constructor(protected xmlElement: any) { }
 
@@ -140,6 +141,16 @@ export class XmlObject {
     });
   }
 
+  getFirstWithClass(xmlTag: string, className: string): XmlObject {
+    return this.firstWithClassCache.getOrPut(xmlTag, className, () => {
+      if (!(xmlTag in this.xmlElement)) {
+        return undefined;
+      }
+      const firstChild = this.xmlElement[xmlTag].find(child => child.$ && child.$['class'] === className);
+      return firstChild ? new XmlObject(firstChild) : undefined;
+    });
+  }
+
   get $() {
     return this.xmlElement.$;
   }
@@ -148,6 +159,13 @@ export class XmlObject {
     return this.$.name;
   }
 
+}
+
+export enum Operation {
+  base_set = 'base_set',
+  base_add = 'base_add',
+  perc_add = 'perc_add',
+  base_subtract = 'base_subtract'
 }
 
 export class Item extends XmlObject {
@@ -188,8 +206,64 @@ export class Item extends XmlObject {
     return this.getPassiveEffectValue('MaxRange');
   }
 
+  // TODO factor with getDamageFalloffRange
+  getMaxRange(magazineItem?: Item): number {
+    const entityDamage = this.getPassiveEffect('MaxRange');
+    if (!entityDamage) {
+      return +magazineItem.getPassiveEffect('MaxRange').$.value;
+    }
+    let value = +entityDamage.$.value;
+
+    // base_set
+    if (entityDamage.$.operation === Operation.base_set) {
+      return value;
+    }
+
+    if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add || entityDamage.$.operation === Operation.base_subtract) {
+      if (!magazineItem) {
+        throw new Error(`Cannot get MaxRange without magazineItem for Item "${this.name}"`);
+      }
+      const baseValue = +magazineItem.getPassiveEffect('MaxRange').$.value;
+      if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add) {
+        value = baseValue + value;
+      } else if (entityDamage.$.operation === Operation.base_subtract) {
+        value = baseValue - value;
+      }
+    }
+
+    return value;
+  }
+
   get DamageFalloffRange(): number {
     return this.getPassiveEffectValue('DamageFalloffRange');
+  }
+
+  // TODO factor with getEntityDamage
+  getDamageFalloffRange(magazineItem?: Item): number {
+    const entityDamage = this.getPassiveEffect('DamageFalloffRange');
+    if (!entityDamage) {
+      return +magazineItem.getPassiveEffect('DamageFalloffRange').$.value;
+    }
+    let value = +entityDamage.$.value;
+
+    // base_set
+    if (entityDamage.$.operation === Operation.base_set) {
+      return value;
+    }
+
+    if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add || entityDamage.$.operation === Operation.base_subtract) {
+      if (!magazineItem) {
+        throw new Error(`Cannot get DamageFalloffRange without magazineItem for Item "${this.name}"`);
+      }
+      const baseValue = +magazineItem.getPassiveEffect('DamageFalloffRange').$.value;
+      if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add) {
+        value = baseValue + value;
+      } else if (entityDamage.$.operation === Operation.base_subtract) {
+        value = baseValue - value;
+      }
+    }
+
+    return value;
   }
 
   get DegradationPerUse(): number {
@@ -198,6 +272,59 @@ export class Item extends XmlObject {
 
   get RoundsPerMinute(): number {
     return this.getPassiveEffectValue('RoundsPerMinute');
+  }
+
+  get EntityDamage(): number {
+    return this.getPassiveEffectValue('EntityDamage');
+  }
+
+  // TODO factor with getMaxRange
+  getEntityDamage(magazineItem?: Item): number {
+    const entityDamage = this.getPassiveEffect('EntityDamage');
+    if (!entityDamage) {
+      return +magazineItem.getPassiveEffect('EntityDamage').$.value;
+    }
+    let value = +entityDamage.$.value;
+
+    // base_set
+    if (entityDamage.$.operation === Operation.base_set) {
+      return value;
+    }
+
+    if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add || entityDamage.$.operation === Operation.base_subtract) {
+      if (!magazineItem) {
+        throw new Error(`Cannot get EntityDamage without magazineItem for Item "${this.name}"`);
+      }
+      const baseValue = +magazineItem.getPassiveEffect('EntityDamage').$.value;
+      if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add) {
+        value = baseValue + value;
+      } else if (entityDamage.$.operation === Operation.base_subtract) {
+        value = baseValue - value;
+      }
+    }
+
+    return value;
+  }
+
+  get MagazineSize(): number {
+    return this.getPassiveEffectValue('MagazineSize');
+  }
+
+  get MagazineItemNames(): string[] {
+    const action0 = this.getFirstWithClass('property', 'Action0');
+    if (!action0) {
+      return undefined;
+    }
+
+    const magazineItems = action0.getFirst('property', 'Magazine_items');
+    if (!magazineItems) {
+      return undefined;
+    }
+
+    if (!magazineItems.$.value) {
+      return undefined;
+    }
+    return magazineItems.$.value.split(/ *, */);
   }
 
   getDegradationMax(tier: number): number {
