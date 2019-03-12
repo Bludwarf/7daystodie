@@ -23,7 +23,7 @@ install:
 
 script:
   # - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI // FIXME
-  - ng build --prod --base-href /7daystodie/
+  - ng build --prod --base-href /7daystodie/SevenDaysToDie/
 
 deploy:
   provider: pages
