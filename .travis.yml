@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - "10"
-sudo: true
+  - "8"
+sudo: false
 dist: trusty
 addons:
   apt:
@@ -10,9 +10,16 @@ addons:
     packages:
       - google-chrome-stable
 
+cache:
+  directories:
+    - ./node_modules
+
 branches:
   only:
   - master
+
+install:
+  - npm install
 
 script:
   - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
