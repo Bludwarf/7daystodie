@@ -29,7 +29,6 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  project-name: 7daystodie
   local-dir: dist
   on:
     branch: master
