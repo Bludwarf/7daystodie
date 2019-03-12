@@ -21,6 +21,7 @@ import {TranslatePipe} from './pipes/translate.pipe';
 import {ItemsService} from './services/config/items.service';
 import {LocalizationService} from './services/config/localization.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    CommonModule
   ],
   providers: [
     ItemsService,

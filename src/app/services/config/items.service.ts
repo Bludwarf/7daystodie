@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {parseString} from 'xml2js';
 import xmlFile from 'src/assets/Data/Config/items.xml.json';
+import {interpolate} from '@angular/core/src/view';
 
 @Injectable({
   providedIn: 'root'
@@ -107,6 +108,26 @@ export class XmlObject {
 
   constructor(protected xmlElement: any) { }
 
+  static interpolateStrings(minMaxValue: string, minMaxTier: string, tier: number): number {
+    return XmlObject.interpolate(
+      minMaxValue.split(',').map(string => +string),
+      minMaxTier.split(',').map(string => +string),
+      tier);
+  }
+
+  static interpolate(minMaxValue: number[], minMaxTier: number[], tier: number): number {
+    const [minValue, maxValue] = minMaxValue;
+    const [minTier, maxTier] = minMaxTier;
+
+    if (tier === minTier) {
+      return minValue;
+    }
+    if (tier === maxTier) {
+      return maxValue;
+    }
+    return minValue + tier / (maxTier - minTier) * (maxValue - minValue);
+  }
+
   getFirst(xmlTag: string, name: string): XmlObject {
     return this.firstCache.getOrPut(xmlTag, name, () => {
       if (!(xmlTag in this.xmlElement)) {
@@ -137,39 +158,67 @@ export class Item extends XmlObject {
     return group ? group.$.value.split(',') : undefined;
   }
 
-  get MaxRange(): number {
-    const effectGroup = this.BaseEffects;
-    if (!effectGroup) {
-      // console.error('no effect_group for ' + this.name);
-      return undefined;
-    }
-
-    const passiveEffect = effectGroup.getFirst('passive_effect', 'MaxRange');
-    if (!passiveEffect) {
-      // console.error('no passive_effect for ' + this.name);
-      return undefined;
-    }
-
-    return +passiveEffect.$.value;
-  }
-
   get BaseEffects(): XmlObject {
     return this.getFirst('effect_group', 'Base Effects');
   }
 
-  get DamageFalloffRange(): number {
+  getPassiveEffect(name: string): XmlObject {
     const effectGroup = this.BaseEffects;
     if (!effectGroup) {
       // console.error('no effect_group for ' + this.name);
       return undefined;
     }
 
-    const passiveEffect = effectGroup.getFirst('passive_effect', 'DamageFalloffRange');
+    return effectGroup.getFirst('passive_effect', name);
+  }
+
+  getPassiveEffectValue(name: string): number {
+    const passiveEffect = this.getPassiveEffect(name);
     if (!passiveEffect) {
       // console.error('no passive_effect for ' + this.name);
       return undefined;
     }
 
     return +passiveEffect.$.value;
+  }
+
+  get MaxRange(): number {
+    return this.getPassiveEffectValue('MaxRange');
+  }
+
+  get DamageFalloffRange(): number {
+    return this.getPassiveEffectValue('DamageFalloffRange');
+  }
+
+  get DegradationPerUse(): number {
+    return this.getPassiveEffectValue('DegradationPerUse');
+  }
+
+  getDegradationMax(tier: number): number {
+    const degradationMax = this.getPassiveEffect('DegradationMax');
+    if (!degradationMax) {
+      return undefined;
+    }
+
+    const valueAttribute = degradationMax.$.value;
+    const tierAttribute = degradationMax.$.tier;
+    return XmlObject.interpolateStrings(valueAttribute, tierAttribute, tier);
+  }
+
+  /**
+   * @return max uses before repair/break
+   */
+  getMaxUses(tier: number): number {
+    const degradationMax = this.getDegradationMax(tier);
+    if (!degradationMax) {
+      return undefined;
+    }
+
+    const degradationPerUse = this.DegradationPerUse;
+    if (!degradationPerUse) {
+      return undefined;
+    }
+
+    return degradationMax / degradationPerUse;
   }
 }
