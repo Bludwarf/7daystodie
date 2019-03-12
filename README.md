@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/Bludwarf/SevenDaysToDie.svg?branch=master)](https://travis-ci.org/Bludwarf/SevenDaysToDie)
+[![Build Status](https://api.travis-ci.org/Bludwarf/7daystodie.svg?branch=master)](https://travis-ci.org/Bludwarf/7daystodie)
 
 # SevenDaysToDie
 
