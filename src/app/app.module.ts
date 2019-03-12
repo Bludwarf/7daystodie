@@ -10,7 +10,7 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
-  MatListModule,
+  MatListModule, MatSelectModule,
   MatSidenavModule,
   MatTableModule,
   MatToolbarModule
@@ -44,7 +44,8 @@ import {CommonModule} from '@angular/common';
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
-    CommonModule
+    CommonModule,
+    MatSelectModule
   ],
   providers: [
     ItemsService,

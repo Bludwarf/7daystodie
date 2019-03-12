@@ -12,9 +12,11 @@ const WEAPONS_GROUP = 'Ammo/Weapons';
 })
 export class WeaponsComponent implements OnInit {
 
-  public displayedColumns = ['name', 'DamageFalloffRange', 'MaxRange', 'MaxUsesT1', 'MaxUsesT6'];
+  public displayedColumns = ['name', 'DamageFalloffRange', 'MaxRange', 'MaxUses'];
   dataSource: MatTableDataSource<Item>;
   @ViewChild(MatSort) sort: MatSort;
+  tiers = Array.from({length: 6}, (v, k) => k + 1);
+  selectedTier = 1;
 
   constructor(private items: ItemsService, private localization: LocalizationService) { }
 
@@ -26,8 +28,7 @@ export class WeaponsComponent implements OnInit {
 
     this.dataSource.sortingDataAccessor = (item: Item, property: string) => {
       switch (property) {
-        case 'MaxUsesT1': return item.getMaxUses(1);
-        case 'MaxUsesT6': return item.getMaxUses(6);
+        case 'MaxUses': return item.getMaxUses(this.selectedTier);
         default: return item[property];
       }
     };

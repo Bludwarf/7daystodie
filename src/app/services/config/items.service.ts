@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {parseString} from 'xml2js';
 import xmlFile from 'src/assets/Data/Config/items.xml.json';
 import {interpolate} from '@angular/core/src/view';
+import {WIKI_URL} from '../../constants';
+import {LocalizationService} from './localization.service';
 
 @Injectable({
   providedIn: 'root'
