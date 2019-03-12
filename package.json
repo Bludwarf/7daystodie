@@ -1,5 +1,5 @@
 {
-  "name": "seven-days-to-die",
+  "name": "7daystodie",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -58,6 +58,6 @@
   },
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/Bludwarf/SevenDaysToDie.git"
+    "url" : "https://github.com/Bludwarf/7daystodie.git"
   }
 }
