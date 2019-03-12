@@ -12,7 +12,7 @@ const WEAPONS_GROUP = 'Ammo/Weapons';
 })
 export class WeaponsComponent implements OnInit {
 
-  public displayedColumns = ['name', 'DamageFalloffRange'];
+  public displayedColumns = ['name', 'DamageFalloffRange', 'MaxRange'];
   dataSource: MatTableDataSource<Item>;
   @ViewChild(MatSort) sort: MatSort;
 

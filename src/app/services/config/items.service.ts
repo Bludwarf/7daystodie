@@ -137,16 +137,34 @@ export class Item extends XmlObject {
     return group ? group.$.value.split(',') : undefined;
   }
 
-  get DamageFalloffRange(): number {
-    const effectGroup = this
-      .getFirst('effect_group', 'Base Effects');
+  get MaxRange(): number {
+    const effectGroup = this.BaseEffects;
     if (!effectGroup) {
       // console.error('no effect_group for ' + this.name);
       return undefined;
     }
 
-    const passiveEffect = effectGroup
-      .getFirst('passive_effect', 'DamageFalloffRange');
+    const passiveEffect = effectGroup.getFirst('passive_effect', 'MaxRange');
+    if (!passiveEffect) {
+      // console.error('no passive_effect for ' + this.name);
+      return undefined;
+    }
+
+    return +passiveEffect.$.value;
+  }
+
+  get BaseEffects(): XmlObject {
+    return this.getFirst('effect_group', 'Base Effects');
+  }
+
+  get DamageFalloffRange(): number {
+    const effectGroup = this.BaseEffects;
+    if (!effectGroup) {
+      // console.error('no effect_group for ' + this.name);
+      return undefined;
+    }
+
+    const passiveEffect = effectGroup.getFirst('passive_effect', 'DamageFalloffRange');
     if (!passiveEffect) {
       // console.error('no passive_effect for ' + this.name);
       return undefined;

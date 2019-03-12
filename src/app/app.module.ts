@@ -20,6 +20,7 @@ import {ForFilterPipe} from './pipes/for-filter.pipe';
 import {TranslatePipe} from './pipes/translate.pipe';
 import {ItemsService} from './services/config/items.service';
 import {LocalizationService} from './services/config/localization.service';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {LocalizationService} from './services/config/localization.service';
     MatListModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   providers: [
     ItemsService,
