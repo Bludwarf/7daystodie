@@ -206,11 +206,10 @@ export class Item extends XmlObject {
     return this.getPassiveEffectValue('MaxRange');
   }
 
-  // TODO factor with getDamageFalloffRange
-  getMaxRange(magazineItem?: Item): number {
-    const entityDamage = this.getPassiveEffect('MaxRange');
+  getPassiveEffectFromBase(name: string, base: Item): number {
+    const entityDamage = this.getPassiveEffect(name);
     if (!entityDamage) {
-      return +magazineItem.getPassiveEffect('MaxRange').$.value;
+      return +base.getPassiveEffect(name).$.value;
     }
     let value = +entityDamage.$.value;
 
@@ -220,10 +219,10 @@ export class Item extends XmlObject {
     }
 
     if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add || entityDamage.$.operation === Operation.base_subtract) {
-      if (!magazineItem) {
-        throw new Error(`Cannot get MaxRange without magazineItem for Item "${this.name}"`);
+      if (!base) {
+        throw new Error(`Cannot get "${name}" without magazineItem for Item "${this.name}"`);
       }
-      const baseValue = +magazineItem.getPassiveEffect('MaxRange').$.value;
+      const baseValue = +base.getPassiveEffect(name).$.value;
       if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add) {
         value = baseValue + value;
       } else if (entityDamage.$.operation === Operation.base_subtract) {
@@ -232,38 +231,18 @@ export class Item extends XmlObject {
     }
 
     return value;
+  }
+
+  getMaxRange(magazineItem?: Item): number {
+    return this.getPassiveEffectFromBase('MaxRange', magazineItem);
   }
 
   get DamageFalloffRange(): number {
     return this.getPassiveEffectValue('DamageFalloffRange');
   }
 
-  // TODO factor with getEntityDamage
   getDamageFalloffRange(magazineItem?: Item): number {
-    const entityDamage = this.getPassiveEffect('DamageFalloffRange');
-    if (!entityDamage) {
-      return +magazineItem.getPassiveEffect('DamageFalloffRange').$.value;
-    }
-    let value = +entityDamage.$.value;
-
-    // base_set
-    if (entityDamage.$.operation === Operation.base_set) {
-      return value;
-    }
-
-    if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add || entityDamage.$.operation === Operation.base_subtract) {
-      if (!magazineItem) {
-        throw new Error(`Cannot get DamageFalloffRange without magazineItem for Item "${this.name}"`);
-      }
-      const baseValue = +magazineItem.getPassiveEffect('DamageFalloffRange').$.value;
-      if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add) {
-        value = baseValue + value;
-      } else if (entityDamage.$.operation === Operation.base_subtract) {
-        value = baseValue - value;
-      }
-    }
-
-    return value;
+    return this.getPassiveEffectFromBase('DamageFalloffRange', magazineItem);
   }
 
   get DegradationPerUse(): number {
@@ -278,32 +257,8 @@ export class Item extends XmlObject {
     return this.getPassiveEffectValue('EntityDamage');
   }
 
-  // TODO factor with getMaxRange
   getEntityDamage(magazineItem?: Item): number {
-    const entityDamage = this.getPassiveEffect('EntityDamage');
-    if (!entityDamage) {
-      return +magazineItem.getPassiveEffect('EntityDamage').$.value;
-    }
-    let value = +entityDamage.$.value;
-
-    // base_set
-    if (entityDamage.$.operation === Operation.base_set) {
-      return value;
-    }
-
-    if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add || entityDamage.$.operation === Operation.base_subtract) {
-      if (!magazineItem) {
-        throw new Error(`Cannot get EntityDamage without magazineItem for Item "${this.name}"`);
-      }
-      const baseValue = +magazineItem.getPassiveEffect('EntityDamage').$.value;
-      if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add) {
-        value = baseValue + value;
-      } else if (entityDamage.$.operation === Operation.base_subtract) {
-        value = baseValue - value;
-      }
-    }
-
-    return value;
+    return this.getPassiveEffectFromBase('EntityDamage', magazineItem);
   }
 
   get MagazineSize(): number {
