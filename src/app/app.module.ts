@@ -23,6 +23,7 @@ import {LocalizationService} from './services/config/localization.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {CommonModule} from '@angular/common';
 import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';
+import {RecipesService} from './services/config/recipes.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';
   ],
   providers: [
     ItemsService,
-    LocalizationService
+    LocalizationService,
+    RecipesService
   ],
   bootstrap: [AppComponent]
 })

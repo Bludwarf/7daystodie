@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import {ItemCombo, ItemsService} from './items.service';
+import {ItemsService} from './items.service';
 
 const ITEMS_COUNT = 579; // TODO 676 !!!
 
 describe('ItemsService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => TestBed.configureTestingModule({ }));
 
   it('should be created', () => {
     const service: ItemsService = TestBed.get(ItemsService);
