@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {CollectionViewer, SelectionChange} from '@angular/cdk/collections';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
@@ -46,7 +46,13 @@ export class DynamicDataSource<T> {
   filterChange: BehaviorSubject<string> = new BehaviorSubject<string>(undefined);
 
   /** how items are filtered with by filter value */
-  filterPredicate: (recipeItem: T, filter) => boolean;
+  filterPredicate: (recipeItem: T, filter) => boolean
+
+  itemExpanded = new BehaviorSubject<T>(undefined);
+  itemCollapsed = new BehaviorSubject<T>(undefined);
+
+  itemsAppeared = new BehaviorSubject<T[]>([]);
+  itemsDisappeared = new BehaviorSubject<T[]>([]);
 
   get data(): DynamicFlatNode<T>[] { return this.dataChange.value; }
   set data(value: DynamicFlatNode<T>[]) {
@@ -115,10 +121,14 @@ export class DynamicDataSource<T> {
       const nodes = await Promise.all(nodesPromises);
       this.data.splice(index + 1, 0, ...nodes);
       this.children.set(node.item, children);
+      this.itemExpanded.next(node.item);
+      this.itemsAppeared.next(children);
     } else {
-      const count = this.countInvisibleDescendants(node);
-      this.data.splice(index + 1, count);
+      const allChildrenNodes = this.getAllInvisibleDescendants(node);
+      this.data.splice(index + 1, allChildrenNodes.length);
       this.children.delete(node.item);
+      this.itemCollapsed.next(node.item);
+      this.itemsDisappeared.next(allChildrenNodes.map(node => node.item));
     }
 
     // notify the change
@@ -126,14 +136,15 @@ export class DynamicDataSource<T> {
     node.isLoading = false;
   }
 
-  countInvisibleDescendants(node: DynamicFlatNode<T>): number {
-    let count = 0;
+  getAllInvisibleDescendants(node: DynamicFlatNode<T>): DynamicFlatNode<T>[] {
+    let all = [];
     if (!this.treeControl.isExpanded(node)) {
       this.treeControl.getDescendants(node).map(child => {
-        count += 1 + this.countInvisibleDescendants(child);
+        all.push(child);
+        all = all.concat(this.getAllInvisibleDescendants(child));
       });
     }
-    return count;
+    return all;
   }
 
 }

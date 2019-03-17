@@ -26,6 +26,7 @@ import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';
 import {RecipesService} from './services/config/recipes.service';
 import { RecipesComponent } from './recipes/recipes.component';
 import {FormsModule} from '@angular/forms';
+import { SummaryComponent } from './recipes/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {FormsModule} from '@angular/forms';
     TranslatePipe,
     ForFilterPipe,
     RoundPerMinutePipe,
-    RecipesComponent
+    RecipesComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
