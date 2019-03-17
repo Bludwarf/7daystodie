@@ -43,7 +43,7 @@ export class DynamicDataSource<T> {
   /** children cache */
   children = new Map<T, T[]>();
 
-  filterChange: BehaviorSubject<T> = new BehaviorSubject<T>(undefined);
+  filterChange: BehaviorSubject<string> = new BehaviorSubject<string>(undefined);
 
   /** how items are filtered with by filter value */
   filterPredicate: (recipeItem: T, filter) => boolean;
@@ -57,10 +57,10 @@ export class DynamicDataSource<T> {
   private unfilteredData: DynamicFlatNode<T>[];
 
   /** current filter value */
-  get filter(): T { return this.filterChange.value; }
+  get filter(): string { return this.filterChange.value; }
 
   /** current filter value */
-  set filter(value: T) {
+  set filter(value: string) {
     if (!this.unfilteredData) {
       this.unfilteredData = this.data;
     }

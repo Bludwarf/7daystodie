@@ -12,7 +12,8 @@
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
         <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
           <button mat-icon-button disabled></button>
-          {{node.item.count}} {{node.item.item.name | translate }}
+          <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
+          {{node.item.item.name | translate }}
         </mat-tree-node>
 
         <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding>
@@ -22,7 +23,8 @@
               {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
             </mat-icon>
           </button>
-          {{node.item.count}} {{node.item.item.name | translate }}
+          <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
+          {{node.item.item.name | translate }}
           <mat-progress-bar *ngIf="node.isLoading"
                             mode="indeterminate"
                             class="example-tree-progress-bar"></mat-progress-bar>

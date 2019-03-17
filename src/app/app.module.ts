@@ -25,6 +25,7 @@ import {CommonModule} from '@angular/common';
 import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';
 import {RecipesService} from './services/config/recipes.service';
 import { RecipesComponent } from './recipes/recipes.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { RecipesComponent } from './recipes/recipes.component';
     CommonModule,
     MatSelectModule,
     MatTreeModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FormsModule
   ],
   providers: [
     ItemsService,
