@@ -9,7 +9,12 @@
   list-style-type: none;
 }
 
-.count {
+.node {
+  font-size: 40px;
+  font-family: 'Agency FB Bold', arial, sans-serif;
+}
+
+.node .count {
   width: 3em;
   text-align: right;
 }

@@ -10,13 +10,14 @@
       </mat-form-field>
 
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
-        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding class="node">
           <button mat-icon-button disabled></button>
           <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
+          <img src="assets/ItemIcons/{{node.item.item.name}}.png" alt="{{node.item.item.name}}"/>
           {{node.item.item.name | translate }}
         </mat-tree-node>
 
-        <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding>
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding class="node">
           <button mat-icon-button
                   [attr.aria-label]="'toggle ' + node.item.item.name" matTreeNodeToggle>
             <mat-icon>
@@ -24,6 +25,7 @@
             </mat-icon>
           </button>
           <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
+          <img src="assets/ItemIcons/{{node.item.item.name}}.png" alt="{{node.item.item.name}}"/>
           {{node.item.item.name | translate }}
           <mat-progress-bar *ngIf="node.isLoading"
                             mode="indeterminate"
