@@ -10,10 +10,10 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
-  MatListModule, MatSelectModule,
+  MatListModule, MatProgressBarModule, MatSelectModule,
   MatSidenavModule,
   MatTableModule,
-  MatToolbarModule
+  MatToolbarModule, MatTreeModule
 } from '@angular/material';
 import {MatSortModule} from '@angular/material/sort';
 import {ForFilterPipe} from './pipes/for-filter.pipe';
@@ -24,6 +24,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {CommonModule} from '@angular/common';
 import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';
 import {RecipesService} from './services/config/recipes.service';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {RecipesService} from './services/config/recipes.service';
     WeaponsComponent,
     TranslatePipe,
     ForFilterPipe,
-    RoundPerMinutePipe
+    RoundPerMinutePipe,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,9 @@ import {RecipesService} from './services/config/recipes.service';
     MatIconModule,
     FlexLayoutModule,
     CommonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTreeModule,
+    MatProgressBarModule
   ],
   providers: [
     ItemsService,

@@ -165,4 +165,16 @@ export class Item extends XmlObject {
 
     return degradationMax / degradationPerUse;
   }
+
+  compareTo(item: Item, translateFunction: (key: string) => string): number {
+    const thisName = translateFunction(this.name.toLowerCase());
+    const itemName = translateFunction(item.name.toLowerCase());
+    if (thisName < itemName) {
+      return -1;
+    }
+    if (thisName > itemName) {
+      return 1;
+    }
+    return 0;
+  }
 }

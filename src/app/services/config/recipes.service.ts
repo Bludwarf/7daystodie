@@ -24,7 +24,12 @@ export class Recipe extends XmlObject {
 
 
   get ingredients(): Ingredient[] {
-    return this.xmlElement.ingredient.map(xmlIngredient => new Ingredient(xmlIngredient));
+    const ingredients = this.xmlElement.ingredient;
+    if (!ingredients) {
+      // TODO wildcard_forge_category
+      return undefined;
+    }
+    return ingredients.map(xmlIngredient => new Ingredient(xmlIngredient));
   }
 
 }

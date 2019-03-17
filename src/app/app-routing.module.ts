@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {WeaponsComponent} from './weapons/weapons.component';
+import {RecipesComponent} from './recipes/recipes.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/List_of_weapons',
+    pathMatch: 'full'
+  },
   {
     path: 'List_of_weapons',
     component: WeaponsComponent,
     data: { title: 'List of weapons' }
   },
   {
-    path: '',
-    redirectTo: '/List_of_weapons',
-    pathMatch: 'full'
+    path: 'Recipes',
+    component: RecipesComponent,
+    data: { title: 'Recipes' }
   }
 ];
 

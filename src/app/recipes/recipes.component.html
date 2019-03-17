@@ -1,0 +1,29 @@
+<main class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <h1>{{ 'lblAttributeRecipe' | translate }}</h1>
+
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+          <button mat-icon-button disabled></button>
+          {{node.item.count}} {{node.item.item.name | translate }}
+        </mat-tree-node>
+
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding>
+          <button mat-icon-button
+                  [attr.aria-label]="'toggle ' + node.item.item.name" matTreeNodeToggle>
+            <mat-icon>
+              {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+          </button>
+          {{node.item.count}} {{node.item.item.name | translate }}
+          <mat-progress-bar *ngIf="node.isLoading"
+                            mode="indeterminate"
+                            class="example-tree-progress-bar"></mat-progress-bar>
+        </mat-tree-node>
+      </mat-tree>
+
+    </div>
+  </div>
+</main>
