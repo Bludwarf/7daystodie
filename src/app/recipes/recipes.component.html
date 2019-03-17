@@ -4,6 +4,11 @@
 
       <h1>{{ 'lblAttributeRecipe' | translate }}</h1>
 
+      <mat-form-field>
+        <mat-label>Name filter</mat-label>
+        <input matInput (keyup)="applyFilter($event.target.value)">
+      </mat-form-field>
+
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
         <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
           <button mat-icon-button disabled></button>

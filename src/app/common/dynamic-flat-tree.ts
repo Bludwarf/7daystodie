@@ -43,10 +43,29 @@ export class DynamicDataSource<T> {
   /** children cache */
   children = new Map<T, T[]>();
 
+  filterChange: BehaviorSubject<T> = new BehaviorSubject<T>(undefined);
+
+  /** how items are filtered with by filter value */
+  filterPredicate: (recipeItem: T, filter) => boolean;
+
   get data(): DynamicFlatNode<T>[] { return this.dataChange.value; }
   set data(value: DynamicFlatNode<T>[]) {
     this.treeControl.dataNodes = value;
     this.dataChange.next(value);
+  }
+
+  private unfilteredData: DynamicFlatNode<T>[];
+
+  /** current filter value */
+  get filter(): T { return this.filterChange.value; }
+
+  /** current filter value */
+  set filter(value: T) {
+    if (!this.unfilteredData) {
+      this.unfilteredData = this.data;
+    }
+    this.data = this.unfilteredData.filter(node => !this.filter || this.filterPredicate && this.filterPredicate(node.item, value));
+    this.filterChange.next(value);
   }
 
   constructor(private treeControl: DynamicFlatTreeControl<T>,
