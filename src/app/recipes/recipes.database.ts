@@ -23,7 +23,9 @@ export class RecipesDatabase extends DynamicDatabase<RecipeItem> {
   }
 
   getRootLevelItems(): RecipeItem[] {
-    const items = this.items.getAll().map(item => new RecipeItem(item, 1));
+    const items = this.items
+      .getAll(item => !!this.recipes.get(item.name))
+      .map(item => new RecipeItem(item, 1));
     items.sort((itemA, itemB) => itemA.item.compareTo(itemB.item, this.localization.translate));
     return items;
   }
