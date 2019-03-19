@@ -1,5 +1,10 @@
 $icon-height: 32px;
 
+mat-button-toggle img {
+  height: $icon-height;
+  width: $icon-height;
+}
+
 .tree-invisible {
   display: none;
 }

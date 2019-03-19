@@ -4,6 +4,18 @@ import {RecipeItem, RecipesDatabase} from './recipes.database';
 import {LocalizationService} from '../services/config/localization.service';
 import {SummaryComponent} from './summary/summary.component';
 import {PerksService} from '../progression/perks.service';
+import {MatButtonToggleGroup} from '@angular/material';
+
+export const CRAFT_AREA_ICONS = {
+  campfire: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_campfire.png',
+  cementMixer: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_cement.png',
+  chemistryStation: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_chemistry.png',
+  forge: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_forge.png',
+  workbench: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_workbench.png'
+};
+
+// Angular Material does not filter when filter is empty
+const FORCE_FILTER = '<force_filter>';
 
 @Component({
   selector: 'app-recipes',
@@ -16,13 +28,24 @@ export class RecipesComponent implements OnInit {
   dataSource: DynamicDataSource<RecipeItem>;
   @ViewChild(SummaryComponent) summary: SummaryComponent;
 
+  @ViewChild(MatButtonToggleGroup)
+  craftAreaFilter: MatButtonToggleGroup;
+  CRAFT_AREA_ICONS = CRAFT_AREA_ICONS;
+  CRAFT_AREAS = Object.keys(CRAFT_AREA_ICONS);
+
   constructor(database: RecipesDatabase, private localization: LocalizationService, public perks: PerksService) {
     this.treeControl = new DynamicFlatTreeControl<RecipeItem>();
     this.dataSource = new DynamicDataSource(this.treeControl, database);
     this.dataSource.data = database.initialData();
+    this.dataSource.filterChange.subscribe(value => console.log('filterChange', value));
     this.dataSource.filterPredicate = (recipeItem: RecipeItem, filter) => {
-      return recipeItem.item.name.toLowerCase().indexOf(filter) !== -1 // Without translation
-        || this.localization.translate(recipeItem.item.name).toLowerCase().indexOf(filter) !== -1;  // With translation
+      // Name filter
+      const nameFiltered = filter === FORCE_FILTER
+        || recipeItem.item.name.toLowerCase().indexOf(filter) !== -1 // Without translation
+        || this.localization.translate(recipeItem.item.name).toLowerCase().indexOf(filter) !== -1;
+      return nameFiltered
+        && (!recipeItem.recipe.craftArea || this.craftAreaFilter.value.includes(recipeItem.recipe.craftArea))
+      ;
     };
   }
 
@@ -35,8 +58,14 @@ export class RecipesComponent implements OnInit {
     this.dataSource.itemsDisappeared.subscribe(nodes => nodes.forEach(node => this.summary.remove(node)));
   }
 
-  applyFilter(name: string): void {
+  applyFilter(name: string = FORCE_FILTER): void {
+    // Angular Material does not detect change from undefined to something
+    name = name || FORCE_FILTER;
     this.dataSource.filter = name.trim().toLowerCase();
+  }
+
+  reapplyFilter() {
+    this.applyFilter(this.dataSource.filter);
   }
 
   getRequiredPerkLevelForRecipe(recipeItem: RecipeItem) {
@@ -49,15 +78,7 @@ export class RecipesComponent implements OnInit {
     return `${localName} ${this.localization.translate('xuiSkillLevel')} ${perkLevel.level}`;
   }
 
-  getCraftAreaIcon(recipeItem: RecipeItem) {
-    const craftArea = recipeItem.recipe.craftArea;
-    switch (craftArea) {
-      case 'campfire': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_campfire.png';
-      case 'cementMixer': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_cement.png';
-      case 'chemistryStation': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_chemistry.png';
-      case 'forge': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_forge.png';
-      case 'workbench': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_workbench.png';
-      default: return undefined;
-    }
+  getCraftAreaIcon(craftArea: string) {
+    return CRAFT_AREA_ICONS[craftArea];
   }
 }

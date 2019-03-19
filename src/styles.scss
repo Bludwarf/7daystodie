@@ -49,3 +49,11 @@ html, body {
 }
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a {
+  color: map-get($candy-app-accent, 400);
+}
+
+a:hover, a:active {
+  color: map-get($candy-app-accent, 400);
+}

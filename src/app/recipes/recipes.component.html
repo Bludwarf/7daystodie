@@ -9,23 +9,30 @@
         <input matInput (keyup)="applyFilter($event.target.value)">
       </mat-form-field>
 
+      <!-- Craft Area Filter -->
+      <mat-button-toggle-group name="craftAreaFilter" aria-label="Craft Area Filter" (change)="reapplyFilter()" multiple>
+        <mat-button-toggle *ngFor="let craftArea of CRAFT_AREAS" value="{{craftArea}}" aria-label="{{ craftArea| translate }}" [checked]="true">
+          <img src="{{ getCraftAreaIcon(craftArea) }}" />
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
         <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding class="node" title="{{node.item.item.name}}">
           <button mat-icon-button disabled></button>
           <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
           <img src="assets/ItemIcons/{{node.item.item.name}}.png" class="ItemIcons"/>
           {{node.item.item.name | translate }}
-          <img *ngIf="node.item.recipe.isLearnable"
+          <img *ngIf="node.item.recipe && node.item.recipe.isLearnable"
                src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
                title="{{getRequiredPerkLevelForRecipe(node.item)}}"
                class="UIAtlasItemIcons"
           />
-          <img *ngIf="node.item.recipe.craftArea"
-               src="{{ getCraftAreaIcon(node.item) }}"
+          <img *ngIf="node.item.recipe && node.item.recipe.craftArea"
+               src="{{ getCraftAreaIcon(node.item.recipe.craftArea) }}"
                title="{{ node.item.recipe.craftArea | translate }}"
                class="UIAtlasItemIcons"
           />
-          <img *ngIf="node.item.recipe.craftTool"
+          <img *ngIf="node.item.recipe && node.item.recipe.craftTool"
                src="assets/ItemIcons/{{node.item.recipe.craftTool}}.png"
                title="{{ node.item.recipe.craftTool | translate }}"
                class="UIAtlasItemIcons"
@@ -42,20 +49,20 @@
           <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count" title="{{node.item.item.name}}"/>
           <img src="assets/ItemIcons/{{node.item.item.name}}.png" class="ItemIcons"/>
           {{node.item.item.name | translate }}
-          <img *ngIf="node.item.recipe.isLearnable"
+          <img *ngIf="node.item.recipe && node.item.recipe.isLearnable"
                src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
                title="{{getRequiredPerkLevelForRecipe(node.item)}}"
                class="UIAtlasItemIcons"
           />
-          <img *ngIf="node.item.recipe.craftArea"
-                 src="{{ getCraftAreaIcon(node.item) }}"
-                 title="{{ node.item.recipe.craftArea | translate }}"
-                 class="UIAtlasItemIcons"
+          <img *ngIf="node.item.recipe && node.item.recipe.craftArea"
+               src="{{ getCraftAreaIcon(node.item.recipe.craftArea) }}"
+               title="{{ node.item.recipe.craftArea | translate }}"
+               class="UIAtlasItemIcons"
           />
-          <img *ngIf="node.item.recipe.craftTool"
-                 src="assets/ItemIcons/{{node.item.recipe.craftTool}}.png"
-                 title="{{ node.item.recipe.craftTool | translate }}"
-                 class="UIAtlasItemIcons"
+          <img *ngIf="node.item.recipe && node.item.recipe.craftTool"
+               src="assets/ItemIcons/{{node.item.recipe.craftTool}}.png"
+               title="{{ node.item.recipe.craftTool | translate }}"
+               class="UIAtlasItemIcons"
           />
           <mat-progress-bar *ngIf="node.isLoading"
                             mode="indeterminate"

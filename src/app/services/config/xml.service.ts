@@ -1,3 +1,5 @@
+const CACHE_LOGS = false;
+
 export abstract class XmlService<T> {
 
   protected cache = new XmlObjectsCache<T>();
@@ -106,7 +108,9 @@ export class XmlObjectsCache<T> {
 
   getOrPut(key: string, createItem: () => T): T {
     if (!this.has(key)) {
-      console.log(`CACHE : create element at key ${key}`);
+      if (CACHE_LOGS) {
+        console.log(`CACHE : create element at key ${key}`);
+      }
       this.put(key, createItem());
     }
     return this.cache[key];
@@ -119,7 +123,9 @@ export class XmlObjectsCache<T> {
 
   getOrPutAll(getKey: (T) => string, createAllItems: () => T[]): T[] {
     if (!this.hasAll) {
-      console.log(`CACHE : create all elements`);
+      if (CACHE_LOGS) {
+        console.log(`CACHE : create all elements`);
+      }
       createAllItems().forEach(item => this.put(getKey(item), item));
     }
     return this.keys.map(key => this.cache[key]);
@@ -153,7 +159,9 @@ export class XmlObjectsCache2<T> {
   getOrPut(key1: string, key2: string, createItem: () => T): T {
     this.autoCreate(key1);
     if (!this.has(key1, key2)) {
-      console.log(`CACHE : create element at keys ${key1},${key2}`);
+      if (CACHE_LOGS) {
+        console.log(`CACHE : create element at keys ${key1},${key2}`);
+      }
       this.cache[key1][key2] = createItem();
     }
     return this.cache[key1][key2];

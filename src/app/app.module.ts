@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {WeaponsComponent} from './weapons/weapons.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MatButtonModule,
+  MatButtonModule, MatButtonToggleModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
@@ -56,7 +56,8 @@ import { SummaryComponent } from './recipes/summary/summary.component';
     MatSelectModule,
     MatTreeModule,
     MatProgressBarModule,
-    FormsModule
+    FormsModule,
+    MatButtonToggleModule
   ],
   providers: [
     ItemsService,
