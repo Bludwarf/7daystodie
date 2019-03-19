@@ -51,6 +51,10 @@ export class Recipe extends XmlObject {
     return this.$.craft_area;
   }
 
+  get craftTool(): string {
+    return this.$.craft_tool;
+  }
+
 }
 
 export class Ingredient extends XmlObject {

@@ -20,6 +20,16 @@
                title="{{getRequiredPerkLevelForRecipe(node.item)}}"
                class="UIAtlasItemIcons"
           />
+          <img *ngIf="node.item.recipe.craftArea"
+               src="{{ getCraftAreaIcon(node.item) }}"
+               title="{{ node.item.recipe.craftArea | translate }}"
+               class="UIAtlasItemIcons"
+          />
+          <img *ngIf="node.item.recipe.craftTool"
+               src="assets/ItemIcons/{{node.item.recipe.craftTool}}.png"
+               title="{{ node.item.recipe.craftTool | translate }}"
+               class="UIAtlasItemIcons"
+          />
         </mat-tree-node>
 
         <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding class="node" title="{{node.item.item.name}}">
@@ -40,6 +50,11 @@
           <img *ngIf="node.item.recipe.craftArea"
                  src="{{ getCraftAreaIcon(node.item) }}"
                  title="{{ node.item.recipe.craftArea | translate }}"
+                 class="UIAtlasItemIcons"
+          />
+          <img *ngIf="node.item.recipe.craftTool"
+                 src="assets/ItemIcons/{{node.item.recipe.craftTool}}.png"
+                 title="{{ node.item.recipe.craftTool | translate }}"
                  class="UIAtlasItemIcons"
           />
           <mat-progress-bar *ngIf="node.isLoading"
