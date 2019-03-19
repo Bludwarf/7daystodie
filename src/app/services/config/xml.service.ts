@@ -6,7 +6,7 @@ export abstract class XmlService<T> {
    *
    * @param xmlElements example : xmlFiles.items.item
    */
-  constructor(protected xmlElements: any[]) { }
+  protected constructor(protected xmlElements: any[]) { }
 
   /**
    * @param name item's name. Example : "gunPistol"
@@ -14,12 +14,12 @@ export abstract class XmlService<T> {
    */
   get(name: string): T {
     return this.cache.getOrPut(name, () => {
-      const xmlElement = this.xmlElements.find(xmlElement => xmlElement.$.name === name);
+      const xmlElement = this.xmlElements.find(xmlElementI => xmlElementI.$.name === name);
       return xmlElement ? this.newElement(xmlElement) : undefined;
     });
   }
 
-  getAll(filter: (element: T) => boolean = undefined): T[] {
+  getAll(filter?: (element: T) => boolean): T[] {
     return this.cache.getOrPutAll(element => element.name, () => {
       return this.xmlElements
         .map(xmlElement => this.newElement(xmlElement))
@@ -39,8 +39,8 @@ export class XmlObject {
 
   static interpolateStrings(minMaxValue: string, minMaxTier: string, tier: number): number {
     return XmlObject.interpolate(
-      minMaxValue.split(',').map(string => +string),
-      minMaxTier.split(',').map(string => +string),
+      minMaxValue.split(',').map(value => +value),
+      minMaxTier.split(',').map(tierString => +tierString),
       tier);
   }
 

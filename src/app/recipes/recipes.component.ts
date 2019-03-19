@@ -2,7 +2,6 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {DynamicDataSource, DynamicFlatNode, DynamicFlatTreeControl} from '../common/dynamic-flat-tree';
 import {RecipeItem, RecipesDatabase} from './recipes.database';
 import {LocalizationService} from '../services/config/localization.service';
-import {SelectionChange} from '@angular/cdk/collections';
 import {SummaryComponent} from './summary/summary.component';
 import {PerksService} from '../progression/perks.service';
 
