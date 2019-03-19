@@ -4,6 +4,7 @@ import {RecipeItem, RecipesDatabase} from './recipes.database';
 import {LocalizationService} from '../services/config/localization.service';
 import {SelectionChange} from '@angular/cdk/collections';
 import {SummaryComponent} from './summary/summary.component';
+import {PerksService} from '../progression/perks.service';
 
 @Component({
   selector: 'app-recipes',
@@ -16,7 +17,7 @@ export class RecipesComponent implements OnInit {
   dataSource: DynamicDataSource<RecipeItem>;
   @ViewChild(SummaryComponent) summary: SummaryComponent;
 
-  constructor(database: RecipesDatabase, private localization: LocalizationService) {
+  constructor(database: RecipesDatabase, private localization: LocalizationService, public perks: PerksService) {
     this.treeControl = new DynamicFlatTreeControl<RecipeItem>();
     this.dataSource = new DynamicDataSource(this.treeControl, database);
     this.dataSource.data = database.initialData();
@@ -37,5 +38,15 @@ export class RecipesComponent implements OnInit {
 
   applyFilter(name: string): void {
     this.dataSource.filter = name.trim().toLowerCase();
+  }
+
+  getRequiredPerkLevelForRecipe(recipeItem: RecipeItem) {
+    const perkLevel = this.perks.getRequiredPerkLevelForRecipe(recipeItem.item.name);
+    if (!perkLevel) {
+      console.error(`Cannot find required PerkLevel for recipe "${recipeItem.item.name}"`);
+      return undefined;
+    }
+    const localName = this.localization.translate(perkLevel.name + 'Name');
+    return `${localName} ${this.localization.translate('xuiSkillLevel')} ${perkLevel.level}`;
   }
 }

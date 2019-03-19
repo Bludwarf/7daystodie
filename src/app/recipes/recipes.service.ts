@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/recipes.xml.json';
-import {XmlObject, XmlService} from './xml.service';
+import {XmlObject, XmlService} from '../services/config/xml.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +16,9 @@ export class RecipesService extends XmlService<Recipe> {
   }
 }
 
+/** learnable tag */
+export const TAG_LEARNABLE = 'learnable';
+
 export class Recipe extends XmlObject {
 
   constructor(xmlElement) {
@@ -30,6 +33,18 @@ export class Recipe extends XmlObject {
       return undefined;
     }
     return ingredients.map(xmlIngredient => new Ingredient(xmlIngredient));
+  }
+
+  /**
+   * @see TAG_LEARNABLE
+   */
+  get tags(): string[] {
+    return this.$.tags ? this.$.tags.split(/ *, */) : undefined;
+  }
+
+  get isLearnable(): boolean {
+    const tags = this.tags;
+    return tags ? this.tags.includes(TAG_LEARNABLE) : false;
   }
 
 }

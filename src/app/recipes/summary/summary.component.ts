@@ -17,7 +17,7 @@ export class SummaryComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   displayedColumns = ['name', 'count'];
 
-  constructor(private localization: LocalizationService, private items: ItemsService, private changeDetectorRefs: ChangeDetectorRef) { }
+  constructor(public localization: LocalizationService, private items: ItemsService, private changeDetectorRefs: ChangeDetectorRef) { }
 
   ngOnInit(): void {
 
@@ -41,7 +41,8 @@ export class SummaryComponent implements OnInit {
     return Object.keys(groups).map(itemName => {
       const recipeItems: RecipeItem[] = groups[itemName];
       const count = recipeItems.reduce((previousValue, ri) => previousValue + ri.count, 0);
-      return new RecipeItem(recipeItems[0].item, count);
+      const recipeItem = recipeItems[0];
+      return new RecipeItem(recipeItem.recipe, count, recipeItem.item);
     });
   }
 

@@ -1,7 +1,7 @@
 import {DynamicDatabase} from '../common/dynamic-flat-tree';
 import {Injectable} from '@angular/core';
 import {Item, ItemsService} from '../services/config/items.service';
-import {RecipesService} from '../services/config/recipes.service';
+import {Recipe, RecipesService} from './recipes.service';
 import {LocalizationService} from '../services/config/localization.service';
 
 @Injectable()
@@ -17,15 +17,19 @@ export class RecipesDatabase extends DynamicDatabase<RecipeItem> {
       return undefined;
     }
     return recipe.ingredients.map(ingredient => {
+      const ingredientRecipe = this.recipes.get(ingredient.name);
       const ingredientItem = this.items.get(ingredient.name);
-      return new RecipeItem(ingredientItem, ingredient.count * item.count);
+      return new RecipeItem(ingredientRecipe, ingredient.count * item.count, ingredientItem);
     });
   }
 
   getRootLevelItems(): RecipeItem[] {
     const items = this.items
       .getAll(item => !!this.recipes.get(item.name))
-      .map(item => new RecipeItem(item, 1));
+      .map(item => {
+        const recipe = this.recipes.get(item.name);
+        return new RecipeItem(recipe, 1, item)
+      });
     items.sort((itemA, itemB) => itemA.item.compareTo(itemB.item, this.localization.translate));
     return items;
   }
@@ -36,5 +40,5 @@ export class RecipesDatabase extends DynamicDatabase<RecipeItem> {
 }
 
 export class RecipeItem {
-  constructor(public item: Item, public count: number) { }
+  constructor(public recipe: Recipe, public count: number, public item: Item) { }
 }

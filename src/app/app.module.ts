@@ -23,7 +23,7 @@ import {LocalizationService} from './services/config/localization.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {CommonModule} from '@angular/common';
 import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';
-import {RecipesService} from './services/config/recipes.service';
+import {RecipesService} from './recipes/recipes.service';
 import { RecipesComponent } from './recipes/recipes.component';
 import {FormsModule} from '@angular/forms';
 import { SummaryComponent } from './recipes/summary/summary.component';

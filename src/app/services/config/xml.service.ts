@@ -90,11 +90,14 @@ export class XmlObject {
 export class XmlObjectsCache<T> {
   cache = {};
 
+  /** To keep order */
+  keys = [];
+
   /** all items have been read ? */
   hasAll = false;
 
   has(key: string): boolean {
-    return key in this.cache;
+    return this.keys.includes(key);
   }
 
   get(key: string): T {
@@ -104,13 +107,14 @@ export class XmlObjectsCache<T> {
   getOrPut(key: string, createItem: () => T): T {
     if (!this.has(key)) {
       console.log(`CACHE : create element at key ${key}`);
-      this.cache[key] = createItem();
+      this.put(key, createItem());
     }
     return this.cache[key];
   }
 
   put(key: string, item: T): void {
     this.cache[key] = item;
+    this.keys.push(key);
   }
 
   getOrPutAll(getKey: (T) => string, createAllItems: () => T[]): T[] {
@@ -118,8 +122,7 @@ export class XmlObjectsCache<T> {
       console.log(`CACHE : create all elements`);
       createAllItems().forEach(item => this.put(getKey(item), item));
     }
-    return Object.keys(this.cache)
-      .map(key => this.cache[key]);
+    return this.keys.map(key => this.cache[key]);
   }
 }
 

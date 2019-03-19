@@ -1,3 +1,5 @@
+$icon-height: 32px;
+
 .tree-invisible {
   display: none;
 }
@@ -10,8 +12,20 @@
 }
 
 .node {
-  font-size: 40px;
+  font-size: $icon-height;
   font-family: 'Agency FB Bold', arial, sans-serif;
+}
+
+.node img {
+  height: $icon-height;
+}
+.node img.ItemIcons {
+  margin-right: 1ex;
+}
+
+.node img.UIAtlasItemIcons {
+  margin-left: 1ex;
+  width: $icon-height;
 }
 
 .node .count {

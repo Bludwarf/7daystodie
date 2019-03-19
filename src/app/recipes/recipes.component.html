@@ -10,23 +10,33 @@
       </mat-form-field>
 
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
-        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding class="node">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding class="node" title="{{node.item.item.name}}">
           <button mat-icon-button disabled></button>
           <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
-          <img src="assets/ItemIcons/{{node.item.item.name}}.png"/>
+          <img src="assets/ItemIcons/{{node.item.item.name}}.png" class="ItemIcons"/>
           {{node.item.item.name | translate }}
+          <img *ngIf="node.item.recipe.isLearnable"
+               src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
+               title="{{getRequiredPerkLevelForRecipe(node.item)}}"
+               class="UIAtlasItemIcons"
+          />
         </mat-tree-node>
 
-        <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding class="node">
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding class="node" title="{{node.item.item.name}}">
           <button mat-icon-button
                   [attr.aria-label]="'toggle ' + node.item.item.name" matTreeNodeToggle>
             <mat-icon>
               {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
             </mat-icon>
           </button>
-          <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
-          <img src="assets/ItemIcons/{{node.item.item.name}}.png"/>
+          <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count" title="{{node.item.item.name}}"/>
+          <img src="assets/ItemIcons/{{node.item.item.name}}.png" class="ItemIcons"/>
           {{node.item.item.name | translate }}
+          <img *ngIf="node.item.recipe.isLearnable"
+               src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
+               title="{{getRequiredPerkLevelForRecipe(node.item)}}"
+               class="UIAtlasItemIcons"
+          />
           <mat-progress-bar *ngIf="node.isLoading"
                             mode="indeterminate"
                             class="example-tree-progress-bar"></mat-progress-bar>
