@@ -48,4 +48,16 @@ export class RecipesComponent implements OnInit {
     const localName = this.localization.translate(perkLevel.name + 'Name');
     return `${localName} ${this.localization.translate('xuiSkillLevel')} ${perkLevel.level}`;
   }
+
+  getCraftAreaIcon(recipeItem: RecipeItem) {
+    const craftArea = recipeItem.recipe.craftArea;
+    switch (craftArea) {
+      case 'campfire': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_campfire.png';
+      case 'cementMixer': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_cement.png';
+      case 'chemistryStation': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_chemistry.png';
+      case 'forge': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_forge.png';
+      case 'workbench': return 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_workbench.png';
+      default: return undefined;
+    }
+  }
 }

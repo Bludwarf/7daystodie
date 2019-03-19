@@ -47,6 +47,10 @@ export class Recipe extends XmlObject {
     return tags ? this.tags.includes(TAG_LEARNABLE) : false;
   }
 
+  get craftArea(): string {
+    return this.$.craft_area;
+  }
+
 }
 
 export class Ingredient extends XmlObject {

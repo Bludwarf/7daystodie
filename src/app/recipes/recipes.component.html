@@ -37,6 +37,11 @@
                title="{{getRequiredPerkLevelForRecipe(node.item)}}"
                class="UIAtlasItemIcons"
           />
+          <img *ngIf="node.item.recipe.craftArea"
+                 src="{{ getCraftAreaIcon(node.item) }}"
+                 title="{{ node.item.recipe.craftArea | translate }}"
+                 class="UIAtlasItemIcons"
+          />
           <mat-progress-bar *ngIf="node.isLoading"
                             mode="indeterminate"
                             class="example-tree-progress-bar"></mat-progress-bar>
