@@ -24,8 +24,14 @@ mat-button-toggle img {
 .node img {
   height: $icon-height;
 }
+
 .node img.ItemIcons {
   margin-right: 1ex;
+}
+
+.node img.ItemIcons-right {
+  margin-right: 0;
+  margin-left: 1ex;
 }
 
 .node img.UIAtlasItemIcons {
