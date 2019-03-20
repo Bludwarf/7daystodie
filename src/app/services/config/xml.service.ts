@@ -92,7 +92,7 @@ export class XmlObject {
 export class XmlObjectsCache<T> {
   cache = {};
 
-  /** To keep order */
+  /** To keep order, unique set */
   keys = [];
 
   /** all items have been read ? */
@@ -118,7 +118,9 @@ export class XmlObjectsCache<T> {
 
   put(key: string, item: T): void {
     this.cache[key] = item;
-    this.keys.push(key);
+    if (!this.keys.includes(key)) {
+      this.keys.push(key);
+    }
   }
 
   getOrPutAll(getKey: (T) => string, createAllItems: () => T[]): T[] {
