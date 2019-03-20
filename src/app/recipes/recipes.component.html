@@ -11,7 +11,8 @@
 
       <!-- Craft Area Filter -->
       <mat-button-toggle-group name="craftAreaFilter" aria-label="Craft Area Filter" (change)="reapplyFilter()" multiple>
-        <mat-button-toggle *ngFor="let craftArea of CRAFT_AREAS" value="{{craftArea}}" aria-label="{{ craftArea| translate }}" [checked]="true">
+        <mat-button-toggle *ngFor="let craftArea of CRAFT_AREAS" value="{{craftArea}}" title="{{ craftArea| translate }}"
+                           aria-label="{{ craftArea| translate }}" [checked]="true">
           <img src="{{ getCraftAreaIcon(craftArea) }}" />
         </mat-button-toggle>
       </mat-button-toggle-group>
