@@ -2,10 +2,18 @@ $icon-height: 32px;
 
 mat-button-toggle-group {
   margin-left: 1ex;
+  //margin-bottom: 1ex;
+}
+
+mat-button-toggle-group:first-of-type {
+  margin-left: 0;
 }
 
 mat-button-toggle img {
   height: $icon-height;
+}
+
+mat-button-toggle img.square {
   width: $icon-height;
 }
 
