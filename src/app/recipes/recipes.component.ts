@@ -3,7 +3,7 @@ import {DynamicDataSource, DynamicFlatNode, DynamicFlatTreeControl} from '../com
 import {RecipeItem, RecipesDatabase} from './recipes.database';
 import {LocalizationService} from '../services/config/localization.service';
 import {SummaryComponent} from './summary/summary.component';
-import {PerksService} from '../progression/perks.service';
+import {PerkLevel, PerksService} from '../progression/perks.service';
 import {MatButtonToggleGroup} from '@angular/material';
 
 export const CRAFT_AREA_ICONS = {
@@ -91,12 +91,16 @@ export class RecipesComponent implements OnInit {
     this.applyFilter(this.dataSource.filter);
   }
 
-  getRequiredPerkLevelForRecipe(recipeItem: RecipeItem) {
+  getRequiredPerkLevelForRecipe(recipeItem: RecipeItem): PerkLevel | undefined {
     const perkLevel = this.perks.getRequiredPerkLevelForRecipe(recipeItem.item.name);
     if (!perkLevel) {
       console.error(`Cannot find required PerkLevel for recipe "${recipeItem.item.name}"`);
       return undefined;
     }
+    return perkLevel;
+  }
+
+  perkLevelToString(perkLevel: PerkLevel) {
     const localName = this.localization.translate(perkLevel.name + 'Name');
     return `${localName} ${this.localization.translate('xuiSkillLevel')} ${perkLevel.level}`;
   }

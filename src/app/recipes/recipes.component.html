@@ -32,10 +32,10 @@
           <button mat-icon-button disabled></button>
           <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
           <img src="assets/ItemIcons/{{node.item.item.name}}.png" class="ItemIcons"/>
-          {{node.item.item.name | translate }}
-          <img *ngIf="node.item.recipe && node.item.recipe.isLearnable"
+          <span class="itemName">{{node.item.item.name | translate }}</span>
+          <img *ngIf="node.item.recipe && node.item.recipe.isLearnable && getRequiredPerkLevelForRecipe(node.item) as perkLevel"
                src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
-               title="{{getRequiredPerkLevelForRecipe(node.item)}}"
+               title="{{perkLevelToString(perkLevel)}}"
                class="UIAtlasItemIcons"
           />
           <img *ngIf="node.item.recipe && node.item.recipe.craftArea"
@@ -59,11 +59,11 @@
           </button>
           <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count" title="{{node.item.item.name}}"/>
           <img src="assets/ItemIcons/{{node.item.item.name}}.png" class="ItemIcons"/>
-          {{node.item.item.name | translate }}
-          <img *ngIf="node.item.recipe && node.item.recipe.isLearnable"
+          <span class="itemName" title="{{node.item.item.name + 'Desc' | translate}}">{{node.item.item.name | translate }}</span>
+          <img *ngIf="node.item.recipe && node.item.recipe.isLearnable && getRequiredPerkLevelForRecipe(node.item) as perkLevel"
                src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
-               title="{{getRequiredPerkLevelForRecipe(node.item)}}"
-               class="UIAtlasItemIcons"
+               title="{{perkLevelToString(perkLevel)}}"
+               class="UIAtlasItemIcons level-{{perkLevel.level}}"
           />
           <img *ngIf="node.item.recipe && node.item.recipe.craftArea"
                src="{{ getCraftAreaIcon(node.item.recipe.craftArea) }}"
