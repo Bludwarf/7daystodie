@@ -46,18 +46,23 @@ export class SummaryComponent implements OnInit {
     });
   }
 
-  push(recipeItem: RecipeItem) {
+  push(recipeItem: RecipeItem): void {
     console.log('push', recipeItem);
     this.recipeItemsHistory.push(recipeItem);
     this.dataSource.data = this.data;
   }
 
-  remove(recipeItem: RecipeItem) {
+  remove(recipeItem: RecipeItem): void {
     const index = this.recipeItemsHistory.indexOf(recipeItem);
     if (index !== -1) {
       this.recipeItemsHistory.splice(index, 1);
       this.dataSource.data = this.data;
     }
+  }
+
+  reset(): void {
+    this.recipeItemsHistory = [];
+    this.dataSource.data = this.data;
   }
 
 }
