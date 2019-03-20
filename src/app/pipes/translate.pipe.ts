@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {LocalizationService} from '../services/config/localization.service';
+import {LocalizationService} from '../localization/localization.service';
 
 @Pipe({
   name: 'translate'

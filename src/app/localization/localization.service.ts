@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import TOKENS from 'src/assets/Data/Config/Localization.txt.json';
-import {WIKI_URL} from '../../constants';
-import {Item} from './items.service';
+import {WIKI_URL} from '../constants';
+import {Item} from '../items/items.service';
 
 const ENGLISH_LANG = 'English';
 const FRENCH_LANG = 'French';

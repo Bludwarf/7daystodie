@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/progression.xml.json';
-import {XmlObject, XmlObjectsCache, XmlService} from '../services/config/xml.service';
+import {XmlObject, XmlObjectsCache, XmlService} from '../common/xml.service';
 
 @Injectable({
   providedIn: 'root'

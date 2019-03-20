@@ -1,8 +1,8 @@
 import {DynamicDatabase} from '../common/dynamic-flat-tree';
 import {Injectable} from '@angular/core';
-import {Item, ItemsService} from '../services/config/items.service';
+import {Item, ItemsService} from '../items/items.service';
 import {Recipe, RecipesService} from './recipes.service';
-import {LocalizationService} from '../services/config/localization.service';
+import {LocalizationService} from '../localization/localization.service';
 
 @Injectable()
 export class RecipesDatabase extends DynamicDatabase<RecipeItem> {

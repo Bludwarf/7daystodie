@@ -1,8 +1,8 @@
 import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
 import {MatSort, MatTableDataSource} from '@angular/material';
 import {RecipeItem} from '../recipes.database';
-import {ItemsService} from '../../services/config/items.service';
-import {LocalizationService} from '../../services/config/localization.service';
+import {ItemsService} from '../../items/items.service';
+import {LocalizationService} from '../../localization/localization.service';
 import * as _ from 'underscore';
 
 @Component({

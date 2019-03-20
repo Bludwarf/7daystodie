@@ -18,8 +18,8 @@ import {
 import {MatSortModule} from '@angular/material/sort';
 import {ForFilterPipe} from './pipes/for-filter.pipe';
 import {TranslatePipe} from './pipes/translate.pipe';
-import {ItemsService} from './services/config/items.service';
-import {LocalizationService} from './services/config/localization.service';
+import {ItemsService} from './items/items.service';
+import {LocalizationService} from './localization/localization.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {CommonModule} from '@angular/common';
 import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';

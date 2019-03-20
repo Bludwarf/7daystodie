@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {parseString} from 'xml2js';
 import xmlFile from 'src/assets/Data/Config/items.xml.json';
-import {XmlObject, XmlService} from './xml.service';
+import {XmlObject, XmlService} from '../common/xml.service';
 
 @Injectable({
   providedIn: 'root'

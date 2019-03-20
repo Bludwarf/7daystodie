@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {DynamicDataSource, DynamicFlatNode, DynamicFlatTreeControl} from '../common/dynamic-flat-tree';
 import {RecipeItem, RecipesDatabase} from './recipes.database';
-import {LocalizationService} from '../services/config/localization.service';
+import {LocalizationService} from '../localization/localization.service';
 import {SummaryComponent} from './summary/summary.component';
 import {PerkLevel, PerksService} from '../progression/perks.service';
 import {MatButtonToggleGroup} from '@angular/material';

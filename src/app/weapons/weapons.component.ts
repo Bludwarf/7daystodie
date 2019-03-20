@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatSort, MatTableDataSource} from '@angular/material';
-import {Item, ItemsService} from '../services/config/items.service';
-import {LocalizationService} from '../services/config/localization.service';
+import {Item, ItemsService} from '../items/items.service';
+import {LocalizationService} from '../localization/localization.service';
 
 const WEAPONS_GROUP = 'Ammo/Weapons';
 
