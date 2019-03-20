@@ -9,7 +9,7 @@
 // THEMING
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+//@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
@@ -44,11 +44,16 @@ $background: map-get($candy-app-theme, background);
 @import url(allfont.css);
 
 html, body {
-  height: 100%;
+  min-height: 100vw;
   background-color: map-get($background, background);
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: "Agency FB Bold", Roboto, "Helvetica Neue", sans-serif;
+  background: url(https://7daystodie.gamepedia.com/media/7daystodie.gamepedia.com/2/20/7dtd_background.jpg) no-repeat fixed top center map-get($background, background);
+  background-size: cover;
+}
 
 a {
   color: map-get($candy-app-accent, 400);
