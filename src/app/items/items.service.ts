@@ -177,4 +177,10 @@ export class Item extends XmlObject {
     }
     return 0;
   }
+
+  get customIcon(): string {
+    const xmlProp = this.getFirst('property', 'CustomIcon');
+    return xmlProp ? xmlProp.$.value : undefined;
+    // TODO CustomIconTint : https://stackoverflow.com/a/43938944/1655155
+  }
 }
