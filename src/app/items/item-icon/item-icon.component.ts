@@ -34,6 +34,7 @@ export class ItemIconComponent implements OnInit {
       const baseImg = base as HTMLImageElement;
 
       Object.assign(img.style, {
+        display: 'inherit',
         position: 'absolute',
         top: baseImg.offsetTop + 'px',
         left: baseImg.offsetLeft + 'px'
