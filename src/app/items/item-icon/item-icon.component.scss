@@ -1,0 +1,14 @@
+@import '../../../globals';
+
+img {
+  height: $icon-height;
+}
+
+img.ItemIcons {
+  margin-right: 1ex;
+}
+
+img.ItemIcons-right {
+  margin-right: 0;
+  margin-left: 1ex;
+}
