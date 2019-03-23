@@ -27,6 +27,8 @@ import {RecipesService} from './recipes/recipes.service';
 import { RecipesComponent } from './recipes/recipes.component';
 import {FormsModule} from '@angular/forms';
 import { SummaryComponent } from './recipes/summary/summary.component';
+import { CustomIconTintDirective } from './common/custom-icon-tint.directive';
+import { RecipeNodeComponent } from './recipes/recipe-node/recipe-node.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { SummaryComponent } from './recipes/summary/summary.component';
     ForFilterPipe,
     RoundPerMinutePipe,
     RecipesComponent,
-    SummaryComponent
+    SummaryComponent,
+    CustomIconTintDirective,
+    RecipeNodeComponent
   ],
   imports: [
     BrowserModule,
