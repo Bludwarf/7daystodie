@@ -5,7 +5,7 @@
       <h1>{{ 'lblAttributeRecipe' | translate }}</h1>
 
       <!-- Craft Area Filter -->
-      <mat-button-toggle-group #craftAreaFilter name="craftAreaFilter" aria-label="Craft Area Filter" (change)="toggleCraftArea($event.value); reapplyFilter()" multiple>
+      <mat-button-toggle-group name="craftAreaFilter" aria-label="Craft Area Filter" (change)="toggleCraftArea($event.value); reapplyFilter()" multiple>
         <mat-button-toggle *ngFor="let craftArea of CRAFT_AREAS" value="{{craftArea}}" title="{{ craftArea | translate }}"
                            aria-label="{{ craftArea | translate }}" [checked]="true">
           <img class="square" src="{{ getCraftAreaIcon(craftArea) }}" />
@@ -13,7 +13,7 @@
       </mat-button-toggle-group>
 
       <!-- Craft Tool Filter -->
-      <mat-button-toggle-group #craftToolFilter name="craftToolFilter" aria-label="Craft Tool Filter" (change)="reapplyFilter()" multiple>
+      <mat-button-toggle-group name="craftToolFilter" aria-label="Craft Tool Filter" (change)="reapplyFilter()" multiple>
         <mat-button-toggle *ngFor="let craftTool of CRAFT_TOOLS" value="{{craftTool}}" title="{{ craftTool | translate }}"
                            aria-label="{{ craftTool | translate }}" [checked]="true">
           <img src="assets/ItemIcons/{{craftTool}}.png" />
