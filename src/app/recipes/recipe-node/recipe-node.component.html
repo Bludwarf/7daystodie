@@ -1,11 +1,25 @@
 <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count"/>
-<app-item-icon [item]="node.item.item"></app-item-icon>
+<app-item-icon [item]="node.item.item" class="ItemIcons"></app-item-icon>
 <span class="itemName">{{node.item.item.name | translate }}</span>
-<img *ngIf="node.item.recipe && node.item.recipe.isLearnable && recipes.getRequiredPerkLevelForRecipe(node.item) as perkLevel"
-     src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
-     title="{{recipes.perkLevelToString(perkLevel)}}"
-     class="UIAtlasItemIcons level-{{perkLevel.level}}"
-/>
+
+<ng-container *ngIf="node.item.recipe && node.item.recipe.isLearnable">
+  <ng-container *ngIf="recipes.getRequiredItem(node.item) as requiredItem; else elseBlock">
+    <img src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
+         title="{{requiredItem.name | translate}}"
+         class="UIAtlasItemIcons"
+    />
+    :
+    <app-item-icon [item]="requiredItem"></app-item-icon>
+  </ng-container>
+  <ng-template #elseBlock>
+    <img *ngIf="recipes.getRequiredPerkLevelForRecipe(node.item) as perkLevel"
+         src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
+         title="{{recipes.perkLevelToString(perkLevel)}}"
+         class="UIAtlasItemIcons level-{{perkLevel.level}}"
+    />
+  </ng-template>
+</ng-container>
+
 <img *ngIf="node.item.recipe && node.item.recipe.craftArea"
      src="{{ recipes.getCraftAreaIcon(node.item.recipe.craftArea) }}"
      title="{{ node.item.recipe.craftArea | translate }}"
@@ -16,6 +30,7 @@
      title="{{ node.item.recipe.craftTool | translate }}"
      class="ItemIcons ItemIcons-right"
 />
+
 <mat-progress-bar *ngIf="node.isLoading"
                   mode="indeterminate"
                   class="example-tree-progress-bar"></mat-progress-bar>

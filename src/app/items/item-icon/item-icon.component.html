@@ -1,2 +1,2 @@
-<img src="assets/ItemIcons/{{item.customIcon || item.name}}.png" class="ItemIcons"/>
+<img src="assets/ItemIcons/{{item.customIcon || item.name}}.png" class="ItemIcons" title="{{ item.name | translate }}"/>
 <img *ngIf="item.customIconTint" src="assets/ItemIcons/{{item.customIcon || item.name}}.png" class="ItemIcons ItemIcons-filter" (load)="loadCustomIconTint($event.target)"/>
