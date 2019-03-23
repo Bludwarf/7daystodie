@@ -1,2 +1,11 @@
-<img src="assets/ItemIcons/{{item.customIcon || item.name}}.png" class="ItemIcons" title="{{ item.name | translate }}"/>
-<img *ngIf="item.customIconTint" src="assets/ItemIcons/{{item.customIcon || item.name}}.png" class="ItemIcons ItemIcons-filter" (load)="loadCustomIconTint($event.target)"/>
+<ng-container *ngIf="getExistingItemIcon(item) as existingIcon; else elseBlock">
+  <img src="{{existingIcon}}" class="ItemIcons" title="{{ item.name | translate }}"/>
+</ng-container>
+
+<ng-template #elseBlock>
+  <ng-container *ngIf="getItemIcon(item.customIcon) as icon">
+    <!-- TODO : le filtre CSS ne reproduit pas la véritable couleur dans le jeu -->
+    <img src="{{icon}}" class="ItemIcons" title="{{ item.name | translate }}"/>
+    <img *ngIf="item.customIconTint" src="{{icon}}" class="ItemIcons ItemIcons-filter" (load)="loadCustomIconTint($event.target)"/>
+  </ng-container>
+</ng-template>

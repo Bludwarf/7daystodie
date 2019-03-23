@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Item} from '../items.service';
+import {Item, ItemsService} from '../items.service';
 import {Color, Solver} from '../../lib/ColorSolver';
 
 /**
@@ -23,7 +23,7 @@ export class ItemIconComponent implements OnInit {
 
   @Input('item') item: Item;
 
-  constructor() { }
+  constructor(private items: ItemsService) { }
 
   ngOnInit() {
   }
@@ -51,6 +51,12 @@ export class ItemIconComponent implements OnInit {
     }
   }
 
+  getExistingItemIcon(item: Item): string {
+    return this.items.getExistingItemIcon(item);
+  }
 
+  getItemIcon(itemName: string): string {
+    return this.items.getItemIcon(itemName);
+  }
 
 }

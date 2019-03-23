@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {parseString} from 'xml2js';
 import xmlFile from 'src/assets/Data/Config/items.xml.json';
+import itemIconsFile from 'src/assets/ItemIcons/index.json';
 import {XmlObject, XmlObjectsCache, XmlService} from '../common/xml.service';
 
 @Injectable({
@@ -25,6 +26,18 @@ export class ItemsService extends XmlService<Item> {
     return this.requiredItemCache.getOrPut(item.name, () =>
       this.getAll().find(itemI => itemI.settedCvars.includes(item.name))
     );
+  }
+
+  /**
+   * @return the icon path only if it exists, undefined otherwise
+   */
+  getExistingItemIcon(item: Item): string {
+    const filename = `${item.name}.png`;
+    return itemIconsFile.includes(filename) ? this.getItemIcon(item.name) : undefined;
+  }
+
+  getItemIcon(itemName: string): string {
+    return `assets/ItemIcons/${itemName}.png`;
   }
 }
 
