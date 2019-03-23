@@ -2,34 +2,44 @@
 <app-item-icon [item]="node.item.item" class="ItemIcons"></app-item-icon>
 <span class="itemName">{{node.item.item.name | translate }}</span>
 
-<ng-container *ngIf="node.item.recipe && node.item.recipe.isLearnable">
-  <ng-container *ngIf="recipes.getRequiredItem(node.item) as requiredItem; else elseBlock">
-    <img src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
-         title="{{requiredItem.name | translate}}"
-         class="UIAtlasItemIcons"
-    />
-    :
-    <app-item-icon [item]="requiredItem"></app-item-icon>
-  </ng-container>
-  <ng-template #elseBlock>
-    <img *ngIf="recipes.getRequiredPerkLevelForRecipe(node.item) as perkLevel"
-         src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
-         title="{{recipes.perkLevelToString(perkLevel)}}"
-         class="UIAtlasItemIcons level-{{perkLevel.level}}"
-    />
-  </ng-template>
-</ng-container>
+<!-- Recipe -->
+<ng-container *ngIf="node.item.recipe">
 
-<img *ngIf="node.item.recipe && node.item.recipe.craftArea"
-     src="{{ recipes.getCraftAreaIcon(node.item.recipe.craftArea) }}"
-     title="{{ node.item.recipe.craftArea | translate }}"
-     class="UIAtlasItemIcons"
-/>
-<img *ngIf="node.item.recipe && node.item.recipe.craftTool"
-     src="assets/ItemIcons/{{node.item.recipe.craftTool}}.png"
-     title="{{ node.item.recipe.craftTool | translate }}"
-     class="ItemIcons ItemIcons-right"
-/>
+  <!-- isLearnable -->
+  <ng-container *ngIf="node.item.recipe.isLearnable">
+    <ng-container *ngIf="recipes.getRequiredItem(node.item) as requiredItem; else elseBlock">
+      <img src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
+           title="{{requiredItem.name | translate}}"
+           class="UIAtlasItemIcons"
+      />
+      :
+      <app-item-icon [item]="requiredItem"></app-item-icon>
+    </ng-container>
+    <ng-template #elseBlock>
+      <img *ngIf="recipes.getRequiredPerkLevelForRecipe(node.item) as perkLevel"
+           src="assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_skills.png"
+           title="{{recipes.perkLevelToString(perkLevel)}}"
+           class="UIAtlasItemIcons level-{{perkLevel.level}}"
+      />
+    </ng-template>
+  </ng-container>
+
+  <!-- Craft Area -->
+  <img *ngIf="node.item.recipe.craftArea as craftArea"
+       src="{{ recipes.getCraftAreaIcon(craftArea) }}"
+       title="{{ craftArea | translate }}"
+       class="UIAtlasItemIcons"
+  />
+  <!-- Craft Tool -->
+  <ng-container *ngIf="node.item.recipe.craftTool as craftTool">
+    +
+    <img *ngIf="node.item.recipe.craftTool"
+         src="assets/ItemIcons/{{craftTool}}.png"
+         title="{{ craftTool | translate }}"
+         class="ItemIcons ItemIcons-right"
+    />
+  </ng-container>
+</ng-container>
 
 <mat-progress-bar *ngIf="node.isLoading"
                   mode="indeterminate"

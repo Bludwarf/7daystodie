@@ -53,7 +53,6 @@ export class RecipesComponent implements OnInit {
     this.treeControl = new DynamicFlatTreeControl<RecipeItem>();
     this.dataSource = new DynamicDataSource(this.treeControl, database);
     this.dataSource.data = database.initialData();
-    this.dataSource.filterChange.subscribe(value => console.log('filterChange', value));
     this.dataSource.filterPredicate = (recipeItem: RecipeItem, filter) => {
       return this.filterByName(recipeItem, filter) && this.filterByCraftArea(recipeItem) && this.filterByCraftTool(recipeItem);
     };

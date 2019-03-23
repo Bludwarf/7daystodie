@@ -1,12 +1,14 @@
 import {Injectable} from '@angular/core';
 import {parseString} from 'xml2js';
 import xmlFile from 'src/assets/Data/Config/items.xml.json';
-import {XmlObject, XmlService} from '../common/xml.service';
+import {XmlObject, XmlObjectsCache, XmlService} from '../common/xml.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemsService extends XmlService<Item> {
+
+  private requiredItemCache = new XmlObjectsCache<Item>();
 
   constructor() {
     super(xmlFile.items.item);
@@ -20,7 +22,9 @@ export class ItemsService extends XmlService<Item> {
    * @return the item required by cvar to craft this item
    */
   getRequiredItem(item: Item): Item {
-    return this.getAll().find(itemI => itemI.settedCvar.includes(item.name));
+    return this.requiredItemCache.getOrPut(item.name, () =>
+      this.getAll().find(itemI => itemI.settedCvars.includes(item.name))
+    );
   }
 }
 
@@ -32,6 +36,9 @@ export enum Operation {
 }
 
 export class Item extends XmlObject {
+
+  private _settedCvars: string[] = undefined;
+
   constructor(xml: any) {
     super(xml);
   }
@@ -205,18 +212,21 @@ export class Item extends XmlObject {
    *     </effect_group>
    * </pre>
    */
-  get settedCvar(): string[] {
-    let triggeredEffects = [];
-    if (this.xmlElement.effect_group) {
-      this.xmlElement.effect_group.forEach(effectGroup => {
-        if (effectGroup.triggered_effect) {
-          triggeredEffects = triggeredEffects.concat(effectGroup.triggered_effect
-            .filter(triggeredEffect => triggeredEffect.$.action === 'ModifyCVar'
-              && triggeredEffect.$.operation === 'set'
-              && triggeredEffect.$.value === '1'));
-        }
-      });
+  get settedCvars(): string[] {
+    if (!this._settedCvars) {
+      let triggeredEffects = [];
+      if (this.xmlElement.effect_group) {
+        this.xmlElement.effect_group.forEach(effectGroup => {
+          if (effectGroup.triggered_effect) {
+            triggeredEffects = triggeredEffects.concat(effectGroup.triggered_effect
+              .filter(triggeredEffect => triggeredEffect.$.action === 'ModifyCVar'
+                && triggeredEffect.$.operation === 'set'
+                && triggeredEffect.$.value === '1'));
+          }
+        });
+      }
+      this._settedCvars = triggeredEffects.map(triggeredEffect => triggeredEffect.$.cvar);
     }
-    return triggeredEffects.map(triggeredEffect => triggeredEffect.$.cvar);
+    return this._settedCvars;
   }
 }
