@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RecipeItem} from '../recipes.database';
-import {MatTreeNodeDef} from '@angular/material';
 import {RecipesComponent} from '../recipes.component';
+import {DynamicFlatNode} from '../../common/dynamic-flat-tree';
 
 @Component({
   selector: 'app-recipe-node',
@@ -10,7 +10,7 @@ import {RecipesComponent} from '../recipes.component';
 })
 export class RecipeNodeComponent implements OnInit {
 
-  @Input('node') node: MatTreeNodeDef<RecipeItem>;
+  @Input('node') node: DynamicFlatNode<RecipeItem>;
   @Input('recipes') recipes: RecipesComponent;
 
   constructor() { }
