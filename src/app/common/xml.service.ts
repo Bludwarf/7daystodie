@@ -1,7 +1,7 @@
 const CACHE_LOGS = false;
 import * as _ from 'underscore';
 
-export abstract class XmlService<T> {
+export abstract class XmlService<T extends XmlObject> {
 
   protected cache = new XmlObjectsCache<T>();
 
@@ -31,8 +31,7 @@ export abstract class XmlService<T> {
   getAll(filter?: (element: T) => boolean): T[] {
     return this.cache.getOrPutAll(element => element.name, () => {
       const elements = this.xmlElements
-        .map(xmlElement => this.newElement(xmlElement))
-        .filter(element => !filter || filter(element));
+        .map(xmlElement => this.newElement(xmlElement));
       const elementsByName = _.groupBy(elements, 'name');
       return Object.keys(elementsByName)
         .map(name => {
@@ -43,7 +42,8 @@ export abstract class XmlService<T> {
             return this.handleDuplicates(duplicates);
           }
         });
-    });
+    })
+      .filter(element => !filter || filter(element));
   }
 
   abstract newElement(xmlElement: any): T;
@@ -117,14 +117,11 @@ export class XmlObject {
 export class XmlObjectsCache<T> {
   cache = {};
 
-  /** To keep order, unique set */
-  keys = [];
-
-  /** all items have been read ? */
-  hasAll = false;
+  /** To keep ordre and know if all items have been read */
+  all: T[] = undefined;
 
   has(key: string): boolean {
-    return this.keys.includes(key);
+    return key in this.cache;
   }
 
   get(key: string): T {
@@ -143,19 +140,17 @@ export class XmlObjectsCache<T> {
 
   put(key: string, item: T): void {
     this.cache[key] = item;
-    if (!this.keys.includes(key)) {
-      this.keys.push(key);
-    }
   }
 
   getOrPutAll(getKey: (T) => string, createAllItems: () => T[]): T[] {
-    if (!this.hasAll) {
+    if (!this.all) {
       if (CACHE_LOGS) {
         console.log(`CACHE : create all elements`);
       }
-      createAllItems().forEach(item => this.put(getKey(item), item));
+      this.all = createAllItems().map(item => this.get(getKey(item)) || item);
+      this.all.forEach(item => this.put(getKey(item), item));
     }
-    return this.keys.map(key => this.cache[key]);
+    return this.all;
   }
 }
 

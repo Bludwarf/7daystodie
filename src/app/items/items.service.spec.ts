@@ -1,5 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 import {ItemsService} from './items.service';
+import {RecipesService} from '../recipes/recipes.service';
 
 const ITEMS_COUNT = 579; // TODO 676 !!!
 
@@ -40,7 +41,7 @@ describe('ItemsService', () => {
     const endTime = new Date();
     const duration = endTime.getTime() - startTime.getTime();
     console.log(`Get gunPistol.DamageFalloffRange ${loops} times took ${duration} ms`);
-    expect(duration).toBeLessThanOrEqual(30 /* ms */);
+    expect(duration).toBeLessThanOrEqual(60 /* ms */);
   });
 
   it('should not take too long to get all items', () => {
@@ -57,7 +58,7 @@ describe('ItemsService', () => {
     const endTime = new Date();
     const duration = endTime.getTime() - startTime.getTime();
     console.log(`Get all items ${loops} times took ${duration} ms`);
-    expect(duration).toBeLessThanOrEqual(30 /* ms */);
+    expect(duration).toBeLessThanOrEqual(70 /* ms */);
   });
 
   it('should get Pistol with 9 mm entity damage', () => {
@@ -72,5 +73,14 @@ describe('ItemsService', () => {
     const item = items.get('gunSMG5');
     const ammo = items.get('ammo9mmBullet');
     expect(item.getEntityDamage(ammo)).toBe(26); /* 32 - 6 */
+  });
+
+  it('should get required items for some items', () => {
+    const items: ItemsService = TestBed.get(ItemsService);
+    const item = items.get('drinkJarBeer');
+    expect(item).toBeDefined();
+    const requiredItem = items.get('beerSchematic');
+    expect(requiredItem).toBeDefined();
+    expect(items.getRequiredItem(item)).toBe(requiredItem);
   });
 });

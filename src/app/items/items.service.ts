@@ -15,6 +15,13 @@ export class ItemsService extends XmlService<Item> {
   newElement(xmlElement: any): Item {
     return new Item(xmlElement);
   }
+
+  /**
+   * @return the item required by cvar to craft this item
+   */
+  getRequiredItem(item: Item): Item {
+    return this.getAll().find(itemI => itemI.settedCvar.includes(item.name));
+  }
 }
 
 export enum Operation {
@@ -74,7 +81,9 @@ export class Item extends XmlObject {
       return value;
     }
 
-    if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add || entityDamage.$.operation === Operation.base_subtract) {
+    if (entityDamage.$.operation === Operation.perc_add
+      || entityDamage.$.operation === Operation.base_add
+      || entityDamage.$.operation === Operation.base_subtract) {
       if (!base) {
         throw new Error(`Cannot get "${name}" without magazineItem for Item "${this.name}"`);
       }
@@ -186,5 +195,28 @@ export class Item extends XmlObject {
   get customIconTint(): string {
     const xmlProp = this.getFirst('property', 'CustomIconTint');
     return xmlProp ? xmlProp.$.value : undefined;
+  }
+
+  /**
+   * Example :
+   * <pre>
+   *     <effect_group tiered="false">
+   *         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkJarBeer" operation="set" value="1"/>
+   *     </effect_group>
+   * </pre>
+   */
+  get settedCvar(): string[] {
+    let triggeredEffects = [];
+    if (this.xmlElement.effect_group) {
+      this.xmlElement.effect_group.forEach(effectGroup => {
+        if (effectGroup.triggered_effect) {
+          triggeredEffects = triggeredEffects.concat(effectGroup.triggered_effect
+            .filter(triggeredEffect => triggeredEffect.$.action === 'ModifyCVar'
+              && triggeredEffect.$.operation === 'set'
+              && triggeredEffect.$.value === '1'));
+        }
+      });
+    }
+    return triggeredEffects.map(triggeredEffect => triggeredEffect.$.cvar);
   }
 }
