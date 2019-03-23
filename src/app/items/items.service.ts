@@ -181,6 +181,10 @@ export class Item extends XmlObject {
   get customIcon(): string {
     const xmlProp = this.getFirst('property', 'CustomIcon');
     return xmlProp ? xmlProp.$.value : undefined;
-    // TODO CustomIconTint : https://stackoverflow.com/a/43938944/1655155
+  }
+
+  get customIconTint(): string {
+    const xmlProp = this.getFirst('property', 'CustomIconTint');
+    return xmlProp ? xmlProp.$.value : undefined;
   }
 }
