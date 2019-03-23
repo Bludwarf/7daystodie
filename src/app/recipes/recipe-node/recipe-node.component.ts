@@ -1,8 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RecipeItem} from '../recipes.database';
 import {MatTreeNodeDef} from '@angular/material';
-import {PerkLevel, PerksService} from '../../progression/perks.service';
-import {LocalizationService} from '../../localization/localization.service';
 import {RecipesComponent} from '../recipes.component';
 
 @Component({
