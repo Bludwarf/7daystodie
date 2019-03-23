@@ -1,31 +1,11 @@
-import {AfterViewInit, Component, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {Component, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {DynamicDataSource, DynamicFlatNode, DynamicFlatTreeControl} from '../common/dynamic-flat-tree';
 import {RecipeItem, RecipesDatabase} from './recipes.database';
 import {LocalizationService} from '../localization/localization.service';
 import {SummaryComponent} from './summary/summary.component';
-import {PerkLevel, PerksService} from '../progression/perks.service';
 import {MatButtonToggleGroup} from '@angular/material';
-import {Item, ItemsService} from '../items/items.service';
-
-export const CRAFT_AREA_ICONS = {
-  campfire: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_campfire.png',
-  cementMixer: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_cement.png',
-  chemistryStation: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_chemistry.png',
-  forge: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_forge.png',
-  workbench: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_workbench.png'
-};
-
-export const CRAFT_TOOLS_CAMPFIRE = [
-  'toolCookingPot',
-  'toolCookingGrill',
-  'toolBeaker'
-];
-
-export const CRAFT_TOOLS_FORGE = [
-  'toolAnvil',
-  'toolForgeCrucible',
-  'toolAndDieSet'
-];
+import {RecipeNodeComponent} from './recipe-node/recipe-node.component';
+import {CRAFT_AREA_ICONS, CRAFT_TOOLS_CAMPFIRE, CRAFT_TOOLS_FORGE, RecipesService} from './recipes.service';
 
 // Angular Material does not filter when filter is empty
 const FORCE_FILTER = '<force_filter>';
@@ -45,11 +25,12 @@ export class RecipesComponent implements OnInit {
   CRAFT_AREAS = Object.keys(CRAFT_AREA_ICONS);
   CRAFT_TOOLS = CRAFT_TOOLS_CAMPFIRE.concat(CRAFT_TOOLS_FORGE);
 
+  @ViewChildren(RecipeNodeComponent) recipeNodeComponents: QueryList<RecipeNodeComponent>;
+
   constructor(
     database: RecipesDatabase,
     private localization: LocalizationService,
-    public perks: PerksService,
-    public items: ItemsService) {
+    private recipes: RecipesService) {
     this.treeControl = new DynamicFlatTreeControl<RecipeItem>();
     this.dataSource = new DynamicDataSource(this.treeControl, database);
     this.dataSource.data = database.initialData();
@@ -89,28 +70,11 @@ export class RecipesComponent implements OnInit {
     // Angular Material does not detect change from undefined to something
     name = name || FORCE_FILTER;
     this.dataSource.filter = name.trim().toLowerCase();
+    this.recipeNodeComponents.forEach(recipeNodeComponent => recipeNodeComponent.reload());
   }
 
   reapplyFilter() {
     this.applyFilter(this.dataSource.filter);
-  }
-
-  getRequiredItem(recipeItem: RecipeItem): Item {
-    return this.items.getRequiredItem(recipeItem.item);
-  }
-
-  getRequiredPerkLevelForRecipe(recipeItem: RecipeItem): PerkLevel | undefined {
-    const perkLevel = this.perks.getRequiredPerkLevelForRecipe(recipeItem.item.name);
-    if (!perkLevel) {
-      console.error(`Cannot find required PerkLevel for recipe "${recipeItem.item.name}"`);
-      return undefined;
-    }
-    return perkLevel;
-  }
-
-  perkLevelToString(perkLevel: PerkLevel) {
-    const localName = this.localization.translate(perkLevel.name + 'Name');
-    return `${localName} ${this.localization.translate('xuiSkillLevel')} ${perkLevel.level}`;
   }
 
   getCraftAreaIcon(craftArea: string) {

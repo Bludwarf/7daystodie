@@ -47,7 +47,6 @@ export class SummaryComponent implements OnInit {
   }
 
   push(recipeItem: RecipeItem): void {
-    console.log('push', recipeItem);
     this.recipeItemsHistory.push(recipeItem);
     this.dataSource.data = this.data;
   }

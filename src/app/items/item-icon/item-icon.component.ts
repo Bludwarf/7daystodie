@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {Item, ItemsService} from '../items.service';
 import {Color, Solver} from '../../lib/ColorSolver';
 
@@ -22,13 +22,14 @@ const getCustomIconTintColor = (value: string): Color => {
 export class ItemIconComponent implements OnInit {
 
   @Input('item') item: Item;
+  @ViewChild('filter') filter: ElementRef;
 
   constructor(private items: ItemsService) { }
 
   ngOnInit() {
   }
 
-  loadCustomIconTint(img: HTMLImageElement) {
+  loadCustomIconTint(img: HTMLImageElement, reload = false) {
     const base = img.previousElementSibling;
     if (base instanceof HTMLImageElement) {
       const baseImg = base as HTMLImageElement;
@@ -40,7 +41,7 @@ export class ItemIconComponent implements OnInit {
         left: baseImg.offsetLeft + 'px'
       });
 
-      if (this.item.customIconTint) {
+      if (!reload && this.item.customIconTint) {
         const color = getCustomIconTintColor(this.item.customIconTint);
         const solver = new Solver(color);
         const result = solver.solve(); // filter: invert(26%) sepia(85%) saturate(5948%) hue-rotate(295deg) brightness(115%) contrast(129%);
@@ -59,4 +60,9 @@ export class ItemIconComponent implements OnInit {
     return this.items.getItemIcon(itemName);
   }
 
+  reload() {
+    if (this.filter) {
+      this.loadCustomIconTint(this.filter.nativeElement, true);
+    }
+  }
 }

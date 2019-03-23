@@ -2,6 +2,26 @@ import { Injectable } from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/recipes.xml.json';
 import {XmlObject, XmlService} from '../common/xml.service';
 
+export const CRAFT_AREA_ICONS = {
+  campfire: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_campfire.png',
+  cementMixer: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_cement.png',
+  chemistryStation: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_chemistry.png',
+  forge: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_forge.png',
+  workbench: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_workbench.png'
+};
+
+export const CRAFT_TOOLS_CAMPFIRE = [
+  'toolCookingPot',
+  'toolCookingGrill',
+  'toolBeaker'
+];
+
+export const CRAFT_TOOLS_FORGE = [
+  'toolAnvil',
+  'toolForgeCrucible',
+  'toolAndDieSet'
+];
+
 @Injectable({
   providedIn: 'root'
 })
