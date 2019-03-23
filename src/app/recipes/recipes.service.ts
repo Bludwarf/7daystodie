@@ -14,12 +14,20 @@ export class RecipesService extends XmlService<Recipe> {
   newElement(xmlElement: any): Recipe {
     return new Recipe(xmlElement);
   }
+
+  handleDuplicates(elements: Recipe[]): Recipe {
+    const first = elements[0];
+    first.siblings = elements.slice(1);
+    return first;
+  }
 }
 
 /** learnable tag */
 export const TAG_LEARNABLE = 'learnable';
 
 export class Recipe extends XmlObject {
+
+  public siblings: Recipe[] = [];
 
   constructor(xmlElement) {
     super(xmlElement);

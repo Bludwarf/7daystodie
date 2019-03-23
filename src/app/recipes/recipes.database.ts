@@ -12,7 +12,7 @@ export class RecipesDatabase extends DynamicDatabase<RecipeItem> {
   }
 
   async getChildren(item: RecipeItem): Promise<RecipeItem[] | undefined> {
-    const recipe = this.recipes.get(item.item.name);
+    const recipe = item.recipe;
     if (!recipe || !recipe.ingredients) {
       return undefined;
     }
@@ -24,14 +24,23 @@ export class RecipesDatabase extends DynamicDatabase<RecipeItem> {
   }
 
   getRootLevelItems(): RecipeItem[] {
-    const items = this.items
+    let recipeItems = this.items
       .getAll(item => !!this.recipes.get(item.name))
       .map(item => {
         const recipe = this.recipes.get(item.name);
-        return new RecipeItem(recipe, 1, item)
+        return new RecipeItem(recipe, 1, item);
       });
-    items.sort((itemA, itemB) => itemA.item.compareTo(itemB.item, this.localization.translate));
-    return items;
+
+    let siblingRecipeItems = [];
+    recipeItems.forEach(recipeItem => {
+      siblingRecipeItems = siblingRecipeItems
+        .concat(recipeItem.recipe.siblings
+          .map(sibling => new RecipeItem(sibling, 1, recipeItem.item)));
+    });
+    recipeItems = recipeItems.concat(siblingRecipeItems);
+
+    recipeItems.sort((itemA, itemB) => itemA.item.compareTo(itemB.item, this.localization.translate));
+    return recipeItems;
   }
 
   async hasChildren(item: RecipeItem): Promise<boolean> {

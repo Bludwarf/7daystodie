@@ -1,4 +1,5 @@
 const CACHE_LOGS = false;
+import * as _ from 'underscore';
 
 export abstract class XmlService<T> {
 
@@ -16,20 +17,44 @@ export abstract class XmlService<T> {
    */
   get(name: string): T {
     return this.cache.getOrPut(name, () => {
-      const xmlElement = this.xmlElements.find(xmlElementI => xmlElementI.$.name === name);
-      return xmlElement ? this.newElement(xmlElement) : undefined;
+      const elements = this.xmlElements
+        .filter(xmlElementI => xmlElementI.$.name === name)
+        .map(xmlElement => xmlElement ? this.newElement(xmlElement) : undefined);
+      if (elements.length <= 1) {
+        return elements.length ? elements[0] : undefined;
+      } else {
+        return this.handleDuplicates(elements);
+      }
     });
   }
 
   getAll(filter?: (element: T) => boolean): T[] {
     return this.cache.getOrPutAll(element => element.name, () => {
-      return this.xmlElements
+      const elements = this.xmlElements
         .map(xmlElement => this.newElement(xmlElement))
         .filter(element => !filter || filter(element));
+      const elementsByName = _.groupBy(elements, 'name');
+      return Object.keys(elementsByName)
+        .map(name => {
+          const duplicates = elementsByName[name];
+          if (duplicates.length <= 1) {
+            return duplicates.length ? duplicates[0] : undefined;
+          } else {
+            return this.handleDuplicates(duplicates);
+          }
+        });
     });
   }
 
   abstract newElement(xmlElement: any): T;
+
+  /**
+   * @elements contains at least two elements that share the same name
+   * @return element to keep between existingElement and newElement
+   */
+  handleDuplicates(elements: T[]): T {
+    return elements.length ? elements[0] : undefined;
+  }
 }
 
 export class XmlObject {
