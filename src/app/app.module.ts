@@ -27,7 +27,6 @@ import {RecipesService} from './recipes/recipes.service';
 import { RecipesComponent } from './recipes/recipes.component';
 import {FormsModule} from '@angular/forms';
 import { SummaryComponent } from './recipes/summary/summary.component';
-import { CustomIconTintDirective } from './common/custom-icon-tint.directive';
 import { RecipeNodeComponent } from './recipes/recipe-node/recipe-node.component';
 import { ItemIconComponent } from './items/item-icon/item-icon.component';
 
@@ -40,7 +39,6 @@ import { ItemIconComponent } from './items/item-icon/item-icon.component';
     RoundPerMinutePipe,
     RecipesComponent,
     SummaryComponent,
-    CustomIconTintDirective,
     RecipeNodeComponent,
     ItemIconComponent
   ],
