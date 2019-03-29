@@ -6,7 +6,7 @@ import {RecipesComponent} from './recipes/recipes.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/List_of_weapons',
+    redirectTo: 'Recipes',
     pathMatch: 'full'
   },
   {
