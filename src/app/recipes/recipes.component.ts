@@ -47,8 +47,8 @@ export class RecipesComponent implements OnInit {
   }
 
   filterByName = (recipeItem: RecipeItem, filter) => filter === FORCE_FILTER
-    || recipeItem.item.name.toLowerCase().indexOf(filter) !== -1 // Without translation
-    || this.localization.translate(recipeItem.item.name).toLowerCase().indexOf(filter) !== -1;
+    || recipeItem.recipe.name.toLowerCase().indexOf(filter) !== -1 // Without translation
+    || this.localization.translate(recipeItem.recipe.name).toLowerCase().indexOf(filter) !== -1;
 
   filterByCraftArea = (recipeItem: RecipeItem) => !recipeItem.recipe.craftArea
     || this.craftAreaFilter.value.includes(recipeItem.recipe.craftArea);
@@ -70,11 +70,15 @@ export class RecipesComponent implements OnInit {
     // Angular Material does not detect change from undefined to something
     name = name || FORCE_FILTER;
     this.dataSource.filter = name.trim().toLowerCase();
-    this.recipeNodeComponents.forEach(recipeNodeComponent => recipeNodeComponent.reload());
+    this.reloadNodeComponents();
   }
 
   reapplyFilter() {
     this.applyFilter(this.dataSource.filter);
+  }
+
+  reloadNodeComponents(): void {
+    this.recipeNodeComponents.forEach(recipeNodeComponent => recipeNodeComponent.reload());
   }
 
   getCraftAreaIcon(craftArea: string) {

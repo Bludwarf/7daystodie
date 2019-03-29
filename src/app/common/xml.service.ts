@@ -41,7 +41,8 @@ export abstract class XmlService<T extends XmlObject> {
           } else {
             return this.handleDuplicates(duplicates);
           }
-        });
+        })
+        .filter(element => !!element); // handleDuplicates may return undefined
     })
       .filter(element => !filter || filter(element));
   }
@@ -50,7 +51,7 @@ export abstract class XmlService<T extends XmlObject> {
 
   /**
    * @elements contains at least two elements that share the same name
-   * @return element to keep between existingElement and newElement
+   * @return element to keep between duplicates, undefined if no element show be kept
    */
   handleDuplicates(elements: T[]): T {
     return elements.length ? elements[0] : undefined;
@@ -110,6 +111,12 @@ export class XmlObject {
 
   get name() {
     return this.$.name;
+  }
+
+  compareTo<T extends XmlObject>(other: T, translateFunction: (key: string) => string): number {
+    const thisName = translateFunction(this.name).toLocaleLowerCase();
+    const otherName = translateFunction(other.name).toLocaleLowerCase();
+    return thisName.localeCompare(otherName);
   }
 
 }

@@ -25,19 +25,19 @@ export class SummaryComponent implements OnInit {
     this.dataSource = new MatTableDataSource(this.data);
     this.dataSource.sortingDataAccessor = (recipeItem: RecipeItem, property: string) => {
       switch (property) {
-        case 'name': return this.localization.translate(recipeItem.item.name);
+        case 'name': return this.localization.translate(recipeItem.name);
         default: return recipeItem.item[property];
       }
     };
     this.dataSource.sort = this.sort;
     this.dataSource.filterPredicate = (recipeItem: RecipeItem, filter) => {
-      return recipeItem.item.name.toLowerCase().indexOf(filter) !== -1 // Without translation
-        || this.localization.translate(recipeItem.item.name).toLowerCase().indexOf(filter) !== -1;  // With translation
+      return recipeItem.name.toLowerCase().indexOf(filter) !== -1 // Without translation
+        || this.localization.translate(recipeItem.name).toLowerCase().indexOf(filter) !== -1;  // With translation
     };
   }
 
   get data(): RecipeItem[] {
-    const groups = _.groupBy(this.recipeItemsHistory, ri => ri.item.name);
+    const groups = _.groupBy(this.recipeItemsHistory, ri => ri.name);
     return Object.keys(groups).map(itemName => {
       const recipeItems: RecipeItem[] = groups[itemName];
       const count = recipeItems.reduce((previousValue, ri) => previousValue + ri.count, 0);

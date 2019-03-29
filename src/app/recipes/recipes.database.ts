@@ -24,10 +24,10 @@ export class RecipesDatabase extends DynamicDatabase<RecipeItem> {
   }
 
   getRootLevelItems(): RecipeItem[] {
-    let recipeItems = this.items
-      .getAll(item => !!this.recipes.get(item.name))
-      .map(item => {
-        const recipe = this.recipes.get(item.name);
+    let recipeItems = this.recipes
+      .getAll(/*recipe => !!this.recipes.get(item.name)*/)
+      .map(recipe => {
+        const item = this.items.get(recipe.name);
         return new RecipeItem(recipe, 1, item);
       });
 
@@ -39,7 +39,7 @@ export class RecipesDatabase extends DynamicDatabase<RecipeItem> {
     });
     recipeItems = recipeItems.concat(siblingRecipeItems);
 
-    recipeItems.sort((itemA, itemB) => itemA.item.compareTo(itemB.item, this.localization.translate));
+    recipeItems.sort((itemA, itemB) => itemA.compareTo(itemB, this.localization.translate));
     return recipeItems;
   }
 
@@ -50,4 +50,15 @@ export class RecipesDatabase extends DynamicDatabase<RecipeItem> {
 
 export class RecipeItem {
   constructor(public recipe: Recipe, public count: number, public item: Item) { }
+
+  compareTo(other: RecipeItem, translateFunction: (key: string) => string): number {
+    const a = this.recipe || this.item;
+    const b = other.recipe || other.item;
+    return a.compareTo(b, translateFunction);
+  }
+
+  get name(): string {
+    // console.log(this, (this.recipe || this.item).name);
+    return (this.recipe || this.item).name;
+  }
 }

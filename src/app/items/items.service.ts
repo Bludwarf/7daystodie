@@ -31,9 +31,9 @@ export class ItemsService extends XmlService<Item> {
   /**
    * @return the icon path only if it exists, undefined otherwise
    */
-  getExistingItemIcon(item: Item): string {
-    const filename = `${item.name}.png`;
-    return itemIconsFile.includes(filename) ? this.getItemIcon(item.name) : undefined;
+  getExistingItemIcon(itemName: string): string {
+    const filename = `${itemName}.png`;
+    return itemIconsFile.includes(filename) ? this.getItemIcon(itemName) : undefined;
   }
 
   getItemIcon(itemName: string): string {
@@ -193,18 +193,6 @@ export class Item extends XmlObject {
     }
 
     return degradationMax / degradationPerUse;
-  }
-
-  compareTo(item: Item, translateFunction: (key: string) => string): number {
-    const thisName = translateFunction(this.name.toLowerCase());
-    const itemName = translateFunction(item.name.toLowerCase());
-    if (thisName < itemName) {
-      return -1;
-    }
-    if (thisName > itemName) {
-      return 1;
-    }
-    return 0;
   }
 
   get customIcon(): string {

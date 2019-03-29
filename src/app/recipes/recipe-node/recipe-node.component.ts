@@ -28,13 +28,16 @@ export class RecipeNodeComponent implements OnInit {
   }
 
   getRequiredItem(recipeItem: RecipeItem): Item {
+    if (!recipeItem.item) {
+      return undefined;
+    }
     return this.items.getRequiredItem(recipeItem.item);
   }
 
   getRequiredPerkLevelForRecipe(recipeItem: RecipeItem): PerkLevel | undefined {
-    const perkLevel = this.perks.getRequiredPerkLevelForRecipe(recipeItem.item.name);
+    const perkLevel = this.perks.getRequiredPerkLevelForRecipe(recipeItem.recipe.name);
     if (!perkLevel) {
-      console.error(`Cannot find required PerkLevel for recipe "${recipeItem.item.name}"`);
+      console.error(`Cannot find required PerkLevel for recipe "${recipeItem.recipe.name}"`);
       return undefined;
     }
     return perkLevel;

@@ -1,4 +1,4 @@
-import {EventEmitter, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {CollectionViewer, SelectionChange} from '@angular/cdk/collections';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
@@ -46,7 +46,7 @@ export class DynamicDataSource<T> {
   filterChange: BehaviorSubject<string> = new BehaviorSubject<string>(undefined);
 
   /** how items are filtered with by filter value */
-  filterPredicate: (recipeItem: T, filter) => boolean
+  filterPredicate: (recipeItem: T, filter) => boolean;
 
   itemExpanded = new BehaviorSubject<T>(undefined);
   itemCollapsed = new BehaviorSubject<T>(undefined);
@@ -128,7 +128,7 @@ export class DynamicDataSource<T> {
       this.data.splice(index + 1, allChildrenNodes.length);
       this.children.delete(node.item);
       this.itemCollapsed.next(node.item);
-      this.itemsDisappeared.next(allChildrenNodes.map(node => node.item));
+      this.itemsDisappeared.next(allChildrenNodes.map(disNode => disNode.item));
     }
 
     // notify the change

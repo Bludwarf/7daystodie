@@ -22,7 +22,7 @@ export class LocalizationService {
     return translations[lang] || translations[ENGLISH_LANG] || key;
   }
 
-  getWikiUrl(item: Item): string {
-    return WIKI_URL + encodeURI(this.translate(item.name, ENGLISH_LANG));
+  getWikiUrl(itemName: string): string {
+    return WIKI_URL + encodeURI(this.translate(itemName, ENGLISH_LANG));
   }
 }

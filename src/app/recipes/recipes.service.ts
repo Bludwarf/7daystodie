@@ -7,6 +7,7 @@ export const CRAFT_AREA_ICONS = {
   cementMixer: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_cement.png',
   chemistryStation: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_chemistry.png',
   forge: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_forge.png',
+  tablesaw: 'assets/UIAtlasItemIcons/ItemIcons/tablesaw.png',
   workbench: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_workbench.png'
 };
 
@@ -36,6 +37,12 @@ export class RecipesService extends XmlService<Recipe> {
   }
 
   handleDuplicates(elements: Recipe[]): Recipe {
+    // TODO wildcard_forge_category
+    elements = elements.filter(element => !!element.ingredients);
+    if (!elements.length) {
+      return undefined;
+    }
+
     const first = elements[0];
     first.siblings = elements.slice(1);
     return first;

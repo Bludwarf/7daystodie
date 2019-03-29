@@ -21,12 +21,16 @@ const getCustomIconTintColor = (value: string): Color => {
 })
 export class ItemIconComponent implements OnInit {
 
-  @Input('item') item: Item;
+  @Input('itemName') itemName: string;
   @ViewChild('filter') filter: ElementRef;
 
   constructor(private items: ItemsService) { }
 
   ngOnInit() {
+  }
+
+  get item(): Item {
+    return this.items.get(this.itemName);
   }
 
   loadCustomIconTint(img: HTMLImageElement, reload = false) {
@@ -41,7 +45,7 @@ export class ItemIconComponent implements OnInit {
         left: baseImg.offsetLeft + 'px'
       });
 
-      if (!reload && this.item.customIconTint) {
+      if (!reload && this.item && this.item.customIconTint) {
         const color = getCustomIconTintColor(this.item.customIconTint);
         const solver = new Solver(color);
         const result = solver.solve(); // filter: invert(26%) sepia(85%) saturate(5948%) hue-rotate(295deg) brightness(115%) contrast(129%);
@@ -52,11 +56,12 @@ export class ItemIconComponent implements OnInit {
     }
   }
 
-  getExistingItemIcon(item: Item): string {
-    return this.items.getExistingItemIcon(item);
+  getExistingItemIcon(): string {
+    return this.items.getExistingItemIcon(this.itemName);
   }
 
-  getItemIcon(itemName: string): string {
+  getItemIcon(): string {
+    const itemName = this.item ? this.item.customIcon : this.itemName;
     return this.items.getItemIcon(itemName);
   }
 

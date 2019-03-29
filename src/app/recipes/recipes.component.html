@@ -28,14 +28,14 @@
       </mat-form-field>
 
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
-        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding class="node" title="{{node.item.item.name}}">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding class="node" title="{{node.item.name}}">
           <button mat-icon-button disabled></button>
           <app-recipe-node [node]="node"></app-recipe-node>
         </mat-tree-node>
 
-        <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding class="node" title="{{node.item.item.name}}">
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChildren" matTreeNodePadding class="node" title="{{node.item.name}}">
           <button mat-icon-button
-                  [attr.aria-label]="'toggle ' + node.item.item.name" matTreeNodeToggle>
+                  [attr.aria-label]="'toggle ' + node.item.name" matTreeNodeToggle>
             <mat-icon>
               {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
             </mat-icon>
