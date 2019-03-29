@@ -18,7 +18,7 @@ export class RecipeNodeComponent implements OnInit {
   @Input('node') node: DynamicFlatNode<RecipeItem>;
   @ViewChildren(ItemIconComponent) itemIconComponents: QueryList<ItemIconComponent>;
 
-  constructor(private items: ItemsService, private perks: PerksService, private localization: LocalizationService) { }
+  constructor(private items: ItemsService, private perks: PerksService, public localization: LocalizationService) { }
 
   ngOnInit() {
   }
