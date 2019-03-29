@@ -7,7 +7,7 @@ export const CRAFT_AREA_ICONS = {
   cementMixer: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_cement.png',
   chemistryStation: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_chemistry.png',
   forge: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_forge.png',
-  tablesaw: 'assets/UIAtlasItemIcons/ItemIcons/tablesaw.png',
+  tableSaw: 'assets/UIAtlasItemIcons/ItemIcons/tableSaw.png',
   workbench: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_workbench.png'
 };
 

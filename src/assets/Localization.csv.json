@@ -1,0 +1,37 @@
+{
+  "nameFilter": {
+    "Key": "nameFilter",
+    "English": "Name filter",
+    "French": "Filtre sur le nom"
+  },
+  "pageList_of_weapons": {
+    "Key": "pageList_of_weapons",
+    "English": "List of weapons",
+    "French": "Liste des armes"
+  },
+  "pageRecipes": {
+    "Key": "pageRecipes",
+    "English": "Recipes",
+    "French": "Recettes"
+  },
+  "reset": {
+    "Key": "reset",
+    "English": "Reset",
+    "French": "RAZ"
+  },
+  "shoppingList": {
+    "Key": "shoppingList",
+    "English": "Shopping List",
+    "French": "Liste de courses"
+  },
+  "shoppingListColName": {
+    "Key": "shoppingListColName",
+    "English": "Name",
+    "French": "Nom"
+  },
+  "shoppingListColCount": {
+    "Key": "shoppingListColCount",
+    "English": "Count",
+    "French": "Quantité"
+  }
+}

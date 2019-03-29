@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {WeaponsComponent} from './weapons/weapons.component';
 import {RecipesComponent} from './recipes/recipes.component';
+import {translate} from './localization/localization.service';
 
 const routes: Routes = [
   {
@@ -12,12 +13,12 @@ const routes: Routes = [
   {
     path: 'List_of_weapons',
     component: WeaponsComponent,
-    data: { title: 'List of weapons' }
+    data: { title: translate('pageList_of_weapons') }
   },
   {
     path: 'Recipes',
     component: RecipesComponent,
-    data: { title: 'Recipes' }
+    data: { title: translate('pageRecipes') }
   }
 ];
 
