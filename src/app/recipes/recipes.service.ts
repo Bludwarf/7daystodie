@@ -83,7 +83,12 @@ export class Recipe extends XmlObject {
   }
 
   get craftArea(): string {
-    return this.$.craft_area;
+    const craftArea = this.$.craft_area;
+    // TODO tableSaw is spelled "tablesaw" in recipes.xml
+    if (craftArea === 'tablesaw') {
+      return 'tableSaw';
+    }
+    return craftArea;
   }
 
   get craftTool(): string {
