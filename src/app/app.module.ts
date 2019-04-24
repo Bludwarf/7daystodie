@@ -29,6 +29,7 @@ import {FormsModule} from '@angular/forms';
 import { SummaryComponent } from './recipes/summary/summary.component';
 import { RecipeNodeComponent } from './recipes/recipe-node/recipe-node.component';
 import { ItemIconComponent } from './items/item-icon/item-icon.component';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ItemIconComponent } from './items/item-icon/item-icon.component';
     RecipesComponent,
     SummaryComponent,
     RecipeNodeComponent,
-    ItemIconComponent
+    ItemIconComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,

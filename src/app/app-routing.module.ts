@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {WeaponsComponent} from './weapons/weapons.component';
 import {RecipesComponent} from './recipes/recipes.component';
 import {translate} from './localization/localization.service';
+import {RecipeComponent} from './recipe/recipe.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,13 @@ const routes: Routes = [
     path: 'Recipes',
     component: RecipesComponent,
     data: { title: translate('pageRecipes') }
+  },
+  {
+    path: 'Recipes/:name',
+    component: RecipeComponent,
+    data: {
+      title: translate('pageRecipe')
+    }
   }
 ];
 
