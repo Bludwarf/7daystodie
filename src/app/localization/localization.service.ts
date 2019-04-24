@@ -36,4 +36,13 @@ export class LocalizationService {
   getWikiUrl(itemName: string): string {
     return WIKI_URL + encodeURI(this.translate(itemName, ENGLISH_LANG));
   }
+
+  /**
+   * @return translated description or translated name if not found
+   */
+  getDescription(itemName: string): string {
+    const key = itemName + 'Desc';
+    const desc = translate(key);
+    return desc !== key ? desc : translate(itemName);
+  }
 }
