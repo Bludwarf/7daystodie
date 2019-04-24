@@ -10,7 +10,7 @@ import {switchMap} from 'rxjs/internal/operators/switchMap';
 })
 export class RecipeComponent implements OnInit {
 
-  private recipe: Recipe;
+  public recipe: Recipe;
 
   constructor(
     private route: ActivatedRoute,
