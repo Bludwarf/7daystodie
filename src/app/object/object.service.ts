@@ -10,7 +10,8 @@ export class ObjectService {
   constructor(private items: ItemsService, private recipes: RecipesService) { }
 
   get(name: string): SevenDaysObject {
-    return new Builder(name)
+    const builder = new Builder(name);
+    return builder
       .item(this.items)
       .recipe(this.recipes)
       .build();
@@ -19,8 +20,10 @@ export class ObjectService {
 
 export class SevenDaysObject {
   public item: Item;
-  recipe: Recipe;
+  public recipe: Recipe;
 
+  constructor(public name: string) {
+  }
 }
 
 class Builder {
@@ -32,7 +35,7 @@ class Builder {
 
   get object(): SevenDaysObject {
     if (!this.builtObject) {
-      this.builtObject = new SevenDaysObject();
+      this.builtObject = new SevenDaysObject(this.name);
     }
     return this.builtObject;
   }

@@ -1,8 +1,40 @@
-<p>
-  object works!
-</p>
+<main class="container">
+  <div class="row">
+    <div class="col-md-8">
 
-<ul>
-  <li *ngIf="object.item">Item : {{object.item.name}}</li>
-  <li *ngIf="object.recipe">Recipe : {{object.recipe.name}}</li>
-</ul>
+      <h1>{{object.name | translate}}</h1>
+
+      <app-item-icon [itemName]="object.name" class="ItemIcons"></app-item-icon>
+
+      <h2>Description</h2>
+
+      <h2>Details</h2>
+
+      <h3>Obtained through</h3>
+
+      <ul>
+        <li><a href="{{localization.getWikiUrl('Crafting')}}">Crafting</a> : {{object.recipe ? 'Yes' : 'No'}}</li>
+      </ul>
+
+      <ng-container *ngIf="object.recipe">
+        <h2>Crafting</h2>
+
+        <h4>Required Items</h4>
+        <ul>
+          <li *ngFor="let ingredient of object.recipe.ingredients">
+            <app-item-icon [itemName]="ingredient.name"></app-item-icon>
+            {{ingredient.count}}* <a href="/{{ingredient.name}}">{{ingredient.name | translate}}</a>
+          </li>
+        </ul>
+
+      </ng-container>
+
+      <h2>See also</h2>
+
+      <ul>
+        <li><a href="{{localization.getWikiUrl(object.name)}}">Wiki</a></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
