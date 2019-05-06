@@ -57,8 +57,13 @@ export class Item extends XmlObject {
   }
 
   get Groups(): string[] {
+    const group = this.Group;
+    return group ? group.split(',') : undefined;
+  }
+
+  get Group(): string {
     const group = this.getFirst('property', 'Group');
-    return group ? group.$.value.split(',') : undefined;
+    return group ? group.$.value : undefined;
   }
 
   get BaseEffects(): XmlObject {
@@ -144,6 +149,10 @@ export class Item extends XmlObject {
 
   getEntityDamage(magazineItem?: Item): number {
     return this.getPassiveEffectFromBase('EntityDamage', magazineItem);
+  }
+
+  get BlockDamage(): number {
+    return this.getPassiveEffectValue('BlockDamage');
   }
 
   get MagazineSize(): number {

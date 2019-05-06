@@ -56,7 +56,8 @@ body {
 }
 
 a {
-  color: map-get($app-accent, 400);
+  //color: map-get($app-accent, 400);
+  color: #cfc59e;
 }
 
 a:hover, a:active {

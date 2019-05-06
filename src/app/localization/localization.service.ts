@@ -40,9 +40,9 @@ export class LocalizationService {
   /**
    * @return translated description or translated name if not found
    */
-  getDescription(itemName: string): string {
+  describe(itemName: string, lang = DEFAULT_LANG): string {
     const key = itemName + 'Desc';
-    const desc = translate(key);
-    return desc !== key ? desc : translate(itemName);
+    const desc = translate(key, lang);
+    return desc !== key ? desc : translate(itemName, lang);
   }
 }
