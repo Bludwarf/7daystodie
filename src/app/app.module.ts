@@ -30,6 +30,7 @@ import { SummaryComponent } from './recipes/summary/summary.component';
 import { RecipeNodeComponent } from './recipes/recipe-node/recipe-node.component';
 import { ItemIconComponent } from './items/item-icon/item-icon.component';
 import { RecipeComponent } from './recipe/recipe.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { RecipeComponent } from './recipe/recipe.component';
     SummaryComponent,
     RecipeNodeComponent,
     ItemIconComponent,
-    RecipeComponent
+    RecipeComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
