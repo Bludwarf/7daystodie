@@ -4,6 +4,11 @@
     "English": "Name filter",
     "French": "Filtre sur le nom"
   },
+  "ok?": {
+    "Key": "ok?",
+    "English": "Is it OK?",
+    "French": "Est-ce bon ?"
+  },
   "pageList_of_weapons": {
     "Key": "pageList_of_weapons",
     "English": "List of weapons",
@@ -13,6 +18,11 @@
     "Key": "pageRecipes",
     "English": "Recipes",
     "French": "Recettes"
+  },
+  "pageRecipe": {
+    "Key": "pageRecipe",
+    "English": "Recipe",
+    "French": "Recette"
   },
   "reset": {
     "Key": "reset",

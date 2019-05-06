@@ -15805,7 +15805,7 @@
     "Context": "Farming",
     "Changes": "New",
     "English": "Chrysanthemum (Seed)",
-    "French": "Chrysanthème",
+    "French": "Chrysanthème (graine)",
     "German": "Chrysantheme",
     "Spanish": "Crisantemo"
   },
@@ -15822,7 +15822,7 @@
     "Context": "Farming",
     "Changes": "New",
     "English": "Chrysanthemum (Growing)",
-    "French": "Chrysanthème",
+    "French": "Chrysanthème (pousse)",
     "German": "Chrysantheme",
     "Spanish": "Crisantemo"
   },
@@ -15832,7 +15832,7 @@
     "Context": "Farming",
     "Changes": "New",
     "English": "Chrysanthemum 3 (POI)",
-    "French": "Chrysanthème",
+    "French": "Chrysanthème 3 (POI)",
     "German": "Chrysantheme",
     "Spanish": "Crisantemo"
   },
@@ -27046,7 +27046,8 @@
     "Source": "items",
     "Context": "Farming",
     "Changes": "New",
-    "English": "Chrysanthemum"
+    "English": "Chrysanthemum",
+    "French": "Chrysanthème"
   },
   "resourceCropChrysanthemumPlantDesc": {
     "Key": "resourceCropChrysanthemumPlantDesc",
