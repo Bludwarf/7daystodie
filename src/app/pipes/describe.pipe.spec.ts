@@ -1,4 +1,4 @@
-import {DescribePipe} from './translate.pipe';
+import {DescribePipe} from './describe.pipe';
 import {TestBed} from '@angular/core/testing';
 import {LocalizationService} from '../localization/localization.service';
 
