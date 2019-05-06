@@ -8,6 +8,10 @@ import {RecipeResolverService} from './recipe/recipe-resolver.service';
 import {CanDeactivateGuard} from './can-deactivate.guard';
 import {ItemComponent} from './item/item.component';
 import {ItemResolverService} from './item/item-resolver.service';
+import {ObjectComponent} from './object/object.component';
+import {ItemGuard} from './item/item.guard';
+import {ObjectGuard} from './object/object.guard';
+import {ObjectResolverService} from './object/object-resolver.service';
 
 const routes: Routes = [
   {
@@ -39,9 +43,20 @@ const routes: Routes = [
   {
     path: 'items/:name',
     component: ItemComponent,
-    canDeactivate: [CanDeactivateGuard],
+    canDeactivate: [ItemGuard],
     resolve: {
       item: ItemResolverService
+    },
+    data: {
+      // TODO : title: translate('pageRecipe')
+    },
+  },
+  {
+    path: ':name',
+    component: ObjectComponent,
+    canDeactivate: [ObjectGuard],
+    resolve: {
+      object: ObjectResolverService
     },
     data: {
       // TODO : title: translate('pageRecipe')

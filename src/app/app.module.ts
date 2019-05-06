@@ -31,6 +31,7 @@ import { RecipeNodeComponent } from './recipes/recipe-node/recipe-node.component
 import { ItemIconComponent } from './items/item-icon/item-icon.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { ItemComponent } from './item/item.component';
+import { ObjectComponent } from './object/object.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ItemComponent } from './item/item.component';
     RecipeNodeComponent,
     ItemIconComponent,
     RecipeComponent,
-    ItemComponent
+    ItemComponent,
+    ObjectComponent
   ],
   imports: [
     BrowserModule,
