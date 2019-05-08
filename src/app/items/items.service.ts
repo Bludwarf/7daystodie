@@ -1,14 +1,23 @@
 import {Injectable} from '@angular/core';
-import {parseString} from 'xml2js';
 import xmlFile from 'src/assets/Data/Config/items.xml.json';
 import itemIconsFile from 'src/assets/ItemIcons/index.json';
 import {XmlObject, XmlObjectsCache, XmlService} from '../common/xml.service';
+import {PassiveEffect} from '../item/passive-effect';
+
+/** When reload_time not explicitly defined in Action0 */
+const HARD_CODED_RELOAD_TIMES: { [key: string]: number } = {
+  gunPistol: 2,
+  gunAK47: 3.8,
+  gunRocketLauncher: 2.7,
+  gunWoodenBow: 0.9,
+  gunCompoundBow: 2,
+  gunCrossbow: 3.4,
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemsService extends XmlService<Item> {
-
   private requiredItemCache = new XmlObjectsCache<Item>();
 
   constructor() {
@@ -70,14 +79,14 @@ export class Item extends XmlObject {
     return this.getFirst('effect_group', 'Base Effects');
   }
 
-  getPassiveEffect(name: string): XmlObject {
+  getPassiveEffect(name: string): PassiveEffect {
     const effectGroup = this.BaseEffects;
     if (!effectGroup) {
       // console.error('no effect_group for ' + this.name);
       return undefined;
     }
 
-    return effectGroup.getFirst('passive_effect', name);
+    return effectGroup.getFirst<PassiveEffect>('passive_effect', name, PassiveEffect);
   }
 
   getPassiveEffectValue(name: string): number {
@@ -87,7 +96,7 @@ export class Item extends XmlObject {
       return undefined;
     }
 
-    return +passiveEffect.$.value;
+    return +passiveEffect.value;
   }
 
   get MaxRange(): number {
@@ -153,6 +162,10 @@ export class Item extends XmlObject {
 
   get BlockDamage(): number {
     return this.getPassiveEffectValue('BlockDamage');
+  }
+
+  getBlockDamage(magazineItem?: Item): number {
+    return this.getPassiveEffectFromBase('BlockDamage', magazineItem);
   }
 
   get MagazineSize(): number {
@@ -238,5 +251,39 @@ export class Item extends XmlObject {
       this._settedCvars = triggeredEffects.map(triggeredEffect => triggeredEffect.$.cvar);
     }
     return this._settedCvars;
+  }
+
+  get recoil(): number {
+    const effectGroup = this.getFirst('effect_group', 'Base Effects');
+    if (!effectGroup) {
+      return undefined;
+    }
+    const dRecoil = effectGroup.getFirst('display_value', 'dRecoil');
+    if (!dRecoil) {
+      return undefined;
+    }
+    return +dRecoil.$.value;
+  }
+
+  get handling(): number {
+    return this.getPassiveEffectValue('WeaponHandling');
+  }
+
+  get action0(): Action0 {
+    return this.getFirstWithClass<Action0>('property', 'Action0', Action0);
+  }
+
+  /**
+   * @return reload time in seconds
+   */
+  get reloadTime(): number {
+    return this.action0.reloadTime || HARD_CODED_RELOAD_TIMES[this.name];
+  }
+}
+
+export class Action0 extends XmlObject {
+  get reloadTime(): number {
+    const reloadTime = this.getFirst('property', 'Reload_time');
+    return reloadTime ? +reloadTime.$.value : undefined;
   }
 }

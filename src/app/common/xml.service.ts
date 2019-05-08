@@ -85,24 +85,34 @@ export class XmlObject {
     return minValue + tier / (maxTier - minTier) * (maxValue - minValue);
   }
 
-  getFirst(xmlTag: string, name: string): XmlObject {
+  /**
+   * @param xmlTag nom de l'élément XML fils
+   * @param name valeur de l'attribut name des fils à rechercher
+   * @param xmlObjectClass classe utilisée pour construire l'élément trouvé (ça devrait être en fait le type de retour de cette méthode)
+   */
+  getFirst<T extends XmlObject>(xmlTag: string, name: string, xmlObjectClass = XmlObject): T {
     return this.firstCache.getOrPut(xmlTag, name, () => {
       if (!(xmlTag in this.xmlElement)) {
         return undefined;
       }
       const firstChild = this.xmlElement[xmlTag].find(child => child.$ && child.$.name === name);
-      return firstChild ? new XmlObject(firstChild) : undefined;
-    });
+      return firstChild ? new xmlObjectClass(firstChild) : undefined;
+    }) as T;
   }
 
-  getFirstWithClass(xmlTag: string, className: string): XmlObject {
+  /**
+   * @param xmlTag nom de l'élément XML fils
+   * @param className valeur de l'attribut className des fils à rechercher
+   * @param xmlObjectClass classe utilisée pour construire l'élément trouvé (ça devrait être en fait le type de retour de cette méthode)
+   */
+  getFirstWithClass<T extends XmlObject>(xmlTag: string, className: string, xmlObjectClass = XmlObject): T {
     return this.firstWithClassCache.getOrPut(xmlTag, className, () => {
       if (!(xmlTag in this.xmlElement)) {
         return undefined;
       }
       const firstChild = this.xmlElement[xmlTag].find(child => child.$ && child.$.class === className);
-      return firstChild ? new XmlObject(firstChild) : undefined;
-    });
+      return firstChild ? new xmlObjectClass(firstChild) : undefined;
+    }) as T;
   }
 
   get $() {

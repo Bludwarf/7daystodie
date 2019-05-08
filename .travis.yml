@@ -22,7 +22,7 @@ install:
   - npm install
 
 script:
-  # - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI // FIXME
+  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
   - ng build --prod --base-href /7daystodie/
 
 deploy:

@@ -1680,7 +1680,8 @@ We _want_ players to specialise so we also have to make it feasible.
 </item>
 
 <item name="gunSMG5">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,selfLoading,bottomAttachments,perkAutomaticWeapons"/>
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,selfLoading,bottomAttachments,perk
+	maticWeapons"/>
 	<property name="DisplayType" value="rangedGun"/>
 	<property name="HoldType" value="6"/>
 	<property name="Meshfile" value="Items/Weapons/Ranged/MP5/MP5Prefab"/>
