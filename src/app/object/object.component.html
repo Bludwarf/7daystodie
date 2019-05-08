@@ -82,7 +82,7 @@
           <ul>
             <li *ngFor="let ingredient of object.recipe.ingredients">
               <app-item-icon [itemName]="ingredient.name"></app-item-icon>
-              {{ingredient.count}}* <a [href]="'/'+ingredient.name">{{ingredient.name | translate}}</a>
+              {{ingredient.count}}* <a [href]="ingredient.name">{{ingredient.name | translate}}</a>
             </li>
           </ul>
 

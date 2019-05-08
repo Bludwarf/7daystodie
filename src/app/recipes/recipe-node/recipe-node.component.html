@@ -1,7 +1,7 @@
 <input matInput type="number" [(ngModel)]="node.item.count" required min="1" max="999" class="count" [readonly]="!node.hasChildren" />
 <app-item-icon [itemName]="(node.item.item || node.item.recipe).name" class="ItemIcons"></app-item-icon>
 <span class="itemName">
-  <a [href]="'/' + node.item.name" target="_blank">{{node.item.name | translate }}</a>
+  <a [href]="node.item.name" target="_blank">{{node.item.name | translate }}</a>
 </span>
 
 <!-- Recipe -->
