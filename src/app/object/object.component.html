@@ -52,14 +52,38 @@
               <th colspan="2">Attack Statistics</th>
             </tr>
 
+            <tr *ngIf="object.item.MagazineItemNames">
+              <td>Magazine Item</td>
+              <td>
+                <select [(ngModel)]="selectedMagazineItem">
+                  <option *ngFor="let magazineItem of magazineItems(object)" [ngValue]="magazineItem">{{magazineItem.name | translate}}</option>
+                </select>
+              </td>
+            </tr>
+
             <tr>
               <td><a [href]="localization.getWikiUrl('Entity_Damage')">Entity Damage</a></td>
-              <td>{{object.item.EntityDamage}}</td>
+
+              <td>
+                <ng-template [ngIf]="!object.item.MagazineItemNames" [ngIfElse]="entityDamageMagazineItems">
+                  {{object.item.EntityDamage}}
+                </ng-template>
+                <ng-template #entityDamageMagazineItems>
+                    {{object.item.getEntityDamage(selectedMagazineItem)}}
+                </ng-template>
+              </td>
             </tr>
 
             <tr>
               <td><a [href]="localization.getWikiUrl('Block_Damage')">Block Damage</a></td>
-              <td>{{object.item.BlockDamage}}</td>
+              <td>
+                <ng-template [ngIf]="!object.item.MagazineItemNames" [ngIfElse]="blockDamageMagazineItems">
+                  {{object.item.BlockDamage}}
+                </ng-template>
+                <ng-template #blockDamageMagazineItems>
+                    {{object.item.getBlockDamage(selectedMagazineItem)}}
+                </ng-template>
+              </td>
             </tr>
 
             <tr>
