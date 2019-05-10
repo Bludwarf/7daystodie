@@ -1,6 +1,49 @@
-th[colspan] {
+.main {
+  font-family: sans-serif;
+  background: #505050f2;
+  // font-size: large;
+}
+
+.main > * {
+  overflow: hidden;
+}
+
+.table-container {
+  background: #ffffff1a;
+  float:right;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  width: 22.2em;
+}
+
+table.stats {
+  font-family: "Agency FB Bold", Roboto, "Helvetica Neue", sans-serif;
+  font-size: large;
+  width: 100%;
+}
+
+table.stats th[colspan] {
   text-align: center;
   background: linear-gradient(to right, #383838 0%, #919191 100%);
+  text-shadow: black 1px 1px 3px;
+  font-size: larger;
+  padding: 2px 4px;
+}
+
+table.stats td {
+  padding: 2px 4px;
+}
+
+div.icon {
+  margin: 5px auto;
+}
+
+h1, h2 {
+  border-bottom: 1px solid #a2a9b1;
+}
+
+// Titre de section
+h2 {
 }
 
 .help {

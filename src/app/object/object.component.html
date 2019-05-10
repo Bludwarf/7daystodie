@@ -1,113 +1,128 @@
 <main class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-lg-12">
 
-      <!-- TODO div -->
-      <div style="background: #505050f2;">
+      <div class="main container rounded">
 
         <h1>{{object.name | translate}}</h1>
 
-        <app-item-icon [itemName]="object.name" class="ItemIcons" height="auto"></app-item-icon>
+        <div class="table-container">
+          <table class="stats">
+
+            <tr>
+              <th colspan="2">{{object.name | translate}}</th>
+            </tr>
+
+            <tr>
+              <td colspan="2" style="text-align: center; padding: 10px;">
+                <app-item-icon [itemName]="object.name" class="ItemIcons" height="auto"></app-item-icon>
+              </td>
+            </tr>
+
+            <tr>
+              <th colspan="2">Description</th>
+            </tr>
+
+            <!-- Item details -->
+            <ng-container *ngIf="object.item">
+
+              <tr>
+                <td>Item ID</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Group</td>
+                <td>{{object.item.Group}}</td>
+              </tr>
+              <tr>
+                <td>Category</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <th colspan="2">Statistics</th>
+              </tr>
+
+              <tr>
+                <td><a [href]="localization.getWikiUrl('Durability')">Durability (Level 1)</a></td>
+                <td>{{object.item.getDegradationMax(1)}}</td>
+              </tr>
+
+              <tr>
+                <td><a [href]="localization.getWikiUrl('Durability')">Durability (Level 6)</a></td>
+                <td>{{object.item.getDegradationMax(6)}}</td>
+              </tr>
+
+              <tr>
+                <th colspan="2">Attack Statistics</th>
+              </tr>
+
+              <tr *ngIf="object.item.MagazineItemNames">
+                <td>Magazine Item</td>
+                <td>
+                  <select [(ngModel)]="selectedMagazineItem">
+                    <option *ngFor="let magazineItem of magazineItems(object)"
+                            [ngValue]="magazineItem">{{magazineItem.name | translate}}</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td><a [href]="localization.getWikiUrl('Entity_Damage')">Entity Damage</a></td>
+
+                <td>
+                  <ng-template [ngIf]="!object.item.MagazineItemNames" [ngIfElse]="entityDamageMagazineItems">
+                    {{object.item.EntityDamage}}
+                  </ng-template>
+                  <ng-template #entityDamageMagazineItems>
+                    <a [href]="selectedMagazineItem.name">{{object.item.getEntityDamage(selectedMagazineItem)}}</a>
+                  </ng-template>
+                </td>
+              </tr>
+
+              <tr>
+                <td><a [href]="localization.getWikiUrl('Block_Damage')">Block Damage</a></td>
+                <td>
+                  <ng-template [ngIf]="!object.item.MagazineItemNames" [ngIfElse]="blockDamageMagazineItems">
+                    {{object.item.BlockDamage}}
+                  </ng-template>
+                  <ng-template #blockDamageMagazineItems>
+                    <a [href]="selectedMagazineItem.name">{{object.item.getBlockDamage(selectedMagazineItem)}}</a>
+                  </ng-template>
+                </td>
+              </tr>
+
+              <tr>
+                <td><a [href]="localization.getWikiUrl('Range')">Range Effective</a></td>
+                <td>{{object.item.DamageFalloffRange}}</td>
+              </tr>
+
+              <tr>
+                <td><a [href]="localization.getWikiUrl('Range')">Max Range</a></td>
+                <td>{{object.item.MaxRange}}</td>
+              </tr>
+
+            </ng-container>
+
+            <tr>
+              <th colspan="2">Obtained through</th>
+            </tr>
+
+            <tr>
+              <td><a [href]="localization.getWikiUrl('Crafting')">Crafting</a></td>
+              <td>{{object.recipe ? 'Yes' : 'No'}}</td>
+            </tr>
+
+          </table><!-- details -->
+        </div>
 
         <h2>Description</h2>
 
-        <h2>Details</h2>
-        <table style="background: #ffffff1a;">
-
-          <tr>
-            <th colspan="2">Description</th>
-          </tr>
-
-          <!-- Item details -->
-          <ng-container *ngIf="object.item">
-
-            <tr>
-              <td>Item ID</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Group</td>
-              <td>{{object.item.Group}}</td>
-            </tr>
-            <tr>
-              <td>Category</td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <th colspan="2">Statistics</th>
-            </tr>
-
-            <tr>
-              <td><a [href]="localization.getWikiUrl('Durability')">Durability (Level 1)</a></td>
-              <td>{{object.item.getDegradationMax(1)}}</td>
-            </tr>
-
-            <tr>
-              <td><a [href]="localization.getWikiUrl('Durability')">Durability (Level 6)</a></td>
-              <td>{{object.item.getDegradationMax(6)}}</td>
-            </tr>
-
-            <tr>
-              <th colspan="2">Attack Statistics</th>
-            </tr>
-
-            <tr *ngIf="object.item.MagazineItemNames">
-              <td>Magazine Item</td>
-              <td>
-                <select [(ngModel)]="selectedMagazineItem">
-                  <option *ngFor="let magazineItem of magazineItems(object)" [ngValue]="magazineItem">{{magazineItem.name | translate}}</option>
-                </select>
-              </td>
-            </tr>
-
-            <tr>
-              <td><a [href]="localization.getWikiUrl('Entity_Damage')">Entity Damage</a></td>
-
-              <td>
-                <ng-template [ngIf]="!object.item.MagazineItemNames" [ngIfElse]="entityDamageMagazineItems">
-                  {{object.item.EntityDamage}}
-                </ng-template>
-                <ng-template #entityDamageMagazineItems>
-                  <a [href]="selectedMagazineItem.name">{{object.item.getEntityDamage(selectedMagazineItem)}}</a>
-                </ng-template>
-              </td>
-            </tr>
-
-            <tr>
-              <td><a [href]="localization.getWikiUrl('Block_Damage')">Block Damage</a></td>
-              <td>
-                <ng-template [ngIf]="!object.item.MagazineItemNames" [ngIfElse]="blockDamageMagazineItems">
-                  {{object.item.BlockDamage}}
-                </ng-template>
-                <ng-template #blockDamageMagazineItems>
-                  <a [href]="selectedMagazineItem.name">{{object.item.getBlockDamage(selectedMagazineItem)}}</a>
-                </ng-template>
-              </td>
-            </tr>
-
-            <tr>
-              <td><a [href]="localization.getWikiUrl('Range')">Range Effective</a></td>
-              <td>{{object.item.DamageFalloffRange}}</td>
-            </tr>
-
-            <tr>
-              <td><a [href]="localization.getWikiUrl('Range')">Max Range</a></td>
-              <td>{{object.item.MaxRange}}</td>
-            </tr>
-
+        <p>
+          <ng-container *ngIf="object.recipe">
+            {{object.item.name | describe}}
           </ng-container>
-
-          <tr>
-            <th colspan="2">Obtained through</th>
-          </tr>
-
-          <tr>
-            <td><a [href]="localization.getWikiUrl('Crafting')">Crafting</a></td>
-            <td>{{object.recipe ? 'Yes' : 'No'}}</td>
-          </tr>
-
-        </table><!-- details -->
+        </p>
 
         <ng-container *ngIf="object.recipe">
           <h2>Crafting</h2>
@@ -115,7 +130,7 @@
           <h4>Required Items</h4>
           <ul>
             <li *ngFor="let ingredient of object.recipe.ingredients">
-              <app-item-icon [itemName]="ingredient.name"></app-item-icon>
+              <app-item-icon [itemName]="ingredient.name" height="56px"></app-item-icon>
               {{ingredient.count}}* <a [href]="ingredient.name">{{ingredient.name | translate}}</a>
             </li>
           </ul>
@@ -128,7 +143,10 @@
           <li><a [href]="localization.getWikiUrl(object.name)">Wiki</a></li>
         </ul>
 
+        <br style="clear: both;"/>
+
       </div>
+
     </div>
   </div>
 </main>

@@ -8,7 +8,7 @@ export class DescribePipe implements PipeTransform {
 
   constructor(private localization: LocalizationService) { }
 
-  transform(value: any, lang?: string): any {
+  transform(value: string, lang?: string): any {
     return this.localization.describe(value);
   }
 
