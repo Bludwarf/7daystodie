@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {Item, ItemsService} from '../items.service';
 import {Color, Solver} from '../../lib/ColorSolver';
 
@@ -22,6 +22,8 @@ const getCustomIconTintColor = (value: string): Color => {
 export class ItemIconComponent implements OnInit {
 
   @Input('itemName') itemName: string;
+  /** CSS height */
+  @Input('height') height: string;
   @ViewChild('filter') filter: ElementRef;
 
   constructor(private items: ItemsService) { }
