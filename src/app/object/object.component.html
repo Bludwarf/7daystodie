@@ -69,7 +69,7 @@
                   {{object.item.EntityDamage}}
                 </ng-template>
                 <ng-template #entityDamageMagazineItems>
-                    {{object.item.getEntityDamage(selectedMagazineItem)}}
+                  <a [href]="selectedMagazineItem.name">{{object.item.getEntityDamage(selectedMagazineItem)}}</a>
                 </ng-template>
               </td>
             </tr>
@@ -81,7 +81,7 @@
                   {{object.item.BlockDamage}}
                 </ng-template>
                 <ng-template #blockDamageMagazineItems>
-                    {{object.item.getBlockDamage(selectedMagazineItem)}}
+                  <a [href]="selectedMagazineItem.name">{{object.item.getBlockDamage(selectedMagazineItem)}}</a>
                 </ng-template>
               </td>
             </tr>
