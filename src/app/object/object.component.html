@@ -156,9 +156,7 @@
         <h2>Description</h2>
 
         <p>
-          <ng-container *ngIf="object.recipe">
-            {{object.item.name | describe}}
-          </ng-container>
+          {{object.name | describe}}
         </p>
 
         <ng-container *ngIf="object.recipe">
