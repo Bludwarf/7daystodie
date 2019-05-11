@@ -57,15 +57,24 @@
                 <th colspan="2">Attack Statistics</th>
               </tr>
 
-              <tr *ngIf="object.item.MagazineItemNames">
-                <td>Magazine Item</td>
-                <td>
-                  <select [(ngModel)]="selectedMagazineItem">
-                    <option *ngFor="let magazineItem of magazineItems(object)"
-                            [ngValue]="magazineItem">{{magazineItem.name | translate}}</option>
-                  </select>
-                </td>
-              </tr>
+              <ng-container *ngIf="object.item.MagazineItemNames">
+
+                <tr>
+                  <td>Magazine Size</td>
+                  <td>{{object.item.MagazineSize}}</td>
+                </tr>
+
+                <tr>
+                  <td>Magazine Item</td>
+                  <td>
+                    <select [(ngModel)]="selectedMagazineItem">
+                      <option *ngFor="let magazineItem of magazineItems(object)"
+                              [ngValue]="magazineItem">{{magazineItem.name | translate}}</option>
+                    </select>
+                  </td>
+                </tr>
+
+              </ng-container>
 
               <tr>
                 <td><a [href]="localization.getWikiUrl('Entity_Damage')">Entity Damage</a></td>
@@ -102,6 +111,21 @@
                 <td>{{object.item.MaxRange}}</td>
               </tr>
 
+              <tr>
+                <td>Recoil</td>
+                <td>{{object.item.recoil}}</td>
+              </tr>
+
+              <tr>
+                <td><a [href]="localization.getWikiUrl('Handling')">Handling</a></td>
+                <td>{{object.item.handling}}</td>
+              </tr>
+
+              <tr>
+                <td>Reload Speed</td>
+                <td>{{object.item.reloadTime}}s</td>
+              </tr>
+
             </ng-container>
 
             <tr>
@@ -112,6 +136,19 @@
               <td><a [href]="localization.getWikiUrl('Crafting')">Crafting</a></td>
               <td>{{object.recipe ? 'Yes' : 'No'}}</td>
             </tr>
+
+            <ng-container *ngIf="object.recipe">
+
+              <tr>
+                <th colspan="2">Crafting</th>
+              </tr>
+
+              <tr *ngIf="getRequiredPerkLevelForRecipe(object.recipe) as perkLevel">
+                <td>Unlocked with</td>
+                <td>{{perkLevelToString(perkLevel)}}</td>
+              </tr>
+
+            </ng-container>
 
           </table><!-- details -->
         </div>

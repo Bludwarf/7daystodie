@@ -4,6 +4,8 @@ import {DialogService} from '../dialog.service';
 import {ActivatedRoute} from '@angular/router';
 import {LocalizationService} from '../localization/localization.service';
 import {Item, ItemsService} from '../items/items.service';
+import {PerkLevel, PerksService} from '../progression/perks.service';
+import {Recipe} from '../recipes/recipes.service';
 
 @Component({
   selector: 'app-object',
@@ -17,7 +19,7 @@ export class ObjectComponent implements OnInit {
   private magazineItemsCache: Item[];
 
   constructor(private route: ActivatedRoute, public dialogService: DialogService, public localization: LocalizationService,
-              private items: ItemsService) {
+              private items: ItemsService, private perks: PerksService) {
   }
 
   ngOnInit() {
@@ -46,4 +48,16 @@ export class ObjectComponent implements OnInit {
     return this.magazineItemsCache;
   }
 
+  getRequiredPerkLevelForRecipe(recipe: Recipe): PerkLevel | undefined {
+    const perkLevel = this.perks.getRequiredPerkLevelForRecipe(recipe.name);
+    if (!perkLevel) {
+      console.error(`Cannot find required PerkLevel for recipe "${recipe.name}"`);
+      return undefined;
+    }
+    return perkLevel;
+  }
+
+  perkLevelToString(perkLevel: PerkLevel) {
+    return this.perks.perkLevelToString(perkLevel, this.localization);
+  }
 }

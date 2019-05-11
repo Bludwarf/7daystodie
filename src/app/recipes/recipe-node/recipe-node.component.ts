@@ -44,8 +44,7 @@ export class RecipeNodeComponent implements OnInit {
   }
 
   perkLevelToString(perkLevel: PerkLevel) {
-    const localName = this.localization.translate(perkLevel.name + 'Name');
-    return `${localName} ${this.localization.translate('xuiSkillLevel')} ${perkLevel.level}`;
+    return this.perks.perkLevelToString(perkLevel, this.localization);
   }
 
   getCraftAreaIcon(craftArea: string) {

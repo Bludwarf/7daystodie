@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/progression.xml.json';
 import {XmlObject, XmlObjectsCache, XmlService} from '../common/xml.service';
+import {LocalizationService} from '../localization/localization.service';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,11 @@ export class PerksService extends XmlService<Perk> {
       // noinspection JSUnusedAssignment
       return foundPerkLevel;
     });
+  }
+
+  perkLevelToString(perkLevel: PerkLevel, localization: LocalizationService): string {
+    const localName = localization.translate(perkLevel.name + 'Name');
+    return `${localName} ${localization.translate('xuiSkillLevel')} ${perkLevel.level}`;
   }
 }
 
