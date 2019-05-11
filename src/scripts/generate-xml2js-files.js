@@ -4,6 +4,7 @@ require('colors');
 
 const files = [
   'src/assets/Data/Config/items.xml',
+  'src/assets/Data/Config/item_modifiers.xml',
   'src/assets/Data/Config/progression.xml',
   'src/assets/Data/Config/recipes.xml'
 ];

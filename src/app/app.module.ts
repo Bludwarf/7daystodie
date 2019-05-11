@@ -33,6 +33,7 @@ import { RecipeComponent } from './recipe/recipe.component';
 import { ItemComponent } from './item/item.component';
 import { ObjectComponent } from './object/object.component';
 import { DescribePipe } from './pipes/describe.pipe';
+import { ItemModifierComponent } from './item-modifier/item-modifier.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { DescribePipe } from './pipes/describe.pipe';
     RecipeComponent,
     ItemComponent,
     ObjectComponent,
-    DescribePipe
+    DescribePipe,
+    ItemModifierComponent
   ],
   imports: [
     BrowserModule,
