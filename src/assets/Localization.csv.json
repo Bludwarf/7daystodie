@@ -1,4 +1,9 @@
 {
+  "Discard changes?": {
+    "Key": "Discard changes?",
+    "English": "Discard changes?",
+    "French": "Abandonner les modifications ?"
+  },
   "nameFilter": {
     "Key": "nameFilter",
     "English": "Name filter",
