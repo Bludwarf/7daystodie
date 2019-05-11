@@ -155,9 +155,7 @@
 
         <h2>Description</h2>
 
-        <p>
-          {{object.name | describe}}
-        </p>
+        <p [innerHTML]="object.name | describe"></p>
 
         <ng-container *ngIf="object.recipe">
           <h2>Crafting</h2>
