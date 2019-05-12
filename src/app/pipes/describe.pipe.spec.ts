@@ -7,7 +7,7 @@ describe('DescribePipe', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('create an instance', () => {
-    const pipe = new DescribePipe(TestBed.get(LocalizationService, DomSanitizer));
+    const pipe = new DescribePipe(TestBed.get(LocalizationService), TestBed.get(DomSanitizer));
     expect(pipe).toBeTruthy();
   });
 });
