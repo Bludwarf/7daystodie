@@ -44,15 +44,17 @@ $background: map-get($app-theme, background);
 @import url(allfont.css);
 
 html, body {
-  min-height: 100vw;
   background-color: map-get($background, background);
+  margin: 0;
+}
+
+html {
+  background: url(https://7daystodie.gamepedia.com/media/7daystodie.gamepedia.com/2/20/7dtd_background.jpg) no-repeat fixed top center map-get($background, background);
+  background-size: cover;
 }
 
 body {
-  margin: 0;
   font-family: "Agency FB Bold", Roboto, "Helvetica Neue", sans-serif;
-  background: url(https://7daystodie.gamepedia.com/media/7daystodie.gamepedia.com/2/20/7dtd_background.jpg) no-repeat fixed top center map-get($background, background);
-  background-size: cover;
 }
 
 a {
