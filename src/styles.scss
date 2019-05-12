@@ -44,7 +44,6 @@ $background: map-get($app-theme, background);
 @import url(allfont.css);
 
 html, body {
-  background-color: map-get($background, background);
   margin: 0;
 }
 
@@ -54,6 +53,7 @@ html {
 }
 
 body {
+  background: none;
   font-family: "Agency FB Bold", Roboto, "Helvetica Neue", sans-serif;
 }
 
