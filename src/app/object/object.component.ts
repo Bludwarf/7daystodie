@@ -54,7 +54,6 @@ export class ObjectComponent implements OnInit, AfterViewInit  {
   getRequiredPerkLevelForRecipe(recipe: Recipe): PerkLevel | undefined {
     const perkLevel = this.perks.getRequiredPerkLevelForRecipe(recipe.name);
     if (!perkLevel) {
-      console.error(`Cannot find required PerkLevel for recipe "${recipe.name}"`);
       return undefined;
     }
     return perkLevel;

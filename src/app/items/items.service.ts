@@ -277,6 +277,9 @@ export class Item extends XmlObject {
    * @return reload time in seconds
    */
   get reloadTime(): number {
+    if (!this.action0) {
+      return undefined;
+    }
     return this.action0.reloadTime || HARD_CODED_RELOAD_TIMES[this.name];
   }
 }
