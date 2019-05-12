@@ -54,6 +54,10 @@ h2 {
 .crafting-container {
   display: flex;
   align-items: center;
+
+  a {
+    font-weight: bold;
+  }
 }
 
 .crafting-container > * {
@@ -74,6 +78,7 @@ h2 {
 
 .crafting-items.with-area {
   border-right: solid 1px;
+  padding-right: 1ex;
 }
 
 .crafting-area,
