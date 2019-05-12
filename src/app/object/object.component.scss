@@ -50,3 +50,38 @@ h2 {
 .help {
   cursor: help;
 }
+
+.crafting-container {
+  display: flex;
+  align-items: center;
+}
+
+.crafting-container > * {
+  flex-grow: 1;
+}
+
+.crafting-items {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-auto-rows: auto;
+  align-items: center;
+
+  .count {
+    text-align: right;
+    margin-right: 1ex;
+  }
+}
+
+.crafting-items.with-area {
+  border-right: solid 1px;
+}
+
+.crafting-area,
+.crafting-tool,
+.crafting-perk {
+  text-align: center;
+
+  p:last-child {
+    margin-top: 1em;
+  }
+}

@@ -34,6 +34,7 @@ import { ItemComponent } from './item/item.component';
 import { ObjectComponent } from './object/object.component';
 import { DescribePipe } from './pipes/describe.pipe';
 import { ItemModifierComponent } from './item-modifier/item-modifier.component';
+import { UiAtlasItemIconComponent } from './ui-atlas-item-icon/ui-atlas-item-icon.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ItemModifierComponent } from './item-modifier/item-modifier.component';
     ItemComponent,
     ObjectComponent,
     DescribePipe,
-    ItemModifierComponent
+    ItemModifierComponent,
+    UiAtlasItemIconComponent
   ],
   imports: [
     BrowserModule,

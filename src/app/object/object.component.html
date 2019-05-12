@@ -160,12 +160,43 @@
           <h2>Crafting</h2>
 
           <h4>Required Items</h4>
-          <ul>
-            <li *ngFor="let ingredient of object.recipe.ingredients">
-              <app-item-icon [itemName]="ingredient.name" height="56px"></app-item-icon>
-              {{ingredient.count}}* <a [href]="ingredient.name">{{ingredient.name | translate}}</a>
-            </li>
-          </ul>
+
+          <div class="crafting-container">
+
+            <div class="crafting-items" [ngClass]="{'with-area': object.recipe.craftArea}">
+              <ng-container *ngFor="let ingredient of object.recipe.ingredients">
+                <div>
+                  <app-item-icon [itemName]="ingredient.name" height="56px"></app-item-icon>
+                </div>
+                <div class="count">{{ingredient.count}}</div>
+                <div>
+                  <a [href]="ingredient.name">{{ingredient.name | translate}}</a>
+                </div>
+              </ng-container>
+            </div>
+
+            <div #craftAreaElement class="crafting-area" *ngIf="object.recipe.craftArea as craftArea">
+              <p>At a</p>
+              <app-item-icon [itemName]="craftArea" height="56px"></app-item-icon>
+              <p><a [href]="craftArea">{{craftArea | translate}}</a></p>
+            </div>
+
+            <div #craftToolElement class="crafting-tool" *ngIf="object.recipe.craftTool as craftTool">
+              <p>that has a</p>
+              <app-item-icon [itemName]="craftTool" height="56px"></app-item-icon>
+              <p><a [href]="craftTool">{{craftTool | translate}}</a></p>
+            </div>
+
+            <div #perkLevelElement class="crafting-perk" *ngIf="getRequiredPerkLevelForRecipe(object.recipe) as perkLevel">
+              <p>After attaining</p>
+              <app-ui-atlas-item-icon name="ui_game_symbol_skills" height="56px" [level]="perkLevel.level"></app-ui-atlas-item-icon>
+              <p>
+                {{perkLevel.name + 'Name' | translate}}<br/>
+                {{'xuiSkillLevel' | translate}} {{perkLevel.level}}
+              </p>
+            </div>
+
+          </div>
 
         </ng-container>
 
