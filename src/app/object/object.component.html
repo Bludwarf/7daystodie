@@ -157,9 +157,9 @@
         <p [innerHTML]="object.name | describe"></p>
 
         <ng-container *ngIf="object.recipe">
-          <h2>Crafting</h2>
+          <h2>{{'xuiWPcrafting' | translate}}</h2>
 
-          <h4>Required Items</h4>
+          <h4>{{'requiredItems' | translate}}</h4>
 
           <div class="crafting-container">
 
@@ -176,19 +176,19 @@
             </div>
 
             <div #craftAreaElement class="crafting-area" *ngIf="object.recipe.craftArea as craftArea">
-              <p>At a</p>
+              <p>{{'atA' | translate}}</p>
               <app-item-icon [itemName]="craftArea" height="56px"></app-item-icon>
               <p><a [href]="craftArea">{{craftArea | translate}}</a></p>
             </div>
 
             <div #craftToolElement class="crafting-tool" *ngIf="object.recipe.craftTool as craftTool">
-              <p>that has a</p>
+              <p>{{'thatHasA' | translate}}</p>
               <app-item-icon [itemName]="craftTool" height="56px"></app-item-icon>
               <p><a [href]="craftTool">{{craftTool | translate}}</a></p>
             </div>
 
             <div #perkLevelElement class="crafting-perk" *ngIf="getRequiredPerkLevelForRecipe(object.recipe) as perkLevel">
-              <p>After attaining</p>
+              <p>{{'afterAttaining' | translate}}</p>
               <app-ui-atlas-item-icon name="ui_game_symbol_skills" height="56px" [level]="perkLevel.level"></app-ui-atlas-item-icon>
               <p>
                 {{perkLevel.name + 'Name' | translate}}<br/>
@@ -200,7 +200,7 @@
 
         </ng-container>
 
-        <h2>See also</h2>
+        <h2>{{'seeAlso' | translate}}</h2>
 
         <ul>
           <li><a [href]="localization.getWikiUrl(object.name)">Wiki</a></li>

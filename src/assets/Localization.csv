@@ -1,11 +1,16 @@
 ﻿Key,English,French
+atA,At a,Dans un·e
+afterAttaining,After attaining,Après avoir obtenu
 Discard changes?,Discard changes?,Abandonner les modifications ?
 nameFilter,Name filter,Filtre sur le nom
 ok?,Is it OK?,Est-ce bon ?
 pageList_of_weapons,List of weapons,Liste des armes
 pageRecipes,Recipes,Recettes
 pageRecipe,Recipe,Recette
+requiredItems,Required Items,Éléments nécessaires
 reset,Reset,RAZ
+seeAlso,See also,Voir aussi
+thatHasA,that has a,qui possède un·e
 shoppingList,Shopping List,Liste de courses
 shoppingListColName,Name,Nom
 shoppingListColCount,Count,Quantité

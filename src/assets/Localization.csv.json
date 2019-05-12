@@ -1,4 +1,14 @@
 {
+  "atA": {
+    "Key": "atA",
+    "English": "At a",
+    "French": "Dans un·e"
+  },
+  "afterAttaining": {
+    "Key": "afterAttaining",
+    "English": "After attaining",
+    "French": "Après avoir obtenu"
+  },
   "Discard changes?": {
     "Key": "Discard changes?",
     "English": "Discard changes?",
@@ -29,10 +39,25 @@
     "English": "Recipe",
     "French": "Recette"
   },
+  "requiredItems": {
+    "Key": "requiredItems",
+    "English": "Required Items",
+    "French": "Éléments nécessaires"
+  },
   "reset": {
     "Key": "reset",
     "English": "Reset",
     "French": "RAZ"
+  },
+  "seeAlso": {
+    "Key": "seeAlso",
+    "English": "See also",
+    "French": "Voir aussi"
+  },
+  "thatHasA": {
+    "Key": "thatHasA",
+    "English": "that has a",
+    "French": "qui possède un·e"
   },
   "shoppingList": {
     "Key": "shoppingList",
