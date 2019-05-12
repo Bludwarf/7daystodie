@@ -1,6 +1,5 @@
 import {TestBed} from '@angular/core/testing';
 import {ItemsService} from './items.service';
-import {RecipesService} from '../recipes/recipes.service';
 import {LinkedElementNotSedError} from '../item/passive-effect';
 
 const ITEMS_COUNT = 579; // TODO 676 !!!
@@ -26,6 +25,7 @@ describe('ItemsService', () => {
     expect(item.recoil).toEqual(8);
     expect(item.handling).toEqual(0.95);
     expect(item.reloadTime).toEqual(2);
+    expect(item.tags).toEqual(['weapon', 'ranged', 'holdBreathAiming', 'reloadPenalty', 'gun', 'shortRange', 'pistol', 'barrelAttachments', 'sideAttachments', 'smallTopAttachments', 'magazine', 'firingMode', 'selfLoading', 'perkGunslinger']);
 
     // Assertions sur un exemple de munitions
     const magazineItem = items.get(item.MagazineItemNames[0]);

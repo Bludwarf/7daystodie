@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {XmlService} from '../common/xml.service';
 import xmlFile from 'src/assets/Data/Config/item_modifiers.xml.json';
 import {ItemModifier} from './item-modifier';
+import {Item} from '../items/items.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,9 @@ export class ItemModifiersService extends XmlService<ItemModifier> {
 
   newElement(xmlElement: any): ItemModifier {
     return new ItemModifier(xmlElement);
+  }
+
+  getAllModsInstallableOn(item: Item): ItemModifier[] {
+    return undefined; // TODO
   }
 }

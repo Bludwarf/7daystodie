@@ -282,6 +282,14 @@ export class Item extends XmlObject {
     }
     return this.action0.reloadTime || HARD_CODED_RELOAD_TIMES[this.name];
   }
+
+  get tags(): string[] {
+    const tags = this.getFirst('property', 'Tags');
+    if (!tags) {
+      return undefined;
+    }
+    return tags.$.value.split(',');
+  }
 }
 
 export class Action0 extends XmlObject {
