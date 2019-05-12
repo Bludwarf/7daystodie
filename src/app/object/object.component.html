@@ -65,8 +65,7 @@
                 </tr>
 
                 <tr>
-                  <td>Magazine Item</td>
-                  <td>
+                  <td colspan="2">
                     <select [(ngModel)]="selectedMagazineItem">
                       <option *ngFor="let magazineItem of magazineItems(object)"
                               [ngValue]="magazineItem">{{magazineItem.name | translate}}</option>
