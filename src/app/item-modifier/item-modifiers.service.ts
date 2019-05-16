@@ -18,6 +18,6 @@ export class ItemModifiersService extends XmlService<ItemModifier> {
   }
 
   getAllModsInstallableOn(item: Item): ItemModifier[] {
-    return undefined; // TODO
+    return this.getAll().filter(mod => mod.isInstallableOn(item));
   }
 }

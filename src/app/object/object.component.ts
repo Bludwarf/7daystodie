@@ -6,6 +6,8 @@ import {LocalizationService} from '../localization/localization.service';
 import {Item, ItemsService} from '../items/items.service';
 import {PerkLevel, PerksService} from '../progression/perks.service';
 import {Recipe} from '../recipes/recipes.service';
+import {ItemModifier} from '../item-modifier/item-modifier';
+import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
 
 @Component({
   selector: 'app-object',
@@ -22,7 +24,7 @@ export class ObjectComponent implements OnInit, AfterViewInit  {
   @ViewChild('perkLevelElement') perkLevelElement: ElementRef;
 
   constructor(private route: ActivatedRoute, public dialogService: DialogService, public localization: LocalizationService,
-              private items: ItemsService, private perks: PerksService) {
+              private items: ItemsService, private perks: PerksService, private itemModifiersService: ItemModifiersService) {
   }
 
   ngOnInit() {
@@ -82,6 +84,19 @@ export class ObjectComponent implements OnInit, AfterViewInit  {
       if (alignMode === AlignMode.HORIZONTAL || alignMode === AlignMode.BOTH) {
         style.left = `${baseElement.nativeElement.offsetLeft - element.nativeElement.offsetLeft}px`;
       }
+    }
+  }
+
+  getAllModsInstallableOn(): ItemModifier[] {
+    if (this.object.item) {
+      const mods = this.itemModifiersService.getAllModsInstallableOn(this.object.item);
+      if (!mods || mods.length === 0) {
+        return undefined;
+      }
+      return mods
+        .sort((a, b) => this.localization.translate(a.name).localeCompare(this.localization.translate(b.name), undefined, { sensitivity: 'base' }));
+    } else {
+      return undefined;
     }
   }
 }

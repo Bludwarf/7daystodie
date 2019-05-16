@@ -36,5 +36,6 @@ describe('ItemModifiersService', () => {
     const items: ItemsService = TestBed.get(ItemsService);
     const pistol = items.get('gunPistol');
     const mods = service.getAllModsInstallableOn(pistol);
+    expect(mods).toContain(service.get('modGunSoundSuppressorSilencer'));
   });
 });

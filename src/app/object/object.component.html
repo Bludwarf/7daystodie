@@ -200,6 +200,14 @@
 
         </ng-container>
 
+        <ng-container *ngIf="getAllModsInstallableOn() as mods">
+          <h2>Weapon Modifications</h2>
+
+          <ul>
+            <li *ngFor="let mod of mods"><a [href]="mod.name">{{mod.name | translate}}</a></li>
+          </ul>
+        </ng-container>
+
         <h2>{{'seeAlso' | translate}}</h2>
 
         <ul>

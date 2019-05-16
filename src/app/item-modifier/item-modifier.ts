@@ -7,11 +7,11 @@ export class ItemModifier extends XmlObject {
   }
 
   get installableTags(): string[] {
-    return this.$.installable_tags.split(',');
+    return this.$.installable_tags ? this.$.installable_tags.split(',') : [];
   }
 
   get blockedTags(): string[] {
-    return this.$.blocked_tags.split(',');
+    return this.$.blocked_tags ? this.$.blocked_tags.split(',') : [];
   }
 
 
