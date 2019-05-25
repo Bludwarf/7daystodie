@@ -290,6 +290,7 @@
 			<requirement name="HoldingItemHasTags" tags="perkShotgunMessiah"/>
 			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.1,0.30" level="1,5"/>
 			<passive_effect name="RoundsPerMinute" operation="perc_add" value="0.15,0.35" level="1,5"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".05,.10,.2,.3,.45" level="1,2,3,4,5" tags="arm,leg"/>
 
 
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned1">
@@ -474,6 +475,7 @@
 			<requirement name="HoldingItemHasTags" tags="perkExplosiveWeapons"/>
 			<passive_effect name="WeaponHandling" operation="perc_add" value="0.1,0.5" level="1,5"/>
 			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.15,0.35" level="1,5"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".05,.1,.2,.3,.45" level="1,2,3,4,5"/>
 
 			<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.2,0.5" level="1,5"/>
 			<passive_effect name="MaxRange" operation="perc_add" value="0.15,0.25" level="3,5"/>
@@ -497,7 +499,7 @@
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="ranged"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="0.2,1" level="1,5" tags="head"/>
-			<passive_effect name="DismemberChance" operation="base_add" value="0.05,0.15" level="3,5" tags="head"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".05,.1,.2,.3,.45" level="1,2,3,4,5" tags="head"/>
 			<effect_description level="1" desc_key="perkHeadshotRank1Desc"/>
 			<effect_description level="2" desc_key="perkHeadshotRank2Desc"/>
 			<effect_description level="3" desc_key="perkHeadshotRank3Desc"/>
@@ -628,6 +630,7 @@
 			<requirement name="HoldingItemHasTags" tags="perkDeepCuts"/>
 			<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
 			<passive_effect name="EntityDamage" operation="perc_add" value="0.4,2" level="1,5" tags="secondary"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".05,.10,.2,.3,.45" level="1,2,3,4,5" tags="arm,leg,secondary"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="perkDeepCutsRank1Desc"/>
@@ -856,7 +859,7 @@
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="melee"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="0.2,1" level="1,5" tags="head"/>
-			<passive_effect name="DismemberChance" operation="base_add" value="0.05,0.15" level="3,5" tags="head"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".05,.1,.2,.3,.45" level="1,2,3,4,5" tags="head"/>
 			<effect_description level="1" desc_key="perkSkullCrusherRank1Desc"/>
 			<effect_description level="2" desc_key="perkSkullCrusherRank2Desc"/>
 			<effect_description level="3" desc_key="perkSkullCrusherRank3Desc"/>
@@ -914,10 +917,6 @@
 		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
 
 		<effect_group>
-			<!--
-			<passive_effect name="HarvestCount" operation="perc_add" value="1" tags="oreWoodHarvest"/>
-			<passive_effect name="HarvestCount" operation="perc_add" value=".4,2" level="1,5" tags="oreWoodHarvest"/>
-			-->
 			<passive_effect name="HarvestCount" operation="perc_add" value=".2,1" level="1,5" tags="oreWoodHarvest"/>
 
 			<effect_description level="1" desc_key="perkMotherLodeRank1Desc"/>
@@ -957,10 +956,6 @@
 
 		<effect_group>
 			<!-- stone axe, knives, etc do the base_set 1 -->
-			<!--
-			<passive_effect name="HarvestCount" operation="perc_add" value="1" tags="butcherHarvest"/>
-			<passive_effect name="HarvestCount" operation="perc_add" value=".4,2" level="1,5" tags="butcherHarvest"/>
-			-->
 			<passive_effect name="HarvestCount" operation="perc_add" value=".2,1" level="1,5" tags="butcherHarvest"/>
 
 			<effect_description level="1" desc_key="perkTheHuntsmanRank1Desc"/>
@@ -1017,7 +1012,7 @@
 		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="HarvestCount" operation="perc_add" value="2,8" level="2,5" tags="cropHarvest"/>
+			<passive_effect name="HarvestCount" operation="perc_add" value="1,4" level="2,5" tags="cropHarvest"/>
 			<passive_effect name="HarvestCount" operation="perc_add" value="0,0" level="1,5" tags="wildCropsHarvest"/>
 
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="1,5" tags="plantedAloe1,plantedBlueberry1,plantedChrysanthemum1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedGoldenrod1,plantedMushroom1,plantedPotato1,plantedYucca1,plantedHop1"/>
@@ -1360,9 +1355,11 @@
 		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="7" desc_key="reqAgilityLevel07"/></level_requirements>
 		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="10" desc_key="reqAgilityLevel10"/></level_requirements>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
-			<passive_effect name="LightMultiplier" operation="perc_subtract" value="0.15,0.75" level="1,5"/>
-			<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.15,0.25,0.35,0.45,0.6" level="1,2,3,4,5"/>
+			<requirement name="HasBuff" buff="buffCrouching" target="self"/>
+			<passive_effect name="LightMultiplier" operation="perc_subtract" value="0.15,0.75" level="1,5">
+				<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+			</passive_effect>
+			<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.1,0.5" level="1,5"/>
 			<effect_description level="1" desc_key="perkFromTheShadowsRank1Desc"/>
 			<effect_description level="2" desc_key="perkFromTheShadowsRank2Desc"/>
 			<effect_description level="3" desc_key="perkFromTheShadowsRank3Desc"/>

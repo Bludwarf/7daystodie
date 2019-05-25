@@ -854,10 +854,10 @@
 			<button depth="4" name="favorite" pos="17,-16" width="26" height="26" sprite="server_favorite" defaultcolor="180,180,180" hovercolor="[white]" selectedcolor="[selectedColor]" type="simple" pivot="center" hoverscale="1.1" visible="{hasentry}" selected="{isfavorite}" tooltip_key="xuiServerBrowserToggleFavoriteTooltip" />
 			<sprite depth="4" name="anticheat" pos="45,-16" width="26" height="26" sprite="server_icon_vac" color="{anticheatcolor}" type="simple" pivot="center" visible="{hasentry}" />
 			<sprite depth="4" name="password" pos="73,-16" width="26" height="26" sprite="server_locked" color="{passwordcolor}" type="simple" pivot="center" visible="{hasentry}" />
-			<label depth="4" name="Name" pos="92,-2" width="${width-312}" height="32" text="{servername}" font_size="26" justify="left" pivot="topleft" support_bb_code="false" />
-			<label depth="4" name="World" pos="${width-215},-2" width="100" height="32" text="{world}" font_size="26" justify="left" pivot="topleft" />
+			<label depth="4" name="Name" pos="92,-2" width="${width-312}" height="32" text="{servername}" font_size="26" justify="left" pivot="topleft" support_bb_code="false" color="{textcolor}" />
+			<label depth="4" name="World" pos="${width-215},-2" width="100" height="32" text="{world}" font_size="26" justify="left" pivot="topleft" color="{textcolor}" />
 			<!--<label depth="4" name="Difficulty" pos="${width-140},-2" width="30" height="32" text="{difficulty}" font_size="26" justify="right" pivot="topleft" visible="{hasentry}" />-->
-			<label depth="4" name="Players" pos="${width-105},-2" width="50" height="32" text="{playersonline}/{playersmax}" font_size="26" justify="right" pivot="topleft" visible="{hasentry}" />
+			<label depth="4" name="Players" pos="${width-105},-2" width="50" height="32" text="{playersonline}/{playersmax}" font_size="26" justify="right" pivot="topleft" visible="{hasentry}" color="{textcolor}" />
 			<label depth="4" name="Ping" pos="${width-50},-2" width="40" height="32" text="{ping}" color="{pingcolor}" font_size="26" justify="right" pivot="topleft" />
 			<!--
 			<label depth="4" name="Version" pos="${width-10},-2" on_hover="true" color="{versioncolor}" width="80" height="32" text="{version}" tooltip="{versiontooltip}" font_size="26" justify="right" pivot="topright" />

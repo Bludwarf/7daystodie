@@ -666,7 +666,7 @@ A single player on default diff can have a GS of up to 480 without perks.
 
 <lootgroup name="skullCapAll">
 	<item name="skullCap" mods="dye" mod_chance="0.00"/>
-	<item name="santaHat" mods="dye" mod_chance="0.00"/>
+	<!--<item name="santaHat" mods="dye" mod_chance="0.00"/>-->
 </lootgroup>
 
 <lootgroup name="ballCapAll">
@@ -780,8 +780,8 @@ A single player on default diff can have a GS of up to 480 without perks.
 <lootgroup name="weaponsMelee">
 	<item name="meleeClubWood"/>
 	<item name="meleeClubIron"/>
-	<item name="meleeCandyCaneClub" prob="0.4"/>
-	<item name="meleeCandyCaneShiv" prob="0.4"/>
+	<!--<item name="meleeCandyCaneClub" prob="0.4"/>-->
+	<!--<item name="meleeCandyCaneShiv" prob="0.4"/>-->
 	<item name="meleeToolHuntingKnife" prob="0.4"/>
 	<item name="meleeToolMachete" prob="0.2"/>
 </lootgroup>
@@ -846,6 +846,7 @@ A single player on default diff can have a GS of up to 480 without perks.
 <lootgroup name="modGunT2" count="1">
 	<item name="modGunBarrelExtender"/>
 	<item name="modGunCrippleEm"/>
+	<item name="modGunBowArrowRest"/>
 	<item name="modGunLaserSight"/>
 	<item name="modGunReflexSight"/>
 	<item name="modGunRetractingStock"/>
@@ -960,6 +961,7 @@ A single player on default diff can have a GS of up to 480 without perks.
 	<item name="modShotgunSawedOffBarrelSchematic"/>
 	<!--<item name="modGunMeleeFeelTheHeatSchematic"/>-->
 	<item name="modGunCrippleEmSchematic"/>
+	<item name="modGunBowArrowRestSchematic"/>
 	<item name="modGunBowPolymerStringSchematic"/>
 	<!--<item name="modGunMeleeTheHunterSchematic"/>-->
 	<item name="modGunMeleeRadRemoverSchematic"/>

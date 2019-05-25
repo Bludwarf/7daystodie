@@ -2003,6 +2003,15 @@
                       "value": "0.15,0.35",
                       "level": "1,5"
                     }
+                  },
+                  {
+                    "$": {
+                      "name": "DismemberChance",
+                      "operation": "base_add",
+                      "value": ".05,.10,.2,.3,.45",
+                      "level": "1,2,3,4,5",
+                      "tags": "arm,leg"
+                    }
                   }
                 ],
                 "triggered_effect": [
@@ -2945,6 +2954,14 @@
                   },
                   {
                     "$": {
+                      "name": "DismemberChance",
+                      "operation": "base_add",
+                      "value": ".05,.1,.2,.3,.45",
+                      "level": "1,2,3,4,5"
+                    }
+                  },
+                  {
+                    "$": {
                       "name": "DamageFalloffRange",
                       "operation": "perc_add",
                       "value": "0.2,0.5",
@@ -3117,8 +3134,8 @@
                     "$": {
                       "name": "DismemberChance",
                       "operation": "base_add",
-                      "value": "0.05,0.15",
-                      "level": "3,5",
+                      "value": ".05,.1,.2,.3,.45",
+                      "level": "1,2,3,4,5",
                       "tags": "head"
                     }
                   }
@@ -4080,6 +4097,15 @@
                       "value": "0.4,2",
                       "level": "1,5",
                       "tags": "secondary"
+                    }
+                  },
+                  {
+                    "$": {
+                      "name": "DismemberChance",
+                      "operation": "base_add",
+                      "value": ".05,.10,.2,.3,.45",
+                      "level": "1,2,3,4,5",
+                      "tags": "arm,leg,secondary"
                     }
                   }
                 ]
@@ -5381,8 +5407,8 @@
                     "$": {
                       "name": "DismemberChance",
                       "operation": "base_add",
-                      "value": "0.05,0.15",
-                      "level": "3,5",
+                      "value": ".05,.1,.2,.3,.45",
+                      "level": "1,2,3,4,5",
                       "tags": "head"
                     }
                   }
@@ -6530,7 +6556,7 @@
                     "$": {
                       "name": "HarvestCount",
                       "operation": "perc_add",
-                      "value": "2,8",
+                      "value": "1,4",
                       "level": "2,5",
                       "tags": "cropHarvest"
                     }
@@ -8465,10 +8491,9 @@
                 "requirement": [
                   {
                     "$": {
-                      "name": "CVarCompare",
-                      "cvar": "_lightlevel",
-                      "operation": "LTE",
-                      "value": "50"
+                      "name": "HasBuff",
+                      "buff": "buffCrouching",
+                      "target": "self"
                     }
                   }
                 ],
@@ -8479,14 +8504,24 @@
                       "operation": "perc_subtract",
                       "value": "0.15,0.75",
                       "level": "1,5"
-                    }
+                    },
+                    "requirement": [
+                      {
+                        "$": {
+                          "name": "CVarCompare",
+                          "cvar": "_lightlevel",
+                          "operation": "LTE",
+                          "value": "50"
+                        }
+                      }
+                    ]
                   },
                   {
                     "$": {
                       "name": "NoiseMultiplier",
                       "operation": "perc_subtract",
-                      "value": "0.15,0.25,0.35,0.45,0.6",
-                      "level": "1,2,3,4,5"
+                      "value": "0.1,0.5",
+                      "level": "1,5"
                     }
                   }
                 ],

@@ -15217,6 +15217,12 @@
               "name": "resourceWood",
               "count": "4"
             }
+          },
+          {
+            "$": {
+              "name": "glassCTRSheet",
+              "count": "1"
+            }
           }
         ]
       },

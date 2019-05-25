@@ -2,7 +2,7 @@
 	<window name="HUDLeftStatBars">
 		<rect name="hud" pos="9,147" rows="5" cols="1" width="168" side="right">
 		<!-- <grid name="hud" pos="9,52" rows="3" cols="1" width="171" cell_width="168" cell_height="47" repeat_content="false" side="left" pivot="BottomLeft"> -->
-			<rect width="171" height="43" pos="0,94" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+			<rect width="171" height="43" pos="0,47" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
 				<sprite depth="1" name="border" color="0,0,0,150" height="43" type="sliced" />
 				<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
 
@@ -18,36 +18,36 @@
 			</rect>
 
 			<!-- Water -->
-			<rect width="171" height="43" pos="0,47" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+			<rect width="84" height="43" pos="0,0" controller="HUDStatBar" stat_type="Water" visible="{statvisible}" tooltip="Current water limited by max water">
 				<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
 				<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
 
-				<filledsprite depth="3" name="background" color="110,110,110,128" width="169" type="filled" fill="1" />
+				<filledsprite depth="3" name="background" color="110,110,110,128" width="82" type="filled" fill="1" />
 
-				<filledsprite depth="5" name="BarContent" color="102,178,255" width="169" type="filled" fill="0" />
+				<filledsprite depth="5" name="BarContent" color="102,178,255" width="82" type="filled" fill="0" />
 				<sprite depth="6" name="Icon" sprite="ui_game_symbol_water" size="32,32" pos="8,-6" foregroundlayer="true"/>
-				<label depth="7" name="TextContent" pos="0,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerwater}%" controller="PlayerStatsWindow" height="30"/>
+				<label depth="7" name="TextContent" pos="15,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerwater}" controller="PlayerStatsWindow" height="30"/>
 
 				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-				<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="1" />
-				<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="1" />
+				<filledsprite depth="8" name="background" color="0,0,0,255" width="84" fillcenter="false" type="filled" fill="1" />
+				<filledsprite depth="3" name="background" color="0,0,0,255" width="83" fillcenter="false" type="filled" fill="1" />
 			</rect>
 			
 			<!-- Food -->
-			<rect width="171" height="43" pos="0,0" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+			<rect width="84" height="43" pos="88,0" controller="HUDStatBar" stat_type="Food" visible="{statvisible}" tooltip="Current food limited by max food">
 				<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
 				<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
 				
-				<filledsprite depth="3" name="background" color="110,110,110,128" width="169" type="filled" fill="1" />
+				<filledsprite depth="3" name="background" color="110,110,110,128" width="82" type="filled" fill="1" />
 				
-				<sprite depth="5" color="255,173,51" width="169" type="filled" fill="{playerfoodfill}" controller="PlayerStatsWindow" />
+				<sprite depth="5" color="255,173,51" width="82" type="filled" fill="{playerfoodfill}" controller="PlayerStatsWindow" />
 				<sprite depth="6" name="Icon" sprite="ui_game_symbol_hunger" size="32,32" pos="8,-6" foregroundlayer="true"/>
 				<!--<label depth="7" name="TextContent" pos="0,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerfood}%" height="30" controller="PlayerStatsWindow" effect="outline" />-->
-				<label depth="7" name="TextContent" pos="0,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerfood}%" controller="PlayerStatsWindow" height="30" />
+				<label depth="7" name="TextContent" pos="15,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerfood}" controller="PlayerStatsWindow" height="30" />
 				
 				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-				<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="1" />
-				<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="1" />
+				<filledsprite depth="8" name="background" color="0,0,0,255" width="84" fillcenter="false" type="filled" fill="1" />
+				<filledsprite depth="3" name="background" color="0,0,0,255" width="83" fillcenter="false" type="filled" fill="1" />
 			</rect>
 
 			<rect width="171" height="43" pos="0,-47" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
@@ -100,7 +100,7 @@
 
 		</rect>
 
-		<rect name="hud" pos="90,219" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
+		<rect name="hud" pos="90,172" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
 			<panel width="168" height="43" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
 				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="43" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
 				<sprite depth="4" name="Icon" size="36,32" pos="-58,0" pivot="center" color="[transparent]"/>

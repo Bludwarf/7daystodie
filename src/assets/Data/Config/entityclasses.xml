@@ -54,9 +54,10 @@
 	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock"/>
 	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock"/>
 	<property name="ExperienceGain" value="173"/>
-	<property name="LegsExplosionDamageMultiplier" value="1"/>
-	<property name="ArmsExplosionDamageMultiplier" value="1"/>
-	<property name="HeadExplosionDamageMultiplier" value="1"/>
+	<property name="LegsExplosionDamageMultiplier" value=".41"/> <!-- Player gets 20% damage reduction (where from?) and this takes it to 33% total -->
+	<property name="ArmsExplosionDamageMultiplier" value=".41"/>
+	<property name="HeadExplosionDamageMultiplier" value=".41"/>
+	<property name="ChestExplosionDamageMultiplier" value=".41"/>
 	<property name="Buffs" value="buffStatusCheck"/>
 
 	<property name="HandItem" value="meleeHandPlayer"/>
@@ -64,6 +65,8 @@
 	<!-- IMPORTANT NOTE: In entityclasses.xml, effect_groups DO extend if you extend an entity to another.
 		Pay attention so that you do not stack several base_add or perc_add. -->
 	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffIllInfection0,buffIllInfection1,buffIllInfection2,buffIllInfection3"/> <!-- SDTD-9538 player is ummunt to infection -->
+
 		<passive_effect name="HealthMax" operation="base_set" value="110"/>
 		<passive_effect name="StaminaMax" operation="base_set" value="110"/>
 		<passive_effect name="WaterMax" operation="base_set" value="100"/>
@@ -72,20 +75,13 @@
 
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" />
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_set" value=".05"/>
 
-		<!--
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="allHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="allToolsHarvest"/> <!-- all tools but not player hands, they come later in the OOO and set this back to 0. -->
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="oreWoodHarvest"/>
 		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="cropHarvest"/>
 		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="wildCropsHarvest"/>
-		-->
-
-		<passive_effect name="HarvestCount" operation="base_set" value=".5" tags="allHarvest"/>
-		<passive_effect name="HarvestCount" operation="base_set" value=".5" tags="allToolsHarvest"/> <!-- all tools but not player hands, they come later in the OOO and set this back to 0. -->
-		<passive_effect name="HarvestCount" operation="base_set" value=".5" tags="oreWoodHarvest"/>
-		<passive_effect name="HarvestCount" operation="base_set" value=".5" tags="cropHarvest"/>
-		<passive_effect name="HarvestCount" operation="perc_add" value="2" tags="cropHarvest"/>
-		<passive_effect name="HarvestCount" operation="base_set" value=".5" tags="wildCropsHarvest"/>
-		<passive_effect name="HarvestCount" operation="perc_add" value="2" tags="wildCropsHarvest"/>
-
 
 		<passive_effect name="WaterLossPerHealthPointGained" operation="base_set" value="0.06"/> <!-- healing damage costs you water -->
 		<passive_effect name="WaterLossPerStaminaPointGained" operation="base_set" value="0.0075"/> <!-- regening stamina costs you water -->
@@ -334,10 +330,8 @@
 	<property name="WalkType" value="2"/>
 	<property name="Mass" value="210"/>
 
-	<property name="DismemberMultiplierHead" value=".33"/>
-	<property name="DismemberMultiplierArms" value=".33"/>
-	<property name="DismemberMultiplierLegs" value=".33"/>
-	<property name="PainResistPerHit" value=".65"/>
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 
 	<!-- Gameplay -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
@@ -362,9 +356,9 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
-	<property name="DismemberMultiplierHead" value=".2"/>
-	<property name="DismemberMultiplierArms" value=".2"/>
-	<property name="DismemberMultiplierLegs" value=".2"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
+
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -449,6 +443,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -469,6 +465,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -555,6 +553,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieStrongFeral"/>
@@ -575,6 +575,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/fatLadyZS_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -610,6 +612,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -628,6 +632,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/joe_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
@@ -677,6 +683,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieStrongFeral"/>
@@ -696,6 +704,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/moe_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/> <!-- XP strong radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<effect_group name="Base Effects">
@@ -745,6 +755,8 @@
 	<property name="ReplaceMaterial2" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="ExperienceGain" value="700"/> <!-- XP grunt feral -->
@@ -760,6 +772,8 @@
 	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
 	<property name="HandItem" value="meleeHandZombieFeral"/>
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/arlene_radiated"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
@@ -787,6 +801,8 @@
 	<property name="Tags" value="entity,zombie,walker,feral"/>
 	<property name="Mesh" value="Zombies/zombieStandardLabRagdoll"/>
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="HandItem" value="meleeHandZombieFeral"/>
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 	<property name="ExperienceGain" value="700"/> <!-- XP grunt feral -->
@@ -802,6 +818,8 @@
 	<property name="Mesh" value="Zombies/zombieStandardLabRagdoll"/>
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/LabZombie_radiated"/>
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="HandItem" value="meleeHandZombieFeral"/>
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
@@ -820,6 +838,8 @@
 	<property name="Tags" value="entity,zombie,walker"/>
 	<property name="HandItem" value="meleeHandZombieFeral"/>
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="800"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -861,6 +881,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -879,6 +901,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/screamer_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -924,6 +948,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -942,6 +968,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/darlene_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<effect_group name="Base Effects">
@@ -982,6 +1010,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -1000,6 +1030,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/marlene_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<effect_group name="Base Effects">
@@ -1033,6 +1065,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -1051,6 +1085,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/yo_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1085,6 +1121,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -1104,6 +1142,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/steve_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1142,6 +1182,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="HandItem" value="meleeHandZombie02Feral"/>
 
 	<property name="ExperienceGain" value="700"/> <!-- XP grunt feral -->
@@ -1178,6 +1220,8 @@
 	<property name="ReplaceMaterial2" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -1198,6 +1242,8 @@
 	<!-- <property name="Buffs" value="buffLegendaryBoss"/> -->
 	<property name="ReplaceMaterial2" value="entities/zombies/materials/feral_eye"/>
 	<property name="HandItem" value="meleeHandZombieFeral"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="900"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -1240,6 +1286,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieStrongFeral"/>
@@ -1311,6 +1359,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 	<property name="JumpMaxDistance" value="11, 13"/>
 
@@ -1332,6 +1382,8 @@
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="HandItem" value="meleeHandZombie02Feral"/>
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
@@ -1409,6 +1461,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -1460,6 +1514,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieCopFeral"/>
@@ -1506,6 +1562,7 @@
 	<property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
 	<property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
 	<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+	<property name="DismemberMultiplierLegs" value="0"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0"/>
 	<property name="KnockdownProneDamageThreshold" value="0"/>
@@ -1540,6 +1597,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value="0"/><!-- Feral Cop -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieCopFeral"/>
@@ -1563,6 +1622,8 @@
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value="0"/><!-- Radiated Cop -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="HandItem" value="meleeHandZombieCopRadiated"/>
 	<property name="Explosion.BlockDamage" value="750"/>
 	<property name="Explosion.EntityDamage" value="250"/>
@@ -1627,6 +1688,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieWorkerFeral"/>
@@ -1648,6 +1711,8 @@
 	<!-- <property name="Buffs" value="buffLegendaryBoss"/> -->
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 	<property name="HandItem" value="meleeHandZombieWorkerFeral"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="900"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -1690,6 +1755,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieWorkerFeral"/>
@@ -1711,6 +1778,8 @@
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieWorkerFeral"/>
@@ -1751,6 +1820,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -1769,6 +1840,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/hoodieZombie_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<effect_group name="Base Effects">
@@ -1810,6 +1883,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -1828,6 +1903,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/cheerleaderZombie_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<effect_group name="Base Effects">
@@ -1857,6 +1934,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieFeral"/>
@@ -1875,6 +1954,8 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/oldTimer_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="900"/> <!-- XP grunt radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1911,6 +1992,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieStrongFeral"/>
@@ -1929,6 +2012,8 @@
 	<property name="Mesh" value="Zombies/zombieStandardBikerRagdoll"/>
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/bikerZ_radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/> <!-- XP strong radiated -->
 	<property name="LootDropProb" value=".03"/> <!-- Radiated -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1978,6 +2063,8 @@
 	<property name="ReplaceMaterial2" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieStrongFeral"/>
@@ -2012,6 +2099,8 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 	<property name="HandItem" value="meleeHandZombieStripperFeral"/>
@@ -2137,14 +2226,14 @@
 
 <entity_class name="animalStag" extends="animalTemplateTimid">
 	<property name="Tags" value="entity,animal"/>
-	<property name="HasRagdoll" value="true"/>
 	<property name="Mesh" value="Animals/Deer/animalDeerStagRagdoll"/>
-	<property name="HasRagdoll" value="true"/>
-	<property name="RootMotion" value="true"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="Prefab" value="NPC"/>
 	<property name="Parent" value="Animals"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="RootMotion" value="true"/>
 	<property name="RotateToGround" value="true"/>
 	<property name="IsEntityAnimal" value="true"/>
 	<property name="IsEnemyEntity" value="false"/>
@@ -3068,7 +3157,7 @@
 	<property name="Class" value="EntityLootContainer"/>
 	<property name="Parent" value="Backpack"/>
 	<property name="IsEnemyEntity" value="false"/>
-	<property name="TimeStayAfterDeath" value="300"/>
+	<property name="TimeStayAfterDeath" value="1200"/>
 	<property name="LootListOnDeath" value="70"/> <!-- used to determine container X/Y size -->
 	<property name="Faction" value="none"/>
 </entity_class>
@@ -3080,7 +3169,7 @@
 	<property name="Class" value="EntityLootContainer"/>
 	<property name="Parent" value="Backpack"/>
 	<property name="IsEnemyEntity" value="false"/>
-	<property name="TimeStayAfterDeath" value="300"/>
+	<property name="TimeStayAfterDeath" value="1200"/>
 	<property name="LootListOnDeath" value="71"/>
 	<property name="Faction" value="none"/>
 </entity_class>
@@ -3092,7 +3181,7 @@
 	<property name="Class" value="EntityLootContainer"/>
 	<property name="Parent" value="Backpack"/>
 	<property name="IsEnemyEntity" value="false"/>
-	<property name="TimeStayAfterDeath" value="300"/>
+	<property name="TimeStayAfterDeath" value="1200"/>
 	<property name="LootListOnDeath" value="73"/>
 	<property name="Faction" value="none"/>
 </entity_class>
@@ -3104,7 +3193,7 @@
 	<property name="Class" value="EntityLootContainer"/>
 	<property name="Parent" value="Backpack"/>
 	<property name="IsEnemyEntity" value="false"/>
-	<property name="TimeStayAfterDeath" value="300"/>
+	<property name="TimeStayAfterDeath" value="1200"/>
 	<property name="LootListOnDeath" value="74"/>
 	<property name="Faction" value="none"/>
 </entity_class>

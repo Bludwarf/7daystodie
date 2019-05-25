@@ -69,7 +69,7 @@ List of hacks to be removed:
 			<passive_effect name="HealthMaxModifierOT" operation="base_add" value="100" />
 			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="100" />
 			<passive_effect name="CarryCapacity" operation="base_set" value="45" />
-			<passive_effect name="ElementalDamageResist" operation="base_add" value="100" tags="cold,heat" />
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical" />
 			<passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveAllNegativeBuffs" target="self"/>
@@ -466,15 +466,15 @@ List of hacks to be removed:
 			<!-- perkOlympicSwimmer update -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="30">
 				<requirement name="ProgressionLevel" progression_name="perkOlympicSwimmer" operation="Equals" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="36">
-				<requirement name="ProgressionLevel" progression_name="perkOlympicSwimmer" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="42">
-				<requirement name="ProgressionLevel" progression_name="perkOlympicSwimmer" operation="Equals" value="2"/></triggered_effect>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="48">
+				<requirement name="ProgressionLevel" progression_name="perkOlympicSwimmer" operation="Equals" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="66">
+				<requirement name="ProgressionLevel" progression_name="perkOlympicSwimmer" operation="Equals" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="84">
 				<requirement name="ProgressionLevel" progression_name="perkOlympicSwimmer" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="54">
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="102">
 				<requirement name="ProgressionLevel" progression_name="perkOlympicSwimmer" operation="Equals" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="60">
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="120">
 				<requirement name="ProgressionLevel" progression_name="perkOlympicSwimmer" operation="Equals" value="5"/></triggered_effect>
 
 			<!-- perkPhysician update -->
@@ -2040,6 +2040,14 @@ List of hacks to be removed:
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
+		<update_rate value="2.5"/>
+		<effect_group>
+			<requirement name="NotHasBuff" buff="buffIllDysentery0"/>
+			<requirement name="NotHasBuff" buff="buffIllFoodPoisoning0"/>
+			<requirement name="NotHasBuff" buff="buffIllPneumonia0"/>
+			<requirement name="NotHasBuff" buff="buffIllInfection0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllnessIndicator"/>
+		</effect_group>
 	</buff>
 
 	<buff name="buffIllDysentery0" hidden="true">

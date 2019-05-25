@@ -260,7 +260,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".5",
+                  "value": "1",
                   "tags": "butcherHarvest"
                 }
               },
@@ -668,7 +668,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".5",
+                  "value": "1",
                   "tags": "butcherHarvest"
                 }
               },
@@ -1084,7 +1084,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".5",
+                  "value": "1",
                   "tags": "butcherHarvest"
                 }
               },
@@ -1629,7 +1629,7 @@
               {
                 "$": {
                   "name": "Allowed_upgrade_items",
-                  "value": "resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceNail"
+                  "value": "resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceNail"
                 }
               },
               {
@@ -1790,7 +1790,7 @@
           {
             "$": {
               "name": "Tags",
-              "value": "knife,melee,light,tool,perkMotherLode,perkDeepCuts,perkTheHuntsman"
+              "value": "knife,axe,melee,light,tool,perkMotherLode,perkDeepCuts,perkTheHuntsman"
             }
           },
           {
@@ -1942,7 +1942,7 @@
               {
                 "$": {
                   "name": "Allowed_upgrade_items",
-                  "value": "resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers"
+                  "value": "resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceCloth,resourceScrapPolymers"
                 }
               },
               {
@@ -2023,7 +2023,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".35",
+                  "value": ".7",
                   "tags": "butcherHarvest"
                 }
               },
@@ -2189,7 +2189,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".35",
+                  "value": ".7",
                   "tags": "butcherHarvest"
                 }
               },
@@ -3490,12 +3490,6 @@
               },
               {
                 "$": {
-                  "name": "DamageType",
-                  "value": "Heat"
-                }
-              },
-              {
-                "$": {
                   "name": "ToolCategory.harvestingTools",
                   "value": ".5",
                   "param1": "1"
@@ -3972,7 +3966,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".5",
+                  "value": "1",
                   "tags": "butcherHarvest"
                 }
               },
@@ -4647,7 +4641,7 @@
               {
                 "$": {
                   "name": "Allowed_upgrade_items",
-                  "value": "resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers"
+                  "value": "resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceCloth,resourceScrapPolymers"
                 }
               }
             ]
@@ -5812,24 +5806,24 @@
               {
                 "$": {
                   "name": "HarvestCount",
-                  "operation": "base_set",
-                  "value": "0",
+                  "operation": "base_add",
+                  "value": "-.75",
                   "tags": "allHarvest"
                 }
               },
               {
                 "$": {
                   "name": "HarvestCount",
-                  "operation": "base_set",
-                  "value": "0",
+                  "operation": "base_add",
+                  "value": "-.75",
                   "tags": "allToolsHarvest"
                 }
               },
               {
                 "$": {
                   "name": "HarvestCount",
-                  "operation": "base_set",
-                  "value": "0",
+                  "operation": "base_add",
+                  "value": "-.75",
                   "tags": "oreWoodHarvest"
                 }
               }
@@ -5939,7 +5933,7 @@
           {
             "$": {
               "name": "Tags",
-              "value": "knife,melee,medium,tool,perkDeepCuts,perkMotherLode"
+              "value": "knife,axe,melee,medium,tool,perkDeepCuts,perkMotherLode"
             }
           },
           {
@@ -6163,7 +6157,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".35",
+                  "value": ".7",
                   "tags": "butcherHarvest"
                 }
               },
@@ -6424,7 +6418,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".35",
+                  "value": ".7",
                   "tags": "butcherHarvest"
                 }
               },
@@ -8773,7 +8767,7 @@
           {
             "$": {
               "name": "Tags",
-              "value": "weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,perkGunslinger"
+              "value": "weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,revolver,noSilencer,barrelAttachments,sideAttachments,smallTopAttachments,perkGunslinger"
             }
           },
           {
@@ -13531,7 +13525,7 @@
               {
                 "$": {
                   "name": "Allowed_upgrade_items",
-                  "value": "resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceNail"
+                  "value": "resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceNail"
                 }
               }
             ]
@@ -15373,19 +15367,7 @@
               },
               {
                 "$": {
-                  "name": "Explosion.BlockDamage",
-                  "value": "105"
-                }
-              },
-              {
-                "$": {
                   "name": "Explosion.RadiusEntities",
-                  "value": "1"
-                }
-              },
-              {
-                "$": {
-                  "name": "Explosion.EntityDamage",
                   "value": "1"
                 }
               },
@@ -15416,6 +15398,34 @@
                   "operation": "base_set",
                   "value": "0.40",
                   "tags": "buffIllInfection0"
+                }
+              },
+              {
+                "$": {
+                  "name": "BlockDamage",
+                  "operation": "base_set",
+                  "value": "105"
+                }
+              },
+              {
+                "$": {
+                  "name": "EntityDamage",
+                  "operation": "base_set",
+                  "value": "1"
+                }
+              }
+            ],
+            "display_value": [
+              {
+                "$": {
+                  "name": "dExDamageBlock",
+                  "value": "105"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "1"
                 }
               }
             ]
@@ -15581,19 +15591,7 @@
               },
               {
                 "$": {
-                  "name": "Explosion.BlockDamage",
-                  "value": "145"
-                }
-              },
-              {
-                "$": {
                   "name": "Explosion.RadiusEntities",
-                  "value": "1"
-                }
-              },
-              {
-                "$": {
-                  "name": "Explosion.EntityDamage",
                   "value": "1"
                 }
               },
@@ -15624,6 +15622,34 @@
                   "operation": "base_set",
                   "value": "0.40",
                   "tags": "buffIllInfection0"
+                }
+              },
+              {
+                "$": {
+                  "name": "BlockDamage",
+                  "operation": "base_set",
+                  "value": "145"
+                }
+              },
+              {
+                "$": {
+                  "name": "EntityDamage",
+                  "operation": "base_set",
+                  "value": "1"
+                }
+              }
+            ],
+            "display_value": [
+              {
+                "$": {
+                  "name": "dExDamageBlock",
+                  "value": "145"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "1"
                 }
               }
             ]
@@ -18286,8 +18312,7 @@
                 "$": {
                   "name": "DismemberChance",
                   "operation": "perc_subtract",
-                  "value": "0.875",
-                  "tags": "head"
+                  "value": "0.875"
                 }
               },
               {
@@ -18574,8 +18599,7 @@
                 "$": {
                   "name": "DismemberChance",
                   "operation": "perc_subtract",
-                  "value": "0.875",
-                  "tags": "head"
+                  "value": "0.875"
                 }
               }
             ]
@@ -18637,6 +18661,18 @@
           },
           {
             "$": {
+              "name": "CraftingSkillGroup",
+              "value": "craftSkillScience"
+            }
+          },
+          {
+            "$": {
+              "name": "Group",
+              "value": "Ammo/Weapons"
+            }
+          },
+          {
+            "$": {
               "class": "Action1"
             },
             "property": [
@@ -18660,20 +18696,8 @@
               },
               {
                 "$": {
-                  "name": "Explosion.BlockDamage",
-                  "value": "500"
-                }
-              },
-              {
-                "$": {
                   "name": "Explosion.RadiusEntities",
-                  "value": "5"
-                }
-              },
-              {
-                "$": {
-                  "name": "Explosion.EntityDamage",
-                  "value": "350"
+                  "value": "4"
                 }
               },
               {
@@ -18701,18 +18725,6 @@
                 }
               }
             ]
-          },
-          {
-            "$": {
-              "name": "CraftingSkillGroup",
-              "value": "craftSkillScience"
-            }
-          },
-          {
-            "$": {
-              "name": "Group",
-              "value": "Ammo/Weapons"
-            }
           }
         ],
         "effect_group": [
@@ -18724,16 +18736,16 @@
             "passive_effect": [
               {
                 "$": {
-                  "name": "EntityDamage",
+                  "name": "BlockDamage",
                   "operation": "base_set",
-                  "value": "350"
+                  "value": "2500"
                 }
               },
               {
                 "$": {
-                  "name": "BlockDamage",
+                  "name": "EntityDamage",
                   "operation": "base_set",
-                  "value": "50"
+                  "value": "420"
                 }
               },
               {
@@ -18747,7 +18759,19 @@
             "display_value": [
               {
                 "$": {
-                  "name": "ExRadius",
+                  "name": "dExDamageBlock",
+                  "value": "2500"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "420"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExRadius",
                   "value": "5"
                 }
               }
@@ -18791,20 +18815,8 @@
               },
               {
                 "$": {
-                  "name": "Explosion.BlockDamage",
-                  "value": "20"
-                }
-              },
-              {
-                "$": {
                   "name": "Explosion.RadiusEntities",
                   "value": "6"
-                }
-              },
-              {
-                "$": {
-                  "name": "Explosion.EntityDamage",
-                  "value": "450"
                 }
               },
               {
@@ -18849,16 +18861,16 @@
             "passive_effect": [
               {
                 "$": {
-                  "name": "EntityDamage",
+                  "name": "BlockDamage",
                   "operation": "base_set",
-                  "value": "350"
+                  "value": "20"
                 }
               },
               {
                 "$": {
-                  "name": "BlockDamage",
+                  "name": "EntityDamage",
                   "operation": "base_set",
-                  "value": "50"
+                  "value": "650"
                 }
               },
               {
@@ -18872,7 +18884,19 @@
             "display_value": [
               {
                 "$": {
-                  "name": "ExRadius",
+                  "name": "dExDamageBlock",
+                  "value": "20"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "650"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExRadius",
                   "value": "6"
                 }
               }
@@ -20127,26 +20151,8 @@
             "property": [
               {
                 "$": {
-                  "name": "Explosion.ParticleIndex",
-                  "value": "0"
-                }
-              },
-              {
-                "$": {
                   "name": "Gravity",
                   "value": "-5"
-                }
-              },
-              {
-                "$": {
-                  "name": "Explosion.BlockDamage",
-                  "value": "10"
-                }
-              },
-              {
-                "$": {
-                  "name": "Explosion.EntityDamage",
-                  "value": "80"
                 }
               },
               {
@@ -20209,16 +20215,16 @@
             "passive_effect": [
               {
                 "$": {
-                  "name": "EntityDamage",
+                  "name": "BlockDamage",
                   "operation": "base_set",
-                  "value": "30"
+                  "value": "2"
                 }
               },
               {
                 "$": {
-                  "name": "BlockDamage",
+                  "name": "EntityDamage",
                   "operation": "base_set",
-                  "value": "6"
+                  "value": "250"
                 }
               },
               {
@@ -20263,7 +20269,19 @@
             "display_value": [
               {
                 "$": {
-                  "name": "ExRadius",
+                  "name": "dExDamageBlock",
+                  "value": "2"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "250"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExRadius",
                   "value": "4"
                 }
               }
@@ -20338,18 +20356,6 @@
           },
           {
             "$": {
-              "name": "Explosion.BlockDamage",
-              "value": "10"
-            }
-          },
-          {
-            "$": {
-              "name": "Explosion.EntityDamage",
-              "value": "110"
-            }
-          },
-          {
-            "$": {
               "name": "Explosion.ParticleIndex",
               "value": "1"
             }
@@ -20357,7 +20363,7 @@
           {
             "$": {
               "name": "Explosion.RadiusBlocks",
-              "value": "3"
+              "value": "4"
             }
           },
           {
@@ -20399,7 +20405,7 @@
           {
             "$": {
               "name": "Explosion.BlastPower",
-              "value": "150"
+              "value": "75"
             }
           },
           {
@@ -20449,6 +20455,16 @@
                   "value": "swoosh"
                 }
               }
+            ],
+            "requirement": [
+              {
+                "$": {
+                  "name": "CVarCompare",
+                  "cvar": "_underwater",
+                  "operation": "LT",
+                  "value": ".98"
+                }
+              }
             ]
           },
           {
@@ -20494,10 +20510,38 @@
             "$": {
               "tiered": "false"
             },
+            "passive_effect": [
+              {
+                "$": {
+                  "name": "BlockDamage",
+                  "operation": "base_set",
+                  "value": "10"
+                }
+              },
+              {
+                "$": {
+                  "name": "EntityDamage",
+                  "operation": "base_set",
+                  "value": "310"
+                }
+              }
+            ],
             "display_value": [
               {
                 "$": {
-                  "name": "ExRadius",
+                  "name": "dExDamageBlock",
+                  "value": "10"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "310"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExRadius",
                   "value": "5"
                 }
               }
@@ -20578,18 +20622,6 @@
           },
           {
             "$": {
-              "name": "Explosion.BlockDamage",
-              "value": "900"
-            }
-          },
-          {
-            "$": {
-              "name": "Explosion.EntityDamage",
-              "value": "320"
-            }
-          },
-          {
-            "$": {
               "name": "Explosion.ParticleIndex",
               "value": "1"
             }
@@ -20653,6 +20685,16 @@
                   "value": "swoosh"
                 }
               }
+            ],
+            "requirement": [
+              {
+                "$": {
+                  "name": "CVarCompare",
+                  "cvar": "_underwater",
+                  "operation": "LT",
+                  "value": ".98"
+                }
+              }
             ]
           },
           {
@@ -20698,10 +20740,38 @@
             "$": {
               "tiered": "false"
             },
+            "passive_effect": [
+              {
+                "$": {
+                  "name": "BlockDamage",
+                  "operation": "base_set",
+                  "value": "900"
+                }
+              },
+              {
+                "$": {
+                  "name": "EntityDamage",
+                  "operation": "base_set",
+                  "value": "680"
+                }
+              }
+            ],
             "display_value": [
               {
                 "$": {
-                  "name": "ExRadius",
+                  "name": "dExDamageBlock",
+                  "value": "900"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "680"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExRadius",
                   "value": "6"
                 }
               }
@@ -20806,18 +20876,6 @@
           },
           {
             "$": {
-              "name": "Explosion.BlockDamage",
-              "value": "5"
-            }
-          },
-          {
-            "$": {
-              "name": "Explosion.EntityDamage",
-              "value": "5"
-            }
-          },
-          {
-            "$": {
               "name": "Explosion.ParticleIndex",
               "value": "10"
             }
@@ -20843,7 +20901,7 @@
           {
             "$": {
               "name": "Explosion.BlastPower",
-              "value": "70"
+              "value": "35"
             }
           },
           {
@@ -20935,6 +20993,16 @@
                   "value": "swoosh"
                 }
               }
+            ],
+            "requirement": [
+              {
+                "$": {
+                  "name": "CVarCompare",
+                  "cvar": "_underwater",
+                  "operation": "LT",
+                  "value": ".98"
+                }
+              }
             ]
           },
           {
@@ -20972,11 +21040,39 @@
                 }
               }
             ],
+            "passive_effect": [
+              {
+                "$": {
+                  "name": "BlockDamage",
+                  "operation": "base_set",
+                  "value": "5"
+                }
+              },
+              {
+                "$": {
+                  "name": "EntityDamage",
+                  "operation": "base_set",
+                  "value": "5"
+                }
+              }
+            ],
             "display_value": [
               {
                 "$": {
-                  "name": "ExRadius",
-                  "value": "4"
+                  "name": "dExDamageBlock",
+                  "value": "5"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "5"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExRadius",
+                  "value": "3"
                 }
               }
             ]
@@ -21068,18 +21164,6 @@
           },
           {
             "$": {
-              "name": "Explosion.BlockDamage",
-              "value": "1"
-            }
-          },
-          {
-            "$": {
-              "name": "Explosion.EntityDamage",
-              "value": "1"
-            }
-          },
-          {
-            "$": {
               "name": "Explosion.ParticleIndex",
               "value": "1"
             }
@@ -21143,6 +21227,16 @@
                   "value": "swoosh"
                 }
               }
+            ],
+            "requirement": [
+              {
+                "$": {
+                  "name": "CVarCompare",
+                  "cvar": "_underwater",
+                  "operation": "LT",
+                  "value": ".98"
+                }
+              }
             ]
           },
           {
@@ -21188,10 +21282,38 @@
             "$": {
               "tiered": "false"
             },
+            "passive_effect": [
+              {
+                "$": {
+                  "name": "BlockDamage",
+                  "operation": "base_set",
+                  "value": "1"
+                }
+              },
+              {
+                "$": {
+                  "name": "EntityDamage",
+                  "operation": "base_set",
+                  "value": "1"
+                }
+              }
+            ],
             "display_value": [
               {
                 "$": {
-                  "name": "ExRadius",
+                  "name": "dExDamageBlock",
+                  "value": "1"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExDamageEntity",
+                  "value": "1"
+                }
+              },
+              {
+                "$": {
+                  "name": "dExRadius",
                   "value": "1"
                 }
               }
@@ -27137,129 +27259,70 @@
             "triggered_effect": [
               {
                 "$": {
-                  "trigger": "onSelfEquipStop",
-                  "action": "RemovePrefabFromEntity",
-                  "parent_transform": "CameraNode",
-                  "prefab": "Entities/Lighting/miningHelmetLightSource"
+                  "trigger": "onSelfEquipStart",
+                  "action": "AddPart",
+                  "part": "HeadLight",
+                  "prefab": "Entities/Lighting/miningHelmetLightSource",
+                  "parentTransform": "Spotlight",
+                  "localPos": "0,0,0",
+                  "localRot": "90,0,0"
                 }
               },
               {
                 "$": {
                   "trigger": "onSelfEquipStart",
-                  "action": "AttachPrefabToEntity",
+                  "action": "AddPart",
+                  "part": "HeadLightCam",
                   "prefab": "Entities/Lighting/miningHelmetLightSource",
-                  "parent_transform": "CameraNode",
-                  "local_rotation": "-90,0,0",
-                  "local_position": "0,0,0"
+                  "parentTransform": "CameraNode",
+                  "localPos": "0,0,0",
+                  "localRot": "-90,0,0"
                 }
-              },
-              {
-                "$": {
-                  "trigger": "onSelfItemActivate",
-                  "action": "SetTransformActive",
-                  "active": "true",
-                  "parent_transform": "CameraNode",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV"
-                    }
-                  }
-                ]
-              },
-              {
-                "$": {
-                  "trigger": "onSelfItemActivate",
-                  "action": "SetTransformActive",
-                  "active": "false",
-                  "parent_transform": "Spotlight",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV"
-                    }
-                  }
-                ]
-              },
-              {
-                "$": {
-                  "trigger": "onSelfItemDeactivate",
-                  "action": "SetTransformActive",
-                  "active": "false",
-                  "parent_transform": "CameraNode",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV"
-                    }
-                  }
-                ]
               },
               {
                 "$": {
                   "trigger": "onSelfEquipStop",
-                  "action": "RemovePrefabFromEntity",
-                  "parent_transform": "Spotlight",
-                  "prefab": "Entities/Lighting/miningHelmetLightSource"
+                  "action": "RemovePart",
+                  "part": "HeadLight"
                 }
               },
               {
                 "$": {
-                  "trigger": "onSelfEquipStart",
-                  "action": "AttachPrefabToEntity",
-                  "prefab": "Entities/Lighting/miningHelmetLightSource",
-                  "parent_transform": "Spotlight",
-                  "local_rotation": "90,0,0",
-                  "local_position": "0,0,0"
+                  "trigger": "onSelfEquipStop",
+                  "action": "RemovePart",
+                  "part": "HeadLightCam"
                 }
               },
               {
                 "$": {
                   "trigger": "onSelfItemActivate",
-                  "action": "SetTransformActive",
-                  "active": "true",
-                  "parent_transform": "Spotlight",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV",
-                      "invert": "true"
-                    }
-                  }
-                ]
+                  "action": "SetPartActive",
+                  "part": "HeadLight",
+                  "active": "@!.IsFPV"
+                }
+              },
+              {
+                "$": {
+                  "trigger": "onSelfItemActivate",
+                  "action": "SetPartActive",
+                  "part": "HeadLightCam",
+                  "active": "@.IsFPV"
+                }
               },
               {
                 "$": {
                   "trigger": "onSelfItemDeactivate",
-                  "action": "SetTransformActive",
-                  "active": "false",
-                  "parent_transform": "Spotlight",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV",
-                      "invert": "true"
-                    }
-                  }
-                ]
+                  "action": "SetPartActive",
+                  "part": "HeadLight",
+                  "active": "false"
+                }
               },
               {
                 "$": {
-                  "trigger": "onSelfEquipStop",
-                  "action": "SetTransformActive",
-                  "active": "false",
-                  "parent_transform": "Spotlight",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
+                  "trigger": "onSelfItemDeactivate",
+                  "action": "SetPartActive",
+                  "part": "HeadLightCam",
+                  "active": "false"
                 }
               }
             ]
@@ -33458,13 +33521,6 @@
                 "$": {
                   "name": "Mask1",
                   "value": "chest",
-                  "param1": "base"
-                }
-              },
-              {
-                "$": {
-                  "name": "Mask2",
-                  "value": "chest",
                   "param1": "inner"
                 }
               }
@@ -37048,7 +37104,7 @@
               },
               {
                 "$": {
-                  "name": "waterAmount",
+                  "name": "$waterAmountAdd",
                   "value": "-35"
                 }
               }
@@ -37201,7 +37257,7 @@
               },
               {
                 "$": {
-                  "name": "waterAmount",
+                  "name": "$waterAmountAdd",
                   "value": "-40"
                 }
               }
@@ -37886,7 +37942,7 @@
               },
               {
                 "$": {
-                  "name": "waterAmount",
+                  "name": "$waterAmountAdd",
                   "value": "-50"
                 }
               }
@@ -38021,7 +38077,7 @@
               },
               {
                 "$": {
-                  "name": "waterAmount",
+                  "name": "$waterAmountAdd",
                   "value": "-30"
                 }
               }
@@ -38174,7 +38230,7 @@
               },
               {
                 "$": {
-                  "name": "waterAmount",
+                  "name": "$waterAmountAdd",
                   "value": "-30"
                 }
               }
@@ -47620,6 +47676,12 @@
           },
           {
             "$": {
+              "name": "DescriptionKey",
+              "value": "schematicMaster2Desc"
+            }
+          },
+          {
+            "$": {
               "name": "EconomicValue",
               "value": "500"
             }
@@ -56447,7 +56509,7 @@
           {
             "$": {
               "name": "Stacknumber",
-              "value": "50"
+              "value": "25"
             }
           },
           {
@@ -56459,13 +56521,13 @@
           {
             "$": {
               "name": "RepairTime",
-              "value": "2"
+              "value": "3"
             }
           },
           {
             "$": {
               "name": "RepairAmount",
-              "value": "2500"
+              "value": "32000"
             }
           },
           {
@@ -59596,7 +59658,7 @@
               {
                 "$": {
                   "name": "Sound_start",
-                  "value": "mp5_fire"
+                  "value": "mp5_s_fire"
                 }
               },
               {
@@ -60030,7 +60092,7 @@
                 "$": {
                   "name": "HarvestCount",
                   "operation": "base_set",
-                  "value": ".5",
+                  "value": "1",
                   "tags": "butcherHarvest"
                 }
               },

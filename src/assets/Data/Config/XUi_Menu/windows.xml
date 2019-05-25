@@ -871,6 +871,8 @@
 
 							<browsergameoptioninfo name="IP" title="goIp" />
 							<browsergameoptioninfo name="Port" title="goPort" />
+							
+							<browsergameoptioninfo name="Version" title="goVersion" />
 
 						</table>
 					</rect>

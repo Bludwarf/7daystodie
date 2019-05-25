@@ -160,7 +160,7 @@
         "$": {
           "name": "modGunSoundSuppressorSilencer",
           "installable_tags": "gun",
-          "blocked_tags": "revolver,flaredBarrel",
+          "blocked_tags": "noSilencer,flaredBarrel",
           "modifier_tags": "barrelAttachment",
           "type": "attachment"
         },
@@ -261,6 +261,12 @@
               },
               {
                 "$": {
+                  "name": "Sound_end",
+                  "value": "silencefiller"
+                }
+              },
+              {
+                "$": {
                   "name": "BarrelOffset",
                   "value": "-0.001,-0.0197,0.3197"
                 }
@@ -301,6 +307,12 @@
                 "$": {
                   "name": "Sound_start",
                   "value": "mp5_s_fire"
+                }
+              },
+              {
+                "$": {
+                  "name": "Sound_end",
+                  "value": "silencefiller"
                 }
               },
               {
@@ -608,7 +620,7 @@
                 "$": {
                   "name": "SpreadMultiplierHip",
                   "operation": "perc_add",
-                  "value": "-.25"
+                  "value": "-.2"
                 }
               },
               {
@@ -2104,7 +2116,7 @@
                 "$": {
                   "name": "SpreadMultiplierHip",
                   "operation": "perc_add",
-                  "value": "-.2"
+                  "value": "-.15"
                 }
               },
               {
@@ -2164,7 +2176,16 @@
           {
             "$": {
               "tiered": "false"
-            }
+            },
+            "passive_effect": [
+              {
+                "$": {
+                  "name": "SpreadMultiplierHip",
+                  "operation": "perc_add",
+                  "value": "-0.15"
+                }
+              }
+            ]
           }
         ]
       },
@@ -2739,12 +2760,6 @@
           "rarity": "0.5"
         },
         "property": [
-          {
-            "$": {
-              "name": "CustomIcon",
-              "value": "resourceScrapIron"
-            }
-          },
           {
             "$": {
               "name": "Stacknumber",
@@ -5051,121 +5066,71 @@
             "triggered_effect": [
               {
                 "$": {
-                  "trigger": "onSelfEquipStop",
-                  "action": "RemovePrefabFromEntity",
-                  "parent_transform": "CameraNode",
-                  "prefab": "Entities/Lighting/miningHelmetLightSource"
+                  "trigger": "onSelfEquipStart",
+                  "action": "AddPart",
+                  "part": "HeadLight",
+                  "prefab": "Entities/Lighting/miningHelmetLightSource",
+                  "parentTransform": "Spotlight",
+                  "localPos": "0,0,0",
+                  "localRot": "90,0,0"
                 }
               },
               {
                 "$": {
                   "trigger": "onSelfEquipStart",
-                  "action": "AttachPrefabToEntity",
+                  "action": "AddPart",
+                  "part": "HeadLightCam",
                   "prefab": "Entities/Lighting/miningHelmetLightSource",
-                  "parent_transform": "CameraNode",
-                  "local_rotation": "-90,0,0",
-                  "local_position": "0,0,0"
+                  "parentTransform": "CameraNode",
+                  "localPos": "0,0,0",
+                  "localRot": "-90,0,0"
                 }
-              },
-              {
-                "$": {
-                  "trigger": "onSelfItemActivate",
-                  "action": "SetTransformActive",
-                  "active": "true",
-                  "parent_transform": "CameraNode",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV"
-                    }
-                  }
-                ]
-              },
-              {
-                "$": {
-                  "trigger": "onSelfItemActivate",
-                  "action": "SetTransformActive",
-                  "active": "false",
-                  "parent_transform": "Spotlight",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV"
-                    }
-                  }
-                ]
-              },
-              {
-                "$": {
-                  "trigger": "onSelfItemDeactivate",
-                  "action": "SetTransformActive",
-                  "active": "false",
-                  "parent_transform": "CameraNode",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV"
-                    }
-                  }
-                ]
               },
               {
                 "$": {
                   "trigger": "onSelfEquipStop",
-                  "action": "RemovePrefabFromEntity",
-                  "parent_transform": "Spotlight",
-                  "prefab": "Entities/Lighting/miningHelmetLightSource"
+                  "action": "RemovePart",
+                  "part": "HeadLight"
                 }
               },
               {
                 "$": {
-                  "trigger": "onSelfEquipStart",
-                  "action": "AttachPrefabToEntity",
-                  "prefab": "Entities/Lighting/miningHelmetLightSource",
-                  "parent_transform": "Spotlight",
-                  "local_rotation": "90,0,0",
-                  "local_position": "0,0,0"
+                  "trigger": "onSelfEquipStop",
+                  "action": "RemovePart",
+                  "part": "HeadLightCam"
                 }
               },
               {
                 "$": {
                   "trigger": "onSelfItemActivate",
-                  "action": "SetTransformActive",
-                  "active": "true",
-                  "parent_transform": "Spotlight",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV",
-                      "invert": "true"
-                    }
-                  }
-                ]
+                  "action": "SetPartActive",
+                  "part": "HeadLight",
+                  "active": "@!.IsFPV"
+                }
+              },
+              {
+                "$": {
+                  "trigger": "onSelfItemActivate",
+                  "action": "SetPartActive",
+                  "part": "HeadLightCam",
+                  "active": "@.IsFPV"
+                }
               },
               {
                 "$": {
                   "trigger": "onSelfItemDeactivate",
-                  "action": "SetTransformActive",
-                  "active": "false",
-                  "parent_transform": "Spotlight",
-                  "transform_path": "tempPrefab_miningHelmetLightSource"
-                },
-                "requirement": [
-                  {
-                    "$": {
-                      "name": "IsFPV",
-                      "invert": "true"
-                    }
-                  }
-                ]
+                  "action": "SetPartActive",
+                  "part": "HeadLight",
+                  "active": "false"
+                }
+              },
+              {
+                "$": {
+                  "trigger": "onSelfItemDeactivate",
+                  "action": "SetPartActive",
+                  "part": "HeadLightCam",
+                  "active": "false"
+                }
               }
             ]
           }

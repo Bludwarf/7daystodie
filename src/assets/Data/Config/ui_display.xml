@@ -90,9 +90,9 @@
 			<display_entry name="RoundRayCount" title_key="statRoundRayCount"/>
 		</item_display_info>
 		<item_display_info display_type="ammoLauncher" display_group="groupAmmo">
-			<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
-			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
-			<display_entry name="ExRadius" title_key="statExRadius"/>
+			<display_entry name="dExDamageEntity" title_key="statEntityDamageExplosion"/>
+			<display_entry name="dExDamageBlock" title_key="statBlockDamage"/>
+			<display_entry name="dExRadius" title_key="statExRadius"/>
 		</item_display_info>
 		<item_display_info display_type="ammoArrow" display_group="groupAmmo">
 			<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
@@ -100,16 +100,16 @@
 			<display_entry name="ProjectileVelocity" title_key="statProjectileVelocity"/>
 		</item_display_info>
 		<item_display_info display_type="ammoArrowExploding" display_group="groupAmmo">
-			<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
-			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
+			<display_entry name="dExDamageEntity" title_key="statEntityDamageExplosion"/>
+			<display_entry name="dExDamageBlock" title_key="statBlockDamage"/>
+			<display_entry name="dExRadius" title_key="statExRadius"/>
 			<display_entry name="ProjectileVelocity" title_key="statProjectileVelocity"/>
-			<display_entry name="ExRadius" title_key="statExRadius"/>
 		</item_display_info>
 
 		<item_display_info display_type="ammoGrenade" display_group="groupAmmo">
-			<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
-			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
-			<display_entry name="ExRadius" title_key="statExRadius"/>
+			<display_entry name="dExDamageEntity" title_key="statEntityDamageExplosion"/>
+			<display_entry name="dExDamageBlock" title_key="statBlockDamage"/>
+			<display_entry name="dExRadius" title_key="statExRadius"/>
 		</item_display_info>
 
 		<item_display_info display_type="modCarryCapacity" display_group="groupAttire">
@@ -192,7 +192,7 @@
 
 		<item_display_info display_type="clothingCigar" display_group="groupAttire" >
 			<display_entry name="AttributeLevel" tags="attStrength" title_key="statShowStrength"/>
-			<display_entry name="Bartering" title_key="statBartering" display_type="Percent"/>
+			<display_entry name="BarteringBuying" title_key="statBartering" display_type="Percent"/>
 		</item_display_info>
 
 		<item_display_info display_type="water" display_group="groupConsumables">

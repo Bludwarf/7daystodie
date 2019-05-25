@@ -53,7 +53,7 @@
 			<prefab rule="downtownGroup"/>
 			<prefab rule="industrialGroup"/>
 			<prefab rule="ruralGroup"/>
-			<prefab rule="detailFillerGroup" prop="0.05"/>
+			<prefab rule="detailFillerGroup" prob="0.05"/>
 		</prefab_rule>
 
 		<prefab_rule name="residentialOldGroup">
@@ -137,15 +137,15 @@
 		</prefab_rule>
 
 		<prefab_rule name="wildernessGroup">
-			<prefab name="settlement_trader_01" min_count="1" max_count="1" prob="2"/>
+			<prefab name="settlement_trader_01" min_count="1" max_count="1" prob="2" min_repeat_distance="800"/>
 			<prefab name="cabin_01" />
-			<prefab name="settlement_trader_02" min_count="1" max_count="1" prob="2"/>
+			<prefab name="settlement_trader_02" min_count="1" max_count="1" prob="2" min_repeat_distance="800"/>
 			<prefab name="cabin_02" />
-			<prefab name="settlement_trader_03" min_count="1" max_count="1" prob="2"/>
+			<prefab name="settlement_trader_03" min_count="1" max_count="1" prob="2" min_repeat_distance="800"/>
 			<prefab name="cabin_03" />
-			<prefab name="settlement_trader_04" min_count="1" max_count="1" prob="2"/>
+			<prefab name="settlement_trader_04" min_count="1" max_count="1" prob="2" min_repeat_distance="800"/>
 			<prefab name="cabin_04" />
-			<prefab name="settlement_trader_05" min_count="1" max_count="1" prob="2"/>
+			<prefab name="settlement_trader_05" min_count="1" max_count="1" prob="2" min_repeat_distance="800"/>
 			<prefab name="cabin_05" />
 			<prefab name="cabin_06" />
 			<prefab name="cabin_07"/>

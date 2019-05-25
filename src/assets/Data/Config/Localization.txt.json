@@ -15,16 +15,14 @@
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Vent Fan",
-    "French": "Ventilateur"
+    "English": "Vent Fan"
   },
   "airConditionVentFanDouble": {
     "Key": "airConditionVentFanDouble",
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Vent Fan, Double",
-    "French": "Ventilateur, Double"
+    "English": "Vent Fan, Double"
   },
   "alphabetLetterSignGroupDesc": {
     "Key": "alphabetLetterSignGroupDesc",
@@ -2658,6 +2656,13 @@
     "German": "Wellblechrampe",
     "Spanish": "Rampa de metal corrugado"
   },
+  "corrugatedMetalRampSheet": {
+    "Key": "corrugatedMetalRampSheet",
+    "Source": "blocks",
+    "Context": "Block",
+    "Changes": "New",
+    "English": "Corr. Metal Ramp Sheet"
+  },
   "corrugatedMetalSheet": {
     "Key": "corrugatedMetalSheet",
     "Source": "blocks",
@@ -3772,7 +3777,6 @@
     "Context": "Block",
     "Changes": "New",
     "English": "Bulletproof Glass Block",
-    "French": "Bloc de verre pare-balles",
     "German": "Panzerglasscheibe - Block"
   },
   "glassBulletproofCTRPlate": {
@@ -3781,7 +3785,6 @@
     "Context": "Block",
     "Changes": "New",
     "English": "Bulletproof Glass Plate Centered",
-    "French": "Plaque de verre pare-balles centrée",
     "German": "Panzerglasscheibe - Platte Mittig"
   },
   "glassBulletproofPlate": {
@@ -3790,7 +3793,6 @@
     "Context": "Block",
     "Changes": "New",
     "English": "Bulletproof Glass Plate",
-    "French": "Plaque de verre pare-balles",
     "German": "Panzerglasscheibe - Platte"
   },
   "glassBulletproofPlateCurved": {
@@ -3799,7 +3801,6 @@
     "Context": "Block",
     "Changes": "New",
     "English": "Bulletproof Glass Curved Plate",
-    "French": "Plaque de verre pare-balles incurvée",
     "German": "Panzerglasscheibe abgerundet"
   },
   "glassBulletproofRamp": {
@@ -3808,7 +3809,6 @@
     "Context": "Block",
     "Changes": "New",
     "English": "Bulletproof Glass Ramp",
-    "French": "Rampe de verre pare-balles",
     "German": "Panzerglasscheibe - Rampe"
   },
   "glassBusinessBlock": {
@@ -10210,16 +10210,14 @@
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Steel Stairs, Railing Left",
-    "French": "Escalier en acier, rambarde à gauche"
+    "English": "Steel Stairs, Railing Left"
   },
   "steelStairsFilledRailingRight": {
     "Key": "steelStairsFilledRailingRight",
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Steel Stairs, Railing Right",
-    "French": "Escalier en acier, rambarde à droite"
+    "English": "Steel Stairs, Railing Right"
   },
   "steelSupport": {
     "Key": "steelSupport",
@@ -10829,24 +10827,21 @@
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Maple Seed",
-    "French": "Graine d'érable"
+    "English": "Maple Seed"
   },
   "treePlantedMountainPine1m": {
     "Key": "treePlantedMountainPine1m",
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Pine Seed",
-    "French": "Pignon de pin"
+    "English": "Pine Seed"
   },
   "treePlantedOak1m": {
     "Key": "treePlantedOak1m",
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Oak Seed",
-    "French": "Gland"
+    "English": "Oak Seed"
   },
   "treePlantedWinterPine19m": {
     "Key": "treePlantedWinterPine19m",
@@ -10863,8 +10858,7 @@
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Blue Spruce Seed",
-    "French": "Graine d'épicéa bleu"
+    "English": "Blue Spruce Seed"
   },
   "treeSmallRandomHelper": {
     "Key": "treeSmallRandomHelper",
@@ -10959,16 +10953,14 @@
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "TV Large, Left",
-    "French": "Grande télé, Gauche"
+    "English": "TV Large, Left"
   },
   "tv_large_2": {
     "Key": "tv_large_2",
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "TV Large, Right",
-    "French": "Grande télé, Droite"
+    "English": "TV Large, Right"
   },
   "utilitySink": {
     "Key": "utilitySink",
@@ -10976,7 +10968,6 @@
     "Context": "Block",
     "Changes": "New",
     "English": "Utility Sink",
-    "French": "Évier-vidoir",
     "German": "Spültisch"
   },
   "vaultDoor01": {
@@ -11064,8 +11055,7 @@
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Wall Sink",
-    "French": "Évier"
+    "English": "Wall Sink"
   },
   "whitePicketFenceSheet": {
     "Key": "whitePicketFenceSheet",
@@ -11319,24 +11309,21 @@
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Wine Barrel",
-    "French": "Tonneau de vin"
+    "English": "Wine Barrel"
   },
   "wineBarrelPlain": {
     "Key": "wineBarrelPlain",
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Wine Barrel, Plain",
-    "French": "Tonneau de vin, Plein"
+    "English": "Wine Barrel, Plain"
   },
   "wineBarrelSet": {
     "Key": "wineBarrelSet",
     "Source": "blocks",
     "Context": "Block",
     "Changes": "New",
-    "English": "Wine Barrel Set",
-    "French": "Ensemble de tonneaux de vin"
+    "English": "Wine Barrel Set"
   },
   "woodArch": {
     "Key": "woodArch",
@@ -13280,32 +13267,28 @@
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Destroyed Battery Bank",
-    "French": "Batteries détruites"
+    "English": "Destroyed Battery Bank"
   },
   "cntCollapsedCementMixer": {
     "Key": "cntCollapsedCementMixer",
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Destroyed Cement Mixer",
-    "French": "Bétonnière détruite"
+    "English": "Destroyed Cement Mixer"
   },
   "cntCollapsedChemistryStation": {
     "Key": "cntCollapsedChemistryStation",
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Destroyed Chemistry Station",
-    "French": "Atelier de chimie détruit"
+    "English": "Destroyed Chemistry Station"
   },
   "cntCollapsedForge": {
     "Key": "cntCollapsedForge",
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Destroyed Forge",
-    "French": "Forge détruite"
+    "English": "Destroyed Forge"
   },
   "cntCollapsedGeneratorbank": {
     "Key": "cntCollapsedGeneratorbank",
@@ -13319,16 +13302,14 @@
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Destroyed Solar Bank",
-    "French": "Panneaux solaires détruits"
+    "English": "Destroyed Solar Bank"
   },
   "cntCollapsedWorkbench": {
     "Key": "cntCollapsedWorkbench",
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Destroyed Workbench",
-    "French": "Établi détruit"
+    "English": "Destroyed Workbench"
   },
   "cntConstructionSuppliesRandomLootHelper": {
     "Key": "cntConstructionSuppliesRandomLootHelper",
@@ -13380,16 +13361,14 @@
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Cupboard",
-    "French": "Placard"
+    "English": "Cupboard"
   },
   "cntCupboardCabinetFullRedTopClosed": {
     "Key": "cntCupboardCabinetFullRedTopClosed",
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Cupboard",
-    "French": "Placard"
+    "English": "Cupboard"
   },
   "cntCupboardCabinetOldTopClosed": {
     "Key": "cntCupboardCabinetOldTopClosed",
@@ -14656,7 +14635,6 @@
     "Context": "Container",
     "Changes": "New",
     "English": "Crack-A-Book Sealed Shipping Crate",
-    "French": "Caisse de provisions Crack-A-Book scellée",
     "German": "Buchhandlungs-Frachtkiste"
   },
   "cntShippingCrateCarParts": {
@@ -14665,7 +14643,6 @@
     "Context": "Container",
     "Changes": "New",
     "English": "Pass-N-Gas Sealed Shipping Crate",
-    "French": "Caisse de provisions Pass-N-Gas scellée",
     "German": "Autoteile-Frachtkiste"
   },
   "cntShippingCrateCarPartsDesc": {
@@ -14695,16 +14672,14 @@
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Sealed Shipping Crate",
-    "French": "Caisse de provisions scellée"
+    "English": "Sealed Shipping Crate"
   },
   "cntShippingCrateLabEquipment": {
     "Key": "cntShippingCrateLabEquipment",
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Pop-N-Pills Sealed Shipping Crate",
-    "French": "Caisse de provisions Pop-N-Pills scellée"
+    "English": "Pop-N-Pills Sealed Shipping Crate"
   },
   "cntShippingCrateShamway": {
     "Key": "cntShippingCrateShamway",
@@ -14712,7 +14687,7 @@
     "Context": "Container",
     "Changes": "KeyChanged EnChanged",
     "English": "Shamway Sealed Shipping Crate",
-    "French": "Caisse de provisions Shamway scellée",
+    "French": "Caisse de provisions Shamway",
     "German": "Shamway-Frachtkiste",
     "Spanish": "Caja de suministros de Shamway"
   },
@@ -14722,7 +14697,7 @@
     "Context": "Container",
     "Changes": "KeyChanged EnChanged",
     "English": "Shotgun Messiah Sealed Shipping Crate",
-    "French": "Caisse de provisions Shotgun Messiah scellée",
+    "French": "Caisse de provisions Shotgun Messiah",
     "German": "Revolverheld-Frachtkiste",
     "Spanish": "Caja de suministros de escopeta Mesías"
   },
@@ -14732,7 +14707,7 @@
     "Context": "Container",
     "Changes": "KeyChanged EnChanged",
     "English": "Working Stiff Sealed Shipping Crate",
-    "French": "Caisse de provisions Working Stiff scellée",
+    "French": "Caisse de provisions Working Stiff",
     "German": "Working-Stiff-Frachtkiste",
     "Spanish": "Caja de suministros de Working Stiff"
   },
@@ -14833,7 +14808,6 @@
     "Context": "Container",
     "Changes": "New",
     "English": "Storage Box",
-    "French": "Boîte de rangement",
     "German": "Lagerkiste"
   },
   "cntStorageGenericDesc": {
@@ -15241,16 +15215,14 @@
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Washing Machine",
-    "French": "Machine à laver"
+    "English": "Washing Machine"
   },
   "cntWasherOpen": {
     "Key": "cntWasherOpen",
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Washing Machine, Open",
-    "French": "Machine à laver, ouvrir"
+    "English": "Washing Machine, Open"
   },
   "cntWasherRandomLootHelper": {
     "Key": "cntWasherRandomLootHelper",
@@ -15265,7 +15237,6 @@
     "Context": "Container",
     "Changes": "New",
     "English": "Washing Machine",
-    "French": "Machine à laver",
     "German": "Waschmaschine"
   },
   "cntWastelandRandomLootHelper": {
@@ -15294,16 +15265,14 @@
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Weapons Bag",
-    "French": "Sac d'armes"
+    "English": "Weapons Bag"
   },
   "cntWeaponsBagSmall": {
     "Key": "cntWeaponsBagSmall",
     "Source": "blocks",
     "Context": "Container",
     "Changes": "New",
-    "English": "Weapons Bag",
-    "French": "Sac d'armes"
+    "English": "Weapons Bag"
   },
   "cntWoodDesk01Closed": {
     "Key": "cntWoodDesk01Closed",
@@ -15455,8 +15424,7 @@
     "Source": "blocks",
     "Context": "Electricity",
     "Changes": "New",
-    "English": "Battery Bank",
-    "French": "Batteries"
+    "English": "Battery Bank"
   },
   "bladeTrap": {
     "Key": "bladeTrap",
@@ -15596,24 +15564,21 @@
     "Source": "blocks",
     "Context": "Electricity",
     "Changes": "New",
-    "English": "Shotgun Turret",
-    "French": "Tourelle fusil à pompe"
+    "English": "Shotgun Turret"
   },
   "shotgunTurretDesc": {
     "Key": "shotgunTurretDesc",
     "Source": "blocks",
     "Context": "Electricity",
     "Changes": "New",
-    "English": "A motion sensing shotgun turret. What more needs to be said?",
-    "French": "Une tourelle fusil à pompe à detecteur de mouvement. Que dire de plus ?"
+    "English": "A motion sensing shotgun turret. What more needs to be said?"
   },
   "solarbank": {
     "Key": "solarbank",
     "Source": "blocks",
     "Context": "Electricity",
     "Changes": "New",
-    "English": "Solar Bank",
-    "French": "Panneaux solaires"
+    "English": "Solar Bank"
   },
   "speaker": {
     "Key": "speaker",
@@ -15805,7 +15770,7 @@
     "Context": "Farming",
     "Changes": "New",
     "English": "Chrysanthemum (Seed)",
-    "French": "Chrysanthème (graine)",
+    "French": "Chrysanthème",
     "German": "Chrysantheme",
     "Spanish": "Crisantemo"
   },
@@ -15822,7 +15787,7 @@
     "Context": "Farming",
     "Changes": "New",
     "English": "Chrysanthemum (Growing)",
-    "French": "Chrysanthème (pousse)",
+    "French": "Chrysanthème",
     "German": "Chrysantheme",
     "Spanish": "Crisantemo"
   },
@@ -15832,7 +15797,7 @@
     "Context": "Farming",
     "Changes": "New",
     "English": "Chrysanthemum 3 (POI)",
-    "French": "Chrysanthème 3 (POI)",
+    "French": "Chrysanthème",
     "German": "Chrysantheme",
     "Spanish": "Crisantemo"
   },
@@ -15862,7 +15827,6 @@
     "Context": "Farming",
     "Changes": "New",
     "English": "Coffee (Seed)",
-    "French": "Café (graine)",
     "German": "Kaffeesamen"
   },
   "plantedCoffee1Desc": {
@@ -15879,7 +15843,6 @@
     "Context": "Farming",
     "Changes": "New",
     "English": "Coffee (Growing)",
-    "French": "Café (pousse)",
     "German": "Kaffeesamen"
   },
   "plantedCoffee3Harvest": {
@@ -15917,8 +15880,7 @@
     "Source": "blocks",
     "Context": "Farming",
     "Changes": "New",
-    "English": "Corn (Seed)",
-    "French": "Maïs (graine)"
+    "English": "Corn (Seed)"
   },
   "plantedCorn1Desc": {
     "Key": "plantedCorn1Desc",
@@ -15935,8 +15897,7 @@
     "Source": "blocks",
     "Context": "Farming",
     "Changes": "New",
-    "English": "Corn (Growing)",
-    "French": "Maïs (pousse)"
+    "English": "Corn (Growing)"
   },
   "plantedCorn2Deco": {
     "Key": "plantedCorn2Deco",
@@ -16001,8 +15962,7 @@
     "Source": "blocks",
     "Context": "Farming",
     "Changes": "New",
-    "English": "Cotton (Seed)",
-    "French": "Cotton (graine)"
+    "English": "Cotton (Seed)"
   },
   "plantedCotton1Desc": {
     "Key": "plantedCotton1Desc",
@@ -16019,8 +15979,7 @@
     "Source": "blocks",
     "Context": "Farming",
     "Changes": "New",
-    "English": "Cotton (Growing)",
-    "French": "Cotton (pousse)"
+    "English": "Cotton (Growing)"
   },
   "plantedCotton3Harvest": {
     "Key": "plantedCotton3Harvest",
@@ -18665,7 +18624,6 @@
     "Context": "Workstation",
     "Changes": "New",
     "English": "Chemistry Station",
-    "French": "Atelier de chimie",
     "German": "Chemietisch"
   },
   "chemistryStationDesc": {
@@ -18698,16 +18656,14 @@
     "Source": "blocks",
     "Context": "Workstation",
     "Changes": "New",
-    "English": "Table Saw",
-    "French": "Scie circulaire de table"
+    "English": "Table Saw"
   },
   "tableSawDesc": {
     "Key": "tableSawDesc",
     "Source": "blocks",
     "Context": "Workstation",
     "Changes": "New",
-    "English": "Create furniture, advanced shapes and decorations for your base.",
-    "French": "Pour créer des meubles, des formes complexes et de la déco pour votre base."
+    "English": "Create furniture, advanced shapes and decorations for your base."
   },
   "workbench": {
     "Key": "workbench",
@@ -18724,7 +18680,7 @@
     "Source": "blocks",
     "Context": "Workstation",
     "Changes": "EnChanged",
-    "English": "A workbench lets you craft items just like you do in your backpack and improve items for up to 100 quality points above your crafting skill.",
+    "English": "Many advanced crafting recipes require a workbench. On a workbench you can also craft all items that you can craft in your backpack.",
     "French": "Un établi vous permet de fabriquer des objets comme vous le faites dans votre sac à dos.",
     "German": "Mit einer Werkbank kannst du genauso wie in deinem Rucksack Gegenstände fertigen.",
     "Spanish": "Una mesa de trabajo te permite fabricar objetos, igual que en la mochila."
@@ -19855,16 +19811,14 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "Encumbered",
-    "French": "Enconcombré"
+    "English": "Encumbered"
   },
   "buffEncumberedInvTooltip": {
     "Key": "buffEncumberedInvTooltip",
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "You are Encumbered",
-    "French": "Vous êtes enconcombré"
+    "English": "You are Encumbered"
   },
   "buffGodModeDesc": {
     "Key": "buffGodModeDesc",
@@ -19878,48 +19832,42 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "God Mode",
-    "French": "Mode Dieu"
+    "English": "God Mode"
   },
   "buffGodModeTooltip": {
     "Key": "buffGodModeTooltip",
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "God Mode Enabled",
-    "French": "Mode Dieu activé"
+    "English": "God Mode Enabled"
   },
   "buffHealHealthDesc": {
     "Key": "buffHealHealthDesc",
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "You are recovering health up to your maximum health.",
-    "French": "Votre santé se régénère jusqu'à son maximum."
+    "English": "You are recovering health up to your maximum health."
   },
   "buffHealHealthMaxDesc": {
     "Key": "buffHealHealthMaxDesc",
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "You are recovering from wounds that lowered your maximum health.",
-    "French": "Vous guérissez de vos blessures qui vous affaiblissent."
+    "English": "You are recovering from wounds that lowered your maximum health."
   },
   "buffHealHealthMaxName": {
     "Key": "buffHealHealthMaxName",
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "Max Health Recovery",
-    "French": "Guérison max"
+    "English": "Max Health Recovery"
   },
   "buffHealHealthName": {
     "Key": "buffHealHealthName",
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "Health Recovery",
-    "French": "Guérison"
+    "English": "Health Recovery"
   },
   "buffPuking1Name": {
     "Key": "buffPuking1Name",
@@ -19953,16 +19901,14 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "Your stamina is regening slightly faster after drinking.",
-    "French": "Votre endurance se régénère légèrement plus vite après avoir bu."
+    "English": "Your stamina is regening slightly faster after drinking."
   },
   "buffWaterStaminaRegenName": {
     "Key": "buffWaterStaminaRegenName",
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "Drink",
-    "French": "Boisson"
+    "English": "Drink"
   },
   "buffIllDysentery1Desc": {
     "Key": "buffIllDysentery1Desc",
@@ -20506,8 +20452,7 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "New",
-    "English": "You barely made it... again.",
-    "French": "Vous avez failli ne pas y arriver... encore une fois."
+    "English": "You barely made it... again."
   },
   "buffNewbieCoatDesc": {
     "Key": "buffNewbieCoatDesc",
@@ -22954,32 +22899,28 @@
     "Source": "item_modifiers",
     "Context": "mod",
     "Changes": "New",
-    "English": "Shotgun Choke",
-    "French": "Choke pour fusil à pompe"
+    "English": "Shotgun Choke"
   },
   "modGunChokeDesc": {
     "Key": "modGunChokeDesc",
     "Source": "item_modifiers",
     "Context": "mod",
     "Changes": "New",
-    "English": "Tightens the shotgun's spread.",
-    "French": "Réduit la dispersion du fusil à pompe."
+    "English": "Tightens the shotgun's spread."
   },
   "modGunDuckbill": {
     "Key": "modGunDuckbill",
     "Source": "item_modifiers",
     "Context": "mod",
     "Changes": "New",
-    "English": "Shotgun Duckbill",
-    "French": "Bec de canard pour fusil à pompe"
+    "English": "Shotgun Duckbill"
   },
   "modGunDuckbillDesc": {
     "Key": "modGunDuckbillDesc",
     "Source": "item_modifiers",
     "Context": "mod",
     "Changes": "New",
-    "English": "Modifies the spread to a horizontal pattern instead of the normal round one.",
-    "French": "Rend la dispersion d'un fusil à pompe horizontale."
+    "English": "Modifies the spread to a horizontal pattern instead of the normal round one."
   },
   "modGunMeleeRadRemover": {
     "Key": "modGunMeleeRadRemover",
@@ -23547,7 +23488,7 @@
     "Context": "Ammo",
     "Changes": "EnChanged",
     "English": "Rocket Frag (Ammo)",
-    "French": "Roquette à fragmentation",
+    "French": "Roquette",
     "German": "Rakete Frag (Mun)",
     "Spanish": "Cohete"
   },
@@ -23565,7 +23506,7 @@
     "Context": "Ammo",
     "Changes": "EnChanged",
     "English": "Rocket HE (Ammo)",
-    "French": "Roquette hautement explosif",
+    "French": "Roquette",
     "German": "Rakete HE (Mun)",
     "Spanish": "Cohete"
   },
@@ -24151,8 +24092,7 @@
     "Source": "items",
     "Context": "Book",
     "Changes": "New",
-    "English": "Battery Bank Schematic",
-    "French": "Schémas de batteries"
+    "English": "Battery Bank Schematic"
   },
   "batterybankSchematicDesc": {
     "Key": "batterybankSchematicDesc",
@@ -25627,7 +25567,7 @@
     "Context": "Clothes",
     "Changes": "EnChanged",
     "English": "Padded Hood",
-    "French": "Capuche rembourrée",
+    "French": "Casque en tissu",
     "German": "Stoffkopfschutz",
     "Spanish": "Armadura de tela para la cabeza"
   },
@@ -26391,7 +26331,6 @@
     "Context": "Clothes",
     "Changes": "New",
     "English": "Hooded Sweatshirt",
-    "French": "Sweat à capuche",
     "German": "Kapuzenpulli"
   },
   "hpRunningShoes": {
@@ -26399,8 +26338,7 @@
     "Source": "items",
     "Context": "Clothes",
     "Changes": "New",
-    "English": "High Performance Running Shoes",
-    "French": "Chaussures de courses hautes performances"
+    "English": "High Performance Running Shoes"
   },
   "hpRunningShoesDesc": {
     "Key": "hpRunningShoesDesc",
@@ -26408,7 +26346,7 @@
     "Context": "Clothes",
     "Changes": "New",
     "English": "You don't have to be the fastest, you just have to not be the slowest.\\nDecreases stamina loss while sprinting.",
-    "French": "Ce qui compte ce n'est pas d'être le plus rapide, mais plutôt d'être le moins lent.\\nRéduit la perte d'endurance lors des sprints."
+    "French": "`"
   },
   "jacketGroupDesc": {
     "Key": "jacketGroupDesc",
@@ -26424,7 +26362,6 @@
     "Context": "Clothes",
     "Changes": "New",
     "English": "College Jacket",
-    "French": "Teddy",
     "German": "Collegejacke"
   },
   "jacketWhite": {
@@ -26432,8 +26369,7 @@
     "Source": "items",
     "Context": "Clothes",
     "Changes": "New",
-    "English": "Jacket",
-    "French": "Blouson"
+    "English": "Jacket"
   },
   "jetPackAdmin": {
     "Key": "jetPackAdmin",
@@ -26494,7 +26430,6 @@
     "Context": "Clothes",
     "Changes": "New",
     "English": "Nerdy Glasses",
-    "French": "Lunettes d'intello",
     "German": "Starke Brille"
   },
   "nerdGlassesDesc": {
@@ -27046,8 +26981,7 @@
     "Source": "items",
     "Context": "Farming",
     "Changes": "New",
-    "English": "Chrysanthemum",
-    "French": "Chrysanthème"
+    "English": "Chrysanthemum"
   },
   "resourceCropChrysanthemumPlantDesc": {
     "Key": "resourceCropChrysanthemumPlantDesc",
@@ -29509,7 +29443,6 @@
     "Context": "Item",
     "Changes": "New",
     "English": "Paint",
-    "French": "Peinture",
     "German": "Farbe"
   },
   "resourcePaintDesc": {
@@ -30048,8 +29981,7 @@
     "Source": "items",
     "Context": "Item",
     "Changes": "New",
-    "English": "Crucible",
-    "French": "Creuset"
+    "English": "Crucible"
   },
   "toolForgeCrucibleDesc": {
     "Key": "toolForgeCrucibleDesc",
@@ -31003,7 +30935,6 @@
     "Context": "Tool",
     "Changes": "New",
     "English": "Paint Brush",
-    "French": "Pinceau",
     "German": "Malerpinsel"
   },
   "meleeToolPaintToolAdmin": {
@@ -31166,8 +31097,7 @@
     "Source": "items",
     "Context": "Tool",
     "Changes": "New",
-    "English": "Wire Tool",
-    "French": "Pince coupe-câble"
+    "English": "Wire Tool"
   },
   "meleeToolWireToolDesc": {
     "Key": "meleeToolWireToolDesc",
@@ -32104,32 +32034,28 @@
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Cobblestone",
-    "French": "Pavé"
+    "English": "Cobblestone"
   },
   "txName_Concrete": {
     "Key": "txName_Concrete",
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Concrete",
-    "French": "Béton"
+    "English": "Concrete"
   },
   "txName_Concrete_block": {
     "Key": "txName_Concrete_block",
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Concrete blocks",
-    "French": "Blocs en béton"
+    "English": "Concrete blocks"
   },
   "txName_Concrete_reinforced": {
     "Key": "txName_Concrete_reinforced",
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Reinforced Concrete",
-    "French": "Béton armé"
+    "English": "Reinforced Concrete"
   },
   "txName_Concrete_trim": {
     "Key": "txName_Concrete_trim",
@@ -32157,16 +32083,14 @@
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Concrete white",
-    "French": "Béton blanc"
+    "English": "Concrete white"
   },
   "txName_Drywall": {
     "Key": "txName_Drywall",
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Drywall",
-    "French": "Cloison sèche"
+    "English": "Drywall"
   },
   "txName_Drywall_tan": {
     "Key": "txName_Drywall_tan",
@@ -32187,8 +32111,7 @@
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Flagstone",
-    "French": "Dalle"
+    "English": "Flagstone"
   },
   "txName_Granite": {
     "Key": "txName_Granite",
@@ -32209,48 +32132,42 @@
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Gravel",
-    "French": "Gravier"
+    "English": "Gravel"
   },
   "txName_Plaster": {
     "Key": "txName_Plaster",
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Plaster",
-    "French": "Plâtre"
+    "English": "Plaster"
   },
   "txName_Sidewalk_wasteland": {
     "Key": "txName_Sidewalk_wasteland",
     "Source": "painting",
     "Context": "txGroupMasonry",
     "Changes": "New",
-    "English": "Sidewalk cracked",
-    "French": "Trottoir craquelé"
+    "English": "Sidewalk cracked"
   },
   "txName_Corregated_metal": {
     "Key": "txName_Corregated_metal",
     "Source": "painting",
     "Context": "txGroupMetal",
     "Changes": "New",
-    "English": "Metal Corrugated",
-    "French": "Tôle ondulée"
+    "English": "Metal Corrugated"
   },
   "txName_Duct_soft": {
     "Key": "txName_Duct_soft",
     "Source": "painting",
     "Context": "txGroupMetal",
     "Changes": "New",
-    "English": "Metal Duct soft",
-    "French": "Tuyau en métal mou"
+    "English": "Metal Duct soft"
   },
   "txName_Fridge_stainless_side": {
     "Key": "txName_Fridge_stainless_side",
     "Source": "painting",
     "Context": "txGroupMetal",
     "Changes": "New",
-    "English": "Metal stainless steel",
-    "French": "Métal inox"
+    "English": "Metal stainless steel"
   },
   "txName_Green_rusty_metal": {
     "Key": "txName_Green_rusty_metal",
@@ -32538,48 +32455,42 @@
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Carpet 1",
-    "French": "Tapis 1"
+    "English": "Carpet 1"
   },
   "txName_Carpet2": {
     "Key": "txName_Carpet2",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Carpet 2",
-    "French": "Tapis 2"
+    "English": "Carpet 2"
   },
   "txName_Carpet3": {
     "Key": "txName_Carpet3",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Carpet 3",
-    "French": "Tapis 3"
+    "English": "Carpet 3"
   },
   "txName_Carpet4": {
     "Key": "txName_Carpet4",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Carpet 4",
-    "French": "Tapis 4"
+    "English": "Carpet 4"
   },
   "txName_Carpet5": {
     "Key": "txName_Carpet5",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Carpet 5",
-    "French": "Tapis 5"
+    "English": "Carpet 5"
   },
   "txName_Carpet6": {
     "Key": "txName_Carpet6",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Carpet 6",
-    "French": "Tapis 6"
+    "English": "Carpet 6"
   },
   "txName_Drop_ceiling01": {
     "Key": "txName_Drop_ceiling01",
@@ -32663,96 +32574,84 @@
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Tile floor 1",
-    "French": "Plancher carrelé 1"
+    "English": "Tile floor 1"
   },
   "txName_Tile_floor2": {
     "Key": "txName_Tile_floor2",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Tile floor 2",
-    "French": "Plancher carrelé 2"
+    "English": "Tile floor 2"
   },
   "txName_Tile_floor3": {
     "Key": "txName_Tile_floor3",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Tile floor 3",
-    "French": "Plancher carrelé 3"
+    "English": "Tile floor 3"
   },
   "txName_Tile_floor4": {
     "Key": "txName_Tile_floor4",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Tile floor white",
-    "French": "Plancher carrelé blanc"
+    "English": "Tile floor white"
   },
   "txName_Tile_floor5": {
     "Key": "txName_Tile_floor5",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Tile floor brown",
-    "French": "Plancher carrelé marron"
+    "English": "Tile floor brown"
   },
   "txName_Tile_floor6": {
     "Key": "txName_Tile_floor6",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Tile Floor 6",
-    "French": "Plancher carrelé 6"
+    "English": "Tile Floor 6"
   },
   "txName_Tile_industrial": {
     "Key": "txName_Tile_industrial",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Tile floor 6",
-    "French": "Plancher carrelé 6"
+    "English": "Tile floor 6"
   },
   "txName_Tile_Marble_Grey": {
     "Key": "txName_Tile_Marble_Grey",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Grey Marble",
-    "French": "Marbre gris"
+    "English": "Grey Marble"
   },
   "txName_wallpaper01": {
     "Key": "txName_wallpaper01",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Wallpaper 1",
-    "French": "Papier-peint 1"
+    "English": "Wallpaper 1"
   },
   "txName_wallpaper02": {
     "Key": "txName_wallpaper02",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Wallpaper 2",
-    "French": "Papier-peint 2"
+    "English": "Wallpaper 2"
   },
   "txName_Wallpaper03": {
     "Key": "txName_Wallpaper03",
     "Source": "painting",
     "Context": "txGroupWallCovering",
     "Changes": "New",
-    "English": "Wallpaper 3",
-    "French": "Papier-peint 3"
+    "English": "Wallpaper 3"
   },
   "txName_Barnwood": {
     "Key": "txName_Barnwood",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Barn wood",
-    "French": "Bois de grange"
+    "English": "Barn wood"
   },
   "txName_Blue_metal_roof": {
     "Key": "txName_Blue_metal_roof",
@@ -32822,8 +32721,7 @@
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood Oak",
-    "French": "Bois de chêne"
+    "English": "Wood Oak"
   },
   "txName_Orange_metal_roof": {
     "Key": "txName_Orange_metal_roof",
@@ -32837,32 +32735,28 @@
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Plywood",
-    "French": "Contreplaqué"
+    "English": "Plywood"
   },
   "txName_Reinforced_wood": {
     "Key": "txName_Reinforced_wood",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Reinforced wood",
-    "French": "Bois renforcé"
+    "English": "Reinforced wood"
   },
   "txName_Reinforced_wood_metal": {
     "Key": "txName_Reinforced_wood_metal",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Metal reinforced wood",
-    "French": "Bois blindé"
+    "English": "Metal reinforced wood"
   },
   "txName_Rough_cut_wood": {
     "Key": "txName_Rough_cut_wood",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Rough cut wood",
-    "French": "Bois brut"
+    "English": "Rough cut wood"
   },
   "txName_Shingles_asphalt": {
     "Key": "txName_Shingles_asphalt",
@@ -32897,8 +32791,7 @@
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Shutters",
-    "French": "Volets"
+    "English": "Shutters"
   },
   "txName_Siding_blue": {
     "Key": "txName_Siding_blue",
@@ -32947,56 +32840,49 @@
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Tarpaper",
-    "French": "Papier goudronné"
+    "English": "Tarpaper"
   },
   "txName_Treetrunk_cut": {
     "Key": "txName_Treetrunk_cut",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Treetrunk cut",
-    "French": "Tronc"
+    "English": "Treetrunk cut"
   },
   "txName_Treetrunk_pine": {
     "Key": "txName_Treetrunk_pine",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Treetrunk pine",
-    "French": "Tronc de pin"
+    "English": "Treetrunk pine"
   },
   "txName_wainscotting": {
     "Key": "txName_wainscotting",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood Wainscotting",
-    "French": "Lambris"
+    "English": "Wood Wainscotting"
   },
   "txName_wainscotting_Oak": {
     "Key": "txName_wainscotting_Oak",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood Wainscotting Oak",
-    "French": "Lambris en chêne"
+    "English": "Wood Wainscotting Oak"
   },
   "txName_wainscotting_Red": {
     "Key": "txName_wainscotting_Red",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood Wainscotting Red",
-    "French": "Lambris rouge"
+    "English": "Wood Wainscotting Red"
   },
   "txName_Window_plug": {
     "Key": "txName_Window_plug",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Window plug 1",
-    "French": "Poignée de fenêtre 1"
+    "English": "Window plug 1"
   },
   "txName_Wood_barricade": {
     "Key": "txName_Wood_barricade",
@@ -33010,8 +32896,7 @@
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood barricade",
-    "French": "Barricade en bois"
+    "English": "Wood barricade"
   },
   "txName_Wood_black": {
     "Key": "txName_Wood_black",
@@ -33032,8 +32917,7 @@
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood fence",
-    "French": "Clôture en bois"
+    "English": "Wood fence"
   },
   "txName_Wood_old": {
     "Key": "txName_Wood_old",
@@ -33054,32 +32938,28 @@
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood painted 1",
-    "French": "Peinture bois 1"
+    "English": "Wood painted 1"
   },
   "txName_Wood_painted2": {
     "Key": "txName_Wood_painted2",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood painted 2",
-    "French": "Peinture bois 2"
+    "English": "Wood painted 2"
   },
   "txName_Wood_painted3": {
     "Key": "txName_Wood_painted3",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Wood painted 3",
-    "French": "Peinture bois 3"
+    "English": "Wood painted 3"
   },
   "txName_Woodfloor01": {
     "Key": "txName_Woodfloor01",
     "Source": "painting",
     "Context": "txGroupWood",
     "Changes": "New",
-    "English": "Red Wood",
-    "French": "Bois rouge"
+    "English": "Red Wood"
   },
   "txName_WoodPaneling_burnt": {
     "Key": "txName_WoodPaneling_burnt",
@@ -33415,312 +33295,273 @@
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Agility",
-    "French": "Agilité"
+    "English": "Agility"
   },
   "attAgilityDesc": {
     "Key": "attAgilityDesc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Agility is the measure of your athletic prowess. Increasing Agility improves maximum stamina.",
-    "French": "L'agilité mesure vos prouesses athlétiques. L'augmenter améliore votre endurance maximale."
+    "English": "Agility is the measure of your athletic prowess. Increasing Agility improves maximum stamina."
   },
   "attAgilityName": {
     "Key": "attAgilityName",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Attribute: Agility",
-    "French": "Attribut : Agilité"
+    "English": "Attribute: Agility"
   },
   "attAgilityRank10Desc": {
     "Key": "attAgilityRank10Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "You are ready for a triathalon. Increase your max stamina to 200.",
-    "French": "Vous êtes prêt pour un triathlon. Votre endurance max passe à 200."
+    "English": "You are ready for a triathalon. Increase your max stamina to 200."
   },
   "attAgilityRank1Desc": {
     "Key": "attAgilityRank1Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Dexterity isn't your strong suit but with a little practice anything is possible.",
-    "French": "La dextérité n'est pas votre fort mais avec un peu d'entraînement tout est possible."
+    "English": "Dexterity isn't your strong suit but with a little practice anything is possible."
   },
   "attAgilityRank2Desc": {
     "Key": "attAgilityRank2Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max stamina to 110.",
-    "French": "Votre endurance max passe à 110"
+    "English": "Increase your max stamina to 110."
   },
   "attAgilityRank3Desc": {
     "Key": "attAgilityRank3Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max stamina to 120.",
-    "French": "Votre endurance max passe à 120"
+    "English": "Increase your max stamina to 120."
   },
   "attAgilityRank4Desc": {
     "Key": "attAgilityRank4Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max stamina to 130.",
-    "French": "Votre endurance max passe à 130"
+    "English": "Increase your max stamina to 130."
   },
   "attAgilityRank5Desc": {
     "Key": "attAgilityRank5Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max stamina to 140.",
-    "French": "Votre endurance max passe à 140"
+    "English": "Increase your max stamina to 140."
   },
   "attAgilityRank6Desc": {
     "Key": "attAgilityRank6Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max stamina to 150.",
-    "French": "Votre endurance max passe à 150"
+    "English": "Increase your max stamina to 150."
   },
   "attAgilityRank7Desc": {
     "Key": "attAgilityRank7Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max stamina to 160.",
-    "French": "Votre endurance max passe à 160"
+    "English": "Increase your max stamina to 160."
   },
   "attAgilityRank8Desc": {
     "Key": "attAgilityRank8Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max stamina to 170.",
-    "French": "Votre endurance max passe à 170"
+    "English": "Increase your max stamina to 170."
   },
   "attAgilityRank9Desc": {
     "Key": "attAgilityRank9Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max stamina to 180.",
-    "French": "Votre endurance max passe à 180"
+    "English": "Increase your max stamina to 180."
   },
   "attfortitude": {
     "Key": "attfortitude",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Fortitude",
-    "French": "Force morale"
+    "English": "Fortitude"
   },
   "attFortitudeDesc": {
     "Key": "attFortitudeDesc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Fortitude is the measure of your physical resilience. Increasing Fortitude increases your \\nmaximum health.",
-    "French": "La force morale mesure votre ténacité physique. L'augmenter améliore votre\\nsanté maximale."
+    "English": "Fortitude is the measure of your physical resilience. Increasing Fortitude increases your \\nmaximum health."
   },
   "attFortitudeName": {
     "Key": "attFortitudeName",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Attribute: Fortitude",
-    "French": "Attribut : Force morale"
+    "English": "Attribute: Fortitude"
   },
   "attFortitudeRank10Desc": {
     "Key": "attFortitudeRank10Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Human tank. Increase your max health to 200",
-    "French": "Tank humain. Votre santé max passe à 200"
+    "English": "Human tank. Increase your max health to 200"
   },
   "attFortitudeRank1Desc": {
     "Key": "attFortitudeRank1Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "You aren't very durable but at least you are alive.",
-    "French": "Vous n'êtes pas très résistant mais au moins vous êtes en vie."
+    "English": "You aren't very durable but at least you are alive."
   },
   "attFortitudeRank2Desc": {
     "Key": "attFortitudeRank2Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max health to 110.",
-    "French": "Votre santé max passe à 110."
+    "English": "Increase your max health to 110."
   },
   "attFortitudeRank3Desc": {
     "Key": "attFortitudeRank3Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max health to 120.",
-    "French": "Votre santé max passe à 120."
+    "English": "Increase your max health to 120."
   },
   "attFortitudeRank4Desc": {
     "Key": "attFortitudeRank4Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max health to 130.",
-    "French": "Votre santé max passe à 130."
+    "English": "Increase your max health to 130."
   },
   "attFortitudeRank5Desc": {
     "Key": "attFortitudeRank5Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max health to 140.",
-    "French": "Votre santé max passe à 140."
+    "English": "Increase your max health to 140."
   },
   "attFortitudeRank6Desc": {
     "Key": "attFortitudeRank6Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max health to 150.",
-    "French": "Votre santé max passe à 150."
+    "English": "Increase your max health to 150."
   },
   "attFortitudeRank7Desc": {
     "Key": "attFortitudeRank7Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max health to 160.",
-    "French": "Votre santé max passe à 160."
+    "English": "Increase your max health to 160."
   },
   "attFortitudeRank8Desc": {
     "Key": "attFortitudeRank8Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max health to 170.",
-    "French": "Votre santé max passe à 170."
+    "English": "Increase your max health to 170."
   },
   "attFortitudeRank9Desc": {
     "Key": "attFortitudeRank9Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Increase your max health to 180.",
-    "French": "Votre santé max passe à 180."
+    "English": "Increase your max health to 180."
   },
   "attintellect": {
     "Key": "attintellect",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Intellect",
-    "French": "Intellect"
+    "English": "Intellect"
   },
   "attIntellectDesc": {
     "Key": "attIntellectDesc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Intellect is the measure of your mental ability. Increasing Intellect improves crafting quality and speed.",
-    "French": "L'intellect mesure vos capacités mentales. L'augmenter améliore la vitesse et la qualité de votre artisanat."
+    "English": "Intellect is the measure of your mental ability. Increasing Intellect improves crafting quality and speed."
   },
   "attIntellectName": {
     "Key": "attIntellectName",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Attribute: Intellect",
-    "French": "Attribut : Intellect"
+    "English": "Attribute: Intellect"
   },
   "attIntellectRank10Desc": {
     "Key": "attIntellectRank10Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "You can craft flawless quality items. Crafting is 65% faster.",
-    "French": "La qualité de votre artisanat est irréprochable (niveau 6). L'artisanat va 65% plus vite."
+    "English": "You can craft flawless quality items. Crafting is 65% faster."
   },
   "attIntellectRank1Desc": {
     "Key": "attIntellectRank1Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "You can craft faulty quality items.",
-    "French": "Vous pouvez façonner des objets défectueux (niveau 1)."
+    "English": "You can craft faulty quality items."
   },
   "attIntellectRank2Desc": {
     "Key": "attIntellectRank2Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "You can craft poor quality items. Crafting is 5% faster.",
-    "French": "Vous pouvez façonner des objets de piètre qualité (niveau 2). L'artisanat va 5% plus vite."
+    "English": "You can craft poor quality items. Crafting is 5% faster."
   },
   "attIntellectRank3Desc": {
     "Key": "attIntellectRank3Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Crafting is 15% faster.",
-    "French": "L'artisanat va 15% plus vite."
+    "English": "Crafting is 15% faster."
   },
   "attIntellectRank4Desc": {
     "Key": "attIntellectRank4Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "You can craft fine quality items. Crafting is 25% faster. ",
-    "French": "Vous pouvez façonner des objets de qualité (niveau 3). L'artisanat va 25% plus vite."
+    "English": "You can craft fine quality items. Crafting is 25% faster. "
   },
   "attIntellectRank5Desc": {
     "Key": "attIntellectRank5Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Crafting is 35% faster.",
-    "French": "L'artisanat va 35% plus vite."
+    "English": "Crafting is 35% faster."
   },
   "attIntellectRank6Desc": {
     "Key": "attIntellectRank6Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "You can craft good quality items. Crafting is now 45% faster.",
-    "French": "Vous pouvez façonner des objets de bonne qualité (niveau 4). L'artisanat va maintenant 45% plus vite."
+    "English": "You can craft good quality items. Crafting is now 45% faster."
   },
   "attIntellectRank7Desc": {
     "Key": "attIntellectRank7Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Crafting is 50% faster.",
-    "French": "L'artisanat va 50% plus vite."
+    "English": "Crafting is 50% faster."
   },
   "attIntellectRank8Desc": {
     "Key": "attIntellectRank8Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "You can craft great quality items. Crafting is 55% faster.",
-    "French": "Vous pouvez façonner des objets de grande qualité (niveau 5). L'artisanat va 55% plus vite."
+    "English": "You can craft great quality items. Crafting is 55% faster."
   },
   "attIntellectRank9Desc": {
     "Key": "attIntellectRank9Desc",
     "Source": "progression",
     "Context": "Attribute",
     "Changes": "New",
-    "English": "Crafting is 60% faster.",
-    "French": "L'artisanat va 60% plus vite."
+    "English": "Crafting is 60% faster."
   },
   "attperception": {
     "Key": "attperception",
@@ -34820,35 +34661,35 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 40% more damage to stunned enemies.\\n+20% chance to inflict bleeding damage."
+    "English": "Power attacks do 40% more damage to stunned enemies.\\n+20% chance to inflict bleeding damage.\\n+5% chance for Power attacks to dismember limbs."
   },
   "perkDeepCutsRank2Desc": {
     "Key": "perkDeepCutsRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 80% more damage to stunned enemies.\\n+30% chance to inflict bleeding damage."
+    "English": "Power attacks do 80% more damage to stunned enemies.\\n+30% chance to inflict bleeding damage.\\n+10% chance for Power attacks to dismember limbs."
   },
   "perkDeepCutsRank3Desc": {
     "Key": "perkDeepCutsRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 120% more damage to stunned enemies.\\n+40% chance to inflict bleeding damage.\\n20% chance for Power attacks to bleed nearby foes.\\n5% chance for Power attacks to decapitate."
+    "English": "Power attacks do 120% more damage to stunned enemies.\\n+40% chance to inflict bleeding damage.\\n20% chance for Power attacks to bleed nearby foes.\\n+20% chance for Power attacks to dismember limbs."
   },
   "perkDeepCutsRank4Desc": {
     "Key": "perkDeepCutsRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 160% more damage to stunned enemies.\\n+60% chance to inflict bleeding damage.\\n40% chance for Power attacks to bleed nearby foes.\\n10% chance for Power attacks to decapitate."
+    "English": "Power attacks do 160% more damage to stunned enemies.\\n+60% chance to inflict bleeding damage.\\n40% chance for Power attacks to bleed nearby foes.\\n+30% chance for Power attacks to dismember limbs."
   },
   "perkDeepCutsRank5Desc": {
     "Key": "perkDeepCutsRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 200% more damage to stunned enemies.\\n+100% chance to inflict bleeding damage.\\n60% chance for Power attacks to bleed nearby foes.\\n15% chance for Power attacks to decapitate."
+    "English": "Power attacks do 200% more damage to stunned enemies.\\n+100% chance to inflict bleeding damage.\\n60% chance for Power attacks to bleed nearby foes.\\n+45% chance for Power attacks to dismember limbs."
   },
   "perkDrunkenMasterDesc": {
     "Key": "perkDrunkenMasterDesc",
@@ -34883,35 +34724,35 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase reload speed by 15%. 10% Faster aiming.\\n50% chance to stun enemies."
+    "English": "Increase reload speed by 15%. 10% Faster aiming.\\n50% chance to stun enemies. +5% chance to dismember."
   },
   "perkExplosiveWeaponsRank2Desc": {
     "Key": "perkExplosiveWeaponsRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase reload speed by 20% .20% Faster aiming.\\n100% chance to stun enemies."
+    "English": "Increase reload speed by 20% .20% Faster aiming.\\n100% chance to stun enemies. +10% chance to dismember."
   },
   "perkExplosiveWeaponsRank3Desc": {
     "Key": "perkExplosiveWeaponsRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase reload speed by 25%. 30% Faster aiming.\\n75% chance to cripple enemies."
+    "English": "Increase reload speed by 25%. 30% Faster aiming.\\n75% chance to cripple enemies. +20% chance to dismember."
   },
   "perkExplosiveWeaponsRank4Desc": {
     "Key": "perkExplosiveWeaponsRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase reload speed by 30%. 40% Faster aiming.\\n50% chance to dismember."
+    "English": "Increase reload speed by 30%. 40% Faster aiming.\\n+30% chance to dismember."
   },
   "perkExplosiveWeaponsRank5Desc": {
     "Key": "perkExplosiveWeaponsRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase reload speed by 35%. 50% Faster aiming.\\n100% chance to dismember."
+    "English": "Increase reload speed by 35%. 50% Faster aiming.\\n+45% chance to dismember."
   },
   "perkFieldMedicDesc": {
     "Key": "perkFieldMedicDesc",
@@ -34981,7 +34822,7 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Specialize in blending into the darkness to completely disappear in even the slightest of shadows."
+    "English": "Specialize in sneaking around in the dark and making less noise in general."
   },
   "perkFromTheShadowsName": {
     "Key": "perkFromTheShadowsName",
@@ -34995,35 +34836,35 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Hide in the shadows 15% more effectively.\\nNoises from actions are muffled 15%"
+    "English": "Hide in the shadows 15% more effectively.\\nNoises from actions are muffled 10%"
   },
   "perkFromTheShadowsRank2Desc": {
     "Key": "perkFromTheShadowsRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Hide in the shadows 30% more effectively.\\nNoises from actions are muffled 25%"
+    "English": "Hide in the shadows 30% more effectively.\\nNoises from actions are muffled 20%"
   },
   "perkFromTheShadowsRank3Desc": {
     "Key": "perkFromTheShadowsRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Hide in the shadows 45% more effectively.\\nNoises from actions are muffled 35%"
+    "English": "Hide in the shadows 45% more effectively.\\nNoises from actions are muffled 30%"
   },
   "perkFromTheShadowsRank4Desc": {
     "Key": "perkFromTheShadowsRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Hide in the shadows 60% more effectively.\\nNoises from actions are muffled 45%"
+    "English": "Hide in the shadows 60% more effectively.\\nNoises from actions are muffled 40%"
   },
   "perkFromTheShadowsRank5Desc": {
     "Key": "perkFromTheShadowsRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Hide in the shadows 75% more effectively.\\nNoises from actions are muffled 60%"
+    "English": "Hide in the shadows 75% more effectively.\\nNoises from actions are muffled 50%"
   },
   "perkGreaseMonkeyDesc": {
     "Key": "perkGreaseMonkeyDesc",
@@ -35058,8 +34899,7 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "You can craft motorcycles.",
-    "French": "Vous pouvez construire des motos."
+    "English": "You can craft motorcycles."
   },
   "perkGreaseMonkeyRank4Desc": {
     "Key": "perkGreaseMonkeyRank4Desc",
@@ -35206,8 +35046,7 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "You can craft a motorcycle.",
-    "French": "Vous pouvez construire des motos."
+    "English": "You can craft a motorcycle."
   },
   "perkHammerGreaseMonkeyRank4Desc": {
     "Key": "perkHammerGreaseMonkeyRank4Desc",
@@ -35221,7 +35060,7 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Specialize in cranial carnage as you pop enemy melons like, well, melons.\\n\\nThe base headshot bonus is 100%."
+    "English": "Specialize in cranial carnage as you pop enemy melons like, well, melons.\\n\\nThe base headshot bonus is 100%.\\nTougher enemies will resist dismemberment."
   },
   "perkHeadshotName": {
     "Key": "perkHeadshotName",
@@ -35235,35 +35074,35 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase Ranged Weapon Headshot damage by 20%"
+    "English": "Increase Ranged Weapon Headshot damage by 20%\\n+5% chance to explode heads on hit."
   },
   "perkHeadshotRank2Desc": {
     "Key": "perkHeadshotRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase Ranged Weapon Headshot damage by 40%"
+    "English": "Increase Ranged Weapon Headshot damage by 40%\\n+10% chance to explode heads on hit."
   },
   "perkHeadshotRank3Desc": {
     "Key": "perkHeadshotRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase Ranged Weapon Headshot damage by 60%.\\n+5% chance to explode heads on hit."
+    "English": "Increase Ranged Weapon Headshot damage by 60%.\\n+20% chance to explode heads on hit."
   },
   "perkHeadshotRank4Desc": {
     "Key": "perkHeadshotRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase Ranged Weapon Headshot damage by 80%.\\n+10% chance to explode heads on hit."
+    "English": "Increase Ranged Weapon Headshot damage by 80%.\\n+30% chance to explode heads on hit."
   },
   "perkHeadshotRank5Desc": {
     "Key": "perkHeadshotRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase Ranged Weapon Headshot damage by 100%.\\n+15% chance to explode heads on hit."
+    "English": "Increase Ranged Weapon Headshot damage by 100%.\\n+45% chance to explode heads on hit."
   },
   "perkHealingFactor": {
     "Key": "perkHealingFactor",
@@ -35461,6 +35300,55 @@
     "Context": "Perk",
     "Changes": "New",
     "English": "Power attacks do 200% more damage to stunned enemies.\\nYou have a 100% chance to knock down enemies with heavy weapons, 60% for power attacks to knock down nearby foes."
+  },
+  "perkHiddenStrikeDesc": {
+    "Key": "perkHiddenStrikeDesc",
+    "Source": "progression",
+    "Context": "Perk",
+    "Changes": "New",
+    "English": "Specialize in catching your enemies unaware while you are sneaking.\\nDeliver your attack before they can even think to defend against it."
+  },
+  "perkHiddenStrikeName": {
+    "Key": "perkHiddenStrikeName",
+    "Source": "progression",
+    "Context": "Perk",
+    "Changes": "New",
+    "English": "Hidden Strike"
+  },
+  "perkHiddenStrikeRank1Desc": {
+    "Key": "perkHiddenStrikeRank1Desc",
+    "Source": "progression",
+    "Context": "Perk",
+    "Changes": "New",
+    "English": "Sneak attacks deal an extra 50% damage."
+  },
+  "perkHiddenStrikeRank2Desc": {
+    "Key": "perkHiddenStrikeRank2Desc",
+    "Source": "progression",
+    "Context": "Perk",
+    "Changes": "New",
+    "English": "Sneak attacks deal an extra 75% damage"
+  },
+  "perkHiddenStrikeRank3Desc": {
+    "Key": "perkHiddenStrikeRank3Desc",
+    "Source": "progression",
+    "Context": "Perk",
+    "Changes": "New",
+    "English": "Sneak attacks deal an extra 100% damage"
+  },
+  "perkHiddenStrikeRank4Desc": {
+    "Key": "perkHiddenStrikeRank4Desc",
+    "Source": "progression",
+    "Context": "Perk",
+    "Changes": "New",
+    "English": "Sneak attacks deal an extra 150% damage"
+  },
+  "perkHiddenStrikeRank5Desc": {
+    "Key": "perkHiddenStrikeRank5Desc",
+    "Source": "progression",
+    "Context": "Perk",
+    "Changes": "New",
+    "English": "Sneak attacks deal an extra 200% damage"
   },
   "perkIntrinsicImmunityDesc": {
     "Key": "perkIntrinsicImmunityDesc",
@@ -35887,35 +35775,35 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase swimming speed by 10%.\\nHold your breath 20% longer."
+    "English": "Increase swimming speed by 10%.\\nHold your breath for 48 seconds."
   },
   "perkOlympicSwimmerRank2Desc": {
     "Key": "perkOlympicSwimmerRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase swimming speed by 15%.\\nHold your breath 40% longer."
+    "English": "Increase swimming speed by 15%.\\nHold your breath for 66 seconds."
   },
   "perkOlympicSwimmerRank3Desc": {
     "Key": "perkOlympicSwimmerRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase swimming speed by 20%.\\nHold your breath 60% longer."
+    "English": "Increase swimming speed by 20%.\\nHold your breath for 84 seconds."
   },
   "perkOlympicSwimmerRank4Desc": {
     "Key": "perkOlympicSwimmerRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase swimming speed by 25%.\\nHold your breath 80% longer."
+    "English": "Increase swimming speed by 25%.\\nHold your breath for 102 seconds."
   },
   "perkOlympicSwimmerRank5Desc": {
     "Key": "perkOlympicSwimmerRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase swimming speed by 30%.\\nHold your breath twice as long."
+    "English": "Increase swimming speed by 30%.\\nHold your breath for 120 seconds."
   },
   "perkPackMuleDesc": {
     "Key": "perkPackMuleDesc",
@@ -36286,154 +36174,140 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Sexual Tyrannosaurus",
-    "French": "Bête de sexe"
+    "English": "Sexual Tyrannosaurus"
   },
   "perkSexualTrexRank1Desc": {
     "Key": "perkSexualTrexRank1Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Reduce melee and tool stamina usage by 5%.",
-    "French": "Réduit la perte d'endurance des armes de corps-à-corps et des outils de 5%."
+    "English": "Reduce melee and tool stamina usage by 5%."
   },
   "perkSexualTrexRank2Desc": {
     "Key": "perkSexualTrexRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Reduce melee and tool stamina usage by 10%.",
-    "French": "Réduit la perte d'endurance des armes de corps-à-corps et des outils de 10%."
+    "English": "Reduce melee and tool stamina usage by 10%."
   },
   "perkSexualTrexRank3Desc": {
     "Key": "perkSexualTrexRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Reduce melee and tool stamina usage by 15%.",
-    "French": "Réduit la perte d'endurance des armes de corps-à-corps et des outils de 15%."
+    "English": "Reduce melee and tool stamina usage by 15%."
   },
   "perkSexualTrexRank4Desc": {
     "Key": "perkSexualTrexRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Reduce melee and tool stamina usage by 20%.",
-    "French": "Réduit la perte d'endurance des armes de corps-à-corps et des outils de 20%."
+    "English": "Reduce melee and tool stamina usage by 20%."
   },
   "perkSexualTrexRank5Desc": {
     "Key": "perkSexualTrexRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Reduce melee and tool stamina usage by 25%.\\nKilling blows grant 50 stamina.",
-    "French": "Réduit la perte d'endurance des armes de corps-à-corps et des outils de 25%. Les coups fatals vous redonnent 50 d'endurance."
+    "English": "Reduce melee and tool stamina usage by 25%.\\nKilling blows grant 50 stamina."
   },
   "perkShotgunMessiahDesc": {
     "Key": "perkShotgunMessiahDesc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Specialize with shotguns and send your enemies to meet their maker.",
-    "French": "Se spécialiser dans l'utilisation du fusil à pompe pour envoyer vos ennemis rencontrer leur créateur."
+    "English": "Specialize with shotguns and send your enemies to meet their maker."
   },
   "perkShotgunMessiahName": {
     "Key": "perkShotgunMessiahName",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Shotgun Messiah",
-    "French": "Messie du fusil à pompe"
+    "English": "Shotgun Messiah"
   },
   "perkShotgunMessiahRank1Desc": {
     "Key": "perkShotgunMessiahRank1Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increases fire rate for shotguns 15%. Reload 10% faster.",
-    "French": "Augmente la cadence de tir du fusil à pompe de 15% et la vitesse de rechargement de 10%."
+    "English": "Increases fire rate for shotguns 15%. Reload 10% faster.\\n+5% chance to dismember limbs."
   },
   "perkShotgunMessiahRank2Desc": {
     "Key": "perkShotgunMessiahRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increases fire rate for shotguns 20%. Reload 15% faster.",
-    "French": "Augmente la cadence de tir du fusil à pompe de 20% et la vitesse de rechargement de 15%."
+    "English": "Increases fire rate for shotguns 20%. Reload 15% faster.\\n+10% chance to dismember limbs."
   },
   "perkShotgunMessiahRank3Desc": {
     "Key": "perkShotgunMessiahRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increases fire rate for shotguns 25%. Reload 20% faster.\\nHas a chance to stun enemies.",
-    "French": "Augmente la cadence de tir du fusil à pompe de 25% et la vitesse de rechargement de 20%.\\nProbabilité d'étourdir les ennemis."
+    "English": "Increases fire rate for shotguns 25%. Reload 20% faster.\\nHas a chance to stun enemies.\\n+20% chance to dismember limbs."
   },
   "perkShotgunMessiahRank4Desc": {
     "Key": "perkShotgunMessiahRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increases fire rate for shotguns 30%. Reload 25% faster.\\nHas a greater chance to stun enemies.",
-    "French": "Augmente la cadence de tir du fusil à pompe de 30% et la vitesse de rechargement de 25%.\\nGrande chance d'étourdir les ennemis."
+    "English": "Increases fire rate for shotguns 30%. Reload 25% faster.\\nHas a greater chance to stun enemies.\\n+30% chance to dismember limbs."
   },
   "perkShotgunMessiahRank5Desc": {
     "Key": "perkShotgunMessiahRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase fire rate for shotguns 35%. Reload 30% faster.\\nLegs shots cripple opponents.",
-    "French": "Augmente la cadence de tir du fusil à pompe de 35% et la vitesse de rechargement de 30%.\\nLes tirs dans les jambes paralysent les adversaires."
+    "English": "Increase fire rate for shotguns 35%. Reload 30% faster.\\nLegs shots cripple opponents.\\n+45% chance to dismember limbs."
   },
   "perkSkullCrusher": {
     "Key": "perkSkullCrusher",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Skull Crusher",
-    "French": "Casse-tête"
+    "English": "Skull Crusher"
   },
   "perkSkullCrusherDesc": {
     "Key": "perkSkullCrusherDesc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Specialize in causing head trauma with all melee weapons and tools.\\n\\nThe base head hit bonus is 100%."
+    "English": "Specialize in causing head trauma with all melee weapons and tools.\\n\\nThe base head hit bonus is 100%.\\nTougher enemies will resist dismemberment."
   },
   "perkSkullCrusherRank1Desc": {
     "Key": "perkSkullCrusherRank1Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Blows to the head do 20% more damage."
+    "English": "Blows to the head do 20% more damage.\\n+5% chance to explode heads on hit."
   },
   "perkSkullCrusherRank2Desc": {
     "Key": "perkSkullCrusherRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Blows to the head do 40% more damage."
+    "English": "Blows to the head do 40% more damage.\\n+10% chance to explode heads on hit."
   },
   "perkSkullCrusherRank3Desc": {
     "Key": "perkSkullCrusherRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Blows to the head do 60% more damage.\\n+5% chance to explode heads on hit."
+    "English": "Blows to the head do 60% more damage.\\n+20% chance to explode heads on hit."
   },
   "perkSkullCrusherRank4Desc": {
     "Key": "perkSkullCrusherRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Blows to the head do 80% more damage.\\n+10% chance to explode heads on hit."
+    "English": "Blows to the head do 80% more damage.\\n+30% chance to explode heads on hit."
   },
   "perkSkullCrusherRank5Desc": {
     "Key": "perkSkullCrusherRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Blows to the head do 100% more damage.\\n+15% chance to explode heads on hit."
+    "English": "Blows to the head do 100% more damage.\\n+45% chance to explode heads on hit."
   },
   "perkSlowMetabolism": {
     "Key": "perkSlowMetabolism",
@@ -36484,55 +36358,6 @@
     "Changes": "New",
     "English": "Reduce food / water loss by 50%."
   },
-  "perkHiddenStrikeDesc": {
-    "Key": "perkHiddenStrikeDesc",
-    "Source": "progression",
-    "Context": "Perk",
-    "Changes": "New",
-    "English": "Specialize in catching your enemies unaware, delivering your attack before they can even think to defend against it."
-  },
-  "perkHiddenStrikeName": {
-    "Key": "perkHiddenStrikeName",
-    "Source": "progression",
-    "Context": "Perk",
-    "Changes": "New",
-    "English": "Hidden Strike"
-  },
-  "perkHiddenStrikeRank1Desc": {
-    "Key": "perkHiddenStrikeRank1Desc",
-    "Source": "progression",
-    "Context": "Perk",
-    "Changes": "New",
-    "English": "Sneak  attacks deal an extra 50% damage."
-  },
-  "perkHiddenStrikeRank2Desc": {
-    "Key": "perkHiddenStrikeRank2Desc",
-    "Source": "progression",
-    "Context": "Perk",
-    "Changes": "New",
-    "English": "Sneak attacks deal an extra 75% damage"
-  },
-  "perkHiddenStrikeRank3Desc": {
-    "Key": "perkHiddenStrikeRank3Desc",
-    "Source": "progression",
-    "Context": "Perk",
-    "Changes": "New",
-    "English": "Sneak attacks deal an extra 100% damage"
-  },
-  "perkHiddenStrikeRank4Desc": {
-    "Key": "perkHiddenStrikeRank4Desc",
-    "Source": "progression",
-    "Context": "Perk",
-    "Changes": "New",
-    "English": "Sneak attacks deal an extra 150% damage"
-  },
-  "perkHiddenStrikeRank5Desc": {
-    "Key": "perkHiddenStrikeRank5Desc",
-    "Source": "progression",
-    "Context": "Perk",
-    "Changes": "New",
-    "English": "Sneak attacks deal an extra 200% damage"
-  },
   "perkRuleOneCardioDesc": {
     "Key": "perkRuleOneCardioDesc",
     "Source": "progression",
@@ -36545,48 +36370,42 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Rule 1: Cardio",
-    "French": "Règle n°1 : le cardio"
+    "English": "Rule 1: Cardio"
   },
   "perkRuleOneCardioNameRank1Desc": {
     "Key": "perkRuleOneCardioNameRank1Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase stamina regen by 10% when sprinting.",
-    "French": "Augmente de 10% la récupération d'endurance lors d'un sprint."
+    "English": "Increase stamina regen by 10% when sprinting."
   },
   "perkRuleOneCardioNameRank2Desc": {
     "Key": "perkRuleOneCardioNameRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase stamina regen by 15% when sprinting.",
-    "French": "Augmente de 15% la récupération d'endurance lors d'un sprint."
+    "English": "Increase stamina regen by 15% when sprinting."
   },
   "perkRuleOneCardioNameRank3Desc": {
     "Key": "perkRuleOneCardioNameRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase stamina regen by 20% when sprinting.",
-    "French": "Augmente de 20% la récupération d'endurance lors d'un sprint."
+    "English": "Increase stamina regen by 20% when sprinting."
   },
   "perkRuleOneCardioNameRank4Desc": {
     "Key": "perkRuleOneCardioNameRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase stamina regen by 25% when sprinting.",
-    "French": "Augmente de 25% la récupération d'endurance lors d'un sprint."
+    "English": "Increase stamina regen by 25% when sprinting."
   },
   "perkRuleOneCardioNameRank5Desc": {
     "Key": "perkRuleOneCardioNameRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Increase stamina regen by 30% when sprinting.",
-    "French": "Augmente de 30% la récupération d'endurance lors d'un sprint."
+    "English": "Increase stamina regen by 30% when sprinting."
   },
   "perkStayDownDesc": {
     "Key": "perkStayDownDesc",
@@ -36600,48 +36419,42 @@
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Stay Down!",
-    "French": "Reste à terre !"
+    "English": "Stay Down!"
   },
   "perkStayDownRank1Desc": {
     "Key": "perkStayDownRank1Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 40% more damage to stunned enemies.\\n60% chance for power attacks to knock foes back down.",
-    "French": "Les attaques puissantes causent 40% de dommage en plus aux ennemis étourdis et 60% de chance de faire reculer un ennemi."
+    "English": "Power attacks do 40% more damage to stunned enemies.\\n60% chance for power attacks to knock foes back down."
   },
   "perkStayDownRank2Desc": {
     "Key": "perkStayDownRank2Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 80% more damage to stunned enemies.\\n70% chance for power attacks to knock foes back down.",
-    "French": "Les attaques puissantes causent 80% de dommage en plus aux ennemis étourdis et 70% de chance de faire reculer un ennemi."
+    "English": "Power attacks do 80% more damage to stunned enemies.\\n70% chance for power attacks to knock foes back down."
   },
   "perkStayDownRank3Desc": {
     "Key": "perkStayDownRank3Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 120% more damage to stunned enemies.\\n80% chance for power attacks to knock foes back down.\\n5 successive hits in a short time causes the last blow to do 100% extra damage.",
-    "French": "Les attaques puissantes causent 120% de dommage en plus aux ennemis étourdis et 80% de chance de faire reculer un ennemi.\\nAu 5e coup successif, les dégâts sont doublés."
+    "English": "Power attacks do 120% more damage to stunned enemies.\\n80% chance for power attacks to knock foes back down.\\n5 successive hits in a short time causes the last blow to do 100% extra damage."
   },
   "perkStayDownRank4Desc": {
     "Key": "perkStayDownRank4Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 160% more damage to stunned enemies.\\n90% chance for power attacks to knock foes back down.\\n4 successive hits in a short time causes the last blow to do 100% extra damage.",
-    "French": "Les attaques puissantes causent 160% de dommage en plus aux ennemis étourdis et 90% de chance de faire reculer un ennemi.\\nAu 4e coup successif, les dégâts sont doublés."
+    "English": "Power attacks do 160% more damage to stunned enemies.\\n90% chance for power attacks to knock foes back down.\\n4 successive hits in a short time causes the last blow to do 100% extra damage."
   },
   "perkStayDownRank5Desc": {
     "Key": "perkStayDownRank5Desc",
     "Source": "progression",
     "Context": "Perk",
     "Changes": "New",
-    "English": "Power attacks do 200% more damage to stunned enemies.\\n100% chance for power attacks to knock foes back down.\\n3 successive hits in a short time causes the last blow to do 100% extra damage.",
-    "French": "Les attaques puissantes causent 200% de dommage en plus aux ennemis étourdis et 80% de chance de faire reculer un ennemi.\\nAu 3e coup successif, les dégâts sont doublés."
+    "English": "Power attacks do 200% more damage to stunned enemies.\\n100% chance for power attacks to knock foes back down.\\n3 successive hits in a short time causes the last blow to do 100% extra damage."
   },
   "perkTacticianDesc": {
     "Key": "perkTacticianDesc",
@@ -36935,7 +36748,7 @@
     "Context": "Perk",
     "Changes": "GrChanged",
     "English": "Sexual Tyrannosaurus",
-    "French": "Bête de sexe",
+    "French": "Tyrannosaure en rut",
     "German": "Wie ein Wildes Tier",
     "Spanish": "Tiranosaurio sexual"
   },
@@ -36945,7 +36758,7 @@
     "Context": "Perk",
     "Changes": "KgNone",
     "English": "You have the stamina of this ancient beast! Regain stamina faster with every rank.",
-    "French": "Vous avez l'endurance d'un tyrannosaure ! Retrouvez votre endurance de plus en plus vite au fil des rangs.",
+    "French": "Vous avez l'endurance de cette bête préhistorique ! Retrouvez votre endurance de plus en plus vite au fil des rangs.",
     "German": "Du hast die Ausdauer eines wilden Tiers! Stelle mit jedem Rang schneller Ausdauer wiederher.",
     "Spanish": "¡Tienes la resistencia de esta bestia prehistórica! Recupera la resistencia más rápido con cada nivel."
   },
@@ -40298,24 +40111,21 @@
     "Source": "UI",
     "Context": "Item Context Menu",
     "Changes": "New",
-    "English": "Mix",
-    "French": "Mélanger"
+    "English": "Mix"
   },
   "lblContextActionModify": {
     "Key": "lblContextActionModify",
     "Source": "UI",
     "Context": "Item Context Menu",
     "Changes": "New",
-    "English": "Modify",
-    "French": "Modifier"
+    "English": "Modify"
   },
   "lblContextActionPrice": {
     "Key": "lblContextActionPrice",
     "Source": "UI",
     "Context": "Item Context Menu",
     "Changes": "New",
-    "English": "Price ({0}%)",
-    "French": "Prix ({0}%)"
+    "English": "Price ({0}%)"
   },
   "lblContextActionRead": {
     "Key": "lblContextActionRead",
@@ -40342,8 +40152,7 @@
     "Source": "UI",
     "Context": "Item Context Menu",
     "Changes": "New",
-    "English": "Rent",
-    "French": "Louer"
+    "English": "Rent"
   },
   "lblContextActionRepair": {
     "Key": "lblContextActionRepair",
@@ -40360,8 +40169,7 @@
     "Source": "UI",
     "Context": "Item Context Menu",
     "Changes": "New",
-    "English": "Reset",
-    "French": "Réinitialiser"
+    "English": "Reset"
   },
   "lblContextActionScrap": {
     "Key": "lblContextActionScrap",
@@ -40378,8 +40186,7 @@
     "Source": "UI",
     "Context": "Item Context Menu",
     "Changes": "New",
-    "English": "Sell",
-    "French": "Vendre"
+    "English": "Sell"
   },
   "lblContextActionSmelt": {
     "Key": "lblContextActionSmelt",
@@ -40932,7 +40739,7 @@
     "Context": "Item Info",
     "Changes": "KgNone",
     "English": "Recipe",
-    "French": "Recettes",
+    "French": "Composition",
     "German": "Rezept",
     "Spanish": "Receta"
   },
@@ -41141,8 +40948,7 @@
     "Source": "UI",
     "Context": "Item Info",
     "Changes": "New",
-    "English": "Base Price",
-    "French": "Prix de base"
+    "English": "Base Price"
   },
   "lblBeltSmllRng": {
     "Key": "lblBeltSmllRng",
@@ -41441,7 +41247,7 @@
     "Context": "Item Info",
     "Changes": "KgNone",
     "English": "Good {0}",
-    "French": "{0} de bonne qualité",
+    "French": "{0} standard",
     "German": "{0} (gut)",
     "Spanish": "Aceptable {0}"
   },
@@ -41471,7 +41277,7 @@
     "Context": "Item Info",
     "Changes": "KgNone",
     "English": "Great {0}",
-    "French": "{0} de grande qualité",
+    "French": "{0} super",
     "German": "{0} (großartig)",
     "Spanish": "Genial {0}"
   },
@@ -41481,7 +41287,7 @@
     "Context": "Item Info",
     "Changes": "KgNone",
     "English": "Fine {0}",
-    "French": "{0} de qualité",
+    "French": "{0} d'exception",
     "German": "{0} (ausgezeichnet)",
     "Spanish": "Bien {0}"
   },
@@ -41491,7 +41297,7 @@
     "Context": "Item Info",
     "Changes": "KgNone",
     "English": "Flawless {0}",
-    "French": "{0} irréprochable",
+    "French": "{0} impeccable",
     "German": "{0} (makellos)",
     "Spanish": "Perfecto {0}"
   },
@@ -41778,8 +41584,7 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Collect",
-    "French": "Collecter"
+    "English": "Collect"
   },
   "btnConfigControls": {
     "Key": "btnConfigControls",
@@ -43014,16 +42819,14 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Morning",
-    "French": "Matin"
+    "English": "Morning"
   },
   "goEvening": {
     "Key": "goEvening",
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Evening",
-    "French": "Soir"
+    "English": "Evening"
   },
   "goBuildCreate": {
     "Key": "goBuildCreate",
@@ -45822,16 +45625,14 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "<{0}> Switch light off",
-    "French": "<{0}> Éteint la lumière"
+    "English": "<{0}> Switch light off"
   },
   "useSwitchLightOn": {
     "Key": "useSwitchLightOn",
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "<{0}> Switch light on",
-    "French": "<{0}> Allume la lumière"
+    "English": "<{0}> Switch light on"
   },
   "vacText": {
     "Key": "vacText",
@@ -45863,32 +45664,28 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Empty Vending Machine",
-    "French": "Distributeur vide"
+    "English": "Empty Vending Machine"
   },
   "xuiExpires": {
     "Key": "xuiExpires",
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Expires",
-    "French": "Expires"
+    "English": "Expires"
   },
   "xuiGameDays": {
     "Key": "xuiGameDays",
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Game Day(s)",
-    "French": "Jour(s) de jeu"
+    "English": "Game Day(s)"
   },
   "xuiGameTime": {
     "Key": "xuiGameTime",
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Game Time",
-    "French": "Temps de jeu"
+    "English": "Game Time"
   },
   "xuiGeneralStock": {
     "Key": "xuiGeneralStock",
@@ -45909,24 +45706,21 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "No Sell Price",
-    "French": "Aucun prix de vente"
+    "English": "No Sell Price"
   },
   "xuiProductName": {
     "Key": "xuiProductName",
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Product Name",
-    "French": "Nom du produit"
+    "English": "Product Name"
   },
   "xuiRealTime": {
     "Key": "xuiRealTime",
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Real Time",
-    "French": "Temps réel"
+    "English": "Real Time"
   },
   "xuiRestock": {
     "Key": "xuiRestock",
@@ -45947,8 +45741,7 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "New",
-    "English": "Sell Price:",
-    "French": "Prix de vente :"
+    "English": "Sell Price:"
   },
   "xuiSkillArmorDefense": {
     "Key": "xuiSkillArmorDefense",
@@ -47040,32 +46833,28 @@
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Advanced",
-    "French": "Rotation avancée"
+    "English": "Advanced"
   },
   "xuiAutoRotation": {
     "Key": "xuiAutoRotation",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Auto Rotate",
-    "French": "Rotation auto"
+    "English": "Auto Rotate"
   },
   "xuiCopyBlock": {
     "Key": "xuiCopyBlock",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Copy Block",
-    "French": "Copier bloc"
+    "English": "Copy Block"
   },
   "xuiCopyRotation": {
     "Key": "xuiCopyRotation",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Copy Rotation",
-    "French": "Copier rotation"
+    "English": "Copy Rotation"
   },
   "xuiOnFaceRotation": {
     "Key": "xuiOnFaceRotation",
@@ -47079,56 +46868,49 @@
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Paint All Sides",
-    "French": "Peindre tous les côtés"
+    "English": "Paint All Sides"
   },
   "xuiPaintBrush": {
     "Key": "xuiPaintBrush",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Paint Brush",
-    "French": "Pinceau"
+    "English": "Paint Brush"
   },
   "xuiPaintRoller": {
     "Key": "xuiPaintRoller",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Paint Roller",
-    "French": "Rouleau à peindre"
+    "English": "Paint Roller"
   },
   "xuiReplacePaint": {
     "Key": "xuiReplacePaint",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Replace Paint",
-    "French": "Remplacer la peinture"
+    "English": "Replace Paint"
   },
   "xuiSimpleRotation": {
     "Key": "xuiSimpleRotation",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Simple",
-    "French": "Simple"
+    "English": "Simple"
   },
   "xuiSprayGun": {
     "Key": "xuiSprayGun",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Spray Gun",
-    "French": "Pistolet à peinture"
+    "English": "Spray Gun"
   },
   "xuiTexturePicker": {
     "Key": "xuiTexturePicker",
     "Source": "UI",
     "Context": "Radial",
     "Changes": "New",
-    "English": "Texture Picker",
-    "French": "Sélecteur de texture"
+    "English": "Texture Picker"
   },
   "respawnTitleMessage": {
     "Key": "respawnTitleMessage",
@@ -48083,16 +47865,14 @@
     "Source": "UI",
     "Context": "Tooltip",
     "Changes": "New",
-    "English": "Sort Container",
-    "French": "Trier le conteneur"
+    "English": "Sort Container"
   },
   "lblSortInventory": {
     "Key": "lblSortInventory",
     "Source": "UI",
     "Context": "Tooltip",
     "Changes": "New",
-    "English": "Sort Inventory",
-    "French": "Trier l'inventaire"
+    "English": "Sort Inventory"
   },
   "lblToggleActive": {
     "Key": "lblToggleActive",
@@ -49185,40 +48965,35 @@
     "Source": "UI",
     "Context": "Tooltip",
     "Changes": "New",
-    "English": "New Journal Entry",
-    "French": "Nouvelle entrée dans le journal"
+    "English": "New Journal Entry"
   },
   "ttNoSpaceForBuying": {
     "Key": "ttNoSpaceForBuying",
     "Source": "UI",
     "Context": "Tooltip",
     "Changes": "New",
-    "English": "You do not have enough inventory space to buy this item.",
-    "French": "Vous n'avez pas assez de place dans votre inventaire pour acheter cet objet."
+    "English": "You do not have enough inventory space to buy this item."
   },
   "ttNoSpaceForSelling": {
     "Key": "ttNoSpaceForSelling",
     "Source": "UI",
     "Context": "Tooltip",
     "Changes": "New",
-    "English": "You do not have enough inventory space to sell this item.",
-    "French": "Vous n'avez pas assez de place dans votre inventaire pour vendre cet objet."
+    "English": "You do not have enough inventory space to sell this item."
   },
   "ttNotEnoughFuel": {
     "Key": "ttNotEnoughFuel",
     "Source": "UI",
     "Context": "Tooltip",
     "Changes": "New",
-    "English": "You do not have enough fuel.",
-    "French": "Vous n'avez pas assez de carburant."
+    "English": "You do not have enough fuel."
   },
   "ttOutOfStamina": {
     "Key": "ttOutOfStamina",
     "Source": "UI",
     "Context": "Tooltip",
     "Changes": "New",
-    "English": "Out of Stamina",
-    "French": "Vous êtes épuisé"
+    "English": "Out of Stamina"
   },
   "ttOverstockedOnItem": {
     "Key": "ttOverstockedOnItem",
@@ -49287,8 +49062,7 @@
     "Source": "UI",
     "Context": "Tooltip",
     "Changes": "New",
-    "English": "You must repair this before picking it up.",
-    "French": "Vous devez réparer ceci avant de le prendre."
+    "English": "You must repair this before picking it up."
   },
   "ttRepairToolsMissing": {
     "Key": "ttRepairToolsMissing",
@@ -49564,7 +49338,7 @@
     "Context": "Use Prompt",
     "Changes": "KgNone",
     "English": "Empty {1}",
-    "French": "{1} vide",
+    "French": "Vider {1}",
     "German": "Leere {1}",
     "Spanish": "{1} Sin botín"
   },
@@ -49656,48 +49430,42 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Brass",
-    "French": "Laiton (f)"
+    "English": "Brass"
   },
   "lblclay": {
     "Key": "lblclay",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Clay",
-    "French": "Argile (f)"
+    "English": "Clay"
   },
   "lblglass": {
     "Key": "lblglass",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Glass",
-    "French": "Verre (f)"
+    "English": "Glass"
   },
   "lbliron": {
     "Key": "lbliron",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Iron",
-    "French": "Fer (f)"
+    "English": "Iron"
   },
   "lbllead": {
     "Key": "lbllead",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Lead",
-    "French": "Plomb (f)"
+    "English": "Lead"
   },
   "lblstone": {
     "Key": "lblstone",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Stone",
-    "French": "Pierre (f)"
+    "English": "Stone"
   },
   "xuiAccept": {
     "Key": "xuiAccept",
@@ -49744,24 +49512,21 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Always",
-    "French": "Toujours"
+    "English": "Always"
   },
   "xuiAmmo": {
     "Key": "xuiAmmo",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "AMMO",
-    "French": "MUNITIONS"
+    "English": "AMMO"
   },
   "xuiApply": {
     "Key": "xuiApply",
     "Source": "UI",
     "Context": "XUi",
     "Changes": "New",
-    "English": "Apply",
-    "French": "Appliquer"
+    "English": "Apply"
   },
   "xuiAssembleMustReadBook": {
     "Key": "xuiAssembleMustReadBook",
@@ -50002,16 +49767,14 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Cancel",
-    "French": "Annuler"
+    "English": "Cancel"
   },
   "xuiCharacter": {
     "Key": "xuiCharacter",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "CHARACTER",
-    "French": "PERSONNAGE"
+    "English": "CHARACTER"
   },
   "xuiClose": {
     "Key": "xuiClose",
@@ -50027,24 +49790,21 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "COMBINE",
-    "French": "COMBINER"
+    "English": "COMBINE"
   },
   "xuiCombineItemA": {
     "Key": "xuiCombineItemA",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "ITEM A",
-    "French": "ÉLÉMENT A"
+    "English": "ITEM A"
   },
   "xuiCombineItemB": {
     "Key": "xuiCombineItemB",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "ITEM B",
-    "French": "ÉLÉMENT B"
+    "English": "ITEM B"
   },
   "xuiCost": {
     "Key": "xuiCost",
@@ -50060,8 +49820,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "CRAFTING",
-    "French": "ARTISANAT"
+    "English": "CRAFTING"
   },
   "xuiCraftQueueFull": {
     "Key": "xuiCraftQueueFull",
@@ -50088,8 +49847,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "CURRENT LIFE",
-    "French": "VIE ACTUELLE"
+    "English": "CURRENT LIFE"
   },
   "xuiDay": {
     "Key": "xuiDay",
@@ -50171,8 +49929,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Discard changes",
-    "French": "Annuler les modifications"
+    "English": "Discard changes"
   },
   "xuiDurability": {
     "Key": "xuiDurability",
@@ -50256,24 +50013,21 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Stone",
-    "French": "Pierre"
+    "English": "Stone"
   },
   "xuifBuilding": {
     "Key": "xuifBuilding",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Building",
-    "French": "Bâtiment"
+    "English": "Building"
   },
   "xuifConcrete": {
     "Key": "xuifConcrete",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Concrete",
-    "French": "Béton"
+    "English": "Concrete"
   },
   "xuifConstruction": {
     "Key": "xuifConstruction",
@@ -50315,8 +50069,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Doors / Hatches",
-    "French": "Portes / Trappes"
+    "English": "Doors / Hatches"
   },
   "xuiFeelsLike": {
     "Key": "xuiFeelsLike",
@@ -50324,7 +50077,7 @@
     "Context": "XUI",
     "Changes": "KgNone",
     "English": "FEELS LIKE",
-    "French": "TEMPÉRATURE RESSENTIE",
+    "French": "AIMERAIT",
     "German": "FÜHLT SICH AN WIE",
     "Spanish": "PARECE"
   },
@@ -50340,8 +50093,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Foliage",
-    "French": "Feuillage"
+    "English": "Foliage"
   },
   "xuifFrames": {
     "Key": "xuifFrames",
@@ -50355,16 +50107,14 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Iron",
-    "French": "Fer"
+    "English": "Iron"
   },
   "xuifLoot": {
     "Key": "xuifLoot",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Loot",
-    "French": "Piller"
+    "English": "Loot"
   },
   "xuiFood": {
     "Key": "xuiFood",
@@ -50380,56 +50130,49 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Other",
-    "French": "Autres"
+    "English": "Other"
   },
   "xuifOutdoor": {
     "Key": "xuifOutdoor",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Outdoor",
-    "French": "Extérieur"
+    "English": "Outdoor"
   },
   "xuifSigns": {
     "Key": "xuifSigns",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Signs",
-    "French": "Panneaux"
+    "English": "Signs"
   },
   "xuifSteel": {
     "Key": "xuifSteel",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Steel",
-    "French": "Acier"
+    "English": "Steel"
   },
   "xuifTerrain": {
     "Key": "xuifTerrain",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Terrain",
-    "French": "Terrain"
+    "English": "Terrain"
   },
   "xuifTraps": {
     "Key": "xuifTraps",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Traps",
-    "French": "Pièges"
+    "English": "Traps"
   },
   "xuifTrees": {
     "Key": "xuifTrees",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Trees",
-    "French": "Arbres"
+    "English": "Trees"
   },
   "xuiFuel": {
     "Key": "xuiFuel",
@@ -50445,16 +50188,14 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Windows",
-    "French": "Fenêtres"
+    "English": "Windows"
   },
   "xuifWood": {
     "Key": "xuifWood",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Wood",
-    "French": "Bois"
+    "English": "Wood"
   },
   "xuiGas": {
     "Key": "xuiGas",
@@ -50495,8 +50236,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Instant",
-    "French": "Instantané"
+    "English": "Instant"
   },
   "xuiInvalidPrefabName": {
     "Key": "xuiInvalidPrefabName",
@@ -50637,7 +50377,7 @@
     "Context": "XUI",
     "Changes": "KgNone",
     "English": "LOOTING",
-    "French": "PILLAGE",
+    "French": "EN COURS D'ACQUISITION DE BUTIN",
     "German": "PLÜNDERN",
     "Spanish": "SAQUEANDO"
   },
@@ -50674,56 +50414,49 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "GROUP",
-    "French": "GROUPE"
+    "English": "GROUP"
   },
   "xuiMaterials": {
     "Key": "xuiMaterials",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "MATERIALS",
-    "French": "MATÉRIAUX"
+    "English": "MATERIALS"
   },
   "xuiMaxOutput": {
     "Key": "xuiMaxOutput",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "MAX OUTPUT",
-    "French": "SORTIE MAX"
+    "English": "MAX OUTPUT"
   },
   "xuiMenuExit": {
     "Key": "xuiMenuExit",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Exit",
-    "French": "Sortir"
+    "English": "Exit"
   },
   "xuiMenuHelp": {
     "Key": "xuiMenuHelp",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Help",
-    "French": "Aide"
+    "English": "Help"
   },
   "xuiMenuOptions": {
     "Key": "xuiMenuOptions",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Options",
-    "French": "Options"
+    "English": "Options"
   },
   "xuiMenuSave": {
     "Key": "xuiMenuSave",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Save",
-    "French": "Sauvegarder"
+    "English": "Save"
   },
   "xuiMinibike": {
     "Key": "xuiMinibike",
@@ -50750,8 +50483,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "MODIFIERS",
-    "French": "MODIFICATEURS"
+    "English": "MODIFIERS"
   },
   "xuiNA": {
     "Key": "xuiNA",
@@ -51166,8 +50898,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "RESULT",
-    "French": "RÉSULTAT"
+    "English": "RESULT"
   },
   "xuiRewards": {
     "Key": "xuiRewards",
@@ -51201,16 +50932,14 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Save",
-    "French": "Sauvegarder"
+    "English": "Save"
   },
   "xuiSaveDirtyPrefab": {
     "Key": "xuiSaveDirtyPrefab",
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "Save changes?",
-    "French": "Sauvegarder les modifications ?"
+    "English": "Save changes?"
   },
   "xuiSaveDirtyPrefabText": {
     "Key": "xuiSaveDirtyPrefabText",
@@ -51757,8 +51486,7 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "New",
-    "English": "XP TO NEXT LEVEL",
-    "French": "XP POUR NIVEAU SUIVANT"
+    "English": "XP TO NEXT LEVEL"
   },
   "xuiZombieKills": {
     "Key": "xuiZombieKills",
@@ -53083,24 +52811,21 @@
     "Source": "vehicles",
     "Context": "item",
     "Changes": "new",
-    "English": "Motorcycle Chassis",
-    "French": "Chassis de moto"
+    "English": "Motorcycle Chassis"
   },
   "vehicleMotorcycleHandlebars": {
     "Key": "vehicleMotorcycleHandlebars",
     "Source": "vehicles",
     "Context": "item",
     "Changes": "new",
-    "English": "Motorcycle Handlebars",
-    "French": "Poignées de moto"
+    "English": "Motorcycle Handlebars"
   },
   "vehicleMotorcyclePlaceable": {
     "Key": "vehicleMotorcyclePlaceable",
     "Source": "vehicles",
     "Context": "item",
     "Changes": "new",
-    "English": "Motorcycle",
-    "French": "Moto"
+    "English": "Motorcycle"
   },
   "vehiclePartsGroupDesc": {
     "Key": "vehiclePartsGroupDesc",
@@ -53141,8 +52866,7 @@
     "Source": "vehicles",
     "Context": "item",
     "Changes": "new",
-    "English": "Wheel",
-    "French": "Roue"
+    "English": "Wheel"
   },
   "vehicle4x4Truck": {
     "Key": "vehicle4x4Truck",
@@ -53195,24 +52919,21 @@
     "Source": "vehicles",
     "Context": "vehicle",
     "Changes": "new",
-    "English": "Motorcycle",
-    "French": "Moto"
+    "English": "Motorcycle"
   },
   "xuiBoolMaleOff": {
     "Key": "xuiBoolMaleOff",
     "Source": "XUi",
     "Context": "Character Editor",
     "Changes": "New",
-    "English": "Female",
-    "French": "Femme"
+    "English": "Female"
   },
   "xuiBoolMaleOn": {
     "Key": "xuiBoolMaleOn",
     "Source": "XUi",
     "Context": "Character Editor",
     "Changes": "New",
-    "English": "Male",
-    "French": "Homme"
+    "English": "Male"
   },
   "xuiCharacterColorFor": {
     "Key": "xuiCharacterColorFor",
@@ -53310,16 +53031,14 @@
     "Source": "XUi",
     "Context": "Ingame Menu",
     "Changes": "New",
-    "English": "Invite Friends",
-    "French": "Inviter des amis"
+    "English": "Invite Friends"
   },
   "xuiKeypad": {
     "Key": "xuiKeypad",
     "Source": "XUi",
     "Context": "Keypad",
     "Changes": "New",
-    "English": "Enter Password",
-    "French": "Entrer mot de passe"
+    "English": "Enter Password"
   },
   "lblSwitchStaticMap": {
     "Key": "lblSwitchStaticMap",
@@ -53389,8 +53108,7 @@
     "Source": "XUi",
     "Context": "Player Profiles",
     "Changes": "New",
-    "English": "Attributes",
-    "French": "Attributs"
+    "English": "Attributes"
   },
   "xuiOptionsProfiles": {
     "Key": "xuiOptionsProfiles",
@@ -53404,32 +53122,28 @@
     "Source": "XUi",
     "Context": "Player Profiles",
     "Changes": "New",
-    "English": "Preview",
-    "French": "Aperçu"
+    "English": "Preview"
   },
   "xuiProfileCreate": {
     "Key": "xuiProfileCreate",
     "Source": "XUi",
     "Context": "Player Profiles",
     "Changes": "New",
-    "English": "Create",
-    "French": "Créer"
+    "English": "Create"
   },
   "xuiProfileDelete": {
     "Key": "xuiProfileDelete",
     "Source": "XUi",
     "Context": "Player Profiles",
     "Changes": "New",
-    "English": "Delete",
-    "French": "Supprimer"
+    "English": "Delete"
   },
   "xuiProfileEdit": {
     "Key": "xuiProfileEdit",
     "Source": "XUi",
     "Context": "Player Profiles",
     "Changes": "New",
-    "English": "Edit",
-    "French": "Éditer"
+    "English": "Edit"
   },
   "xuiProfilesDeleteConfirmation": {
     "Key": "xuiProfilesDeleteConfirmation",
@@ -53457,8 +53171,7 @@
     "Source": "XUi",
     "Context": "Player Report",
     "Changes": "New",
-    "English": "Other",
-    "French": "Autres"
+    "English": "Other"
   },
   "xuiCategoryPlayerReportSpamming": {
     "Key": "xuiCategoryPlayerReportSpamming",
@@ -53584,72 +53297,63 @@
     "Source": "XUi",
     "Context": "Skills",
     "Changes": "New",
-    "English": "Buy",
-    "French": "Acheter"
+    "English": "Buy"
   },
   "xuiSkillEffects": {
     "Key": "xuiSkillEffects",
     "Source": "XUi",
     "Context": "Skills",
     "Changes": "New",
-    "English": "Effects",
-    "French": "Effets"
+    "English": "Effects"
   },
   "xuiSkillLevel": {
     "Key": "xuiSkillLevel",
     "Source": "XUi",
     "Context": "Skills",
     "Changes": "New",
-    "English": "Level",
-    "French": "Niveau"
+    "English": "Level"
   },
   "xuiSkillList": {
     "Key": "xuiSkillList",
     "Source": "XUi",
     "Context": "Skills",
     "Changes": "New",
-    "English": "Skill List",
-    "French": "Liste des compétences"
+    "English": "Skill List"
   },
   "xuiSkillMilestones": {
     "Key": "xuiSkillMilestones",
     "Source": "XUi",
     "Context": "Skills",
     "Changes": "New",
-    "English": "Milestones",
-    "French": "Jalons"
+    "English": "Milestones"
   },
   "xuiSkillRequirement": {
     "Key": "xuiSkillRequirement",
     "Source": "XUi",
     "Context": "Skills",
     "Changes": "New",
-    "English": "Req: {0} {1}",
-    "French": "Requis : {0} {1}"
+    "English": "Req: {0} {1}"
   },
   "xuiSkillUnlocks": {
     "Key": "xuiSkillUnlocks",
     "Source": "XUi",
     "Context": "Skills",
     "Changes": "New",
-    "English": "Unlocks",
-    "French": "Débloque"
+    "English": "Unlocks"
   },
   "xuiSteamExit": {
     "Key": "xuiSteamExit",
     "Source": "XUi",
     "Context": "Steam Login",
     "Changes": "New",
-    "English": "Exit Game",
-    "French": "Quitter le jeu"
+    "English": "Exit Game"
   },
   "xuiSteamLogin": {
     "Key": "xuiSteamLogin",
     "Source": "XUi",
     "Context": "Steam Login",
     "Changes": "New",
-    "English": "Steam Login",
-    "French": "Connexion Steam"
+    "English": "Steam Login"
   },
   "xuiSteamLoginFailure": {
     "Key": "xuiSteamLoginFailure",
@@ -53705,32 +53409,28 @@
     "Source": "XUi",
     "Context": "Steam Login",
     "Changes": "New",
-    "English": "Play Offline",
-    "French": "Jouer hors-ligne"
+    "English": "Play Offline"
   },
   "xuiSteamRetryLogin": {
     "Key": "xuiSteamRetryLogin",
     "Source": "XUi",
     "Context": "Steam Login",
     "Changes": "New",
-    "English": "Retry",
-    "French": "Réessayer"
+    "English": "Retry"
   },
   "xuiOptionsUsername": {
     "Key": "xuiOptionsUsername",
     "Source": "XUi",
     "Context": "Username",
     "Changes": "New",
-    "English": "Set Player Name",
-    "French": "Saisir nom du joueur"
+    "English": "Set Player Name"
   },
   "xuiUsernameLabel": {
     "Key": "xuiUsernameLabel",
     "Source": "XUi",
     "Context": "Username",
     "Changes": "New",
-    "English": "Player Name:",
-    "French": "Nom du joueur :"
+    "English": "Player Name:"
   },
   "xuiOptionsVideoRestartRequiredText": {
     "Key": "xuiOptionsVideoRestartRequiredText",
@@ -58916,7 +58616,7 @@
     "Context": "Skill Menu",
     "Changes": "KgNone",
     "English": "XP TO NEXT LEVEL:",
-    "French": "XP POUR NIVEAU SUIVANT",
+    "French": "XP AU NIVEAU SUIVANT",
     "German": "XP AUF DIE NÄCHSTE STUFE",
     "Spanish": "XP A NIVEL SIGUIENTE:"
   },
@@ -59271,656 +58971,581 @@
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Attacks / Minute",
-    "French": "Attaques / Minute"
+    "English": "Attacks / Minute"
   },
   "statBlockDamage": {
     "Key": "statBlockDamage",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Block Damage",
-    "French": "Dégâts des blocs"
+    "English": "Block Damage"
   },
   "statDegradationMax": {
     "Key": "statDegradationMax",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Max Durability",
-    "French": "Durabilité"
+    "English": "Max Durability"
   },
   "statDegradationPerUse": {
     "Key": "statDegradationPerUse",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Degradation",
-    "French": "Dégradation"
+    "English": "Degradation"
   },
   "statEntityDamageFists": {
     "Key": "statEntityDamageFists",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Fist Melee Damage",
-    "French": "Dégâts aux poings"
+    "English": "Fist Melee Damage"
   },
   "statEntityDamageMelee": {
     "Key": "statEntityDamageMelee",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Melee Damage",
-    "French": "Dégâts au corps-à-corps"
+    "English": "Melee Damage"
   },
   "statEntityDamageRanged": {
     "Key": "statEntityDamageRanged",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Ranged Damage",
-    "French": "Dégâts à distance"
+    "English": "Ranged Damage"
   },
   "statEntityDamageShotgun": {
     "Key": "statEntityDamageShotgun",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Damage / Pellet",
-    "French": "Dégâts / Plomb"
+    "English": "Damage / Pellet"
   },
   "statEntityDamage": {
     "Key": "statEntityDamage",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Damage",
-    "French": "Dégâts"
+    "English": "Damage"
+  },
+  "statEntityDamageExplosion": {
+    "Key": "statEntityDamageExplosion",
+    "Source": "UI",
+    "Context": "Item stat",
+    "Changes": "New",
+    "English": "Explosion Damage"
   },
   "statPowerAttack": {
     "Key": "statPowerAttack",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Power Attack Damage",
-    "French": "Dégâts d'attaque puissante"
+    "English": "Power Attack Damage"
   },
   "statHyperthermalResist": {
     "Key": "statHyperthermalResist",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Heat Resist",
-    "French": "Résistance au chaud"
+    "English": "Heat Resist"
   },
   "statHypothermalResist": {
     "Key": "statHypothermalResist",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Cold Resist",
-    "French": "Résistance au froid"
+    "English": "Cold Resist"
   },
   "statMagazineSize": {
     "Key": "statMagazineSize",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Magazine Size",
-    "French": "Taille du chargeur"
+    "English": "Magazine Size"
   },
   "statMaxRange": {
     "Key": "statMaxRange",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Max Range",
-    "French": "Portée max"
+    "English": "Max Range"
   },
   "statDamageFalloffRange": {
     "Key": "statDamageFalloffRange",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Effective Range",
-    "French": "Portée pratique"
+    "English": "Effective Range"
   },
   "statMobility": {
     "Key": "statMobility",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Mobility",
-    "French": "Mobilité"
+    "English": "Mobility"
   },
   "statPhysicalDamageResist": {
     "Key": "statPhysicalDamageResist",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Armor Rating",
-    "French": "Niveau d'armure"
+    "English": "Armor Rating"
   },
   "statPhysicalDamageResistLight": {
     "Key": "statPhysicalDamageResistLight",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Light Armor Rating",
-    "French": "Niveau d'armure légère"
+    "English": "Light Armor Rating"
   },
   "statPhysicalDamageResistHeavy": {
     "Key": "statPhysicalDamageResistHeavy",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Heavy Armor Rating",
-    "French": "Niveau d'armure lourde"
+    "English": "Heavy Armor Rating"
   },
   "statBuffResistance": {
     "Key": "statBuffResistance",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Effect Resistance",
-    "French": "Résistance aux effets"
+    "English": "Effect Resistance"
   },
   "statNoiseReduction": {
     "Key": "statNoiseReduction",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Noise Reduction",
-    "French": "Réduction du bruit"
+    "English": "Noise Reduction"
   },
   "statRoundsPerMinute": {
     "Key": "statRoundsPerMinute",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Rounds / Minute",
-    "French": "Cadence de tir"
+    "English": "Rounds / Minute"
   },
   "statStaminaChangeOT": {
     "Key": "statStaminaChangeOT",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Stamina /S",
-    "French": "Endurance /S"
+    "English": "Stamina /S"
   },
   "statStaminaLoss": {
     "Key": "statStaminaLoss",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Stamina Cost",
-    "French": "Perte d'endurance"
+    "English": "Stamina Cost"
   },
   "statWeaponHandling": {
     "Key": "statWeaponHandling",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Weapon Handling",
-    "French": "Tenue d'arme"
+    "English": "Weapon Handling"
   },
   "statKickDegreesVertical": {
     "Key": "statKickDegreesVertical",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Recoil",
-    "French": "Recul"
+    "English": "Recoil"
   },
   "statKickDegreesHorizontal": {
     "Key": "statKickDegreesHorizontal",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Recoil Horizontal",
-    "French": "Recul horizontal"
+    "English": "Recoil Horizontal"
   },
   "statProjectileVelocity": {
     "Key": "statProjectileVelocity",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Projectile Velocity",
-    "French": "Vélocité du projectile"
+    "English": "Projectile Velocity"
   },
   "statToxicResist": {
     "Key": "statToxicResist",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Toxic Resist",
-    "French": "Résistance aux intoxications"
+    "English": "Toxic Resist"
   },
   "statRoundRayCount": {
     "Key": "statRoundRayCount",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Pellets",
-    "French": "Plombs"
+    "English": "Pellets"
   },
   "statFallDamage": {
     "Key": "statFallDamage",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Fall Damage",
-    "French": "Dégâts de chute"
+    "English": "Fall Damage"
   },
   "statCanShootThrough": {
     "Key": "statCanShootThrough",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Shoot Through",
-    "French": "Perforant"
+    "English": "Shoot Through"
   },
   "statMass": {
     "Key": "statMass",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Mass",
-    "French": "Masse"
+    "English": "Mass"
   },
   "statStabilityGlue": {
     "Key": "statStabilityGlue",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Horizontal Support",
-    "French": "Support horizontal"
+    "English": "Horizontal Support"
   },
   "statMaxDamage": {
     "Key": "statMaxDamage",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Hit Points",
-    "French": "Points de vie"
+    "English": "Hit Points"
   },
   "statStabilitySupport": {
     "Key": "statStabilitySupport",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Vertical Support",
-    "French": "Support vertical"
+    "English": "Vertical Support"
   },
   "statLightOpacity": {
     "Key": "statLightOpacity",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Light Opacity",
-    "French": "Opacité"
+    "English": "Light Opacity"
   },
   "statRequiredPower": {
     "Key": "statRequiredPower",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Required Power",
-    "French": "Puissance requise"
+    "English": "Required Power"
   },
   "statMassMultiblock": {
     "Key": "statMassMultiblock",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Mass / Multiblock",
-    "French": "Masse / bloc multiple"
+    "English": "Mass / Multiblock"
   },
   "statWaterAmount": {
     "Key": "statWaterAmount",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Water",
-    "French": "Eau"
+    "English": "Water"
   },
   "statStaminaAmount": {
     "Key": "statStaminaAmount",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Stamina",
-    "French": "Endurance"
+    "English": "Stamina"
   },
   "statFoodAmount": {
     "Key": "statFoodAmount",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Max Stamina",
-    "French": "Endurance max"
+    "English": "Max Stamina"
   },
   "statHealthAmount": {
     "Key": "statHealthAmount",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Health",
-    "French": "Santé"
+    "English": "Health"
   },
   "statFirstAidAmount": {
     "Key": "statFirstAidAmount",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "First Aid",
-    "French": "Premiers soins"
+    "English": "First Aid"
   },
   "statMaxHealthAmount": {
     "Key": "statMaxHealthAmount",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Max Health",
-    "French": "Santé max"
+    "English": "Max Health"
   },
   "statTrue": {
     "Key": "statTrue",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Yes",
-    "French": "Oui"
+    "English": "Yes"
   },
   "statFalse": {
     "Key": "statFalse",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "No",
-    "French": "Non"
+    "English": "No"
   },
   "statFoodPoisoningRisk": {
     "Key": "statFoodPoisoningRisk",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Food Poisoning",
-    "French": "Intoxication alimentair"
+    "English": "Food Poisoning"
   },
   "statDysenteryRisk": {
     "Key": "statDysenteryRisk",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Dysentery",
-    "French": "Dysenterie"
+    "English": "Dysentery"
   },
   "statBagSize": {
     "Key": "statBagSize",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Bag invit",
-    "French": "Capacité du sac"
+    "English": "Bag Size"
   },
   "statCraftingTier": {
     "Key": "statCraftingTier",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Crafting Tier",
-    "French": "Niveau d'artisanat"
+    "English": "Crafting Tier"
   },
   "statCarryCapacity": {
     "Key": "statCarryCapacity",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Carrying Capacity",
-    "French": "Capacité de charge"
+    "English": "Carrying Capacity"
   },
   "statJumpStrength": {
     "Key": "statJumpStrength",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Jump Strength",
-    "French": "Force de saut"
+    "English": "Jump Strength"
   },
   "statPlayerExpGain": {
     "Key": "statPlayerExpGain",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "XP Gain",
-    "French": "Gain d'XP"
+    "English": "XP Gain"
   },
   "statHealthMaxModifierOT": {
     "Key": "statHealthMaxModifierOT",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Medical Healing /s",
-    "French": "Soins médicaux /s"
+    "English": "Medical Healing /s"
   },
   "statHealthChangeOT": {
     "Key": "statHealthChangeOT",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Healing /s",
-    "French": "Santé /s"
+    "English": "Healing /s"
   },
   "statHealthLoss": {
     "Key": "statHealthLoss",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Damage Mitigation",
-    "French": "Atténuation des dommages"
+    "English": "Damage Mitigation"
   },
   "statShowInstantHealth": {
     "Key": "statShowInstantHealth",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Health",
-    "French": "Santé"
+    "English": "Health"
   },
   "statShowMaxHealth": {
     "Key": "statShowMaxHealth",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "+ Max Health",
-    "French": "+ Santé max"
+    "English": "+ Max Health"
   },
   "statWaterChangeOT": {
     "Key": "statWaterChangeOT",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Water /s",
-    "French": "Eau /s"
+    "English": "Water /s"
   },
   "statExRadius": {
     "Key": "statExRadius",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Explosion Radius",
-    "French": "Rayon d'impact"
+    "English": "Explosion Radius"
   },
   "statShowPerception": {
     "Key": "statShowPerception",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Perception",
-    "French": "Perception"
+    "English": "Perception"
   },
   "statShowStrength": {
     "Key": "statShowStrength",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Strength",
-    "French": "Force"
+    "English": "Strength"
   },
   "statShowFortitude": {
     "Key": "statShowFortitude",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Fortitude",
-    "French": "Force morale"
+    "English": "Fortitude"
   },
   "statShowAgility": {
     "Key": "statShowAgility",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Agility",
-    "French": "Agilité"
+    "English": "Agility"
   },
   "statShowIntellect": {
     "Key": "statShowIntellect",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Intellect",
-    "French": "Intellect"
+    "English": "Intellect"
   },
   "statCraftingTime": {
     "Key": "statCraftingTime",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Crafting Time",
-    "French": "Temps d'artisanat"
+    "English": "Crafting Time"
   },
   "statShowPlayerExpGain": {
     "Key": "statShowPlayerExpGain",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "XP Gain",
-    "French": "Gain d'XP"
+    "English": "XP Gain"
   },
   "statBartering": {
     "Key": "statBartering",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Bartering",
-    "French": "Troc"
+    "English": "Bartering"
   },
   "statLootGamestage": {
     "Key": "statLootGamestage",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Loot Bonus",
-    "French": "Butin"
+    "English": "Loot Bonus"
   },
   "statTreasureRadius": {
     "Key": "statTreasureRadius",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Buried Treasure Radius",
-    "French": "Rayon de trésor enfoui"
+    "English": "Buried Treasure Radius"
   },
   "statRunSpeed": {
     "Key": "statRunSpeed",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Run Speed",
-    "French": "Vitesse de course"
+    "English": "Run Speed"
   },
   "statWalkSpeed": {
     "Key": "statWalkSpeed",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Walk Speed",
-    "French": "Vitesse de marche"
+    "English": "Walk Speed"
   },
   "groupAttire": {
     "Key": "groupAttire",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Attire",
-    "French": "Tenue"
+    "English": "Attire"
   },
   "groupRanged": {
     "Key": "groupRanged",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Ranged",
-    "French": "À distance"
+    "English": "Ranged"
   },
   "groupMelee": {
     "Key": "groupMelee",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Melee",
-    "French": "Au corps-à-corps"
+    "English": "Melee"
   },
   "groupConsumables": {
     "Key": "groupConsumables",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Consumable",
-    "French": "Consommable"
+    "English": "Consumable"
   },
   "groupResources": {
     "Key": "groupResources",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Resource",
-    "French": "Ressource"
+    "English": "Resource"
   },
   "groupAmmo": {
     "Key": "groupAmmo",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Ammunition",
-    "French": "Munitions"
+    "English": "Ammunition"
   },
   "groupBlocks": {
     "Key": "groupBlocks",
     "Source": "UI",
     "Context": "Item stat",
     "Changes": "New",
-    "English": "Block",
-    "French": "Bloc"
+    "English": "Block"
   },
   "xuiSkillNerfedEffect": {
     "Key": "xuiSkillNerfedEffect",
     "Source": "UI",
     "Context": "Skills",
     "Changes": "New",
-    "English": "Disabled by status effect",
-    "French": "Annulé par un effet"
+    "English": "Disabled by status effect"
   },
   "xuiDefault": {
     "Key": "xuiDefault",
     "Source": "UI",
     "Context": "Options Video",
     "Changes": "New",
-    "English": "Default",
-    "French": "Par défaut"
+    "English": "Default"
   },
   "activeBlockPrompt": {
     "Key": "activeBlockPrompt",
@@ -59932,8 +59557,7 @@
     "Key": "inactiveBlockPrompt",
     "Context": "Block prompt",
     "Changes": "New",
-    "English": "(Inactive) {0}",
-    "French": "{0} (inactif)"
+    "English": "(Inactive) {0}"
   },
   "xuiOptionsVideoStreamingMipmapsEnabled": {
     "Key": "xuiOptionsVideoStreamingMipmapsEnabled",
@@ -59955,5 +59579,19 @@
     "Context": "Xui Server Browser",
     "Changes": "New",
     "English": "[FF0000][U]Failed retrieving server information![/U]\\n[FF4F00]Other data shown will be incorrect.\\nServer might need a restart to work properly."
+  },
+  "goVersion": {
+    "Key": "goVersion",
+    "Source": "UI",
+    "Context": "Menu",
+    "Changes": "KgNone",
+    "English": "Game Version"
+  },
+  "goVersionDesc": {
+    "Key": "goVersionDesc",
+    "Source": "UI",
+    "Context": "Menu",
+    "Changes": "KgNone",
+    "English": "Version of the game running on the server"
   }
 }
