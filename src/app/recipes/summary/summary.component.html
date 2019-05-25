@@ -8,7 +8,7 @@
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'shoppingListColName' | translate }} </th>
     <td mat-cell *matCellDef="let recipeItem">
-      <a [href]="recipeItem.name" target="_blank" [title]="recipeItem.name | describe"> {{recipeItem.name | translate}} </a>
+      <a [href]="recipeItem.name" target="_blank" [title]="recipeItem.name | describeAttribute"> {{recipeItem.name | translate}} </a>
     </td>
   </ng-container>
 

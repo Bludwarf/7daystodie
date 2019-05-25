@@ -35,6 +35,7 @@ import { ObjectComponent } from './object/object.component';
 import { DescribePipe } from './pipes/describe.pipe';
 import { ItemModifierComponent } from './item-modifier/item-modifier.component';
 import { UiAtlasItemIconComponent } from './ui-atlas-item-icon/ui-atlas-item-icon.component';
+import {DescribeAttributePipe} from './pipes/describe-attribute.pipe';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { UiAtlasItemIconComponent } from './ui-atlas-item-icon/ui-atlas-item-ico
     ItemComponent,
     ObjectComponent,
     DescribePipe,
+    DescribeAttributePipe,
     ItemModifierComponent,
     UiAtlasItemIconComponent
   ],

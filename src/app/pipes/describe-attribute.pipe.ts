@@ -5,14 +5,6 @@ import {DomSanitizer} from '@angular/platform-browser';
 /**
  * Exemple d'utilisation :
  * <pre>
- * <p>
- *     {{object.name | describe}}
- * </p>
- * </pre>
- *
- * <p>Attention à ne pas utiliser cette version si on décrit un attribut HTML :</p>
- *
- * <pre>
  * <p [title]="object.name | describeAttribute"></p>
  * </pre>
  *
@@ -20,21 +12,18 @@ import {DomSanitizer} from '@angular/platform-browser';
  *
  */
 @Pipe({
-  name: 'describe'
+  name: 'describeAttribute'
 })
-export class DescribePipe implements PipeTransform {
+export class DescribeAttributePipe implements PipeTransform {
 
-  constructor(private localization: LocalizationService, private sanitizer: DomSanitizer) { }
+  constructor(private localization: LocalizationService) { }
 
   transform(value: string, lang?: string): any {
     const description = this.localization.describe(value);
     if (!description) {
       return description;
     }
-    if (description.indexOf('\\n') === -1) {
-      return description;
-    }
-    return this.sanitizer.bypassSecurityTrustHtml(description.replace(/\\n/g, '<br/>'));
+    return description.replace(/\\n/g, '\n');
   }
 
 }
