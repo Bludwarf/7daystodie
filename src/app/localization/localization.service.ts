@@ -3,8 +3,8 @@ import TOKENS from 'src/assets/Data/Config/Localization.txt.json';
 import INTERAL_TOKENS from 'src/assets/Localization.csv.json';
 import {WIKI_URL} from '../constants';
 
-const ENGLISH_LANG = 'English';
-const FRENCH_LANG = 'French';
+export const ENGLISH_LANG = 'English';
+export const FRENCH_LANG = 'French';
 
 const getCurrentLanguage = (): string => {
   if (navigator.language.startsWith('fr')) {
