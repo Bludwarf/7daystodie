@@ -1,6 +1,7 @@
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {Router} from '@angular/router';
+import manifest from 'src/assets/manifest.json';
 
 @Component({
   selector: 'app-root',
@@ -26,5 +27,9 @@ export class AppComponent implements OnDestroy {
 
   forFilter(route): boolean {
     return route.data && route.data.title;
+  }
+
+  get manifest(): any {
+    return manifest;
   }
 }

@@ -5,6 +5,9 @@
       src="https://gamepedia.cursecdn.com/7daystodie_gamepedia/thumb/1/1f/OfficalWiki.png/600px-OfficalWiki.png?version=53cf53a4d2849bbdabf215f58b3b43ef"
       alt="7 Days to Die"/></a>
   </mat-toolbar>
+  <div class="version">
+    <a [href]="manifest['7d2d'].version.link">{{ manifest['7d2d'].version.title }}</a>
+  </div>
 </header>
 
 <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
