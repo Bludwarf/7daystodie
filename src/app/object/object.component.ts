@@ -14,7 +14,7 @@ import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
   templateUrl: './object.component.html',
   styleUrls: ['./object.component.scss']
 })
-export class ObjectComponent implements OnInit, AfterViewInit  {
+export class ObjectComponent implements OnInit, AfterViewInit {
 
   public objectCache: SevenDaysObject;
   public selectedMagazineItem: Item;
@@ -94,7 +94,20 @@ export class ObjectComponent implements OnInit, AfterViewInit  {
         return undefined;
       }
       return mods
-        .sort((a, b) => this.localization.translate(a.name).localeCompare(this.localization.translate(b.name), undefined, { sensitivity: 'base' }));
+        .sort(this.localization.getSortFunction());
+    } else {
+      return undefined;
+    }
+  }
+
+  getCompatibleItems(): Item[] {
+    if (this.object.itemModifier) {
+      const items = this.items.getCompatibleItems(this.object.itemModifier);
+      if (!items || items.length === 0) {
+        return undefined;
+      }
+      return items
+        .sort(this.localization.getSortFunction());
     } else {
       return undefined;
     }

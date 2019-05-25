@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import TOKENS from 'src/assets/Data/Config/Localization.txt.json';
 import INTERAL_TOKENS from 'src/assets/Localization.csv.json';
 import {WIKI_URL} from '../constants';
+import {XmlObject} from '../common/xml.service';
 
 export const ENGLISH_LANG = 'English';
 export const FRENCH_LANG = 'French';
@@ -27,7 +28,8 @@ export const translate = (key: string, lang = DEFAULT_LANG): string => {
 })
 export class LocalizationService {
 
-  constructor() { }
+  constructor() {
+  }
 
   translate(key: string, lang = DEFAULT_LANG): string {
     return translate(key, lang);
@@ -44,5 +46,11 @@ export class LocalizationService {
     const key = itemName + 'Desc';
     const desc = translate(key, lang);
     return desc !== key ? desc : translate(itemName, lang);
+  }
+
+  getSortFunction<T extends XmlObject>(): (a: T, b: T) => number {
+    return (a, b) => this
+      .translate(a.name)
+      .localeCompare(this.translate(b.name), undefined, {sensitivity: 'base'});
   }
 }

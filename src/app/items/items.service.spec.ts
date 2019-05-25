@@ -1,6 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {ItemsService} from './items.service';
 import {LinkedElementNotSedError} from '../item/passive-effect';
+import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
 
 const ITEMS_COUNT = 579; // TODO 676 !!!
 
@@ -115,5 +116,13 @@ describe('ItemsService', () => {
     const requiredItem = items.get('beerSchematic');
     expect(requiredItem).toBeDefined();
     expect(items.getRequiredItem(item)).toBe(requiredItem);
+  });
+
+  it('should get all pistol mods', () => {
+    const service: ItemsService = TestBed.get(ItemsService);
+    const mods: ItemModifiersService = TestBed.get(ItemModifiersService);
+    const mod = mods.get('modGunSoundSuppressorSilencer');
+    const compatibleItems = service.getCompatibleItems(mod);
+    expect(compatibleItems).toContain(service.get('gunPistol'));
   });
 });

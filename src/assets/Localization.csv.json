@@ -9,6 +9,16 @@
     "English": "After attaining",
     "French": "Après avoir obtenu"
   },
+  "compatibleItems": {
+    "Key": "compatibleItems",
+    "English": "Compatible Items",
+    "French": "Éléments compatibles"
+  },
+  "compatibleMods": {
+    "Key": "compatibleMods",
+    "English": "Compatible Modifications",
+    "French": "Modifications compatibles"
+  },
   "Discard changes?": {
     "Key": "Discard changes?",
     "English": "Discard changes?",
