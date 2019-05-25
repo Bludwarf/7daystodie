@@ -1,19 +1,22 @@
 import {Injectable} from '@angular/core';
 import {Item, ItemsService} from '../items/items.service';
 import {Recipe, RecipesService} from '../recipes/recipes.service';
+import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
+import {ItemModifier} from '../item-modifier/item-modifier';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ObjectService {
 
-  constructor(private items: ItemsService, private recipes: RecipesService) { }
+  constructor(private items: ItemsService, private recipes: RecipesService, private itemModifiers: ItemModifiersService) { }
 
   get(name: string): SevenDaysObject {
     const builder = new Builder(name);
     return builder
       .item(this.items)
       .recipe(this.recipes)
+      .itemModifier(this.itemModifiers)
       .build();
   }
 }
@@ -21,6 +24,7 @@ export class ObjectService {
 export class SevenDaysObject {
   public item: Item;
   public recipe: Recipe;
+  public itemModifier: ItemModifier;
 
   constructor(public name: string) {
   }
@@ -52,6 +56,14 @@ class Builder {
     const recipe = recipes.get(this.name);
     if (recipe) {
       this.object.recipe = recipe;
+    }
+    return this;
+  }
+
+  itemModifier(service: ItemModifiersService): this {
+    const element = service.get(this.name);
+    if (element) {
+      this.object.itemModifier = element;
     }
     return this;
   }
