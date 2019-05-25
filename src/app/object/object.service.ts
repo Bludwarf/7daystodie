@@ -28,6 +28,35 @@ export class SevenDaysObject {
 
   constructor(public name: string) {
   }
+
+  get customIcon(): string {
+    if (this.item) {
+      if (this.item.customIcon) {
+        return this.item.customIcon;
+      }
+    }
+    if (this.itemModifier) {
+      if (this.itemModifier.customIcon) {
+        return this.itemModifier.customIcon;
+      }
+    }
+    return undefined;
+  }
+
+  get customIconTint(): string {
+    if (this.item) {
+      if (this.item.customIconTint) {
+        return this.item.customIconTint;
+      }
+    }
+    if (this.itemModifier) {
+      if (this.itemModifier.customIconTint) {
+        return this.itemModifier.customIconTint;
+      }
+    }
+    return undefined;
+  }
+
 }
 
 class Builder {

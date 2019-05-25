@@ -1,6 +1,7 @@
 import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {Item, ItemsService} from '../items.service';
 import {Color, Solver} from '../../lib/ColorSolver';
+import {ObjectService, SevenDaysObject} from '../../object/object.service';
 
 /**
  *
@@ -26,13 +27,16 @@ export class ItemIconComponent implements OnInit {
   @Input('height') height: string;
   @ViewChild('filter') filter: ElementRef;
 
-  constructor(private items: ItemsService) { }
+  /** CSS style left offset to fix positioning problems */
+  @Input() customIconTintLeftOffset: string;
+
+  constructor(private items: ItemsService, private objects: ObjectService) { }
 
   ngOnInit() {
   }
 
-  get item(): Item {
-    return this.items.get(this.itemName);
+  get object(): SevenDaysObject {
+    return this.objects.get(this.itemName);
   }
 
   loadCustomIconTint(img: HTMLImageElement, reload = false) {
@@ -44,11 +48,11 @@ export class ItemIconComponent implements OnInit {
         display: 'inherit',
         position: 'absolute',
         top: baseImg.offsetTop + 'px',
-        left: baseImg.offsetLeft + 'px'
+        left: (baseImg.offsetLeft + (this.customIconTintLeftOffset ? +this.customIconTintLeftOffset : 0)) + 'px'
       });
 
-      if (!reload && this.item && this.item.customIconTint) {
-        const color = getCustomIconTintColor(this.item.customIconTint);
+      if (!reload && this.object && this.object.customIconTint) {
+        const color = getCustomIconTintColor(this.object.item.customIconTint);
         const solver = new Solver(color);
         const result = solver.solve(); // filter: invert(26%) sepia(85%) saturate(5948%) hue-rotate(295deg) brightness(115%) contrast(129%);
         if (result && result.filter) {
@@ -63,8 +67,7 @@ export class ItemIconComponent implements OnInit {
   }
 
   getItemIcon(): string {
-    const itemName = this.item ? this.item.customIcon : this.itemName;
-    return this.items.getItemIcon(itemName);
+    return this.items.getItemIcon(this.object ? this.object.customIcon : this.itemName);
   }
 
   reload() {

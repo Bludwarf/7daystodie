@@ -38,4 +38,14 @@ export class ItemModifier extends XmlObject {
     }
     return !!tags.find(tag => !!tags2.find(tag2 => tag2 === tag));
   }
+
+  get customIcon(): string {
+    const xmlProp = this.getFirst('property', 'CustomIcon');
+    return xmlProp ? xmlProp.$.value : undefined;
+  }
+
+  get customIconTint(): string {
+    const xmlProp = this.getFirst('property', 'CustomIconTint');
+    return xmlProp ? xmlProp.$.value : undefined;
+  }
 }

@@ -1,7 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { ObjectService } from './object.service';
-import {LinkedElementNotSedError} from '../item/passive-effect';
+import {ObjectService} from './object.service';
 
 describe('ObjectService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
@@ -17,5 +16,13 @@ describe('ObjectService', () => {
     expect(object).toBeDefined();
     expect(object.item).toBeDefined();
     expect(object.recipe).toBeDefined();
+  });
+
+  it('should get customIcons', () => {
+    const objects: ObjectService = TestBed.get(ObjectService);
+    expect(objects.get('gunPistol').customIcon).toBeFalsy();
+    expect(objects.get('modShotgunSawedOffBarrel').customIcon).toBeFalsy();
+    expect(objects.get('ammo44MagnumBulletSteel').customIcon).toEqual('ammo44MagnumBullet');
+    expect(objects.get('modGunButtkick3000').customIcon).toEqual('gothBootsBlack');
   });
 });

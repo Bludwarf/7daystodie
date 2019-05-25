@@ -6,6 +6,6 @@
   <ng-container *ngIf="getItemIcon() as icon">
     <!-- TODO : le filtre CSS ne reproduit pas la véritable couleur dans le jeu -->
     <img src="{{icon}}" class="ItemIcons" [style.height]="height" title="{{ itemName | translate }}" [alt]="itemName"/>
-    <img #filter *ngIf="item?.customIconTint" [style.height]="height" src="{{icon}}" class="ItemIcons ItemIcons-filter" (load)="loadCustomIconTint($event.target)" [alt]="itemName + ' tint'"/>
+    <img #filter *ngIf="object?.customIconTint" [style.height]="height" src="{{icon}}" class="ItemIcons ItemIcons-filter" (load)="loadCustomIconTint($event.target)" [alt]="itemName + ' tint'"/>
   </ng-container>
 </ng-template>
