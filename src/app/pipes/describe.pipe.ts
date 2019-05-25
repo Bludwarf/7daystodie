@@ -31,7 +31,7 @@ export class DescribePipe implements PipeTransform {
     if (!description) {
       return description;
     }
-    return this.sanitizer.bypassSecurityTrustHtml(description.replace('\\n', '<br/>'));
+    return this.sanitizer.bypassSecurityTrustHtml(description.replace(/\\n/g, '<br/>'));
   }
 
 }
