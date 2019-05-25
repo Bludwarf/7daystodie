@@ -1,4 +1,9 @@
 {
+  "ammunition": {
+    "Key": "ammunition",
+    "English": "Ammunition",
+    "French": "Munitions"
+  },
   "atA": {
     "Key": "atA",
     "English": "At a",

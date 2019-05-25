@@ -200,6 +200,16 @@
 
         </ng-container>
 
+        <ng-container *ngIf="object.item && object.item.MagazineItemNames as magazineItemNames">
+          <h2>{{ 'ammunition' | translate }}</h2>
+
+          <ul>
+            <li *ngFor="let magazineItemName of magazineItemNames">
+              <a [href]="magazineItemName">{{magazineItemName | translate}}</a>
+            </li>
+          </ul>
+        </ng-container>
+
         <ng-container *ngIf="getAllModsInstallableOn() as mods">
           <h2>{{ 'compatibleMods' | translate }}</h2>
 
