@@ -52,7 +52,7 @@ export class ItemIconComponent implements OnInit {
       });
 
       if (!reload && this.object && this.object.customIconTint) {
-        const color = getCustomIconTintColor(this.object.item.customIconTint);
+        const color = getCustomIconTintColor(this.object.customIconTint);
         const solver = new Solver(color);
         const result = solver.solve(); // filter: invert(26%) sepia(85%) saturate(5948%) hue-rotate(295deg) brightness(115%) contrast(129%);
         if (result && result.filter) {
