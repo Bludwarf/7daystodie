@@ -2457,7 +2457,7 @@
 		<property name="state0" value="DeathTrigger"/>
 	</property>
 	<property class="MechanimDeathStates">
-		<property name="state0" value="Base Layer.Death"/>
+		<property name="state0" value="Death"/>
 	</property>
 
 	<property name="AITask-1" value="Swim"/>

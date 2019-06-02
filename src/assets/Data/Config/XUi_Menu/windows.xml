@@ -1063,9 +1063,9 @@
 				</rect>
 				
 				<rect tab_key="xuiOptionsVideoQuality">
-					<videooption pos="8,-40" name="QualityPreset" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High,Custom" value_wrap="false" />
+					<videooption pos="8,-40" name="QualityPreset" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High,Ultra,Custom" value_wrap="false" />
 
-					<grid pos="8,-120" rows="10" cell_width="600" cell_height="45" repeat_content="false" arrangement="vertical" >
+					<grid pos="8,-110" rows="11" cell_width="600" cell_height="42" repeat_content="false" arrangement="vertical" >
 						<videooption name="AntiAliasing" type="ComboBoxBool" />
 
 						<videooption name="TextureQuality" type="ComboBoxList&lt;System.String&gt;" values="Full,Half,Quarter,Eighth" value_wrap="false" reverse_list="true" />
@@ -1076,7 +1076,7 @@
 
 						<videooption name="ReflectedShadows" type="ComboBoxBool" />
 
-						<videooption name="ShadowsDistance" type="ComboBoxList&lt;System.String&gt;" values="Off,Near,Far" value_wrap="false" />
+						<videooption name="ShadowsDistance" type="ComboBoxList&lt;System.String&gt;" values="Off,Near,Middle,Far" value_wrap="false" />
 
 						<videooption name="WaterQuality" type="ComboBoxList&lt;System.String&gt;" values="Low,High" value_wrap="false" />
 
@@ -1084,10 +1084,10 @@
 
 						<videooption name="ViewDistance" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High" value_wrap="false" />
 
+						<videooption name="LODDistance" type="ComboBoxFloat" value_increment="0.05" value_wrap="false" format_string="0%" />
+
 						<!--videooption name="FieldOfView" type="ComboBoxInt" value_increment="2" value_wrap="false" /-->
 						<rect />
-
-						<videooption name="LODDistance" type="ComboBoxFloat" value_increment="0.05" value_wrap="false" format_string="0%" />
 
 						<videooption name="TreeQuality" type="ComboBoxList&lt;System.String&gt;" values="Low,Middle,High,Ultra" value_wrap="false" />
 
@@ -1096,14 +1096,18 @@
 						<rect />
 						<!-- Image Effects -->
 
+						<videooption name="Bloom" type="ComboBoxBool" />
+
+						<videooption name="DepthOfField" type="ComboBoxBool" />
+
 						<videooption name="MotionBlur" type="ComboBoxList&lt;System.String&gt;" values="Off,Simple,Normal" value_wrap="false" />
 
 						<videooption name="SSAO" type="ComboBoxBool" />
 
-						<videooption name="DepthOfField" type="ComboBoxBool" />
+						<videooption name="SSReflections" type="ComboBoxBool" />
 
 						<videooption name="SunShafts" type="ComboBoxBool" />
-						
+
 						<rect />
 
 						<videooption name="StreamingMipmapsEnabled" type="ComboBoxBool" />
