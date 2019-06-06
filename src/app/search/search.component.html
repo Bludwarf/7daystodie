@@ -1,12 +1,14 @@
 <form>
   <mat-form-field class="full-width">
-    <mat-label>Search</mat-label>
+    <mat-label>{{ 'search' | translate }}</mat-label>
     <input type="text" matInput [formControl]="query" [matAutocomplete]="auto">
   </mat-form-field>
 </form>
 
 <mat-autocomplete #auto="matAutocomplete">
-  <mat-option *ngFor="let object of filteredObjects | async" [value]="object.name | translate" (onSelectionChange)="selectObject(object)">
+  <mat-option *ngFor="let object of filteredObjects | async" [value]="object.name | translate"
+              (onSelectionChange)="selectObject(object)"
+              (change)="selectObject(object)">
     <div [title]="object.name | describeAttribute">
       <app-item-icon [itemName]="object.name" class="ItemIcons"></app-item-icon>
       <span class="name">{{ object.name | translate }}</span> :

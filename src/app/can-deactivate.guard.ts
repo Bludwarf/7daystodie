@@ -27,9 +27,7 @@ export class CanDeactivateGuard implements CanDeactivate<RecipeComponent> {
     if (!component.recipe/* || component.crisis.name === component.editName*/) {
       return true;
     }
-    // Otherwise ask the user with the dialog service and return its
-    // observable which resolves to true or false when the user decides
-    return component.dialogService.confirm(this.localization.translate('Discard changes?'));
+    return true;
   }
 
 }

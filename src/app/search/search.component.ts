@@ -32,7 +32,7 @@ export class SearchComponent implements OnInit {
   private _filterObjects(value: string): SevenDaysObject[] {
     const filterValue = value.toLowerCase();
 
-    const matches = (stringValue: string) => stringValue.toLowerCase().indexOf(filterValue) === 0;
+    const matches = (stringValue: string) => stringValue.toLowerCase().indexOf(filterValue) !== -1;
     return this.objects.filter(object => {
       // check internal name
       return DEFAULT_LANG !== ENGLISH_LANG && matches(this.localization.translate(object.name)) ||
