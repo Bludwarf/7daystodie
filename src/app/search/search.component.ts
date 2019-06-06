@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {DEFAULT_LANG, ENGLISH_LANG, LocalizationService} from '../localization/localization.service';
 import {Router} from '@angular/router';
+import {MatOptionSelectionChange} from '@angular/material';
 
 @Component({
   selector: 'app-search',
@@ -22,8 +23,14 @@ export class SearchComponent implements OnInit {
     this.filteredObjects = this.query.valueChanges
       .pipe(
         startWith(''),
-        map(object => object ? this._filterObjects(object) : this.objects.slice())
+        map(value => value ? this._filterObjects(value) : this.objects.slice())
       );
+    this.filteredObjects.subscribe(filteredObjects => {
+      if (filteredObjects && filteredObjects.length === 1) {
+        const object = filteredObjects[0];
+        return this.router.navigate([`/${object.name}`]);
+      }
+    });
   }
 
   ngOnInit() {
@@ -43,7 +50,11 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  selectObject(object: SevenDaysObject): Promise<boolean> {
-    return this.router.navigate([`/${object.name}`]);
+  selectObject(object: SevenDaysObject, $event?: MatOptionSelectionChange): Promise<boolean> {
+    if (!$event || $event.source.selected) {
+      return this.router.navigate([`/${object.name}`]);
+    } else {
+      return Promise.resolve(false);
+    }
   }
 }
