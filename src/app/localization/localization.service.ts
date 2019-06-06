@@ -13,7 +13,7 @@ const getCurrentLanguage = (): string => {
   }
   return ENGLISH_LANG;
 };
-const DEFAULT_LANG = getCurrentLanguage();
+export const DEFAULT_LANG = getCurrentLanguage();
 
 export const translate = (key: string, lang = DEFAULT_LANG): string => {
   const translations = TOKENS[key] || INTERAL_TOKENS[key];

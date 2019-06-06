@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {WeaponsComponent} from './weapons/weapons.component';
 import {RecipesComponent} from './recipes/recipes.component';
 import {translate} from './localization/localization.service';
@@ -12,11 +12,12 @@ import {ObjectComponent} from './object/object.component';
 import {ItemGuard} from './item/item.guard';
 import {ObjectGuard} from './object/object.guard';
 import {ObjectResolverService} from './object/object-resolver.service';
+import {IndexComponent} from './index/index.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'Recipes',
+    component: IndexComponent,
     pathMatch: 'full'
   },
   {

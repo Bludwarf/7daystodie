@@ -3,22 +3,53 @@ import {Item, ItemsService} from '../items/items.service';
 import {Recipe, RecipesService} from '../recipes/recipes.service';
 import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
 import {ItemModifier} from '../item-modifier/item-modifier';
+import {ObjectsCache, XmlObject, XmlService} from '../common/xml.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ObjectService {
 
+  cache = new ObjectsCache<SevenDaysObject>();
+
   constructor(private items: ItemsService, private recipes: RecipesService, private itemModifiers: ItemModifiersService) { }
 
   get(name: string): SevenDaysObject {
-    const builder = new Builder(name);
-    return builder
-      .item(this.items)
-      .recipe(this.recipes)
-      .itemModifier(this.itemModifiers)
-      .build();
+    return this.cache.getOrPut(name, () => {
+      const builder = new Builder(name);
+      return builder
+        .item(this.items)
+        .recipe(this.recipes)
+        .itemModifier(this.itemModifiers)
+        .build();
+    });
   }
+
+  getAll(): SevenDaysObject[] {
+    return this.cache.getOrPutAll(object => object.name, () => {
+      // All object names
+      const names: string[] = [];
+
+      // All object parts
+      addAllNames<Item>(this.items, 'item', names);
+      addAllNames<Recipe>(this.recipes, 'recipe', names);
+      addAllNames<ItemModifier>(this.itemModifiers, 'item-modifier', names);
+
+      return names.map(name => this.get(name));
+    });
+  }
+}
+
+function addAllNames<T extends XmlObject>(service: XmlService<T>, objectType: string, names: string[]) {
+  service.getAll()
+    .map(item => item.name)
+    .forEach(name => {
+      if (!names.includes(name)) {
+        names.push(name);
+      } else {
+        console.warn(`Duplicate key for ${objectType} "${name}"`);
+      }
+    });
 }
 
 export class SevenDaysObject {

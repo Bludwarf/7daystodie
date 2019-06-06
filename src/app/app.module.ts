@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {WeaponsComponent} from './weapons/weapons.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
+  MatAutocompleteModule,
   MatButtonModule, MatButtonToggleModule,
   MatFormFieldModule,
   MatIconModule,
@@ -25,7 +26,7 @@ import {CommonModule} from '@angular/common';
 import { RoundPerMinutePipe } from './pipes/round-per-minute.pipe';
 import {RecipesService} from './recipes/recipes.service';
 import { RecipesComponent } from './recipes/recipes.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SummaryComponent } from './recipes/summary/summary.component';
 import { RecipeNodeComponent } from './recipes/recipe-node/recipe-node.component';
 import { ItemIconComponent } from './items/item-icon/item-icon.component';
@@ -36,6 +37,8 @@ import { DescribePipe } from './pipes/describe.pipe';
 import { ItemModifierComponent } from './item-modifier/item-modifier.component';
 import { UiAtlasItemIconComponent } from './ui-atlas-item-icon/ui-atlas-item-icon.component';
 import {DescribeAttributePipe} from './pipes/describe-attribute.pipe';
+import { SearchComponent } from './search/search.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,9 @@ import {DescribeAttributePipe} from './pipes/describe-attribute.pipe';
     DescribePipe,
     DescribeAttributePipe,
     ItemModifierComponent,
-    UiAtlasItemIconComponent
+    UiAtlasItemIconComponent,
+    SearchComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +80,9 @@ import {DescribeAttributePipe} from './pipes/describe-attribute.pipe';
     MatTreeModule,
     MatProgressBarModule,
     FormsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   providers: [
     ItemsService,

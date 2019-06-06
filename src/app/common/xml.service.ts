@@ -3,7 +3,7 @@ import * as _ from 'underscore';
 
 export abstract class XmlService<T extends XmlObject> {
 
-  protected cache = new XmlObjectsCache<T>();
+  protected cache = new ObjectsCache<T>();
 
   /**
    *
@@ -60,8 +60,8 @@ export abstract class XmlService<T extends XmlObject> {
 
 export class XmlObject {
 
-  private firstCache = new XmlObjectsCache2<XmlObject>();
-  private firstWithClassCache = new XmlObjectsCache2<XmlObject>();
+  private firstCache = new ObjectsCache2<XmlObject>();
+  private firstWithClassCache = new ObjectsCache2<XmlObject>();
 
   constructor(protected xmlElement: any) { }
 
@@ -131,7 +131,7 @@ export class XmlObject {
 
 }
 
-export class XmlObjectsCache<T> {
+export class ObjectsCache<T> {
   cache = {};
 
   /** To keep ordre and know if all items have been read */
@@ -171,7 +171,7 @@ export class XmlObjectsCache<T> {
   }
 }
 
-export class XmlObjectsCache2<T> {
+export class ObjectsCache2<T> {
   cache = {};
 
   /**

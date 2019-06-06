@@ -52250,6 +52250,26 @@
     "German": "Glättet gezackte Kanten der Objekte.\\nAuswirkung auf die Leistung: Mittel\\n",
     "Spanish": "Pule los bordes irregulares de los objetos.\\nEfecto en rendimiento: Medio\\n"
   },
+  "xuiOptionsVideoBloom": {
+    "Key": "xuiOptionsVideoBloom",
+    "Source": "UI",
+    "Context": "Xui Video Options",
+    "Changes": "New",
+    "English": "Bloom",
+    "French": "Flou lumineux",
+    "German": "Bloom",
+    "Spanish": "Bloom"
+  },
+  "xuiOptionsVideoBloomTooltip": {
+    "Key": "xuiOptionsVideoBloomTooltip",
+    "Source": "UI",
+    "Context": "Xui Video Options",
+    "Changes": "New",
+    "English": "A glow around brighter highlights.\\nPerformance Impact: Medium\\n",
+    "French": "Une lueur autour des points les plus lumineux.\\nImpact sur la performance : moyen\\n",
+    "German": "Hellste Bildteile erhalten ein Leuchten.\\nAuswirkung auf die Leistung: Mittel\\n",
+    "Spanish": "Aparece un brillo alrededor de zonas resaltadas.\\nEfecto en el rendimiento: Medio\\n"
+  },
   "xuiOptionsVideoDepthOfField": {
     "Key": "xuiOptionsVideoDepthOfField",
     "Source": "UI",
@@ -52512,6 +52532,20 @@
     "French": "Utilise l'effet visuel d'occlusion ambiante qui dessine des ombres plus détaillées sur les objets.\\nImpact sur la performance : moyen\\n",
     "German": "Die Rendering-Technik SSAO verwenden, die für Objekte detailliertere Schatten kreiert.\\nAuswirkung auf die Leistung: Mittel\\n",
     "Spanish": "Usa el efecto de imagen SSAO, que dibuja sombras más detalladas en los objetos.\\nEfecto en el rendimiento: Medio\\n"
+  },
+  "xuiOptionsVideoSSReflections": {
+    "Key": "xuiOptionsVideoSSReflections",
+    "Source": "UI",
+    "Context": "Xui Video Options",
+    "Changes": "New",
+    "English": "SS Reflections"
+  },
+  "xuiOptionsVideoSSReflectionsTooltip": {
+    "Key": "xuiOptionsVideoSSReflectionsTooltip",
+    "Source": "UI",
+    "Context": "Xui Video Options",
+    "Changes": "New",
+    "English": "Use the screen space reflection effect.\\nPerformance Impact: High\\n"
   },
   "xuiOptionsVideoSunShafts": {
     "Key": "xuiOptionsVideoSunShafts",
