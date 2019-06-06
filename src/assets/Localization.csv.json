@@ -74,6 +74,11 @@
     "English": "that has a",
     "French": "qui possède un·e"
   },
+  "search": {
+    "Key": "search",
+    "English": "Search",
+    "French": "Recherche"
+  },
   "shoppingList": {
     "Key": "shoppingList",
     "English": "Shopping List",
