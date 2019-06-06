@@ -12,12 +12,17 @@ import {ObjectComponent} from './object/object.component';
 import {ItemGuard} from './item/item.guard';
 import {ObjectGuard} from './object/object.guard';
 import {ObjectResolverService} from './object/object-resolver.service';
+import {SearchComponent} from './search/search.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'Recipes',
+    redirectTo: 'search',
     pathMatch: 'full'
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
   },
   {
     path: 'List_of_weapons',

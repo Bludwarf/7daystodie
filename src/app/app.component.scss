@@ -8,6 +8,19 @@ header a, header img {
   height: 100%;
 }
 
+header {
+
+  mat-toolbar {
+    width: 100%;
+
+    app-search {
+      margin: 0 1em;
+      width: 100%;
+    }
+  }
+
+}
+
 .version {
   position: absolute;
   top: 0;

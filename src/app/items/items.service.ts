@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/items.xml.json';
 import itemIconsFile from 'src/assets/ItemIcons/index.json';
-import {XmlObject, XmlObjectsCache, XmlService} from '../common/xml.service';
+import {XmlObject, ObjectsCache, XmlService} from '../common/xml.service';
 import {PassiveEffect} from '../item/passive-effect';
 import {ItemModifier} from '../item-modifier/item-modifier';
 
@@ -19,7 +19,7 @@ const HARD_CODED_RELOAD_TIMES: { [key: string]: number } = {
   providedIn: 'root'
 })
 export class ItemsService extends XmlService<Item> {
-  private requiredItemCache = new XmlObjectsCache<Item>();
+  private requiredItemCache = new ObjectsCache<Item>();
 
   constructor() {
     super(xmlFile.items.item);
