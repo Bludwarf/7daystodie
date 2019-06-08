@@ -8,7 +8,7 @@ import xmlFile from 'src/assets/Data/Config/blocks.xml.json';
 })
 export class BlocksService extends XmlService<Block> {
 
-  private getBlocksToGetCache = new ObjectsCache<Block[]>();
+  private getDropsToGetCache = new ObjectsCache<Drop[]>();
 
   constructor() {
     super(xmlFile.blocks.block);
@@ -22,9 +22,9 @@ export class BlocksService extends XmlService<Block> {
    * @return All the blocks where one can harvest the requested item
    */
   getDropsToGet(dropName: string): Drop[] {
-    return this.getBlocksToGetCache.getOrPut(dropName, () => {
-      const drops = [];
-      this.getAll(block =>
+    return this.getDropsToGetCache.getOrPut(dropName, () => {
+      const drops: Drop[] = [];
+      this.getAll().forEach(block =>
         block.getDropsToGet(dropName).forEach(
           drop => drops.push(drop)
         )
