@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { BlocksService } from './blocks.service';
+import {Interval} from '../common/interval';
 
 describe('BlocksService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
@@ -25,7 +26,16 @@ describe('BlocksService', () => {
 
     const dropPNi = dropListAfterHarvest[0];
     expect(dropPNi.name).toEqual('resourcePotassiumNitratePowder');
-    expect(dropPNi.count).toEqual(33);
+    expect(dropPNi.count.min).toEqual(33);
+    expect(dropPNi.count.max).toEqual(33);
+    expect(dropPNi.prob).toEqual(1);
     expect(dropPNi.tag).toEqual('oreWoodHarvest');
+  });
+
+  it('should getBlocksToHarvest resourcePotassiumNitratePowder', () => {
+    const service: BlocksService = TestBed.get(BlocksService);
+    const blocks = service.getBlocksToHarvest('resourcePotassiumNitratePowder');
+    expect(blocks).toBeTruthy();
+    expect(blocks.length).toEqual(7);
   });
 });

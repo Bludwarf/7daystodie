@@ -1,4 +1,5 @@
 import {XmlObject} from '../common/xml.service';
+import {Interval} from '../common/interval';
 
 export class Block extends XmlObject {
   get dropList(): Drop[] {
@@ -13,6 +14,7 @@ export class Block extends XmlObject {
 export class Drop extends XmlObject {
 
   public static EVENT_HARVEST = 'Harvest';
+  private _count: Interval;
 
   get event(): string {
     return this.xmlElement.$.event;
@@ -22,8 +24,11 @@ export class Drop extends XmlObject {
     return this.xmlElement.$.name;
   }
 
-  get count(): number {
-    return +this.xmlElement.$.count;
+  get count(): Interval {
+    if (!this._count) {
+      this._count = Interval.fromString(this.xmlElement.$.count);
+    }
+    return this._count;
   }
 
   get tag(): string {
@@ -31,10 +36,11 @@ export class Drop extends XmlObject {
   }
 
   get prob(): number {
-    return +this.xmlElement.$.prob;
+    return this.xmlElement.$.prob ? +this.xmlElement.$.prob : 1;
   }
 
   get stickChance(): number {
     return +this.xmlElement.$.stick_chance;
   }
 }
+

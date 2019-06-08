@@ -123,7 +123,7 @@ export class XmlObject {
   getChildren<T extends XmlObject>(xmlTag: string, xmlObjectClass = XmlObject): T[] {
     return this.childrenCache.getOrPut(xmlTag, () => {
       if (!(xmlTag in this.xmlElement)) {
-        return undefined;
+        return [];
       }
       const children = this.xmlElement[xmlTag];
       return children ? children.map(child => new xmlObjectClass(child)) : undefined;
