@@ -3,6 +3,7 @@ const {parseString} = require('xml2js');
 require('colors');
 
 const files = [
+  'src/assets/Data/Config/biomes.xml',
   'src/assets/Data/Config/blocks.xml',
   'src/assets/Data/Config/items.xml',
   'src/assets/Data/Config/item_modifiers.xml',

@@ -214,6 +214,32 @@
           </ul>
         </ng-container>
 
+        <!-- Block frequency -->
+        <ng-container *ngIf="object.block">
+          <h2>Block frequency</h2>
+
+          <table>
+            <tr>
+              <th>Map</th>
+              <th>Biome</th>
+              <th>Sub Biome</th>
+              <th>Layer</th>
+              <th>Block</th><!-- Default layer block -->
+              <th>Prob. (%)</th>
+            </tr>
+
+            <tr *ngFor="let resourceOccurence of getResourceOccurences(object.name)">
+              <td [ngStyle]="{'background-color': getBiomeMapColor(resourceOccurence.layer.biome)}">&nbsp;</td><!-- biomemapcolor -->
+              <td>{{ getBiomeName(resourceOccurence.layer.biome) }}</td>
+              <td>{{ getSubBiomeProb(resourceOccurence.layer.biome) | percent }}</td>
+              <td>{{ resourceOccurence.layer.elevation.max }}<br/>{{ resourceOccurence.layer.elevation.min }}</td>
+              <td><app-item-icon [itemName]="resourceOccurence.layer.blockname"></app-item-icon> {{ resourceOccurence.layer.blockname | translate }}</td>
+              <td>{{ resourceOccurence.prob | percent }}</td>
+            </tr>
+
+          </table>
+        </ng-container>
+
         <ng-container *ngIf="object.item && object.item.MagazineItemNames as magazineItemNames">
           <h2>{{ 'ammunition' | translate }}</h2>
 

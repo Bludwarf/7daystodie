@@ -1,6 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {SevenDaysObject} from './object.service';
-import {DialogService} from '../dialog.service';
 import {ActivatedRoute} from '@angular/router';
 import {LocalizationService} from '../localization/localization.service';
 import {Item, ItemsService} from '../items/items.service';
@@ -10,6 +9,8 @@ import {ItemModifier} from '../item-modifier/item-modifier';
 import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
 import {Block, Drop} from '../block/block';
 import {BlocksService} from '../block/blocks.service';
+import {AbstractBiome, Biome, Resource, SubBiome} from '../biome/Biome';
+import {BiomesService} from '../biome/biomes.service';
 
 @Component({
   selector: 'app-object',
@@ -25,9 +26,9 @@ export class ObjectComponent implements OnInit, AfterViewInit {
   @ViewChild('craftToolElement') craftToolElement: ElementRef;
   @ViewChild('perkLevelElement') perkLevelElement: ElementRef;
 
-  constructor(private route: ActivatedRoute, public dialogService: DialogService, public localization: LocalizationService,
+  constructor(private route: ActivatedRoute, public localization: LocalizationService,
               private items: ItemsService, private perks: PerksService, private itemModifiersService: ItemModifiersService,
-              private blocks: BlocksService) {
+              private blocks: BlocksService, private biomes: BiomesService) {
   }
 
   ngOnInit() {
@@ -144,6 +145,32 @@ export class ObjectComponent implements OnInit, AfterViewInit {
       msg += ` (${drop.prob * 100}% chance)`;
     }
     return msg;
+  }
+
+  getResourceOccurences(resourceBlockname: string): Resource[] {
+    const resourceOccurences = this.biomes.getResourceOccurences(resourceBlockname);
+    if (!resourceOccurences || resourceOccurences.length === 0) {
+      return undefined;
+    }
+    return resourceOccurences;
+  }
+
+  getBiomeName(aBiome: AbstractBiome): string {
+    const biome: Biome = aBiome.biome || aBiome as Biome;
+    return biome.name;
+  }
+
+  getSubBiomeProb(aBiome: AbstractBiome): number {
+    if (aBiome instanceof SubBiome) {
+      const subBiome = aBiome as SubBiome;
+      return subBiome.prob;
+    }
+    return undefined;
+  }
+
+  getBiomeMapColor(aBiome: AbstractBiome): string {
+    const biome: Biome = aBiome.biome || aBiome as Biome;
+    return biome.biomemapcolor;
   }
 }
 

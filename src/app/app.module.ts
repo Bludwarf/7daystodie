@@ -39,6 +39,7 @@ import { UiAtlasItemIconComponent } from './ui-atlas-item-icon/ui-atlas-item-ico
 import {DescribeAttributePipe} from './pipes/describe-attribute.pipe';
 import { SearchComponent } from './search/search.component';
 import { IndexComponent } from './index/index.component';
+import { PercentPipe } from './pipes/percent.pipe';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { IndexComponent } from './index/index.component';
     ItemModifierComponent,
     UiAtlasItemIconComponent,
     SearchComponent,
-    IndexComponent
+    IndexComponent,
+    PercentPipe
   ],
   imports: [
     BrowserModule,
