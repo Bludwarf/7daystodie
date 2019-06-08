@@ -60,6 +60,10 @@ export class Recipe extends XmlObject {
     super(xmlElement);
   }
 
+  get count(): number {
+    const count = this.xmlElement.$.count;
+    return count ? +count : 1;
+  }
 
   get ingredients(): Ingredient[] {
     const ingredients = this.xmlElement.ingredient;

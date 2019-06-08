@@ -151,9 +151,11 @@
         <ng-container *ngIf="object.recipe">
           <h2>{{'xuiWPcrafting' | translate}}</h2>
 
+          <h4>{{'requiredItems' | translate}}</h4>
+
           <ng-container *ngFor="let recipe of getRecipeAndSiblings(object.recipe)">
 
-            <h4>{{'requiredItems' | translate}}</h4>
+            <p>{{ 'To obtain' | translate }} {{ object.recipe.count }} {{ object.name | translate }} :</p>
 
             <div class="crafting-container">
 
