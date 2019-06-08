@@ -62,6 +62,7 @@ export class XmlObject {
 
   private firstCache = new ObjectsCache2<XmlObject>();
   private firstWithClassCache = new ObjectsCache2<XmlObject>();
+  private childrenCache = new ObjectsCache<XmlObject[]>();
 
   constructor(protected xmlElement: any) { }
 
@@ -113,6 +114,20 @@ export class XmlObject {
       const firstChild = this.xmlElement[xmlTag].find(child => child.$ && child.$.class === className);
       return firstChild ? new xmlObjectClass(firstChild) : undefined;
     }) as T;
+  }
+
+  /**
+   * @param xmlTag nom de l'élément XML fils
+   * @param xmlObjectClass classe utilisée pour construire l'élément trouvé (ça devrait être en fait le type de retour de cette méthode)
+   */
+  getChildren<T extends XmlObject>(xmlTag: string, xmlObjectClass = XmlObject): T[] {
+    return this.childrenCache.getOrPut(xmlTag, () => {
+      if (!(xmlTag in this.xmlElement)) {
+        return undefined;
+      }
+      const children = this.xmlElement[xmlTag];
+      return children ? children.map(child => new xmlObjectClass(child)) : undefined;
+    }) as T[];
   }
 
   get $() {
