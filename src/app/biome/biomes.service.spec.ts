@@ -51,6 +51,22 @@ describe('BiomesService', () => {
   it('should get resource occurences', () => {
     const service: BiomesService = TestBed.get(BiomesService);
     const resourceOccurences = service.getResourceOccurences('terrOreGravelPlusPotassium');
-    expect(resourceOccurences.length).toBe(37);
+    /**
+     * Due to an error in biomes.xml there are 36 resources instead of 37, because of the 5th subbiome of snow biome :
+     *
+     * <pre>
+     * <layer depth="3" blockname="terrSnow"/>
+     * <resource blockname="terrOreGravelPlusPotassium" prob="0.071" rwgGenerationType="all"/>
+     * </pre>
+     *
+     * which should be :
+     *
+     * <pre>
+     * <layer depth="3" blockname="terrSnow">
+     *     <resource blockname="terrOreGravelPlusPotassium" prob="0.071" rwgGenerationType="all"/>
+     * </layer>
+     * </pre>
+     */
+    expect(resourceOccurences.length).toBe(36);
   });
 });

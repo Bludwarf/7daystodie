@@ -160,6 +160,11 @@ export class ObjectComponent implements OnInit, AfterViewInit {
     return biome.name;
   }
 
+  getBiomeMapColor(aBiome: AbstractBiome): string {
+    const biome: Biome = aBiome.biome || aBiome as Biome;
+    return biome.biomemapcolor;
+  }
+
   getSubBiomeProb(aBiome: AbstractBiome): number {
     if (aBiome instanceof SubBiome) {
       const subBiome = aBiome as SubBiome;
@@ -168,9 +173,12 @@ export class ObjectComponent implements OnInit, AfterViewInit {
     return undefined;
   }
 
-  getBiomeMapColor(aBiome: AbstractBiome): string {
-    const biome: Biome = aBiome.biome || aBiome as Biome;
-    return biome.biomemapcolor;
+  getSubBiomeIndex(aBiome: AbstractBiome): string {
+    if (aBiome instanceof SubBiome) {
+      const subBiome = aBiome as SubBiome;
+      return `#${subBiome.index} :`;
+    }
+    return undefined;
   }
 }
 

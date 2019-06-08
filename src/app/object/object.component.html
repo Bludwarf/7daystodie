@@ -231,7 +231,7 @@
             <tr *ngFor="let resourceOccurence of getResourceOccurences(object.name)">
               <td [ngStyle]="{'background-color': getBiomeMapColor(resourceOccurence.layer.biome)}">&nbsp;</td><!-- biomemapcolor -->
               <td>{{ getBiomeName(resourceOccurence.layer.biome) }}</td>
-              <td>{{ getSubBiomeProb(resourceOccurence.layer.biome) | percent }}</td>
+              <td>{{getSubBiomeIndex(resourceOccurence.layer.biome)}} {{ getSubBiomeProb(resourceOccurence.layer.biome) | percent }}</td>
               <td>{{ resourceOccurence.layer.elevation.max }}<br/>{{ resourceOccurence.layer.elevation.min }}</td>
               <td><app-item-icon [itemName]="resourceOccurence.layer.blockname"></app-item-icon> {{ resourceOccurence.layer.blockname | translate }}</td>
               <td>{{ resourceOccurence.prob | percent }}</td>

@@ -122,7 +122,7 @@ export class XmlObject {
    * @param xmlTag nom de l'élément XML fils
    * @param xmlObjectClass classe utilisée pour construire l'élément trouvé (ça devrait être en fait le type de retour de cette méthode)
    */
-  getChildren<T extends XmlObject>(xmlTag: string, xmlObjectClass = XmlObject, after?: (T) => void): T[] {
+  getChildren<T extends XmlObject>(xmlTag: string, xmlObjectClass = XmlObject, after?: (T, index: number) => void): T[] {
     return this.childrenCache.getOrPut(xmlTag, () => {
       if (!(xmlTag in this.xmlElement)) {
         return [];
@@ -133,7 +133,7 @@ export class XmlObject {
       }
       const childrenObjects = children.map(child => new xmlObjectClass(child));
       if (after) {
-        childrenObjects.forEach(childObject => after(childObject));
+        childrenObjects.forEach((childObject, index) => after(childObject, index));
       }
       return childrenObjects;
     }) as T[];

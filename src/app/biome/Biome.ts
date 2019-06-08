@@ -28,12 +28,16 @@ export class Biome extends AbstractBiome {
   }
 
   get subBiomes(): SubBiome[] {
-    return this.getChildren<SubBiome>('subbiome', SubBiome, subBiome => subBiome.biome = this);
+    return this.getChildren<SubBiome>('subbiome', SubBiome, (subBiome, index) => {
+      subBiome.biome = this;
+      subBiome.index = index;
+    });
   }
 
 }
 
 export class SubBiome extends AbstractBiome {
+  public index: number;
   get prob(): number {
     return +this.xmlElement.$.prob;
   }
