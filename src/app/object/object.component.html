@@ -138,7 +138,7 @@
 
             <tr>
               <td><a [href]="localization.getWikiUrl('Harvesting')">{{ 'harvesting' | translate }}</a></td>
-              <td>{{getBlocksToHarvest(object) ? ('Yes' | translate) : ('No' | translate)}}</td>
+              <td>{{getBlocksToGet(object) ? ('Yes' | translate) : ('No' | translate)}}</td>
             </tr>
 
           </table><!-- details -->
@@ -198,19 +198,19 @@
 
         </ng-container>
 
-        <!-- Harvesting -->
-        <ng-container *ngIf="getBlocksToHarvest(object) as blocksToHarvest">
+        <!-- Get from blocks -->
+        <ng-container *ngIf="getBlocksToGet(object) as blocksToGet">
           <h2>{{'harvesting' | translate}}</h2>
 
           <ul>
-            <li *ngFor="let blockToHarvest of blocksToHarvest">
-              <!-- Harvesting block -->
-              <app-item-icon [itemName]="blockToHarvest.name" class="itemIcon"></app-item-icon>
-              <a [href]="blockToHarvest.name">{{blockToHarvest.name | translate}}</a>
+            <li *ngFor="let blockToGet of blocksToGet">
+              <!-- Block -->
+              <app-item-icon [itemName]="blockToGet.name" class="itemIcon"></app-item-icon>
+              <a [href]="blockToGet.name">{{blockToGet.name | translate}}</a>
 
-              <!-- Harvesting details -->
-              <ng-container *ngIf="getDropToHarvest(object, blockToHarvest) as dropToHarvest">
-                : {{ getDropToHarvestDetails(dropToHarvest) }}
+              <!-- Details -->
+              <ng-container *ngIf="getDropToGet(object, blockToGet) as drop">
+                {{ getBlocksToGetDetails(drop) }}
               </ng-container>
             </li>
           </ul>

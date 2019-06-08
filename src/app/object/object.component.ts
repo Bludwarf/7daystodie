@@ -121,29 +121,40 @@ export class ObjectComponent implements OnInit, AfterViewInit {
     return [recipe].concat(recipe.siblings);
   }
 
-  getBlocksToHarvest(object: SevenDaysObject): Block[] {
-    const blocks = this.blocks.getBlocksToHarvest(object.name);
+  getBlocksToGet(object: SevenDaysObject): Block[] {
+    const blocks = this.blocks.getBlocksToGet(object.name);
     if (!blocks || blocks.length === 0) {
       return undefined;
     }
 
     // Sort by count*prob
     return blocks.sort((blockA, blockB) => {
-      const dropA = blockA.getDropToHarvest(object.name);
-      const dropB = blockB.getDropToHarvest(object.name);
+      const dropA = blockA.getDropToGet(object.name);
+      const dropB = blockB.getDropToGet(object.name);
       return dropB.count.average * dropB.prob - dropA.count.average * dropA.prob;
     });
   }
 
-  getDropToHarvest(object: SevenDaysObject, block: Block): Drop {
-    return block.getDropToHarvest(object.name);
+  getDropToGet(object: SevenDaysObject, block: Block): Drop {
+    return block.getDropToGet(object.name);
   }
 
-  getDropToHarvestDetails(drop: Drop): string {
-    let msg = `${drop.count}`;
+  getBlocksToGetDetails(drop: Drop): string {
+    let msg = '';
+
+    // Event
+    if (drop.event !== Drop.EVENT_HARVEST) {
+      msg += `(${drop.event}) `;
+    }
+
+    // Count
+    msg += ` : ${drop.count}`;
+
+    // Prob
     if (drop.prob > 0 && drop.prob < 1) {
       msg += ` (${drop.prob * 100}% chance)`;
     }
+
     return msg;
   }
 
