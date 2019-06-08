@@ -112,6 +112,10 @@ export class ObjectComponent implements OnInit, AfterViewInit {
       return undefined;
     }
   }
+
+  getRecipeAndSiblings(recipe: Recipe): Recipe[] {
+    return [recipe].concat(recipe.siblings);
+  }
 }
 
 enum AlignMode {

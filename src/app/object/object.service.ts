@@ -5,6 +5,16 @@ import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
 import {ItemModifier} from '../item-modifier/item-modifier';
 import {ObjectsCache, XmlObject, XmlService} from '../common/xml.service';
 
+function uniqueConcats<T>(... arrays: (T[])[]): T[] {
+  const uniqueArray: T[] = [];
+  arrays.forEach(array => array.forEach(item => {
+    if (!uniqueArray.includes(item)) {
+      uniqueArray.push(item);
+    }
+  }));
+  return uniqueArray;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -28,19 +38,19 @@ export class ObjectService {
   getAll(): SevenDaysObject[] {
     return this.cache.getOrPutAll(object => object.name, () => {
       // All object names
-      const names: string[] = [];
-
-      // All object parts
-      addAllNames<Item>(this.items, 'item', names);
-      addAllNames<Recipe>(this.recipes, 'recipe', names);
-      addAllNames<ItemModifier>(this.itemModifiers, 'item-modifier', names);
+      const names = uniqueConcats<string>(
+        getAllNames<Item>(this.items, 'item'),
+        getAllNames<Recipe>(this.recipes, 'recipe'),
+        getAllNames<ItemModifier>(this.itemModifiers, 'item-modifier')
+      );
 
       return names.map(name => this.get(name));
     });
   }
 }
 
-function addAllNames<T extends XmlObject>(service: XmlService<T>, objectType: string, names: string[]) {
+function getAllNames<T extends XmlObject>(service: XmlService<T>, objectType: string): string[] {
+  const names: string[] = [];
   service.getAll()
     .map(item => item.name)
     .forEach(name => {
@@ -50,6 +60,7 @@ function addAllNames<T extends XmlObject>(service: XmlService<T>, objectType: st
         console.warn(`Duplicate key for ${objectType} "${name}"`);
       }
     });
+  return names;
 }
 
 export class SevenDaysObject {

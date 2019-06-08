@@ -136,19 +136,6 @@
               <td>{{object.recipe ? 'Yes' : 'No'}}</td>
             </tr>
 
-            <ng-container *ngIf="object.recipe">
-
-              <tr>
-                <th colspan="2">Crafting</th>
-              </tr>
-
-              <tr *ngIf="getRequiredPerkLevelForRecipe(object.recipe) as perkLevel">
-                <td>Unlocked with</td>
-                <td>{{perkLevelToString(perkLevel)}}</td>
-              </tr>
-
-            </ng-container>
-
           </table><!-- details -->
         </div>
 
@@ -159,44 +146,48 @@
         <ng-container *ngIf="object.recipe">
           <h2>{{'xuiWPcrafting' | translate}}</h2>
 
-          <h4>{{'requiredItems' | translate}}</h4>
+          <ng-container *ngFor="let recipe of getRecipeAndSiblings(object.recipe)">
 
-          <div class="crafting-container">
+            <h4>{{'requiredItems' | translate}}</h4>
 
-            <div class="crafting-items" [ngClass]="{'with-area': object.recipe.craftArea}">
-              <ng-container *ngFor="let ingredient of object.recipe.ingredients">
-                <div>
-                  <app-item-icon [itemName]="ingredient.name" height="56px"></app-item-icon>
-                </div>
-                <div class="count">{{ingredient.count}}</div>
-                <div>
-                  <a [href]="ingredient.name">{{ingredient.name | translate}}</a>
-                </div>
-              </ng-container>
+            <div class="crafting-container">
+
+              <div class="crafting-items" [ngClass]="{'with-area': recipe.craftArea}">
+                <ng-container *ngFor="let ingredient of recipe.ingredients">
+                  <div>
+                    <app-item-icon [itemName]="ingredient.name" height="56px"></app-item-icon>
+                  </div>
+                  <div class="count">{{ingredient.count}}</div>
+                  <div>
+                    <a [href]="ingredient.name">{{ingredient.name | translate}}</a>
+                  </div>
+                </ng-container>
+              </div>
+
+              <div #craftAreaElement class="crafting-area" *ngIf="recipe.craftArea as craftArea">
+                <p>{{'atA' | translate}}</p>
+                <app-item-icon [itemName]="craftArea" height="56px"></app-item-icon>
+                <p><a [href]="craftArea">{{craftArea | translate}}</a></p>
+              </div>
+
+              <div #craftToolElement class="crafting-tool" *ngIf="recipe.craftTool as craftTool">
+                <p>{{'thatHasA' | translate}}</p>
+                <app-item-icon [itemName]="craftTool" height="56px"></app-item-icon>
+                <p><a [href]="craftTool">{{craftTool | translate}}</a></p>
+              </div>
+
+              <div #perkLevelElement class="crafting-perk" *ngIf="getRequiredPerkLevelForRecipe(recipe) as perkLevel">
+                <p>{{'afterAttaining' | translate}}</p>
+                <app-ui-atlas-item-icon name="ui_game_symbol_skills" height="56px" [level]="perkLevel.level"></app-ui-atlas-item-icon>
+                <p>
+                  {{perkLevel.name + 'Name' | translate}}<br/>
+                  {{'xuiSkillLevel' | translate}} {{perkLevel.level}}
+                </p>
+              </div>
+
             </div>
 
-            <div #craftAreaElement class="crafting-area" *ngIf="object.recipe.craftArea as craftArea">
-              <p>{{'atA' | translate}}</p>
-              <app-item-icon [itemName]="craftArea" height="56px"></app-item-icon>
-              <p><a [href]="craftArea">{{craftArea | translate}}</a></p>
-            </div>
-
-            <div #craftToolElement class="crafting-tool" *ngIf="object.recipe.craftTool as craftTool">
-              <p>{{'thatHasA' | translate}}</p>
-              <app-item-icon [itemName]="craftTool" height="56px"></app-item-icon>
-              <p><a [href]="craftTool">{{craftTool | translate}}</a></p>
-            </div>
-
-            <div #perkLevelElement class="crafting-perk" *ngIf="getRequiredPerkLevelForRecipe(object.recipe) as perkLevel">
-              <p>{{'afterAttaining' | translate}}</p>
-              <app-ui-atlas-item-icon name="ui_game_symbol_skills" height="56px" [level]="perkLevel.level"></app-ui-atlas-item-icon>
-              <p>
-                {{perkLevel.name + 'Name' | translate}}<br/>
-                {{'xuiSkillLevel' | translate}} {{perkLevel.level}}
-              </p>
-            </div>
-
-          </div>
+          </ng-container>
 
         </ng-container>
 
