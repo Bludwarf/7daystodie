@@ -19,11 +19,7 @@ describe('BlocksService', () => {
     expect(dropList).toBeTruthy();
     expect(dropList.length).toEqual(4);
 
-    const dropListAfterHarvest = block.dropListAfterHarvest;
-    expect(dropListAfterHarvest).toBeTruthy();
-    expect(dropListAfterHarvest.length).toEqual(2);
-
-    const dropPNi = dropListAfterHarvest[0];
+    const dropPNi = dropList[0];
     expect(dropPNi.name).toEqual('resourcePotassiumNitratePowder');
     expect(dropPNi.count.min).toEqual(33);
     expect(dropPNi.count.max).toEqual(33);
@@ -31,7 +27,7 @@ describe('BlocksService', () => {
     expect(dropPNi.tag).toEqual('oreWoodHarvest');
   });
 
-  it('should getBlocksToHarvest resourcePotassiumNitratePowder', () => {
+  it('should getDropsToGet resourcePotassiumNitratePowder', () => {
     const service: BlocksService = TestBed.get(BlocksService);
     const drops = service.getDropsToGet('resourcePotassiumNitratePowder');
     expect(drops).toBeTruthy();
