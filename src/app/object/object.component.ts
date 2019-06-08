@@ -177,7 +177,7 @@ export class ObjectComponent implements OnInit, AfterViewInit {
   getSubBiomeIndex(aBiome: AbstractBiome): string {
     if (aBiome instanceof SubBiome) {
       const subBiome = aBiome as SubBiome;
-      return `#${subBiome.index} :`;
+      return `#${subBiome.index + 1} :`;
     }
     return undefined;
   }
