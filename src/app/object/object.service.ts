@@ -4,6 +4,8 @@ import {Recipe, RecipesService} from '../recipes/recipes.service';
 import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
 import {ItemModifier} from '../item-modifier/item-modifier';
 import {ObjectsCache, XmlObject, XmlService} from '../common/xml.service';
+import {BlocksService} from '../block/blocks.service';
+import {Block} from '../block/block';
 
 function uniqueConcats<T>(... arrays: (T[])[]): T[] {
   const uniqueArray: T[] = [];
@@ -22,15 +24,19 @@ export class ObjectService {
 
   cache = new ObjectsCache<SevenDaysObject>();
 
-  constructor(private items: ItemsService, private recipes: RecipesService, private itemModifiers: ItemModifiersService) { }
+  constructor(private blocks: BlocksService,
+              private items: ItemsService,
+              private itemModifiers: ItemModifiersService,
+              private recipes: RecipesService) { }
 
   get(name: string): SevenDaysObject {
     return this.cache.getOrPut(name, () => {
       const builder = new Builder(name);
       return builder
+        .block(this.blocks)
         .item(this.items)
-        .recipe(this.recipes)
         .itemModifier(this.itemModifiers)
+        .recipe(this.recipes)
         .build();
     });
   }
@@ -39,9 +45,10 @@ export class ObjectService {
     return this.cache.getOrPutAll(object => object.name, () => {
       // All object names
       const names = uniqueConcats<string>(
+        getAllNames<Block>(this.blocks, 'block'),
         getAllNames<Item>(this.items, 'item'),
-        getAllNames<Recipe>(this.recipes, 'recipe'),
-        getAllNames<ItemModifier>(this.itemModifiers, 'item-modifier')
+        getAllNames<ItemModifier>(this.itemModifiers, 'item-modifier'),
+        getAllNames<Recipe>(this.recipes, 'recipe')
       );
 
       return names.map(name => this.get(name));
@@ -64,9 +71,10 @@ function getAllNames<T extends XmlObject>(service: XmlService<T>, objectType: st
 }
 
 export class SevenDaysObject {
+  public block: Block;
   public item: Item;
-  public recipe: Recipe;
   public itemModifier: ItemModifier;
+  public recipe: Recipe;
 
   constructor(public name: string) {
   }
@@ -115,6 +123,14 @@ class Builder {
     return this.builtObject;
   }
 
+  block(blocks: BlocksService): this {
+    const block = blocks.get(this.name);
+    if (block) {
+      this.object.block = block;
+    }
+    return this;
+  }
+
   item(items: ItemsService): this {
     const item = items.get(this.name);
     if (item) {
@@ -123,18 +139,18 @@ class Builder {
     return this;
   }
 
-  recipe(recipes: RecipesService): this {
-    const recipe = recipes.get(this.name);
-    if (recipe) {
-      this.object.recipe = recipe;
-    }
-    return this;
-  }
-
   itemModifier(service: ItemModifiersService): this {
     const element = service.get(this.name);
     if (element) {
       this.object.itemModifier = element;
+    }
+    return this;
+  }
+
+  recipe(recipes: RecipesService): this {
+    const recipe = recipes.get(this.name);
+    if (recipe) {
+      this.object.recipe = recipe;
     }
     return this;
   }
