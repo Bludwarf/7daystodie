@@ -29,10 +29,19 @@
     "English": "Discard changes?",
     "French": "Abandonner les modifications ?"
   },
+  "harvesting": {
+    "Key": "harvesting",
+    "English": "Harvesting",
+    "French": "Récolte"
+  },
   "nameFilter": {
     "Key": "nameFilter",
     "English": "Name filter",
     "French": "Filtre sur le nom"
+  },
+  "No": {
+    "Key": "No",
+    "English": "No"
   },
   "ok?": {
     "Key": "ok?",
@@ -93,5 +102,10 @@
     "Key": "shoppingListColCount",
     "English": "Count",
     "French": "Quantité"
+  },
+  "Yes": {
+    "Key": "Yes",
+    "English": "Yes",
+    "French": "Oui"
   }
 }

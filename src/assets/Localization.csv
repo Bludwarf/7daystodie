@@ -5,7 +5,9 @@ afterAttaining,After attaining,Après avoir obtenu
 compatibleItems,Compatible Items,Éléments compatibles
 compatibleMods,Compatible Modifications,Modifications compatibles
 Discard changes?,Discard changes?,Abandonner les modifications ?
+harvesting,Harvesting,Récolte
 nameFilter,Name filter,Filtre sur le nom
+No,No,Non
 ok?,Is it OK?,Est-ce bon ?
 pageList_of_weapons,List of weapons,Liste des armes
 pageRecipes,Recipes,Recettes
@@ -18,3 +20,4 @@ search,Search,Recherche
 shoppingList,Shopping List,Liste de courses
 shoppingListColName,Name,Nom
 shoppingListColCount,Count,Quantité
+Yes,Yes,Oui

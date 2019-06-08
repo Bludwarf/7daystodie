@@ -58,6 +58,8 @@ export abstract class XmlService<T extends XmlObject> {
   }
 }
 
+export const ident = (object) => object;
+
 export class XmlObject {
 
   private firstCache = new ObjectsCache2<XmlObject>();
@@ -138,7 +140,7 @@ export class XmlObject {
     return this.$.name;
   }
 
-  compareTo<T extends XmlObject>(other: T, translateFunction: (key: string) => string): number {
+  compareTo<T extends XmlObject>(other: T, translateFunction: (key: string) => string = ident): number {
     const thisName = translateFunction(this.name).toLocaleLowerCase();
     const otherName = translateFunction(other.name).toLocaleLowerCase();
     return thisName.localeCompare(otherName);

@@ -1,4 +1,4 @@
-import {XmlObject} from '../common/xml.service';
+import {ident, XmlObject} from '../common/xml.service';
 import {Interval} from '../common/interval';
 
 export class Block extends XmlObject {
@@ -8,6 +8,14 @@ export class Block extends XmlObject {
 
   get dropListAfterHarvest(): Drop[] {
     return this.dropList.filter(drop => drop.event === Drop.EVENT_HARVEST);
+  }
+
+  getDropToHarvest(dropName: string): Drop {
+    const drops = this.dropListAfterHarvest.filter(drop => drop.name === dropName);
+    if (drops.length > 1) {
+      console.warn(`Drop list to harvest "${dropName}" from block "${this.name}" counts ${drops.length} which is bigger than the only one expected`);
+    }
+    return drops[0];
   }
 }
 

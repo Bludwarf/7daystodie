@@ -8,6 +8,8 @@ import {PerkLevel, PerksService} from '../progression/perks.service';
 import {Recipe} from '../recipes/recipes.service';
 import {ItemModifier} from '../item-modifier/item-modifier';
 import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
+import {Block, Drop} from '../block/block';
+import {BlocksService} from '../block/blocks.service';
 
 @Component({
   selector: 'app-object',
@@ -24,7 +26,8 @@ export class ObjectComponent implements OnInit, AfterViewInit {
   @ViewChild('perkLevelElement') perkLevelElement: ElementRef;
 
   constructor(private route: ActivatedRoute, public dialogService: DialogService, public localization: LocalizationService,
-              private items: ItemsService, private perks: PerksService, private itemModifiersService: ItemModifiersService) {
+              private items: ItemsService, private perks: PerksService, private itemModifiersService: ItemModifiersService,
+              private blocks: BlocksService) {
   }
 
   ngOnInit() {
@@ -115,6 +118,32 @@ export class ObjectComponent implements OnInit, AfterViewInit {
 
   getRecipeAndSiblings(recipe: Recipe): Recipe[] {
     return [recipe].concat(recipe.siblings);
+  }
+
+  getBlocksToHarvest(object: SevenDaysObject): Block[] {
+    const blocks = this.blocks.getBlocksToHarvest(object.name);
+    if (!blocks || blocks.length === 0) {
+      return undefined;
+    }
+
+    // Sort by count*prob
+    return blocks.sort((blockA, blockB) => {
+      const dropA = blockA.getDropToHarvest(object.name);
+      const dropB = blockB.getDropToHarvest(object.name);
+      return dropB.count.average * dropB.prob - dropA.count.average * dropA.prob;
+    });
+  }
+
+  getDropToHarvest(object: SevenDaysObject, block: Block): Drop {
+    return block.getDropToHarvest(object.name);
+  }
+
+  getDropToHarvestDetails(drop: Drop): string {
+    let msg = `${drop.count}`;
+    if (drop.prob > 0 && drop.prob < 1) {
+      msg += ` (${drop.prob * 100}% chance)`;
+    }
+    return msg;
   }
 }
 

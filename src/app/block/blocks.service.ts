@@ -23,7 +23,7 @@ export class BlocksService extends XmlService<Block> {
    */
   getBlocksToHarvest(dropName: string): Block[] {
     return this.blocksToHarvestCache.getOrPut(dropName, () =>
-      this.getAll(block => block.dropListAfterHarvest.find(drop => drop.name === dropName) !== undefined)
+      this.getAll(block => block.getDropToHarvest(dropName) !== undefined)
     );
   }
 }
