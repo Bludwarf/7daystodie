@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {ObjectsCache, XmlService} from '../common/xml.service';
-import {Block} from './block';
+import {Block, Drop} from './block';
 import xmlFile from 'src/assets/Data/Config/blocks.xml.json';
 
 @Injectable({
@@ -21,9 +21,15 @@ export class BlocksService extends XmlService<Block> {
   /**
    * @return All the blocks where one can harvest the requested item
    */
-  getBlocksToGet(dropName: string): Block[] {
-    return this.getBlocksToGetCache.getOrPut(dropName, () =>
-      this.getAll(block => block.getDropToGet(dropName) !== undefined)
-    );
+  getDropsToGet(dropName: string): Drop[] {
+    return this.getBlocksToGetCache.getOrPut(dropName, () => {
+      const drops = [];
+      this.getAll(block =>
+        block.getDropsToGet(dropName).forEach(
+          drop => drops.push(drop)
+        )
+      );
+      return drops;
+    });
   }
 }

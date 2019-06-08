@@ -121,22 +121,12 @@ export class ObjectComponent implements OnInit, AfterViewInit {
     return [recipe].concat(recipe.siblings);
   }
 
-  getBlocksToGet(object: SevenDaysObject): Block[] {
-    const blocks = this.blocks.getBlocksToGet(object.name);
-    if (!blocks || blocks.length === 0) {
-      return undefined;
-    }
-
+  getDropsToGet(object: SevenDaysObject): Drop[] {
+    const drops = this.blocks.getDropsToGet(object.name);
     // Sort by count*prob
-    return blocks.sort((blockA, blockB) => {
-      const dropA = blockA.getDropToGet(object.name);
-      const dropB = blockB.getDropToGet(object.name);
-      return dropB.count.average * dropB.prob - dropA.count.average * dropA.prob;
-    });
-  }
-
-  getDropToGet(object: SevenDaysObject, block: Block): Drop {
-    return block.getDropToGet(object.name);
+    return drops.sort((dropA, dropB) =>
+      dropB.count.average * dropB.prob - dropA.count.average * dropA.prob
+    );
   }
 
   getBlocksToGetDetails(drop: Drop): string {

@@ -138,7 +138,7 @@
 
             <tr>
               <td><a [href]="localization.getWikiUrl('Harvesting')">{{ 'harvesting' | translate }}</a></td>
-              <td>{{getBlocksToGet(object) ? ('Yes' | translate) : ('No' | translate)}}</td>
+              <td>{{getDropsToGet(object) ? ('Yes' | translate) : ('No' | translate)}}</td>
             </tr>
 
           </table><!-- details -->
@@ -199,21 +199,27 @@
         </ng-container>
 
         <!-- Get from blocks -->
-        <ng-container *ngIf="getBlocksToGet(object) as blocksToGet">
+        <ng-container *ngIf="getDropsToGet(object) as drops">
           <h2>{{'harvesting' | translate}}</h2>
 
-          <ul>
-            <li *ngFor="let blockToGet of blocksToGet">
-              <!-- Block -->
-              <app-item-icon [itemName]="blockToGet.name" class="itemIcon"></app-item-icon>
-              <a [href]="blockToGet.name">{{blockToGet.name | translate}}</a>
+          <table>
+            <tr>
+              <th>Event</th>
+              <th>Block</th>
+              <th>Prob. (%)</th>
+              <th>Count</th>
+            </tr>
 
-              <!-- Details -->
-              <ng-container *ngIf="getDropToGet(object, blockToGet) as drop">
-                {{ getBlocksToGetDetails(drop) }}
-              </ng-container>
-            </li>
-          </ul>
+            <tr *ngFor="let drop of drops">
+              <td>{{ drop.event }}</td>
+              <td>
+                <app-item-icon [itemName]="drop.block.name" class="itemIcon"></app-item-icon>
+                <a [href]="drop.block.name">{{ drop.block.name | translate }}</a>
+              </td>
+              <td>{{ drop.prob | percent }}</td>
+              <td>{{ drop.count }}</td>
+            </tr>
+          </table>
         </ng-container>
 
         <!-- Block frequency -->

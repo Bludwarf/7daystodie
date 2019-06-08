@@ -1,17 +1,13 @@
-import {ident, XmlObject} from '../common/xml.service';
+import {XmlObject} from '../common/xml.service';
 import {Interval} from '../common/interval';
 
 export class Block extends XmlObject {
   get dropList(): Drop[] {
-    return this.getChildren('drop', Drop);
+    return this.getChildren('drop', Drop, drop => drop.block = this);
   }
 
-  getDropToGet(dropName: string): Drop {
-    const drops = this.dropList.filter(drop => drop.name === dropName);
-    if (drops.length > 1) {
-      console.warn(`Drop list to get "${dropName}" from block "${this.name}" counts ${drops.length} which is bigger than the only one expected`);
-    }
-    return drops[0];
+  getDropsToGet(dropName: string): Drop[] {
+    return this.dropList.filter(drop => drop.name === dropName);
   }
 }
 
@@ -20,6 +16,7 @@ export class Drop extends XmlObject {
   public static EVENT_DESTROY = 'Destroy';
   public static EVENT_FALL = 'Fall';
   public static EVENT_HARVEST = 'Harvest';
+  public block: Block;
   private countCache: Interval;
 
   get event(): string {

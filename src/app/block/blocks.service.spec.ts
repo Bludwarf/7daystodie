@@ -1,7 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { BlocksService } from './blocks.service';
-import {Interval} from '../common/interval';
+import {BlocksService} from './blocks.service';
 
 describe('BlocksService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
@@ -34,8 +33,8 @@ describe('BlocksService', () => {
 
   it('should getBlocksToHarvest resourcePotassiumNitratePowder', () => {
     const service: BlocksService = TestBed.get(BlocksService);
-    const blocks = service.getBlocksToHarvest('resourcePotassiumNitratePowder');
-    expect(blocks).toBeTruthy();
-    expect(blocks.length).toEqual(7);
+    const drops = service.getDropsToGet('resourcePotassiumNitratePowder');
+    expect(drops).toBeTruthy();
+    expect(drops.length).toEqual(11);
   });
 });
