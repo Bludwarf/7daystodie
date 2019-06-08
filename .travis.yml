@@ -23,7 +23,7 @@ install:
 
 script:
   - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-  - ng build --prod --base-href /7daystodie/
+  - npm run ng-high-memory -- build --prod --base-href /7daystodie/ --progress=true
 
 deploy:
   provider: pages

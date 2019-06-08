@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "ng-high-memory": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng",
     "generate": "npm run xml2js && npm run csv2js && npm run itemicons-index",
     "xml2js": "node src/scripts/generate-xml2js-files.js",
     "csv2js": "node src/scripts/generate-csv2js-files.js",
