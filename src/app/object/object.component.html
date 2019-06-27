@@ -223,7 +223,7 @@
         </ng-container>
 
         <!-- Block frequency -->
-        <ng-container *ngIf="object.block">
+        <ng-container *ngIf="getResourceOccurences(object) as resourceOccurences">
           <h2>Block frequency</h2>
 
           <table>
@@ -236,7 +236,7 @@
               <th>Prob. (%)</th>
             </tr>
 
-            <tr *ngFor="let resourceOccurence of getResourceOccurences(object.name)">
+            <tr *ngFor="let resourceOccurence of resourceOccurences">
               <td [ngStyle]="{'background-color': getBiomeMapColor(resourceOccurence.layer.biome)}">&nbsp;</td><!-- biomemapcolor -->
               <td>{{ getBiomeName(resourceOccurence.layer.biome) }}</td>
               <td>{{getSubBiomeIndex(resourceOccurence.layer.biome)}} {{ getSubBiomeProb(resourceOccurence.layer.biome) | percent }}</td>

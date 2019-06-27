@@ -123,6 +123,10 @@ export class ObjectComponent implements OnInit, AfterViewInit {
 
   getDropsToGet(object: SevenDaysObject): Drop[] {
     const drops = this.blocks.getDropsToGet(object.name);
+    if (!drops.length) {
+      return undefined;
+    }
+
     // Sort by count*prob
     return drops.sort((dropA, dropB) =>
       dropB.count.average * dropB.prob - dropA.count.average * dropA.prob
@@ -148,8 +152,12 @@ export class ObjectComponent implements OnInit, AfterViewInit {
     return msg;
   }
 
-  getResourceOccurences(resourceBlockname: string): Resource[] {
-    const resourceOccurences = this.biomes.getResourceOccurences(resourceBlockname);
+  getResourceOccurences(object: SevenDaysObject): Resource[] {
+    if (!object.block) {
+      return undefined;
+    }
+
+    const resourceOccurences = this.biomes.getResourceOccurences(object.name);
     if (!resourceOccurences || resourceOccurences.length === 0) {
       return undefined;
     }
