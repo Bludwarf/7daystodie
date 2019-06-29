@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/items.xml.json';
 import itemIconsFile from 'src/assets/ItemIcons/index.json';
-import {XmlObject, ObjectsCache, XmlService} from '../common/xml.service';
-import {PassiveEffect} from '../item/passive-effect';
+import {XmlService} from '../common/xml.service';
 import {ItemModifier} from '../item-modifier/item-modifier';
+import {ObjectsCache, XmlObject} from '../common/xml-object';
+import {XmlTopObject} from '../common/xml-top-object';
 
 /** When reload_time not explicitly defined in Action0 */
 const HARD_CODED_RELOAD_TIMES: { [key: string]: number } = {
@@ -59,86 +60,15 @@ export class ItemsService extends XmlService<Item> {
   }
 }
 
-export enum Operation {
-  base_set = 'base_set',
-  base_add = 'base_add',
-  perc_add = 'perc_add',
-  base_subtract = 'base_subtract'
-}
+export class Item extends XmlTopObject {
 
-export class Item extends XmlObject {
-
-  private _settedCvars: string[] = undefined;
 
   constructor(xml: any) {
     super(xml);
   }
 
-  get Groups(): string[] {
-    const group = this.Group;
-    return group ? group.split(',') : undefined;
-  }
-
-  get Group(): string {
-    const group = this.getFirst('property', 'Group');
-    return group ? group.$.value : undefined;
-  }
-
-  get BaseEffects(): XmlObject {
-    return this.getFirst('effect_group', 'Base Effects');
-  }
-
-  getPassiveEffect(name: string): PassiveEffect {
-    const effectGroup = this.BaseEffects;
-    if (!effectGroup) {
-      // console.error('no effect_group for ' + this.name);
-      return undefined;
-    }
-
-    return effectGroup.getFirst<PassiveEffect>('passive_effect', name, PassiveEffect);
-  }
-
-  getPassiveEffectValue(name: string): number {
-    const passiveEffect = this.getPassiveEffect(name);
-    if (!passiveEffect) {
-      // console.error('no passive_effect for ' + this.name);
-      return undefined;
-    }
-
-    return +passiveEffect.value;
-  }
-
   get MaxRange(): number {
     return this.getPassiveEffectValue('MaxRange');
-  }
-
-  getPassiveEffectFromBase(name: string, base: Item): number {
-    const entityDamage = this.getPassiveEffect(name);
-    if (!entityDamage) {
-      return +base.getPassiveEffect(name).$.value;
-    }
-    let value = +entityDamage.$.value;
-
-    // base_set
-    if (entityDamage.$.operation === Operation.base_set) {
-      return value;
-    }
-
-    if (entityDamage.$.operation === Operation.perc_add
-      || entityDamage.$.operation === Operation.base_add
-      || entityDamage.$.operation === Operation.base_subtract) {
-      if (!base) {
-        throw new Error(`Cannot get "${name}" without magazineItem for Item "${this.name}"`);
-      }
-      const baseValue = +base.getPassiveEffect(name).$.value;
-      if (entityDamage.$.operation === Operation.perc_add || entityDamage.$.operation === Operation.base_add) {
-        value = baseValue + value;
-      } else if (entityDamage.$.operation === Operation.base_subtract) {
-        value = baseValue - value;
-      }
-    }
-
-    return value;
   }
 
   getMaxRange(magazineItem?: Item): number {
@@ -226,42 +156,6 @@ export class Item extends XmlObject {
     return degradationMax / degradationPerUse;
   }
 
-  get customIcon(): string {
-    const xmlProp = this.getFirst('property', 'CustomIcon');
-    return xmlProp ? xmlProp.$.value : undefined;
-  }
-
-  get customIconTint(): string {
-    const xmlProp = this.getFirst('property', 'CustomIconTint');
-    return xmlProp ? xmlProp.$.value : undefined;
-  }
-
-  /**
-   * Example :
-   * <pre>
-   *     <effect_group tiered="false">
-   *         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkJarBeer" operation="set" value="1"/>
-   *     </effect_group>
-   * </pre>
-   */
-  get settedCvars(): string[] {
-    if (!this._settedCvars) {
-      let triggeredEffects = [];
-      if (this.xmlElement.effect_group) {
-        this.xmlElement.effect_group.forEach(effectGroup => {
-          if (effectGroup.triggered_effect) {
-            triggeredEffects = triggeredEffects.concat(effectGroup.triggered_effect
-              .filter(triggeredEffect => triggeredEffect.$.action === 'ModifyCVar'
-                && triggeredEffect.$.operation === 'set'
-                && triggeredEffect.$.value === '1'));
-          }
-        });
-      }
-      this._settedCvars = triggeredEffects.map(triggeredEffect => triggeredEffect.$.cvar);
-    }
-    return this._settedCvars;
-  }
-
   get recoil(): number {
     const effectGroup = this.getFirst('effect_group', 'Base Effects');
     if (!effectGroup) {
@@ -294,22 +188,6 @@ export class Item extends XmlObject {
       return undefined;
     }
     return this.action0.reloadTime || HARD_CODED_RELOAD_TIMES[this.name];
-  }
-
-  get tags(): string[] {
-    const tags = this.getFirst('property', 'Tags');
-    if (!tags) {
-      return undefined;
-    }
-    return tags.$.value.split(',');
-  }
-
-  get descriptionKey(): string {
-    return this.getPropertyValue('DescriptionKey');
-  }
-
-  get extends(): string {
-    return this.getPropertyValue('Extends');
   }
 }
 

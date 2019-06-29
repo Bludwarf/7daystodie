@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/biomes.xml.json';
-import {ObjectsCache, XmlService} from '../common/xml.service';
+import {XmlService} from '../common/xml.service';
 import {AbstractBiome, Biome, Resource} from './Biome';
+import {ObjectsCache} from '../common/xml-object';
 
 @Injectable({
   providedIn: 'root'

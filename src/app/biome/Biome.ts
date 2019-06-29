@@ -1,7 +1,8 @@
-import {XmlObject} from '../common/xml.service';
 import {Interval} from '../common/interval';
+import {XmlObject} from '../common/xml-object';
+import {XmlTopObject} from '../common/xml-top-object';
 
-export class AbstractBiome extends XmlObject {
+export class AbstractBiome extends XmlTopObject {
   public biome: Biome;
   private layersObject: XmlObject;
 

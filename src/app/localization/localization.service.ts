@@ -2,7 +2,9 @@ import {Injectable} from '@angular/core';
 import TOKENS from 'src/assets/Data/Config/Localization.txt.json';
 import INTERAL_TOKENS from 'src/assets/Localization.csv.json';
 import {WIKI_URL} from '../constants';
-import {XmlObject} from '../common/xml.service';
+import {XmlObject} from '../common/xml-object';
+import {XmlTopObject} from '../common/xml-top-object';
+import {NamedAndDescribed} from '../common/interfaces';
 
 export const ENGLISH_LANG = 'English';
 export const FRENCH_LANG = 'French';
@@ -42,10 +44,17 @@ export class LocalizationService {
   /**
    * @return translated description or translated name if not found
    */
-  describe(itemName: string, lang = DEFAULT_LANG): string {
-    const key = itemName + 'Desc';
-    const desc = translate(key, lang);
-    return desc !== key ? desc : translate(itemName, lang);
+  describe(object: NamedAndDescribed, lang = DEFAULT_LANG): string {
+    if (object.descriptionKey) {
+      const desc = translate(object.descriptionKey, lang);
+      console.log('object.descriptionKey='+object.descriptionKey);
+      console.log('desc='+desc);
+      if (desc && desc !== object.descriptionKey) {
+        return desc;
+      }
+    }
+    console.log('object.name='+object.name);
+    return translate(object.name, lang);
   }
 
   getSortFunction<T extends XmlObject>(): (a: T, b: T) => number {

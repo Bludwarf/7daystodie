@@ -146,7 +146,7 @@
 
         <h2>Description</h2>
 
-        <p [innerHTML]="object.name | describe"></p>
+        <p [innerHTML]="object | describe"></p>
 
         <ng-container *ngIf="object.recipe">
           <h2>{{'xuiWPcrafting' | translate}}</h2>

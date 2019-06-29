@@ -3,9 +3,11 @@ import {Item, ItemsService} from '../items/items.service';
 import {Recipe, RecipesService} from '../recipes/recipes.service';
 import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
 import {ItemModifier} from '../item-modifier/item-modifier';
-import {ObjectsCache, XmlObject, XmlService} from '../common/xml.service';
+import {XmlService} from '../common/xml.service';
 import {BlocksService} from '../block/blocks.service';
 import {Block} from '../block/block';
+import {ObjectsCache, XmlObject} from '../common/xml-object';
+import {XmlTopObject} from '../common/xml-top-object';
 
 function uniqueConcats<T>(... arrays: (T[])[]): T[] {
   const uniqueArray: T[] = [];
@@ -56,7 +58,7 @@ export class ObjectService {
   }
 }
 
-function getAllNames<T extends XmlObject>(service: XmlService<T>, objectType: string): string[] {
+function getAllNames<T extends XmlTopObject>(service: XmlService<T>, objectType: string): string[] {
   const names: string[] = [];
   service.getAll()
     .map(item => item.name)

@@ -1,7 +1,8 @@
-import {XmlObject} from '../common/xml.service';
 import {Item} from '../items/items.service';
+import {XmlObject} from '../common/xml-object';
+import {XmlTopObject} from '../common/xml-top-object';
 
-export class ItemModifier extends XmlObject {
+export class ItemModifier extends XmlTopObject {
   constructor(xmlElement: any) {
     super(xmlElement);
   }

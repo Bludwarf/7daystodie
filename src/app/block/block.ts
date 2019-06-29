@@ -1,7 +1,8 @@
-import {XmlObject} from '../common/xml.service';
 import {Interval} from '../common/interval';
+import {XmlObject} from '../common/xml-object';
+import {XmlTopObject} from '../common/xml-top-object';
 
-export class Block extends XmlObject {
+export class Block extends XmlTopObject {
   get dropList(): Drop[] {
     return this.getChildren('drop', Drop, drop => drop.block = this);
   }

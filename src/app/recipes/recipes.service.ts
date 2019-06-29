@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/recipes.xml.json';
-import {XmlObject, XmlService} from '../common/xml.service';
+import {XmlService} from '../common/xml.service';
+import {XmlObject} from '../common/xml-object';
+import {XmlTopObject} from '../common/xml-top-object';
 
 export const CRAFT_AREA_ICONS = {
   campfire: 'assets/UIAtlasItemIcons/ItemIcons/ui_game_symbol_campfire.png',
@@ -56,7 +58,7 @@ export class RecipesService extends XmlService<Recipe> {
 /** learnable tag */
 export const TAG_LEARNABLE = 'learnable';
 
-export class Recipe extends XmlObject {
+export class Recipe extends XmlTopObject {
 
   public siblings: Recipe[] = [];
 

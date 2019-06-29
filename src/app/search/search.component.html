@@ -8,10 +8,10 @@
 <mat-autocomplete #auto="matAutocomplete">
   <mat-option *ngFor="let object of filteredObjects | async" [value]="object.name | translate"
               (onSelectionChange)="selectObject(object, $event)">
-    <div [title]="object.name | describeAttribute">
+    <div [title]="object | describeAttribute">
       <app-item-icon [itemName]="object.name" class="ItemIcons"></app-item-icon>
       <span class="name">{{ object.name | translate }}</span> :
-      <span class="description">{{ object.name | describeAttribute }}</span>
+      <span class="description">{{ object | describeAttribute }}</span>
     </div>
   </mat-option>
 </mat-autocomplete>

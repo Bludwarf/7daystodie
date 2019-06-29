@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
-import {ObjectsCache, XmlService} from '../common/xml.service';
+import {XmlService} from '../common/xml.service';
 import {Block, Drop} from './block';
 import xmlFile from 'src/assets/Data/Config/blocks.xml.json';
+import {ObjectsCache} from '../common/xml-object';
 
 @Injectable({
   providedIn: 'root'

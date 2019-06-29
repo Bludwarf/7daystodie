@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
 import xmlFile from 'src/assets/Data/Config/progression.xml.json';
-import {XmlObject, ObjectsCache, XmlService} from '../common/xml.service';
+import {XmlService} from '../common/xml.service';
 import {LocalizationService} from '../localization/localization.service';
+import {ObjectsCache, XmlObject} from '../common/xml-object';
+import {XmlTopObject} from '../common/xml-top-object';
 
 @Injectable({
   providedIn: 'root'
@@ -51,7 +53,7 @@ export class PerksService extends XmlService<Perk> {
   }
 }
 
-export class Perk extends XmlObject {
+export class Perk extends XmlTopObject {
 
   private levelsCache = new ObjectsCache<PerkLevel>();
 
