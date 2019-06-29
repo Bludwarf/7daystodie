@@ -18,6 +18,10 @@ export class BiomesService extends XmlService<Biome> {
     return new Biome(xmlElement);
   }
 
+  get xmlFile(): string {
+    return 'Data/Config/biomes.xml';
+  }
+
   getResourceOccurences(resourceBlockname: string): Resource[] {
     return this.getResourceOccurencesCache.getOrPut(resourceBlockname, () => {
       const resources = [];

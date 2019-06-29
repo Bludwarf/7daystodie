@@ -1,3 +1,5 @@
+import {el} from '@angular/platform-browser/testing/src/browser_util';
+
 const CACHE_LOGS = false;
 import * as _ from 'underscore';
 
@@ -19,7 +21,7 @@ export abstract class XmlService<T extends XmlObject> {
     return this.cache.getOrPut(name, () => {
       const elements = this.xmlElements
         .filter(xmlElementI => xmlElementI.$.name === name)
-        .map(xmlElement => xmlElement ? this.newElement(xmlElement) : undefined);
+        .map(xmlElement => xmlElement ? this.newElement0(xmlElement) : undefined);
       if (elements.length <= 1) {
         return elements.length ? elements[0] : undefined;
       } else {
@@ -31,7 +33,7 @@ export abstract class XmlService<T extends XmlObject> {
   getAll(filter?: (element: T) => boolean): T[] {
     return this.cache.getOrPutAll(element => element.name, () => {
       const elements = this.xmlElements
-        .map(xmlElement => this.newElement(xmlElement));
+        .map(xmlElement => this.newElement0(xmlElement));
       const elementsByName = _.groupBy(elements, 'name');
       return Object.keys(elementsByName)
         .map(name => {
@@ -47,7 +49,37 @@ export abstract class XmlService<T extends XmlObject> {
       .filter(element => !filter || filter(element));
   }
 
+  /**
+   * Internal creation of XmlElement
+   * @param xmlElement
+   */
+  private newElement0(xmlElement: any): T {
+
+    // Right before creation, check if this element extends an other
+    if (xmlElement.property) {
+      const extendsElement = xmlElement.property.find(property => property.$.name === 'Extends');
+      if (extendsElement) {
+        const parentName = extendsElement.$ ? extendsElement.$.value : undefined;
+        const parent = this.get(parentName);
+        if (!parent) {
+          throw new Error(`Cannot find "${parentName}" which is the parent of "${xmlElement.$ ? xmlElement.$.name : xmlElement}" in ${this.xmlFile}`);
+        }
+
+        // Replace xmlElement data before any usage
+        xmlElement = XmlObject.assign(parent, xmlElement);
+      }
+    }
+
+    return this.newElement(xmlElement);
+  }
+
   abstract newElement(xmlElement: any): T;
+
+  /**
+   * Path (relative to "assets" folder) of the source xml file for this service.
+   * Example : 'Data/Config/items.xml'
+   */
+  abstract get xmlFile(): string;
 
   /**
    * @elements contains at least two elements that share the same name
@@ -65,8 +97,9 @@ export class XmlObject {
   private firstCache = new ObjectsCache2<XmlObject>();
   private firstWithClassCache = new ObjectsCache2<XmlObject>();
   private childrenCache = new ObjectsCache<XmlObject[]>();
+  parent: XmlObject;
 
-  constructor(protected xmlElement: any) { }
+  constructor(protected xmlElement: any) {}
 
   static interpolateStrings(minMaxValue: string, minMaxTier: string, tier: number): number {
     return XmlObject.interpolate(
@@ -86,6 +119,62 @@ export class XmlObject {
       return maxValue;
     }
     return minValue + tier / (maxTier - minTier) * (maxValue - minValue);
+  }
+
+  static assign<T extends XmlObject, X>(parent: T, xmlElement: X): X {
+    XmlObject.mergeInto(parent.xmlElement, xmlElement);
+    return xmlElement;
+  }
+
+  static mergeInto<T>(parent, child) {
+    for (const key in parent) {
+      // It semms that only property element are extended
+      if (key === 'property' && parent.hasOwnProperty(key)) {
+        const parentValue = parent[key];
+
+        if (Array.isArray(parentValue)) {
+
+          if (!child.hasOwnProperty(key)) {
+            child[key] = parentValue;
+          } else {
+            // Group property elements by name attribute
+            const parentProperties: Map<string, any> = this.getPropertiesByName(parentValue);
+            const childValue = child[key];
+            const childProperties: Map<string, any> = this.getPropertiesByName(childValue);
+            child[key] = XmlObject.mergePropertiesInto(parentProperties, childProperties);
+          }
+        }
+      }
+    }
+  }
+
+  private static mergePropertiesInto(parentProperties: Map<string, any>, childProperties: Map<string, any>): any {
+    const properties = [];
+    parentProperties.forEach((parentProperty, name) => {
+      const childProperty = childProperties.get(name);
+      if (!childProperty) {
+        // Property not found in child
+        properties.push(parentProperty);
+      } else {
+        // Property found in child -> merge
+        XmlObject.mergeInto(parentProperty, childProperty);
+        properties.push(childProperty);
+      }
+    });
+    // Add child only properties
+    childProperties.forEach((childProperty, name) => {
+      if (!parentProperties.get(name)) {
+        properties.push(childProperty);
+      }
+    });
+    return properties;
+  }
+
+  private static getPropertiesByName(properties: any[]) {
+    return properties.reduce((map: Map<string, any>, property) => {
+      map.set(property.$.name, property);
+      return map;
+    }, new Map());
   }
 
   /**
@@ -153,6 +242,10 @@ export class XmlObject {
     return thisName.localeCompare(otherName);
   }
 
+  getPropertyValue(name: string): string {
+    const property = this.getFirst('property', name);
+    return property && property.$ ? property.$.value : undefined;
+  }
 }
 
 export class ObjectsCache<T> {

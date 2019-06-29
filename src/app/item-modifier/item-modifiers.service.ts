@@ -17,6 +17,10 @@ export class ItemModifiersService extends XmlService<ItemModifier> {
     return new ItemModifier(xmlElement);
   }
 
+  get xmlFile(): string {
+    return 'Data/Config/item_modifiers.xml';
+  }
+
   getAllModsInstallableOn(item: Item): ItemModifier[] {
     return this.getAll().filter(mod => mod.isInstallableOn(item));
   }

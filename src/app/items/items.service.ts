@@ -29,6 +29,10 @@ export class ItemsService extends XmlService<Item> {
     return new Item(xmlElement);
   }
 
+  get xmlFile(): string {
+    return 'Data/Config/items.xml';
+  }
+
   /**
    * @return the item required by cvar to craft this item
    */
@@ -274,8 +278,12 @@ export class Item extends XmlObject {
     return this.getPassiveEffectValue('WeaponHandling');
   }
 
-  get action0(): Action0 {
-    return this.getFirstWithClass<Action0>('property', 'Action0', Action0);
+  get action0(): Action {
+    return this.getFirstWithClass<Action>('property', 'Action0', Action);
+  }
+
+  get action1(): Action {
+    return this.getFirstWithClass<Action>('property', 'Action1', Action);
   }
 
   /**
@@ -295,11 +303,27 @@ export class Item extends XmlObject {
     }
     return tags.$.value.split(',');
   }
+
+  get descriptionKey(): string {
+    return this.getPropertyValue('DescriptionKey');
+  }
+
+  get extends(): string {
+    return this.getPropertyValue('Extends');
+  }
 }
 
-export class Action0 extends XmlObject {
+export class Action extends XmlObject {
   get reloadTime(): number {
     const reloadTime = this.getFirst('property', 'Reload_time');
     return reloadTime ? +reloadTime.$.value : undefined;
+  }
+
+  get vehicle(): string {
+    return this.getPropertyValue('Vehicle');
+  }
+
+  get class(): string {
+    return this.getPropertyValue('Class');
   }
 }

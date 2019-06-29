@@ -18,6 +18,10 @@ export class BlocksService extends XmlService<Block> {
     return new Block(xmlElement);
   }
 
+  get xmlFile(): string {
+    return 'Data/Config/blocks.xml';
+  }
+
   /**
    * @return All the blocks where one can harvest the requested item
    */

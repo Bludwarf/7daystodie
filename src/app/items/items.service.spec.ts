@@ -125,4 +125,32 @@ describe('ItemsService', () => {
     const compatibleItems = service.getCompatibleItems(mod);
     expect(compatibleItems).toContain(service.get('gunPistol'));
   });
+
+  it('should get extended item properties', () => {
+    const items: ItemsService = TestBed.get(ItemsService);
+
+    // vehicleBicyclePlaceable only
+    // - Extends: vehicleMinibikePlaceable
+    // - DescriptionKey: vehiclePlaceableBicycleDesc
+    // - Action1.Vehicle: vehicleBicycle
+    const child = items.get('vehicleBicyclePlaceable');
+
+    // vehicleMinibikePlaceable
+    // - Tags: vehicle
+    // - DescriptionKey: vehiclePlaceableGroupDesc
+    // - Action1.Class: SpawnVehicle
+    // - Action1.Vehicle: vehicleMinibike
+    const parent = items.get('vehicleMinibikePlaceable');
+
+    // vehicleBicyclePlaceable extends vehicleMinibikePlaceable
+    // - Tags: vehicle (from parent)
+    // - DescriptionKey: vehiclePlaceableBicycleDesc
+    // - Action1.Class: SpawnVehicle (from parent even if Action1 exists)
+    // - Action1.Vehicle: vehicleBicycle
+    expect(child.tags).toEqual(['vehicle']);
+    expect(child.descriptionKey).toBe('vehiclePlaceableBicycleDesc');
+    expect(child.action1.vehicle).toBe('vehicleBicycle');
+    expect(child.action1.class).toBe('SpawnVehicle');
+    expect(child.extends).toBeTruthy(); // child property only
+  });
 });

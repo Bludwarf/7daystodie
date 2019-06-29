@@ -18,6 +18,10 @@ export class PerksService extends XmlService<Perk> {
     return new Perk(xmlElement);
   }
 
+  get xmlFile(): string {
+    return 'Data/Config/perks.xml';
+  }
+
   /**
    * Example : getRequiredPerkLevelForRecipe('foodShamChowder') => {
    *     name: "perkMasterChef",

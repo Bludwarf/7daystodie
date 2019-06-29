@@ -36,6 +36,10 @@ export class RecipesService extends XmlService<Recipe> {
     return new Recipe(xmlElement);
   }
 
+  get xmlFile(): string {
+    return 'Data/Config/recipes.xml';
+  }
+
   handleDuplicates(elements: Recipe[]): Recipe {
     // TODO wildcard_forge_category
     elements = elements.filter(element => !!element.ingredients);
