@@ -92,7 +92,7 @@ describe('ItemsService', () => {
     const endTime = new Date();
     const duration = endTime.getTime() - startTime.getTime();
     console.log(`Get all items ${loops} times took ${duration} ms`);
-    expect(duration).toBeLessThanOrEqual(70 /* ms */);
+    expect(duration).toBeLessThanOrEqual(100 /* ms */);
   });
 
   it('should get Pistol with 9 mm entity damage', () => {
