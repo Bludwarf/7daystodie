@@ -45,8 +45,8 @@ export class SearchComponent implements OnInit {
       return DEFAULT_LANG !== ENGLISH_LANG && matches(this.localization.translate(object.name)) ||
         matches(this.localization.translate(object.name, ENGLISH_LANG)) ||
         matches(object.name) ||
-        DEFAULT_LANG !== ENGLISH_LANG && matches(this.localization.describe(object.name)) ||
-        matches(this.localization.describe(object.name, ENGLISH_LANG));
+        DEFAULT_LANG !== ENGLISH_LANG && matches(this.localization.describe(object)) ||
+        matches(this.localization.describe(object, ENGLISH_LANG));
     });
   }
 

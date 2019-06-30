@@ -8,6 +8,7 @@ import {BlocksService} from '../block/blocks.service';
 import {Block} from '../block/block';
 import {ObjectsCache, XmlObject} from '../common/xml-object';
 import {XmlTopObject} from '../common/xml-top-object';
+import {NamedAndDescribed} from '../common/interfaces';
 
 function uniqueConcats<T>(... arrays: (T[])[]): T[] {
   const uniqueArray: T[] = [];
@@ -72,13 +73,29 @@ function getAllNames<T extends XmlTopObject>(service: XmlService<T>, objectType:
   return names;
 }
 
-export class SevenDaysObject {
+export class SevenDaysObject implements NamedAndDescribed {
   public block: Block;
   public item: Item;
   public itemModifier: ItemModifier;
   public recipe: Recipe;
 
   constructor(public name: string) {
+  }
+
+  get(key: string): string {
+    const children = [this.item, this.itemModifier];
+    for (const child of children) {
+      if (child) {
+        if (child[key]) {
+          return child[key];
+        }
+      }
+    }
+    return undefined;
+  }
+
+  get descriptionKey(): string {
+    return this.get('descriptionKey');
   }
 
   get customIcon(): string {
