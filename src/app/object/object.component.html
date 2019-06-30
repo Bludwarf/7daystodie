@@ -210,13 +210,17 @@
 
           <p>{{'requiredItems' | translate}} {{'to repair' | translate}} 1 {{ object.name | translate }} :</p>
 
-          <table>
-            <tr *ngFor="let repairItem of repairItems">
-              <td><app-item-icon [itemName]="repairItem.name" height="56px"></app-item-icon></td>
-              <td class="count">{{repairItem.count}}</td>
-              <td><a [href]="repairItem.name">{{repairItem.name | translate}}</a></td>
-            </tr>
-          </table>
+          <div class="crafting-items">
+            <ng-container *ngFor="let repairItem of repairItems">
+              <div>
+                <app-item-icon [itemName]="repairItem.name" height="56px"></app-item-icon>
+              </div>
+              <div class="count">{{repairItem.count}}</div>
+              <div>
+                <a [href]="repairItem.name">{{repairItem.name | translate}}</a>
+              </div>
+            </ng-container>
+          </div>
 
         </ng-container>
 

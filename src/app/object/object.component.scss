@@ -1,3 +1,5 @@
+$icon-height: 56px;
+
 .main {
   font-family: sans-serif;
   background: #505050f2;
@@ -53,7 +55,7 @@ h2 {
 
 .crafting-container {
   display: flex;
-  align-items: center;
+  //align-items: center;
 
   a {
     font-weight: bold;
@@ -71,12 +73,16 @@ h2 {
 
 .crafting-items {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: $icon-height*1.5 5ex auto;
   grid-auto-rows: auto;
   align-items: center;
 
   .count {
     @include count;
+  }
+
+  a {
+    font-weight: bold;
   }
 }
 
