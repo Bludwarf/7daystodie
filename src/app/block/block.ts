@@ -10,6 +10,43 @@ export class Block extends XmlTopObject {
   getDropsToGet(dropName: string): Drop[] {
     return this.dropList.filter(drop => drop.name === dropName);
   }
+
+  get UpgradeBlock(): UpgradeBlock {
+    return this.getFirstWithClass<UpgradeBlock>('property', 'UpgradeBlock', UpgradeBlock);
+  }
+
+  get RepairItems(): RepairItems {
+    return this.getFirstWithClass<RepairItems>('property', 'RepairItems', RepairItems);
+  }
+}
+
+export class UpgradeBlock extends XmlObject {
+  constructor(protected xmlElement: any) {
+    super(xmlElement);
+  }
+
+  get toBlock(): string {
+    return this.getPropertyValue('ToBlock');
+  }
+
+  get item(): string {
+    return this.getPropertyValue('Item');
+  }
+}
+
+export class RepairItems extends XmlObject {
+  constructor(protected xmlElement: any) {
+    super(xmlElement);
+  }
+
+  /**
+   * @param itemName item name
+   * @return quantity of this item needed to repair, undefined if item does not appear in repair items
+   */
+  get(itemName: string): number {
+    const value = this.getPropertyValue(itemName);
+    return value !== undefined ? +value : undefined;
+  }
 }
 
 export class Drop extends XmlObject {

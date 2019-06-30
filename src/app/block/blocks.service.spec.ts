@@ -33,4 +33,31 @@ describe('BlocksService', () => {
     expect(drops).toBeTruthy();
     expect(drops.length).toEqual(11);
   });
+
+  it('should extend property by class', () => {
+    const service: BlocksService = TestBed.get(BlocksService);
+
+    /*
+         woodFrameMaster
+          RepairItems
+            resourceWood: 2
+          UpgradeBlock
+            ToBlock: woodMaster
+            Item: resourceWood
+    */
+    const parent = service.get('woodFrameMaster');
+    expect(parent.RepairItems.get('resourceWood')).toBe(2);
+    expect(parent.UpgradeBlock.toBlock).toBe('woodMaster');
+    expect(parent.UpgradeBlock.item).toBe('resourceWood');
+
+    /*
+         woodFrameGableInvertedSteep
+          UpgradeBlock
+            ToBlock: woodGableInvertedSteep
+    */
+    const child = service.get('woodFrameGableInvertedSteep');
+    expect(child.RepairItems.get('resourceWood')).toBe(parent.RepairItems.get('resourceWood'));
+    expect(child.UpgradeBlock.toBlock).toBe('woodGableInvertedSteep');
+    expect(child.UpgradeBlock.item).toBe(parent.UpgradeBlock.item);
+  });
 });

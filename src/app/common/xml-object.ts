@@ -115,20 +115,22 @@ export class XmlObject {
 
   static mergeInto<T>(parent, child) {
     for (const key in parent) {
-      // It semms that only property element are extended
-      if (key === 'property' && parent.hasOwnProperty(key)) {
+      if (parent.hasOwnProperty(key)) {
         const parentValue = parent[key];
 
+        // Arrays
         if (Array.isArray(parentValue)) {
-
-          if (!child.hasOwnProperty(key)) {
-            child[key] = parentValue;
-          } else {
-            // Group property elements by name attribute
-            const parentProperties: Map<string, any> = this.getPropertiesByName(parentValue);
-            const childValue = child[key];
-            const childProperties: Map<string, any> = this.getPropertiesByName(childValue);
-            child[key] = XmlObject.mergePropertiesInto(parentProperties, childProperties);
+          // It seems that only property element are extended
+          if (key === 'property') {
+            if (!child.hasOwnProperty(key)) {
+              child[key] = parentValue;
+            } else {
+              // Group property elements by name attribute
+              const parentProperties: Map<string, any> = this.getPropertiesByNameOrClass(parentValue);
+              const childValue = child[key];
+              const childProperties: Map<string, any> = this.getPropertiesByNameOrClass(childValue);
+              child[key] = XmlObject.mergePropertiesInto(parentProperties, childProperties);
+            }
           }
         }
       }
@@ -157,9 +159,9 @@ export class XmlObject {
     return properties;
   }
 
-  private static getPropertiesByName(properties: any[]) {
+  private static getPropertiesByNameOrClass(properties: any[]) {
     return properties.reduce((map: Map<string, any>, property) => {
-      map.set(property.$.name, property);
+      map.set(property.$.name || property.$.class, property);
       return map;
     }, new Map());
   }
