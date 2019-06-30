@@ -78,20 +78,27 @@ export class SevenDaysObject implements NamedAndDescribed {
   public item: Item;
   public itemModifier: ItemModifier;
   public recipe: Recipe;
+  private properties = {};
 
   constructor(public name: string) {
   }
 
-  get(key: string): string {
-    const children = [this.item, this.itemModifier];
-    for (const child of children) {
-      if (child) {
-        if (child[key]) {
-          return child[key];
+  get(key: string, skipCache = false): string {
+    if (skipCache) {
+      const children = [this.block, this.item, this.itemModifier, this.recipe];
+      for (const child of children) {
+        if (child) {
+          if (child[key]) {
+            return child[key];
+          }
         }
       }
+      return undefined;
     }
-    return undefined;
+    if (!(key in this.properties)) {
+      this.properties[key] = this.get(key, true);
+    }
+    return this.properties[key];
   }
 
   get descriptionKey(): string {
@@ -99,31 +106,11 @@ export class SevenDaysObject implements NamedAndDescribed {
   }
 
   get customIcon(): string {
-    if (this.item) {
-      if (this.item.customIcon) {
-        return this.item.customIcon;
-      }
-    }
-    if (this.itemModifier) {
-      if (this.itemModifier.customIcon) {
-        return this.itemModifier.customIcon;
-      }
-    }
-    return undefined;
+    return this.get('customIcon');
   }
 
   get customIconTint(): string {
-    if (this.item) {
-      if (this.item.customIconTint) {
-        return this.item.customIconTint;
-      }
-    }
-    if (this.itemModifier) {
-      if (this.itemModifier.customIconTint) {
-        return this.itemModifier.customIconTint;
-      }
-    }
-    return undefined;
+    return this.get('customIconTint');
   }
 
 }
