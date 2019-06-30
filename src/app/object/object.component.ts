@@ -192,8 +192,10 @@ export class ObjectComponent implements OnInit, AfterViewInit {
 
   getRepairItems(object: SevenDaysObject): RepairItem[] | undefined {
     const items = [];
-    for (const [name, count] of object.block.RepairItems.entries()) {
-      items.push({name, count});
+    if (object.block) {
+      for (const [name, count] of object.block.RepairItems.entries()) {
+        items.push({name, count});
+      }
     }
     return items ? items : undefined;
   }
