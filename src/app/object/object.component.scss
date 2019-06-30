@@ -64,6 +64,11 @@ h2 {
   flex-grow: 1;
 }
 
+@mixin count {
+  text-align: right;
+  padding-right: 1ex;
+}
+
 .crafting-items {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -71,9 +76,12 @@ h2 {
   align-items: center;
 
   .count {
-    text-align: right;
-    margin-right: 1ex;
+    @include count;
   }
+}
+
+td.count {
+  @include count;
 }
 
 .crafting-items.with-area {

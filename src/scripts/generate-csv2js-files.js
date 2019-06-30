@@ -40,7 +40,7 @@ function generateJsonFromCsv(input) {
         lines.forEach(line => {
           const key = line[0];
           const object = {};
-          for (let i = 0; i < key.length; ++i) {
+          for (let i = 0; i < line.length; ++i) {
             const value = line[i];
             if (value) {
               object[headers[i]] = value;

@@ -141,6 +141,11 @@
               <td>{{getDropsToGet(object) ? ('Yes' | translate) : ('No' | translate)}}</td>
             </tr>
 
+            <tr>
+              <td><a [href]="localization.getWikiUrl('Repairing')">{{ 'lblContextActionRepair' | translate }}</a></td>
+              <td>{{getRepairItems(object) ? ('Yes' | translate) : ('No' | translate)}}</td>
+            </tr>
+
           </table><!-- details -->
         </div>
 
@@ -195,6 +200,23 @@
             </div>
 
           </ng-container>
+
+        </ng-container>
+
+        <!-- Repairing -->
+        <ng-container *ngIf="getRepairItems(object) as repairItems">
+
+          <h2>{{'lblContextActionRepair' | translate}}</h2>
+
+          <p>{{'requiredItems' | translate}} {{'to repair' | translate}} 1 {{ object.name | translate }} :</p>
+
+          <table>
+            <tr *ngFor="let repairItem of repairItems">
+              <td><app-item-icon [itemName]="repairItem.name" height="56px"></app-item-icon></td>
+              <td class="count">{{repairItem.count}}</td>
+              <td><a [href]="repairItem.name">{{repairItem.name | translate}}</a></td>
+            </tr>
+          </table>
 
         </ng-container>
 

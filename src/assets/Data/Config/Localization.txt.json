@@ -185,14 +185,19 @@
     "Context": "Block",
     "Changes": "New",
     "English": "Bar Stool",
-    "German": "Barhocker"
+    "German": "Barhocker",
+    "Polish": "Stołek barowy"
   },
   "bed01": {
     "Key": "bed01",
     "Source": "blocks",
     "Context": "Block",
     "Changes": "KgNone",
-    "English": "An Old Bed"
+    "English": "An Old Bed",
+    "French": "Un vieux lit",
+    "German": "Altes Bett",
+    "Spanish": "Una cama vieja",
+    "Polish": "Stare łóżko"
   },
   "bed01Frame": {
     "Key": "bed01Frame",
@@ -210,7 +215,11 @@
     "Source": "blocks",
     "Context": "Block",
     "Changes": "KgNone",
-    "English": "King Size Bed"
+    "English": "King Size Bed",
+    "French": "Grand lit",
+    "German": "Doppelbett",
+    "Spanish": "Cama king size",
+    "Polish": "Ogromne łóżko"
   },
   "bedGroupDesc": {
     "Key": "bedGroupDesc",
@@ -229,7 +238,9 @@
     "Changes": "KgNone",
     "English": "Bedroll",
     "French": "Sac de couchage",
-    "German": "Schlafsack"
+    "German": "Schlafsack",
+    "Spanish": "Saco de dormir",
+    "Polish": "Śpiwór"
   },
   "birdBathPlanter": {
     "Key": "birdBathPlanter",
@@ -1000,7 +1011,9 @@
     "Context": "Block",
     "Changes": "KgNone",
     "English": "Cable1",
-    "French": "Câble 1"
+    "French": "Câble 1",
+    "German": "Kabel 1",
+    "Spanish": "Cable 1"
   },
   "carsRandomHelper": {
     "Key": "carsRandomHelper",
@@ -1478,7 +1491,9 @@
     "Context": "Block",
     "Changes": "KgNone",
     "English": "Cobweb",
-    "French": "Toile d'araignée"
+    "French": "Toile d'araignée",
+    "German": "Spinnennetz",
+    "Spanish": "Telaraña"
   },
   "cobwebDesc": {
     "Key": "cobwebDesc",
@@ -3089,7 +3104,8 @@
     "Changes": "GrChanged",
     "English": "Duct Soft",
     "French": "Conduit souple",
-    "German": "Luftschacht"
+    "German": "Luftschacht",
+    "Spanish": "Conducto flexible"
   },
   "ductSoftCorner": {
     "Key": "ductSoftCorner",
@@ -3182,7 +3198,8 @@
     "Changes": "KgNone",
     "English": "End Table",
     "French": "Table d'appoint",
-    "German": "Beistelltisch"
+    "German": "Beistelltisch",
+    "Spanish": "Mesita"
   },
   "endTableLamp": {
     "Key": "endTableLamp",
@@ -3236,7 +3253,8 @@
     "Changes": "KgNone",
     "English": "Household Faucet",
     "French": "Robinet ordinaire",
-    "German": "Standardwasserhahn"
+    "German": "Standardwasserhahn",
+    "Spanish": "Grifo"
   },
   "faucet04": {
     "Key": "faucet04",
@@ -3245,7 +3263,8 @@
     "Changes": "KgNone",
     "English": "Household Faucet",
     "French": "Robinet ordinaire",
-    "German": "Standardwasserhahn"
+    "German": "Standardwasserhahn",
+    "Spanish": "Grifo"
   },
   "faucetBrass02": {
     "Key": "faucetBrass02",
@@ -3665,7 +3684,8 @@
     "Changes": "KgNone",
     "English": "Fountain",
     "French": "Fontaine",
-    "German": "Brunnen"
+    "German": "Brunnen",
+    "Spanish": "Fuente"
   },
   "furnaceDrawer": {
     "Key": "furnaceDrawer",
@@ -3692,7 +3712,8 @@
     "Changes": "KgNone",
     "English": "Fusebox",
     "French": "Boîte à fusibles",
-    "German": "Sicherungskasten"
+    "German": "Sicherungskasten",
+    "Spanish": "Caja de fusibles"
   },
   "garageDoorMetal_v1": {
     "Key": "garageDoorMetal_v1",
@@ -4380,7 +4401,8 @@
     "Changes": "KgNone",
     "English": "Iron Bars",
     "French": "Barreaux en fer",
-    "German": "Eisenstangen"
+    "German": "Eisenstangen",
+    "Spanish": "Barras de hierro"
   },
   "ironBarsCentered": {
     "Key": "ironBarsCentered",
@@ -4629,7 +4651,8 @@
     "Changes": "KgNone",
     "English": "Mattress",
     "French": "Matelas",
-    "German": "Matratze"
+    "German": "Matratze",
+    "Spanish": "Colchón"
   },
   "mattressFlat": {
     "Key": "mattressFlat",
@@ -6735,7 +6758,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 01",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 01",
+    "Spanish": "Piedra pequeña"
   },
   "rock02": {
     "Key": "rock02",
@@ -6743,7 +6768,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 02",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 02",
+    "Spanish": "Piedra pequeña"
   },
   "rock03": {
     "Key": "rock03",
@@ -6751,7 +6778,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 03",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 03",
+    "Spanish": "Piedra pequeña"
   },
   "rock04": {
     "Key": "rock04",
@@ -6759,7 +6788,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 04",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 04",
+    "Spanish": "Piedra pequeña"
   },
   "rock05": {
     "Key": "rock05",
@@ -6767,7 +6798,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 05",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 05",
+    "Spanish": "Piedra pequeña"
   },
   "rock06": {
     "Key": "rock06",
@@ -6775,7 +6808,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 06",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 06",
+    "Spanish": "Piedra pequeña"
   },
   "rock07": {
     "Key": "rock07",
@@ -6783,7 +6818,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 07",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 07",
+    "Spanish": "Piedra pequeña"
   },
   "rock08": {
     "Key": "rock08",
@@ -6791,7 +6828,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 08",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 08",
+    "Spanish": "Piedra pequeña"
   },
   "rock09": {
     "Key": "rock09",
@@ -6799,7 +6838,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 09",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 09",
+    "Spanish": "Piedra pequeña"
   },
   "rock10": {
     "Key": "rock10",
@@ -6807,7 +6848,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 10",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 10",
+    "Spanish": "Piedra pequeña"
   },
   "rock11": {
     "Key": "rock11",
@@ -6815,7 +6858,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 11",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 11",
+    "Spanish": "Piedra pequeña"
   },
   "rock12": {
     "Key": "rock12",
@@ -6823,7 +6868,9 @@
     "Context": "Block",
     "Changes": "EnChanged GrChanged KgNone",
     "English": "Small Rock 12",
-    "French": "Petite pierre"
+    "French": "Petite pierre",
+    "German": "Kleiner Stein 12",
+    "Spanish": "Piedra pequeña"
   },
   "rockResource": {
     "Key": "rockResource",
@@ -10946,7 +10993,13 @@
   },
   "tv": {
     "Key": "tv",
-    "Source": "blocks"
+    "Source": "blocks",
+    "Context": "Block",
+    "Changes": "KgNone",
+    "English": "TV",
+    "French": "Télévision",
+    "German": "TV",
+    "Spanish": "TV"
   },
   "tv_large_1": {
     "Key": "tv_large_1",
@@ -11084,7 +11137,8 @@
     "Changes": "KgNone",
     "English": "Window 2",
     "French": "Fenêtre 2",
-    "German": "Fenster 2"
+    "German": "Fenster 2",
+    "Spanish": "Ventana 2"
   },
   "window02Broken01CTRPlate": {
     "Key": "window02Broken01CTRPlate",
@@ -11133,7 +11187,8 @@
     "Changes": "KgNone",
     "English": "Window 3",
     "French": "Fenêtre 3",
-    "German": "Fenster 3"
+    "German": "Fenster 3",
+    "Spanish": "Ventana 3"
   },
   "window03Broke1": {
     "Key": "window03Broke1",
@@ -11252,7 +11307,8 @@
     "Changes": "KgNone",
     "English": "Window 4",
     "French": "Fenêtre 04",
-    "German": "Fenster 04"
+    "German": "Fenster 04",
+    "Spanish": "Ventana 4"
   },
   "window04Frame": {
     "Key": "window04Frame",
@@ -12063,7 +12119,8 @@
     "Changes": "KgNone",
     "English": "Wood 1/2 Block",
     "French": "1/2 de bloc de bois",
-    "German": "1/2 Holzblock"
+    "German": "1/2 Holzblock",
+    "Spanish": "Mitad de madera"
   },
   "woodHalfCentered": {
     "Key": "woodHalfCentered",
@@ -12225,7 +12282,8 @@
     "Changes": "KgNone",
     "English": "Wood Pole",
     "French": "Poteau en bois",
-    "German": "Holzpfosten"
+    "German": "Holzpfosten",
+    "Spanish": "Poste de madera"
   },
   "woodPoleSCTR": {
     "Key": "woodPoleSCTR",
@@ -12344,7 +12402,8 @@
     "Changes": "KgNone",
     "English": "Wood Ramp",
     "French": "Rampe en bois",
-    "German": "Holzrampe"
+    "German": "Holzrampe",
+    "Spanish": "Rampa de madera"
   },
   "woodRampIncline": {
     "Key": "woodRampIncline",
@@ -12775,7 +12834,9 @@
     "Context": "Container",
     "Changes": "KgNone",
     "English": "Small Trash Bin",
-    "French": "Petite corbeille"
+    "French": "Petite corbeille",
+    "German": "Kleiner Mülleimer",
+    "Spanish": "Bote de basura"
   },
   "cntBirdnest": {
     "Key": "cntBirdnest",
@@ -17781,7 +17842,12 @@
   "air": {
     "Key": "air",
     "Source": "blocks",
-    "Context": "Terrain"
+    "Context": "Terrain",
+    "Changes": "KgNone",
+    "English": "Air",
+    "French": "Air",
+    "German": "Luft",
+    "Spanish": "Aire"
   },
   "terrainBlockGroupDesc": {
     "Key": "terrainBlockGroupDesc",
@@ -17919,7 +17985,8 @@
     "Changes": "KgNone",
     "English": "Dirt",
     "French": "Terre",
-    "German": "Erde"
+    "German": "Erde",
+    "Spanish": "Suciedad"
   },
   "terrFertileDirt": {
     "Key": "terrFertileDirt",
@@ -18008,7 +18075,8 @@
     "Changes": "KgNone",
     "English": "Ice",
     "French": "Glace",
-    "German": "Eis"
+    "German": "Eis",
+    "Spanish": "Hielo"
   },
   "terrOreCoal": {
     "Key": "terrOreCoal",
@@ -18164,7 +18232,8 @@
     "Changes": "KgNone",
     "English": "Sand",
     "French": "Sable",
-    "German": "Sand"
+    "German": "Sand",
+    "Spanish": "Arena"
   },
   "terrSandDesc": {
     "Key": "terrSandDesc",
@@ -18200,7 +18269,8 @@
     "Changes": "KgNone",
     "English": "Snow",
     "French": "Neige",
-    "German": "Schnee"
+    "German": "Schnee",
+    "Spanish": "Nieve"
   },
   "terrSnowDesc": {
     "Key": "terrSnowDesc",
@@ -18429,7 +18499,12 @@
   "tnt": {
     "Key": "tnt",
     "Source": "blocks",
-    "Context": "Trap"
+    "Context": "Trap",
+    "Changes": "EnChanged",
+    "English": "Explosive Charge (Ammo)",
+    "French": "T.N.T.",
+    "German": "Sprengladung (Mun)",
+    "Spanish": "Dinamita"
   },
   "tntDesc": {
     "Key": "tntDesc",
@@ -18438,7 +18513,8 @@
     "Changes": "EnChanged",
     "English": "Explosive Charges can be made from paper, plant fibers and gun powder. Place on the ground and ignite it by damaging it.",
     "French": "La T.N.T. peut être fabriquée avec du papier, des fibres végétales et de la poudre à canon. Placez-la sur le sol et allumez-la en l'endommageant.",
-    "German": "Sprengladungen werden aus Papier, Pflanzenfasern und Schießpulver hergestellt. Plaziere sie auf dem Boden und entzünde sie indem du sie beschädigst."
+    "German": "Sprengladungen werden aus Papier, Pflanzenfasern und Schießpulver hergestellt. Plaziere sie auf dem Boden und entzünde sie indem du sie beschädigst.",
+    "Spanish": "La dinamita se puede hacer con papel, fibra vegetal y pólvora. Colócala en el suelo y dáñala para prenderla."
   },
   "trapSpikesDamage1": {
     "Key": "trapSpikesDamage1",
@@ -18586,7 +18662,8 @@
     "Changes": "KgNone",
     "English": "Campfire",
     "French": "Feu de camp",
-    "German": "Lagerfeuer"
+    "German": "Lagerfeuer",
+    "Spanish": "Fogata"
   },
   "campfireDesc": {
     "Key": "campfireDesc",
@@ -18639,7 +18716,10 @@
     "Source": "blocks",
     "Context": "Workstation",
     "Changes": "KgNone",
-    "English": "Forge"
+    "English": "Forge",
+    "French": "Forge",
+    "German": "Schmiede",
+    "Spanish": "Fragua"
   },
   "forgeDesc": {
     "Key": "forgeDesc",
@@ -20966,7 +21046,10 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "KgNone",
-    "English": "Cured"
+    "English": "Cured",
+    "French": "Rémission",
+    "German": "Geheilt",
+    "Spanish": "Curado"
   },
   "curedDesc": {
     "Key": "curedDesc",
@@ -20995,7 +21078,8 @@
     "Changes": "KgNone",
     "English": "First Aid",
     "French": "Premiers soins",
-    "German": "Erste Hilfe"
+    "German": "Erste Hilfe",
+    "Spanish": "Primeros auxilios"
   },
   "firstAidDesc": {
     "Key": "firstAidDesc",
@@ -21054,7 +21138,8 @@
     "Changes": "KgNone",
     "English": "Fresh Air",
     "French": "Air frais",
-    "German": "Frische Luft"
+    "German": "Frische Luft",
+    "Spanish": "Aire fresco"
   },
   "freshAirDesc": {
     "Key": "freshAirDesc",
@@ -21075,7 +21160,8 @@
     "Changes": "KgNone",
     "English": "Hangover",
     "French": "Gueule de bois",
-    "German": "Kater"
+    "German": "Kater",
+    "Spanish": "Crudo"
   },
   "hangoverDesc": {
     "Key": "hangoverDesc",
@@ -21130,7 +21216,10 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "KgNone",
-    "English": "Heat Stroke 1"
+    "English": "Heat Stroke 1",
+    "French": "Coup de chaleur 1",
+    "German": "Hitzschlag 1",
+    "Spanish": "Insolación 1"
   },
   "heat1Desc": {
     "Key": "heat1Desc",
@@ -21157,7 +21246,10 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "KgNone",
-    "English": "Heat Stroke 2"
+    "English": "Heat Stroke 2",
+    "French": "Coup de chaleur 2",
+    "German": "Hitzschlag 2",
+    "Spanish": "Insolación 2"
   },
   "heat2Desc": {
     "Key": "heat2Desc",
@@ -21184,7 +21276,10 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "KgNone",
-    "English": "Hypothermia 1"
+    "English": "Hypothermia 1",
+    "French": "Hypothermie 1",
+    "German": "Unterkühlung 1",
+    "Spanish": "Hipotermia 1"
   },
   "hypo1Desc": {
     "Key": "hypo1Desc",
@@ -21211,7 +21306,10 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "KgNone",
-    "English": "Hypothermia 2"
+    "English": "Hypothermia 2",
+    "French": "Hypothermie 2",
+    "German": "Unterkühlung 2",
+    "Spanish": "Hipotermia 2"
   },
   "hypo2Desc": {
     "Key": "hypo2Desc",
@@ -21238,7 +21336,10 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "KgNone",
-    "English": "Hypothermia 3"
+    "English": "Hypothermia 3",
+    "French": "Hypothermie 3",
+    "German": "Unterkühlung 3",
+    "Spanish": "Hipotermia 3"
   },
   "hypo3Desc": {
     "Key": "hypo3Desc",
@@ -21354,7 +21455,8 @@
     "Changes": "KgNone",
     "English": "Resting",
     "French": "Repos",
-    "German": "Ausruhen"
+    "German": "Ausruhen",
+    "Spanish": "Descansando"
   },
   "sleepingAwesome": {
     "Key": "sleepingAwesome",
@@ -21411,7 +21513,10 @@
     "Source": "buffs",
     "Context": "Buff",
     "Changes": "KgNone",
-    "English": "Emitting Smell"
+    "English": "Emitting Smell",
+    "French": "Odeur",
+    "German": "Stinkende Last",
+    "Spanish": "Emanando olor"
   },
   "smellDesc": {
     "Key": "smellDesc",
@@ -21439,7 +21544,9 @@
     "Context": "Buff",
     "Changes": "KgNone",
     "English": "Smelly",
-    "French": "Puanteur"
+    "French": "Puanteur",
+    "German": "Stinker",
+    "Spanish": "Apestoso"
   },
   "smellyDesc": {
     "Key": "smellyDesc",
@@ -21591,7 +21698,8 @@
     "Changes": "KgNone",
     "English": "Gain Wellness",
     "French": "Gain en bien-être",
-    "German": "Erhalte Wohlbefinden"
+    "German": "Erhalte Wohlbefinden",
+    "Spanish": "Aumenta el bienestar"
   },
   "wellnessDesc": {
     "Key": "wellnessDesc",
@@ -22414,7 +22522,8 @@
     "Changes": "KgNone",
     "English": "Rotting Carcass",
     "French": "Carcasse pourrie",
-    "German": "Verrottender Kadaver"
+    "German": "Verrottender Kadaver",
+    "Spanish": "Cuerpo podrido"
   },
   "zombieYoFeral": {
     "Key": "zombieYoFeral",
@@ -25997,7 +26106,8 @@
     "Changes": "EnChanged KgNone",
     "English": "Baseball Cap",
     "French": "Casquette de baseball",
-    "German": "Baseballmütze"
+    "German": "Baseballmütze",
+    "Spanish": "Gorra de béisbol"
   },
   "ballCapDesc": {
     "Key": "ballCapDesc",
@@ -26016,7 +26126,8 @@
     "Changes": "KgNone",
     "English": "Bandana",
     "French": "Bandana",
-    "German": "Halstuch"
+    "German": "Halstuch",
+    "Spanish": "Bandana"
   },
   "bandanaClothesGroupDesc": {
     "Key": "bandanaClothesGroupDesc",
@@ -26054,7 +26165,10 @@
     "Source": "items",
     "Context": "Clothes",
     "Changes": "KgNone",
-    "English": "Cigar"
+    "English": "Cigar",
+    "French": "Cigare",
+    "German": "Zigarre",
+    "Spanish": "Puro"
   },
   "cigarDesc": {
     "Key": "cigarDesc",
@@ -26218,7 +26332,8 @@
     "Changes": "KgNone",
     "English": "Gasmask",
     "French": "Masque à gaz",
-    "German": "Gasmaske"
+    "German": "Gasmaske",
+    "Spanish": "Máscara de gas"
   },
   "gasMaskDesc": {
     "Key": "gasMaskDesc",
@@ -26237,7 +26352,8 @@
     "Changes": "EnChanged",
     "English": "Ski Goggles",
     "French": "Lunettes de protection",
-    "German": "Schutzbrille"
+    "German": "Schutzbrille",
+    "Spanish": "Gafas de buceo"
   },
   "gogglesDesc": {
     "Key": "gogglesDesc",
@@ -26687,7 +26803,9 @@
     "Context": "Clothes",
     "Changes": "KgNone",
     "English": "Shades",
-    "French": "Lunettes de soleil"
+    "French": "Lunettes de soleil",
+    "German": "Sonnenbrille",
+    "Spanish": "Gafas de sol"
   },
   "shadesBlack": {
     "Key": "shadesBlack",
@@ -26712,7 +26830,10 @@
     "Source": "items",
     "Context": "Clothes",
     "Changes": "KgNone",
-    "English": "Shirt"
+    "English": "Shirt",
+    "French": "Chemises",
+    "German": "Hemd",
+    "Spanish": "Camisa"
   },
   "shirtClothesGroupDesc": {
     "Key": "shirtClothesGroupDesc",
@@ -26738,7 +26859,8 @@
     "Changes": "KgNone",
     "English": "Skull Cap",
     "French": "Bonnet",
-    "German": "Mütze"
+    "German": "Mütze",
+    "Spanish": "Casquete"
   },
   "skullCapDesc": {
     "Key": "skullCapDesc",
@@ -26781,7 +26903,8 @@
     "Changes": "EnChanged",
     "English": "Tank Top",
     "French": "Débardeur blanc",
-    "German": "Muskelshirt"
+    "German": "Muskelshirt",
+    "Spanish": "Camiseta de tirantes blanca"
   },
   "tankTopClothesGroupDesc": {
     "Key": "tankTopClothesGroupDesc",
@@ -26799,7 +26922,9 @@
     "Context": "Clothes",
     "Changes": "KgNone",
     "English": "T-Shirt",
-    "French": "T-shirt"
+    "French": "T-shirt",
+    "German": "T-Shirt",
+    "Spanish": "Camiseta"
   },
   "tshirtClothesGroupDesc": {
     "Key": "tshirtClothesGroupDesc",
@@ -27883,7 +28008,8 @@
     "Changes": "KgNone",
     "English": "Egg",
     "French": "Œuf",
-    "German": "Ei"
+    "German": "Ei",
+    "Spanish": "Huevo"
   },
   "foodEggBoiled": {
     "Key": "foodEggBoiled",
@@ -28156,7 +28282,8 @@
     "Changes": "KgNone",
     "English": "AK-47 Assault Rifle",
     "French": "Fusil d'assaut AK-47",
-    "German": "AK-47 Sturmgewehr"
+    "German": "AK-47 Sturmgewehr",
+    "Spanish": "Rifle de asalto AK-47"
   },
   "gunAK47Desc": {
     "Key": "gunAK47Desc",
@@ -28251,7 +28378,8 @@
     "Changes": "KgNone",
     "English": "Marksman Rifle",
     "French": "MR-10",
-    "German": "MR-10"
+    "German": "MR-10",
+    "Spanish": "MR-10"
   },
   "gunMR10Desc": {
     "Key": "gunMR10Desc",
@@ -28330,7 +28458,8 @@
     "Changes": "KgNone",
     "English": "SMG-5",
     "French": "Mitraillette",
-    "German": "Maschinenpistole"
+    "German": "Maschinenpistole",
+    "Spanish": "Metralleta"
   },
   "gunSMG5Desc": {
     "Key": "gunSMG5Desc",
@@ -28452,7 +28581,11 @@
     "Key": "book",
     "Source": "items",
     "Context": "Item",
-    "Changes": "KgNone"
+    "Changes": "KgNone",
+    "English": "Book",
+    "French": "Livre",
+    "German": "Buch",
+    "Spanish": "Libro"
   },
   "bookDesc": {
     "Key": "bookDesc",
@@ -28461,13 +28594,18 @@
     "Changes": "KgNone",
     "English": "An old book will get you paper.",
     "French": "Un vieux livre qui vous fournira du papier.",
-    "German": "Durch ein altes Buch erhältst du Papier."
+    "German": "Durch ein altes Buch erhältst du Papier.",
+    "Spanish": "Con un libro viejo puedes conseguir papel."
   },
   "bowl": {
     "Key": "bowl",
     "Source": "items",
     "Context": "Item",
-    "Changes": "KgNone"
+    "Changes": "KgNone",
+    "English": "Clay Bowl",
+    "French": "Bol en argile",
+    "German": "Lehmschale",
+    "Spanish": "Tazón de arcilla"
   },
   "bowlDesc": {
     "Key": "bowlDesc",
@@ -28476,7 +28614,8 @@
     "Changes": "KgNone",
     "English": "Maybe it's useful for something.",
     "French": "Il sert peut-être à quelque chose.",
-    "German": "Vielleicht ist sie zu etwas gut."
+    "German": "Vielleicht ist sie zu etwas gut.",
+    "Spanish": "Tal vez sea útil para algo."
   },
   "bucketEmpty": {
     "Key": "bucketEmpty",
@@ -28524,7 +28663,9 @@
     "Context": "Item",
     "Changes": "KgNone",
     "English": "Candle",
-    "French": "Bougie"
+    "French": "Bougie",
+    "German": "Kerze",
+    "Spanish": "Vela"
   },
   "candleDesc": {
     "Key": "candleDesc",
@@ -28583,7 +28724,8 @@
     "Changes": "KgNone",
     "English": "Empty Mason Jar",
     "French": "Bocal de conserve vide",
-    "German": "Leeres Einweckglas"
+    "German": "Leeres Einweckglas",
+    "Spanish": "Mason Jar vacía"
   },
   "meleeToolFlashlight02": {
     "Key": "meleeToolFlashlight02",
@@ -31150,7 +31292,8 @@
     "Changes": "KgNone",
     "English": "A ragged old treasure map I found with some scribbling on it.",
     "French": "Une vieille carte au trésor ornée de gribouillages que j'ai trouvée.",
-    "German": "Eine alte, vergilbte Schatzkarte mit ein paar Kritzeleien, die ich gefunden habe."
+    "German": "Eine alte, vergilbte Schatzkarte mit ein paar Kritzeleien, die ich gefunden habe.",
+    "Spanish": "Un viejo mapa del tesoro arrugado y con garabatos que encontré por ahí."
   },
   "qt_jennifer": {
     "Key": "qt_jennifer",
@@ -31189,7 +31332,8 @@
     "Changes": "KgNone",
     "English": "Sarah's Treasure Map",
     "French": "La carte au trésor de Sarah",
-    "German": "Sarahs Schatzkarte"
+    "German": "Sarahs Schatzkarte",
+    "Spanish": "Mapa del tesoro de Sarah"
   },
   "qt_stephan": {
     "Key": "qt_stephan",
@@ -36819,7 +36963,8 @@
     "Changes": "KgNone",
     "English": "Handguns",
     "French": "Pistolets",
-    "German": "Faustfeuerwaffen"
+    "German": "Faustfeuerwaffen",
+    "Spanish": "Revólveres"
   },
   "pistolsDesc": {
     "Key": "pistolsDesc",
@@ -36897,7 +37042,9 @@
     "Context": "Skill",
     "Changes": "KgNone",
     "English": "Rifles",
-    "French": "Fusils"
+    "French": "Fusils",
+    "German": "Gewehre",
+    "Spanish": "Rifles"
   },
   "riflesDesc": {
     "Key": "riflesDesc",
@@ -36956,7 +37103,8 @@
     "Changes": "KgNone",
     "English": "Shotguns",
     "French": "Fusils à pompe",
-    "German": "Schrotflinten"
+    "German": "Schrotflinten",
+    "Spanish": "Escopetas"
   },
   "shotgunsDesc": {
     "Key": "shotgunsDesc",
@@ -37210,7 +37358,8 @@
     "Changes": "KgNone",
     "English": "The Camel",
     "French": "Le chameau",
-    "German": "Das Kamel"
+    "German": "Das Kamel",
+    "Spanish": "El camello"
   },
   "theCamelDesc": {
     "Key": "theCamelDesc",
@@ -37239,7 +37388,8 @@
     "Changes": "KgNone",
     "English": "The Fixer",
     "French": "Le réparateur",
-    "German": "Der Reparaturmeister"
+    "German": "Der Reparaturmeister",
+    "Spanish": "El reparador"
   },
   "theFixerDesc": {
     "Key": "theFixerDesc",
@@ -39910,7 +40060,8 @@
     "Changes": "KgNone",
     "English": "Press <{0}> to use",
     "French": "Appuyer sur <{0}> pour utiliser",
-    "German": "Zum Benutzen <{0}> drücken"
+    "German": "Zum Benutzen <{0}> drücken",
+    "Spanish": "Presiona <{0}> para usar."
   },
   "useSecureDoor": {
     "Key": "useSecureDoor",
@@ -41154,7 +41305,8 @@
     "Changes": "KgNone",
     "English": "Group(s)",
     "French": "Groupe(s)",
-    "German": "Gruppe(n)"
+    "German": "Gruppe(n)",
+    "Spanish": "Grupo(s)"
   },
   "lblHardness": {
     "Key": "lblHardness",
@@ -41193,7 +41345,8 @@
     "Changes": "KgNone",
     "English": "Known",
     "French": "Connu",
-    "German": "Bekannt"
+    "German": "Bekannt",
+    "Spanish": "Conocidos"
   },
   "lblLightValue": {
     "Key": "lblLightValue",
@@ -41209,7 +41362,8 @@
     "Changes": "KgNone",
     "English": "Mass",
     "French": "Masse",
-    "German": "Masse"
+    "German": "Masse",
+    "Spanish": "Masa"
   },
   "lblMaxLoad": {
     "Key": "lblMaxLoad",
@@ -41558,7 +41712,8 @@
     "Changes": "KgNone",
     "English": "Apply",
     "French": "Appliquer",
-    "German": "Anwenden"
+    "German": "Anwenden",
+    "Spanish": "Aplicar"
   },
   "btnBack": {
     "Key": "btnBack",
@@ -41567,7 +41722,8 @@
     "Changes": "KgNone",
     "English": "Back",
     "French": "Retour",
-    "German": "Zurück"
+    "German": "Zurück",
+    "Spanish": "Atrás"
   },
   "btnCancel": {
     "Key": "btnCancel",
@@ -41683,7 +41839,8 @@
     "Changes": "KgNone",
     "English": "Quit",
     "French": "Quitter",
-    "German": "Verlassen"
+    "German": "Verlassen",
+    "Spanish": "Salir"
   },
   "btnMoreInfo": {
     "Key": "btnMoreInfo",
@@ -41730,7 +41887,10 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "KgNone",
-    "English": "Ok"
+    "English": "Ok",
+    "French": "OK",
+    "German": "Ok",
+    "Spanish": "Aceptar"
   },
   "btnOptions": {
     "Key": "btnOptions",
@@ -41809,7 +41969,8 @@
     "Changes": "KgNone",
     "English": "Reset Defaults",
     "French": "Réinitialiser par défaut",
-    "German": "Zurücksetzen"
+    "German": "Zurücksetzen",
+    "Spanish": "Restablecer predeterminados"
   },
   "btnResetGameOptions": {
     "Key": "btnResetGameOptions",
@@ -41828,7 +41989,8 @@
     "Changes": "KgNone",
     "English": "Retry",
     "French": "Réessayer",
-    "German": "Erneut versuchen"
+    "German": "Erneut versuchen",
+    "Spanish": "Volver a intentar"
   },
   "btnStart": {
     "Key": "btnStart",
@@ -41837,7 +41999,8 @@
     "Changes": "KgNone",
     "English": "Start",
     "French": "Commencer",
-    "German": "Starten"
+    "German": "Starten",
+    "Spanish": "Empezar"
   },
   "btnTakeAll": {
     "Key": "btnTakeAll",
@@ -41856,14 +42019,18 @@
     "Changes": "KgNone",
     "English": "Bloom",
     "French": "Flou lumineux",
-    "German": "Bloom"
+    "German": "Bloom",
+    "Spanish": "Bloom"
   },
   "cbDOF": {
     "Key": "cbDOF",
     "Source": "UI",
     "Context": "Menu",
     "Changes": "KgNone",
-    "English": "DOF"
+    "English": "DOF",
+    "French": "Profondeur de champ",
+    "German": "Tiefenschärfe",
+    "Spanish": "Profundidad de campo"
   },
   "cbDynamicContrast": {
     "Key": "cbDynamicContrast",
@@ -41941,7 +42108,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "SSAO",
-    "French": "Occlusion ambiante"
+    "French": "Occlusion ambiante",
+    "German": "SSAO",
+    "Spanish": "SSAO"
   },
   "cbSunShafts": {
     "Key": "cbSunShafts",
@@ -42040,7 +42209,8 @@
     "Changes": "KgNone",
     "English": "POIs",
     "French": "Points d'intérêt",
-    "German": "Sehenswürdigkeiten"
+    "German": "Sehenswürdigkeiten",
+    "Spanish": "Puntos de interés"
   },
   "cbxSelectWorld": {
     "Key": "cbxSelectWorld",
@@ -42647,7 +42817,10 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "KgNone",
-    "English": "Everything"
+    "English": "Everything",
+    "French": "Tout",
+    "German": "Alles",
+    "Spanish": "Todo"
   },
   "goAnyValue": {
     "Key": "goAnyValue",
@@ -42937,7 +43110,10 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "KgNone",
-    "English": "{0} Day"
+    "English": "{0} Day",
+    "French": "{0} jour",
+    "German": "{0} Tag",
+    "Spanish": "{0} día"
   },
   "goDayCount": {
     "Key": "goDayCount",
@@ -43025,7 +43201,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "{0} Days",
-    "French": "{0} jours"
+    "French": "{0} jours",
+    "German": "{0} Tage",
+    "Spanish": "{0} días"
   },
   "goDeleteAll": {
     "Key": "goDeleteAll",
@@ -43294,7 +43472,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "Fast",
-    "French": "Rapide"
+    "French": "Rapide",
+    "German": "Schnell",
+    "Spanish": "Rápido"
   },
   "goFrag": {
     "Key": "goFrag",
@@ -43302,7 +43482,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "{0} Frag",
-    "French": "{0} élimination"
+    "French": "{0} élimination",
+    "German": "{0} Frag",
+    "Spanish": "{0} baja"
   },
   "goFragLimit": {
     "Key": "goFragLimit",
@@ -43331,7 +43513,8 @@
     "Changes": "KgNone",
     "English": "{0} Frags",
     "French": "{0} éliminations",
-    "German": "{0} Frags"
+    "German": "{0} Frags",
+    "Spanish": "{0} bajas"
   },
   "goFriendlyFire": {
     "Key": "goFriendlyFire",
@@ -43413,7 +43596,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "High",
-    "French": "Élevé"
+    "French": "Élevé",
+    "German": "Hoch",
+    "Spanish": "Alto"
   },
   "goInfinite": {
     "Key": "goInfinite",
@@ -43429,7 +43614,8 @@
     "Key": "goIp",
     "Source": "UI",
     "Context": "Menu",
-    "Changes": "KgNone"
+    "Changes": "KgNone",
+    "English": "Server IP"
   },
   "goIpDesc": {
     "Key": "goIpDesc",
@@ -43823,7 +44009,10 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "KgNone",
-    "English": "Low"
+    "English": "Low",
+    "French": "Lent",
+    "German": "Niedrig",
+    "Spanish": "Bajo"
   },
   "goMarkAirDrops": {
     "Key": "goMarkAirDrops",
@@ -43920,7 +44109,8 @@
     "Changes": "KgNone",
     "English": "Medium",
     "French": "Moyen",
-    "German": "Mittel"
+    "German": "Mittel",
+    "Spanish": "Medio"
   },
   "goMinute": {
     "Key": "goMinute",
@@ -43929,7 +44119,8 @@
     "Changes": "KgNone",
     "English": "{0} Minute",
     "French": "{0} minute",
-    "German": "{0} Minute"
+    "German": "{0} Minute",
+    "Spanish": "{0} minuto"
   },
   "goMinutes": {
     "Key": "goMinutes",
@@ -43987,7 +44178,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "Nothing",
-    "French": "Rien"
+    "French": "Rien",
+    "German": "Nichts",
+    "Spanish": "Nada"
   },
   "goNormal": {
     "Key": "goNormal",
@@ -43996,7 +44189,8 @@
     "Changes": "KgNone",
     "English": "Normal",
     "French": "Normal",
-    "German": "Normal"
+    "German": "Normal",
+    "Spanish": "Normal"
   },
   "goNoTimer": {
     "Key": "goNoTimer",
@@ -44013,13 +44207,20 @@
     "Source": "UI",
     "Context": "Menu",
     "Changes": "KgNone",
-    "English": "Off"
+    "English": "Off",
+    "French": "Désactivé",
+    "German": "Aus",
+    "Spanish": "Desactivado"
   },
   "goOn": {
     "Key": "goOn",
     "Source": "UI",
     "Context": "Menu",
-    "Changes": "KgNone"
+    "Changes": "KgNone",
+    "English": "On",
+    "French": "Activé",
+    "German": "An",
+    "Spanish": "Activado"
   },
   "goPartySharedKillRange": {
     "Key": "goPartySharedKillRange",
@@ -44131,7 +44332,8 @@
     "Changes": "KgNone",
     "English": "{0} Player",
     "French": "{0} joueur",
-    "German": "{0} Spieler"
+    "German": "{0} Spieler",
+    "Spanish": "{0} jugador"
   },
   "goPlayerDamageGiven": {
     "Key": "goPlayerDamageGiven",
@@ -44231,7 +44433,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "Game Port",
-    "French": "Port de la partie"
+    "French": "Port de la partie",
+    "German": "Spiel-Port",
+    "Spanish": "Puerto de la partida"
   },
   "goPortDesc": {
     "Key": "goPortDesc",
@@ -44250,7 +44454,8 @@
     "Changes": "KgNone",
     "English": "Public/Private",
     "French": "Publique/privée",
-    "German": "Öffentlich/Privat"
+    "German": "Öffentlich/Privat",
+    "Spanish": "Pública/privada"
   },
   "goPublicDesc": {
     "Key": "goPublicDesc",
@@ -44363,7 +44568,8 @@
     "Changes": "KgNone",
     "English": "{0} Second",
     "French": "{0} seconde",
-    "German": "{0} Sekunde"
+    "German": "{0} Sekunde",
+    "Spanish": "{0} segundo"
   },
   "goSeconds": {
     "Key": "goSeconds",
@@ -44855,7 +45061,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "Field of View:",
-    "French": "Champ de vision :"
+    "French": "Champ de vision :",
+    "German": "Sichtfeld:",
+    "Spanish": "Campo de visión:"
   },
   "lblFuel": {
     "Key": "lblFuel",
@@ -44864,7 +45072,8 @@
     "Changes": "KgNone",
     "English": "Fuel",
     "French": "Carburant",
-    "German": "Brennstoff"
+    "German": "Brennstoff",
+    "Spanish": "Combustible"
   },
   "lblFullscreen": {
     "Key": "lblFullscreen",
@@ -44893,7 +45102,8 @@
     "Changes": "KgNone",
     "English": "Gamma:",
     "French": "Gamma :",
-    "German": "Gamma:"
+    "German": "Gamma:",
+    "Spanish": "Gama:"
   },
   "lblGOBackground": {
     "Key": "lblGOBackground",
@@ -45009,7 +45219,9 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "LOD Distance",
-    "French": "Distance du niveau de détail :"
+    "French": "Distance du niveau de détail :",
+    "German": "Detaillierungsgradsdistanz:",
+    "Spanish": "Distancia de detalles:"
   },
   "lblMetal": {
     "Key": "lblMetal",
@@ -45018,7 +45230,8 @@
     "Changes": "KgNone",
     "English": "Material",
     "French": "Matériaux",
-    "German": "Material"
+    "German": "Material",
+    "Spanish": "Material"
   },
   "lblMicrophoneGain": {
     "Key": "lblMicrophoneGain",
@@ -45037,7 +45250,8 @@
     "Changes": "KgNone",
     "English": "Mold",
     "French": "Moule",
-    "German": "Gussform"
+    "German": "Gussform",
+    "Spanish": "Molde"
   },
   "lblMotionBlur": {
     "Key": "lblMotionBlur",
@@ -45076,7 +45290,8 @@
     "Changes": "KgNone",
     "English": "Name:",
     "French": "Nom :",
-    "German": "Name:"
+    "German": "Name:",
+    "Spanish": "Nombre:"
   },
   "lblname": {
     "Key": "lblname",
@@ -45085,7 +45300,8 @@
     "Changes": "KgNone",
     "English": "Name:",
     "French": "Nom :",
-    "German": "Name:"
+    "German": "Name:",
+    "Spanish": "Nombre:"
   },
   "lblNewBinding": {
     "Key": "lblNewBinding",
@@ -45191,7 +45407,8 @@
     "Changes": "KgNone",
     "English": "Seed:",
     "French": "Graine :",
-    "German": "Startwert:"
+    "German": "Startwert:",
+    "Spanish": "Semilla:"
   },
   "lblSelectWorld": {
     "Key": "lblSelectWorld",
@@ -45240,7 +45457,8 @@
     "Changes": "KgNone",
     "English": "Size:",
     "French": "Taille :",
-    "German": "Größe:"
+    "German": "Größe:",
+    "Spanish": "Tamaño:"
   },
   "lblSkyQuality": {
     "Key": "lblSkyQuality",
@@ -45366,7 +45584,8 @@
     "Changes": "KgNone",
     "English": "V-Sync:",
     "French": "Synchronisation verticale :",
-    "German": "V-Sync:"
+    "German": "V-Sync:",
+    "Spanish": "Sincronización vertical:"
   },
   "lblWaterParticleLimiter": {
     "Key": "lblWaterParticleLimiter",
@@ -45612,13 +45831,18 @@
     "Changes": "KgNone",
     "English": "<{0}> Use {1}",
     "French": "<{0}> utilisent {1}",
-    "German": "<{0}> {1} verwenden"
+    "German": "<{0}> {1} verwenden",
+    "Spanish": "<{0}> Usa {1}"
   },
   "uses": {
     "Key": "uses",
     "Source": "UI",
     "Context": "Menu",
-    "Changes": "KgNone"
+    "Changes": "KgNone",
+    "English": "Uses",
+    "French": "Utilise",
+    "German": "Verwendungszwecke",
+    "Spanish": "Usa"
   },
   "useSwitchLightOff": {
     "Key": "useSwitchLightOff",
@@ -45641,7 +45865,8 @@
     "Changes": "KgNone",
     "English": "This is an Easy Anti-Cheat protected server. Cheating will not be tolerated and will result in an EAC kick/ban.",
     "French": "Ceci est un serveur protégé EasyAntiCheat. Il est interdit de tricher. Si vous trichez, vous subirez une exclusion ou un bannissement par EAC.",
-    "German": "Dieser Server wird durch EasyAntiCheat geschützt. Cheaten wird nicht toleriert und führt zum Bann oder Hinauswurf durch EAC (EasyAntiCheat)."
+    "German": "Dieser Server wird durch EasyAntiCheat geschützt. Cheaten wird nicht toleriert und führt zum Bann oder Hinauswurf durch EAC (EasyAntiCheat).",
+    "Spanish": "Este es un servidor protegido con EAC (antitrampa). No se permitirán las trampas, y si se hacen, el filtro EAC expulsará al infractor."
   },
   "vacTitle": {
     "Key": "vacTitle",
@@ -45650,7 +45875,8 @@
     "Changes": "KgNone",
     "English": "Easy Anti-Cheat Warning",
     "French": "Avertissement EasyAntiCheat",
-    "German": "EasyAntiCheat-Warnung"
+    "German": "EasyAntiCheat-Warnung",
+    "Spanish": "Aviso antitrampas (EasyAntiCheat)"
   },
   "xuiBuyPrice": {
     "Key": "xuiBuyPrice",
@@ -46181,14 +46407,18 @@
     "Changes": "KgNone",
     "English": "Arm Width",
     "French": "Largeur des bras",
-    "German": "Armdicke"
+    "German": "Armdicke",
+    "Spanish": "Anchura de los brazos"
   },
   "belly": {
     "Key": "belly",
     "Source": "UI",
     "Context": "Menu UMA",
     "Changes": "KgNone",
-    "English": "Belly"
+    "English": "Belly",
+    "French": "Ventre",
+    "German": "Bauch",
+    "Spanish": "Barriga"
   },
   "breastSize": {
     "Key": "breastSize",
@@ -46227,7 +46457,8 @@
     "Changes": "KgNone",
     "English": "Save",
     "French": "Sauvegarder",
-    "German": "Speichern"
+    "German": "Speichern",
+    "Spanish": "Guardar"
   },
   "cheekPosition": {
     "Key": "cheekPosition",
@@ -46276,7 +46507,8 @@
     "Changes": "KgNone",
     "English": "Chin Size",
     "French": "Taille du menton",
-    "German": "Größe des Kinns"
+    "German": "Größe des Kinns",
+    "Spanish": "Tamaño de la barbilla"
   },
   "earsPosition": {
     "Key": "earsPosition",
@@ -46305,7 +46537,8 @@
     "Changes": "KgNone",
     "English": "Ear Size",
     "French": "Taille des oreilles",
-    "German": "Größe der Ohren"
+    "German": "Größe der Ohren",
+    "Spanish": "Tamaño de las orejas"
   },
   "eyeColor": {
     "Key": "eyeColor",
@@ -46314,7 +46547,8 @@
     "Changes": "KgNone",
     "English": "Eye Color",
     "French": "Couleur des yeux",
-    "German": "Augenfarbe"
+    "German": "Augenfarbe",
+    "Spanish": "Color de ojos"
   },
   "eyeRotation": {
     "Key": "eyeRotation",
@@ -46333,7 +46567,8 @@
     "Changes": "KgNone",
     "English": "Eye Size",
     "French": "Taille des yeux",
-    "German": "Größe der Augen"
+    "German": "Größe der Augen",
+    "Spanish": "Tamaño de los ojos"
   },
   "feetSize": {
     "Key": "feetSize",
@@ -46342,7 +46577,8 @@
     "Changes": "KgNone",
     "English": "Foot Size",
     "French": "Taille des pieds",
-    "German": "Größe der Füße"
+    "German": "Größe der Füße",
+    "Spanish": "Tamaño de los pies"
   },
   "forearmLength": {
     "Key": "forearmLength",
@@ -46421,7 +46657,8 @@
     "Changes": "KgNone",
     "English": "Head Size",
     "French": "Taille de la tête",
-    "German": "Kopfgröße (vertikal)"
+    "German": "Kopfgröße (vertikal)",
+    "Spanish": "Tamaño de la cabeza"
   },
   "headWidth": {
     "Key": "headWidth",
@@ -46439,7 +46676,9 @@
     "Context": "Menu UMA",
     "Changes": "KgNone",
     "English": "Height",
-    "French": "Taille"
+    "French": "Taille",
+    "German": "Körpergröße",
+    "Spanish": "Estatura"
   },
   "jawsPosition": {
     "Key": "jawsPosition",
@@ -46458,7 +46697,8 @@
     "Changes": "KgNone",
     "English": "Jaw Size",
     "French": "Taille de la mâchoire",
-    "German": "Größe des Oberkiefers"
+    "German": "Größe des Oberkiefers",
+    "Spanish": "Tamaño de la mandíbula"
   },
   "lblConfirmProfileDelete": {
     "Key": "lblConfirmProfileDelete",
@@ -46497,7 +46737,8 @@
     "Changes": "KgNone",
     "English": "Edit",
     "French": "Modifier",
-    "German": "Bearbeiten"
+    "German": "Bearbeiten",
+    "Spanish": "Editar"
   },
   "lblFemale": {
     "Key": "lblFemale",
@@ -46516,7 +46757,8 @@
     "Changes": "KgNone",
     "English": "Male",
     "French": "Homme",
-    "German": "Männlich"
+    "German": "Männlich",
+    "Spanish": "Hombre"
   },
   "lblNoProfile": {
     "Key": "lblNoProfile",
@@ -46533,7 +46775,10 @@
     "Source": "UI",
     "Context": "Menu UMA",
     "Changes": "KgNone",
-    "English": "Ok"
+    "English": "Ok",
+    "French": "OK",
+    "German": "Ok",
+    "Spanish": "Aceptar"
   },
   "lblProfileName": {
     "Key": "lblProfileName",
@@ -46562,7 +46807,8 @@
     "Changes": "KgNone",
     "English": "Leg Size",
     "French": "Taille des jambes",
-    "German": "Länge der Beine"
+    "German": "Länge der Beine",
+    "Spanish": "Tamaño de las piernas"
   },
   "lipsSize": {
     "Key": "lipsSize",
@@ -46571,7 +46817,8 @@
     "Changes": "KgNone",
     "English": "Lip Size",
     "French": "Taille des lèvres",
-    "German": "Größe der Lippen"
+    "German": "Größe der Lippen",
+    "Spanish": "Tamaño de los labios"
   },
   "lowCheekPosition": {
     "Key": "lowCheekPosition",
@@ -46639,7 +46886,9 @@
     "Context": "Menu UMA",
     "Changes": "KgNone",
     "English": "Muscle",
-    "French": "Muscle"
+    "French": "Muscle",
+    "German": "Muskulatur",
+    "Spanish": "Músculos"
   },
   "neckThickness": {
     "Key": "neckThickness",
@@ -46708,7 +46957,8 @@
     "Changes": "KgNone",
     "English": "Nose Size",
     "French": "Taille du nez",
-    "German": "Größe der Nase"
+    "German": "Größe der Nase",
+    "Spanish": "Tamaño de la nariz"
   },
   "noseWidth": {
     "Key": "noseWidth",
@@ -46755,7 +47005,10 @@
     "Source": "UI",
     "Context": "Menu UMA",
     "Changes": "KgNone",
-    "English": "Waist"
+    "English": "Waist",
+    "French": "Taille",
+    "German": "Taille",
+    "Spanish": "Cintura"
   },
   "weight": {
     "Key": "weight",
@@ -46763,7 +47016,9 @@
     "Context": "Menu UMA",
     "Changes": "KgNone",
     "English": "Weight",
-    "French": "Poids"
+    "French": "Poids",
+    "German": "Gewicht",
+    "Spanish": "Peso"
   },
   "teInUse": {
     "Key": "teInUse",
@@ -47369,7 +47624,9 @@
     "Context": "Tooltip",
     "Changes": "KgNone",
     "English": "You are busy.",
-    "French": "Vous faites quelque chose."
+    "French": "Vous faites quelque chose.",
+    "German": "Du bist beschäftigt.",
+    "Spanish": "Estás ocupado."
   },
   "lblAll": {
     "Key": "lblAll",
@@ -47377,7 +47634,9 @@
     "Context": "Tooltip",
     "Changes": "KgNone",
     "English": "All",
-    "French": "Tout"
+    "French": "Tout",
+    "German": "Alle",
+    "Spanish": "Todo"
   },
   "lblAllBlocks": {
     "Key": "lblAllBlocks",
@@ -47671,7 +47930,8 @@
     "Changes": "KgNone",
     "English": "Face",
     "French": "Visage",
-    "German": "Gesicht"
+    "German": "Gesicht",
+    "Spanish": "Rostro"
   },
   "lblFavorites": {
     "Key": "lblFavorites",
@@ -47730,7 +47990,8 @@
     "Changes": "KgNone",
     "English": "LEVEL: {0}",
     "French": "NIVEAU : {0}",
-    "German": "LEVEL: {0}"
+    "German": "LEVEL: {0}",
+    "Spanish": "NIVEL: {0}"
   },
   "lblOvercoat": {
     "Key": "lblOvercoat",
@@ -47749,7 +48010,8 @@
     "Changes": "KgNone",
     "English": "Pants",
     "French": "Pantalons",
-    "German": "Hose"
+    "German": "Hose",
+    "Spanish": "Pantalones"
   },
   "lblPartStackMissing": {
     "Key": "lblPartStackMissing",
@@ -47828,7 +48090,8 @@
     "Changes": "KgNone",
     "English": "Shirt",
     "French": "Chemises",
-    "German": "Hemd"
+    "German": "Hemd",
+    "Spanish": "Camisa"
   },
   "lblShowOnMap": {
     "Key": "lblShowOnMap",
@@ -47931,7 +48194,8 @@
     "Changes": "KgNone",
     "English": "You are not hurt.",
     "French": "Vous n'avez pas mal.",
-    "German": "Du bist nicht verletzt."
+    "German": "Du bist nicht verletzt.",
+    "Spanish": "No estás herido."
   },
   "notThirsty": {
     "Key": "notThirsty",
@@ -49783,7 +50047,8 @@
     "Changes": "KgNone",
     "English": "CLOSE",
     "French": "FERMER",
-    "German": "SCHLIESSEN"
+    "German": "SCHLIESSEN",
+    "Spanish": "CERRAR"
   },
   "xuiCombine": {
     "Key": "xuiCombine",
@@ -49813,7 +50078,8 @@
     "Changes": "KgNone",
     "English": "COST",
     "French": "COÛT",
-    "German": "KOSTEN"
+    "German": "KOSTEN",
+    "Spanish": "COSTO"
   },
   "xuiCrafting": {
     "Key": "xuiCrafting",
@@ -49855,7 +50121,9 @@
     "Context": "XUI",
     "Changes": "KgNone",
     "English": "DAY",
-    "French": "JOUR"
+    "French": "JOUR",
+    "German": "TAG",
+    "Spanish": "DÍA"
   },
   "xuiDayTime": {
     "Key": "xuiDayTime",
@@ -50123,7 +50391,8 @@
     "Changes": "KgNone",
     "English": "FOOD",
     "French": "NOURRITURE",
-    "German": "NAHRUNG"
+    "German": "NAHRUNG",
+    "Spanish": "COMIDA"
   },
   "xuifOther": {
     "Key": "xuifOther",
@@ -50181,7 +50450,8 @@
     "Changes": "KgNone",
     "English": "FUEL",
     "French": "CARBURANT",
-    "German": "BRENNSTOFF"
+    "German": "BRENNSTOFF",
+    "Spanish": "COMBUSTIBLE"
   },
   "xuifWindows": {
     "Key": "xuifWindows",
@@ -50203,7 +50473,9 @@
     "Context": "XUI",
     "Changes": "KgNone",
     "English": "GAS",
-    "French": "ESSENCE"
+    "French": "ESSENCE",
+    "German": "BENZIN",
+    "Spanish": "GAS"
   },
   "xuiIngameDebugMenu": {
     "Key": "xuiIngameDebugMenu",
@@ -50219,7 +50491,8 @@
     "Changes": "KgNone",
     "English": "INPUT",
     "French": "ENTRÉE",
-    "German": "INPUT"
+    "German": "INPUT",
+    "Spanish": "ENTRADA"
   },
   "xuiInspect": {
     "Key": "xuiInspect",
@@ -50317,7 +50590,10 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "KgNone",
-    "English": "KM"
+    "English": "KM",
+    "French": "KM",
+    "German": "KM",
+    "Spanish": "KM"
   },
   "xuiKMTravelled": {
     "Key": "xuiKMTravelled",
@@ -50336,7 +50612,8 @@
     "Changes": "KgNone",
     "English": "LEVEL",
     "French": "NIVEAU",
-    "German": "LEVEL"
+    "German": "LEVEL",
+    "Spanish": "NIVEL"
   },
   "xuiLevelTools": {
     "Key": "xuiLevelTools",
@@ -50369,7 +50646,8 @@
     "Changes": "KgNone",
     "English": "LOOT",
     "French": "BUTIN",
-    "German": "BEUTE"
+    "German": "BEUTE",
+    "Spanish": "BOTÍN"
   },
   "xuiLooting": {
     "Key": "xuiLooting",
@@ -50387,7 +50665,9 @@
     "Context": "XUI",
     "Changes": "KgNone",
     "English": "MAP",
-    "French": "CARTE"
+    "French": "CARTE",
+    "German": "KARTE",
+    "Spanish": "MAPA"
   },
   "xuiMapDayTime": {
     "Key": "xuiMapDayTime",
@@ -50490,7 +50770,10 @@
     "Source": "UI",
     "Context": "XUI",
     "Changes": "KgNone",
-    "English": "N/A"
+    "English": "N/A",
+    "French": "S.O.",
+    "German": "–",
+    "Spanish": "N/D"
   },
   "xuiNextLevelRequirements": {
     "Key": "xuiNextLevelRequirements",
@@ -50509,7 +50792,8 @@
     "Changes": "KgNone",
     "English": "NOISE",
     "French": "BRUIT",
-    "German": "GERÄUSCHE"
+    "German": "GERÄUSCHE",
+    "Spanish": "RUIDO"
   },
   "xuiObjectives": {
     "Key": "xuiObjectives",
@@ -50576,7 +50860,8 @@
     "Changes": "KgNone",
     "English": "PING",
     "French": "PING",
-    "German": "PING"
+    "German": "PING",
+    "Spanish": "PING"
   },
   "xuiPlayerKills": {
     "Key": "xuiPlayerKills",
@@ -50972,7 +51257,8 @@
     "Changes": "KgNone",
     "English": "SCORE",
     "French": "SCORE",
-    "German": "PUNKTZAHL"
+    "German": "PUNKTZAHL",
+    "Spanish": "PUNTUACIÓN"
   },
   "xuiScreenshotNoPrefabLoaded": {
     "Key": "xuiScreenshotNoPrefabLoaded",
@@ -50988,7 +51274,8 @@
     "Changes": "KgNone",
     "English": "SEATS",
     "French": "SIÈGES",
-    "German": "SITZE"
+    "German": "SITZE",
+    "Spanish": "ASIENTOS"
   },
   "xuiSent": {
     "Key": "xuiSent",
@@ -50997,7 +51284,8 @@
     "Changes": "KgNone",
     "English": "SENT",
     "French": "ENVOYÉS",
-    "German": "VERSCHICKT"
+    "German": "VERSCHICKT",
+    "Spanish": "ENVIADO"
   },
   "xuiSharedWaypoints": {
     "Key": "xuiSharedWaypoints",
@@ -51109,7 +51397,8 @@
     "Changes": "KgNone",
     "English": "SPEED",
     "French": "VITESSE",
-    "German": "GESCHWINDGKEIT"
+    "German": "GESCHWINDGKEIT",
+    "Spanish": "VELOCIDAD"
   },
   "xuiStartTime": {
     "Key": "xuiStartTime",
@@ -51125,7 +51414,8 @@
     "Changes": "KgNone",
     "English": "STATS",
     "French": "STATS",
-    "German": "STATISTIKEN"
+    "German": "STATISTIKEN",
+    "Spanish": "ESTADÍSTICAS"
   },
   "xuiStatus": {
     "Key": "xuiStatus",
@@ -51234,7 +51524,8 @@
     "Changes": "KgNone",
     "English": "TIME",
     "French": "DURÉE",
-    "German": "ZEIT"
+    "German": "ZEIT",
+    "Spanish": "TIEMPO"
   },
   "xuiTip": {
     "Key": "xuiTip",
@@ -51242,7 +51533,9 @@
     "Context": "XUI",
     "Changes": "KgNone",
     "English": "TIP",
-    "French": "ASTUCE"
+    "French": "ASTUCE",
+    "German": "TIPP",
+    "Spanish": "CONSEJO"
   },
   "xuiTools": {
     "Key": "xuiTools",
@@ -51251,7 +51544,8 @@
     "Changes": "KgNone",
     "English": "TOOLS",
     "French": "OUTILS",
-    "German": "WERKZEUGE"
+    "German": "WERKZEUGE",
+    "Spanish": "HERRAMIENTAS"
   },
   "xuiTrack": {
     "Key": "xuiTrack",
@@ -51260,7 +51554,8 @@
     "Changes": "KgNone",
     "English": "TRACK",
     "French": "PISTER",
-    "German": "VERFOLGEN"
+    "German": "VERFOLGEN",
+    "Spanish": "PISTA"
   },
   "xuiTrader": {
     "Key": "xuiTrader",
@@ -51310,7 +51605,8 @@
     "Changes": "KgNone",
     "English": "TYPE",
     "French": "TYPE",
-    "German": "ART"
+    "German": "ART",
+    "Spanish": "TIPO"
   },
   "xuiUpdateBounds": {
     "Key": "xuiUpdateBounds",
@@ -51424,7 +51720,8 @@
     "Changes": "KgNone",
     "English": "VOICE",
     "French": "VOIX",
-    "German": "STIMME"
+    "German": "STIMME",
+    "Spanish": "VOZ"
   },
   "xuiWater": {
     "Key": "xuiWater",
@@ -51433,7 +51730,8 @@
     "Changes": "KgNone",
     "English": "WATER",
     "French": "EAU",
-    "German": "WASSER"
+    "German": "WASSER",
+    "Spanish": "AGUA"
   },
   "xuiWaypoints": {
     "Key": "xuiWaypoints",
@@ -51462,7 +51760,8 @@
     "Changes": "KgNone",
     "English": "WIND",
     "French": "VENT",
-    "German": "WIND"
+    "German": "WIND",
+    "Spanish": "VIENTO"
   },
   "xuiWorkstationOutputFull": {
     "Key": "xuiWorkstationOutputFull",
@@ -51991,7 +52290,8 @@
     "Changes": "New",
     "English": "Quit",
     "French": "Quitter",
-    "German": "Verlassen"
+    "German": "Verlassen",
+    "Spanish": "Salir"
   },
   "xuiBoolCelsiusOff": {
     "Key": "xuiBoolCelsiusOff",
@@ -53562,7 +53862,11 @@
   "aeOK": {
     "Key": "aeOK",
     "Context": "App Error",
-    "Changes": "KgNone"
+    "Changes": "KgNone",
+    "English": "OK",
+    "French": "OK",
+    "German": "OK",
+    "Spanish": "ACEPTAR"
   },
   "xuiWPcharacter": {
     "Key": "xuiWPcharacter",
@@ -53786,7 +54090,8 @@
     "Changes": "KgNone",
     "English": "OK",
     "French": "OK",
-    "German": "OK"
+    "German": "OK",
+    "Spanish": "ACEPTAR"
   },
   "mmBtnOptions": {
     "Key": "mmBtnOptions",
@@ -54640,7 +54945,8 @@
     "Changes": "KgNone",
     "English": "HAVE",
     "French": "AVOIR",
-    "German": "HABEN"
+    "German": "HABEN",
+    "Spanish": "TENER"
   },
   "lblitem": {
     "Key": "lblitem",
@@ -54648,7 +54954,8 @@
     "Changes": "KgNone",
     "English": "ITEM",
     "French": "ARTICLE",
-    "German": "ARTIKEL"
+    "German": "ARTIKEL",
+    "Spanish": "OBJETO"
   },
   "lblneed": {
     "Key": "lblneed",
@@ -54656,7 +54963,8 @@
     "Changes": "KgNone",
     "English": "NEED",
     "French": "BESOIN",
-    "German": "BRAUCHEN"
+    "German": "BRAUCHEN",
+    "Spanish": "NECESITAR"
   },
   "xuiWPcrafting": {
     "Key": "xuiWPcrafting",
@@ -54952,7 +55260,8 @@
     "Changes": "KgNone",
     "English": "Drop",
     "French": "Jeter",
-    "German": "Fallenlassen"
+    "German": "Fallenlassen",
+    "Spanish": "Soltar"
   },
   "igcoDropAll": {
     "Key": "igcoDropAll",
@@ -54987,7 +55296,8 @@
     "Changes": "KgNone",
     "English": "Exit",
     "French": "Quitter",
-    "German": "Verlassen"
+    "German": "Verlassen",
+    "Spanish": "Salir"
   },
   "igcoInspect": {
     "Key": "igcoInspect",
@@ -55013,7 +55323,8 @@
     "Changes": "KgNone",
     "English": "Jump",
     "French": "Sauter",
-    "German": "Springen"
+    "German": "Springen",
+    "Spanish": "Saltar"
   },
   "igcoLeftClick": {
     "Key": "igcoLeftClick",
@@ -55048,7 +55359,8 @@
     "Changes": "KgNone",
     "English": "Look",
     "French": "Regarder",
-    "German": "Schauen"
+    "German": "Schauen",
+    "Spanish": "Mirar"
   },
   "igcoLootAll": {
     "Key": "igcoLootAll",
@@ -55110,7 +55422,8 @@
     "Changes": "KgNone",
     "English": "Move",
     "French": "Se déplacer",
-    "German": "Bewegen"
+    "German": "Bewegen",
+    "Spanish": "Mover"
   },
   "igcoMoveCursor": {
     "Key": "igcoMoveCursor",
@@ -55343,7 +55656,8 @@
     "Changes": "KgNone",
     "English": "Swap",
     "French": "Échanger",
-    "German": "Tauschen"
+    "German": "Tauschen",
+    "Spanish": "Cambiar"
   },
   "igcoTake": {
     "Key": "igcoTake",
@@ -55351,7 +55665,8 @@
     "Changes": "KgNone",
     "English": "Take",
     "French": "Prendre",
-    "German": "Nehmen"
+    "German": "Nehmen",
+    "Spanish": "Recoger"
   },
   "igcoTakeAll": {
     "Key": "igcoTakeAll",
@@ -55527,7 +55842,11 @@
   "door": {
     "Key": "door",
     "Context": "item",
-    "Changes": "GrNone"
+    "Changes": "GrNone",
+    "English": "Door",
+    "French": "Porte",
+    "Klingon": "Tür",
+    "Spanish": "Puerta"
   },
   "waitingForServer": {
     "Key": "waitingForServer",
@@ -55733,7 +56052,8 @@
     "Changes": "KgNone",
     "English": "Please accept the Terms of Service.",
     "French": "Veuillez accepter les conditions d'utilisation.",
-    "German": "Bitte akzeptiere die Nutzungsbedingungen."
+    "German": "Bitte akzeptiere die Nutzungsbedingungen.",
+    "Spanish": "Acepta los Términos de servicio."
   },
   "mmBtnJoin": {
     "Key": "mmBtnJoin",
@@ -55930,7 +56250,8 @@
     "Changes": "KgNone",
     "English": "BELLY",
     "French": "VENTRE",
-    "German": "BAUCH"
+    "German": "BAUCH",
+    "Spanish": "BARRIGA"
   },
   "mmBodyType": {
     "Key": "mmBodyType",
@@ -56190,7 +56511,8 @@
     "Changes": "KgNone",
     "English": "GENDER",
     "French": "GENRE",
-    "German": "GESCHLECHT"
+    "German": "GESCHLECHT",
+    "Spanish": "SEXO"
   },
   "mmGluteusSize": {
     "Key": "mmGluteusSize",
@@ -56270,7 +56592,8 @@
     "Changes": "KgNone",
     "English": "HEIGHT",
     "French": "TAILLE",
-    "German": "KÖRPERGRÖSSE"
+    "German": "KÖRPERGRÖSSE",
+    "Spanish": "ESTATURA"
   },
   "mmJawsPosition": {
     "Key": "mmJawsPosition",
@@ -56413,7 +56736,8 @@
     "Changes": "KgNone",
     "English": "OK",
     "French": "OK",
-    "German": "OK"
+    "German": "OK",
+    "Spanish": "ACEPTAR"
   },
   "mmLblProfileName": {
     "Key": "mmLblProfileName",
@@ -56502,7 +56826,8 @@
     "Changes": "KgNone",
     "English": "MOHAWK",
     "French": "CRÊTE",
-    "German": "IROKESENSCHNITT"
+    "German": "IROKESENSCHNITT",
+    "Spanish": "MOHAWK"
   },
   "mmMouthSize": {
     "Key": "mmMouthSize",
@@ -56527,7 +56852,9 @@
     "Context": "Main Menu Character Creation",
     "Changes": "KgNone",
     "English": "NONE",
-    "French": "AUCUN"
+    "French": "AUCUN",
+    "German": "KEINE",
+    "Spanish": "NADA"
   },
   "mmNoseCurve": {
     "Key": "mmNoseCurve",
@@ -56679,7 +57006,8 @@
     "Changes": "KgNone",
     "English": "WAIST",
     "French": "TAILLE",
-    "German": "TAILLE"
+    "German": "TAILLE",
+    "Spanish": "CINTURA"
   },
   "mmHours": {
     "Key": "mmHours",
@@ -56687,7 +57015,8 @@
     "Changes": "KgNone",
     "English": "{0} Hours",
     "French": "{0} heures",
-    "German": "{0} Stunden"
+    "German": "{0} Stunden",
+    "Spanish": "{0} horas"
   },
   "mmDLCinstalled": {
     "Key": "mmDLCinstalled",
@@ -56740,7 +57069,8 @@
     "Changes": "KgNone",
     "English": "EVERYTHING",
     "French": "TOUT",
-    "German": "ALLES"
+    "German": "ALLES",
+    "Spanish": "TODO"
   },
   "mmGoBackpack": {
     "Key": "mmGoBackpack",
@@ -56829,7 +57159,8 @@
     "Changes": "KgNone",
     "English": "{0} DAY",
     "French": "{0} JOUR",
-    "German": "{0} TAG"
+    "German": "{0} TAG",
+    "Spanish": "{0} DÍA"
   },
   "mmGoDayCount": {
     "Key": "mmGoDayCount",
@@ -56891,7 +57222,8 @@
     "Changes": "KgNone",
     "English": "{0} DAYS",
     "French": "{0} JOURS",
-    "German": "{0} TAGE"
+    "German": "{0} TAGE",
+    "Spanish": "{0} DÍAS"
   },
   "mmGoDeleteAll": {
     "Key": "mmGoDeleteAll",
@@ -57052,7 +57384,8 @@
     "Changes": "KgNone",
     "English": "FAST",
     "French": "RAPIDE",
-    "German": "SCHNELL"
+    "German": "SCHNELL",
+    "Spanish": "RÁPIDO"
   },
   "mmGoFrag": {
     "Key": "mmGoFrag",
@@ -57060,7 +57393,8 @@
     "Changes": "KgNone",
     "English": "{0} FRAG",
     "French": "{0} ÉLIMINATION",
-    "German": "{0} FRAG"
+    "German": "{0} FRAG",
+    "Spanish": "{0} BAJA"
   },
   "mmGoFragLimit": {
     "Key": "mmGoFragLimit",
@@ -57122,7 +57456,8 @@
     "Changes": "KgNone",
     "English": "HIGH",
     "French": "ÉLEVÉE",
-    "German": "HOCH"
+    "German": "HOCH",
+    "Spanish": "ALTO"
   },
   "mmGoHighQuality": {
     "Key": "mmGoHighQuality",
@@ -57400,7 +57735,8 @@
     "Changes": "KgNone",
     "English": "LOW",
     "French": "BASSE",
-    "German": "NIEDRIG"
+    "German": "NIEDRIG",
+    "Spanish": "BAJO"
   },
   "mmGoMarkAirDrops": {
     "Key": "mmGoMarkAirDrops",
@@ -57489,7 +57825,8 @@
     "Changes": "KgNone",
     "English": "NOTHING",
     "French": "RIEN",
-    "German": "NICHTS"
+    "German": "NICHTS",
+    "Spanish": "NADA"
   },
   "mmGoNormal": {
     "Key": "mmGoNormal",
@@ -57515,14 +57852,17 @@
     "Changes": "KgNone",
     "English": "OFF",
     "French": "DÉSACTIVÉ",
-    "German": "AUS"
+    "German": "AUS",
+    "Spanish": "DESACTIVADO"
   },
   "mmGoOn": {
     "Key": "mmGoOn",
     "Context": "Main Menu Game Options",
     "Changes": "KgNone",
     "English": "ON",
-    "French": "ACTIVÉ"
+    "French": "ACTIVÉ",
+    "German": "AN",
+    "Spanish": "ACTIVADO"
   },
   "mmGoPassword": {
     "Key": "mmGoPassword",
@@ -57584,7 +57924,8 @@
     "Changes": "KgNone",
     "English": "GAME PORT:",
     "French": "PORT DE LA PARTIE :",
-    "German": "SPIEL-PORT:"
+    "German": "SPIEL-PORT:",
+    "Spanish": "PUERTO DE LA PARTIDA:"
   },
   "mmGoPublic": {
     "Key": "mmGoPublic",
@@ -58177,7 +58518,8 @@
     "Changes": "KgNone",
     "English": "Map",
     "French": "Carte",
-    "German": "Karte"
+    "German": "Karte",
+    "Spanish": "Mapa"
   },
   "aemmNoSessions": {
     "Key": "aemmNoSessions",
@@ -58293,7 +58635,8 @@
     "Changes": "KgNone",
     "English": "FERAL",
     "French": "FÉROCE",
-    "German": "WILD"
+    "German": "WILD",
+    "Spanish": "SALVAJE"
   },
   "rsFeralDesc": {
     "Key": "rsFeralDesc",
@@ -58310,7 +58653,8 @@
     "Changes": "KgNone",
     "English": "INSANE",
     "French": "EXTRÊME",
-    "German": "IRRER"
+    "German": "IRRER",
+    "Spanish": "DEMENTE"
   },
   "rsInsaneDesc": {
     "Key": "rsInsaneDesc",
@@ -58399,7 +58743,8 @@
     "Changes": "KgNone",
     "English": "Base Hair",
     "French": "Cheveux classiques",
-    "German": "Standard-Frisur"
+    "German": "Standard-Frisur",
+    "Spanish": "Pelo base"
   },
   "gmSurvivalMPDesc": {
     "Key": "gmSurvivalMPDesc",
@@ -58425,7 +58770,8 @@
     "Changes": "KgNone",
     "English": "Afro",
     "French": "Afro",
-    "German": "Afro-Look"
+    "German": "Afro-Look",
+    "Spanish": "Afro"
   },
   "hairDreds": {
     "Key": "hairDreds",
@@ -58459,12 +58805,18 @@
     "Context": "Menu",
     "Changes": "KgNone",
     "English": "Mohawk",
-    "French": "Crête"
+    "French": "Crête",
+    "German": "Irokesenschnitt",
+    "Spanish": "Mohawk"
   },
   "none": {
     "Key": "none",
     "Context": "Menu",
-    "Changes": "KgNone"
+    "Changes": "KgNone",
+    "English": "None",
+    "French": "Aucun",
+    "German": "Keiner",
+    "Spanish": "Nada"
   },
   "regentMustache": {
     "Key": "regentMustache",
@@ -58589,7 +58941,8 @@
     "Changes": "KgNone",
     "English": "Press <{0}> to pick up {1}",
     "French": "Appuyer sur <{0}> pour ramasser {1}",
-    "German": "<{0}> drücken, um {1} aufzuheben"
+    "German": "<{0}> drücken, um {1} aufzuheben",
+    "Spanish": "Presiona <{0}> para recoger {1}."
   },
   "iglblPlayerId": {
     "Key": "iglblPlayerId",

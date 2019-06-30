@@ -41,7 +41,8 @@
   },
   "No": {
     "Key": "No",
-    "English": "No"
+    "English": "No",
+    "French": "Non"
   },
   "ok?": {
     "Key": "ok?",
@@ -107,6 +108,11 @@
     "Key": "To obtain",
     "English": "To obtain",
     "French": "Pour obtenir"
+  },
+  "to repair": {
+    "Key": "to repair",
+    "English": "to repair",
+    "French": "pour réparer"
   },
   "Yes": {
     "Key": "Yes",

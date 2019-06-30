@@ -7,7 +7,7 @@ import {PerkLevel, PerksService} from '../progression/perks.service';
 import {Recipe} from '../recipes/recipes.service';
 import {ItemModifier} from '../item-modifier/item-modifier';
 import {ItemModifiersService} from '../item-modifier/item-modifiers.service';
-import {Block, Drop} from '../block/block';
+import {Block, Drop, RepairItems} from '../block/block';
 import {BlocksService} from '../block/blocks.service';
 import {AbstractBiome, Biome, Resource, SubBiome} from '../biome/Biome';
 import {BiomesService} from '../biome/biomes.service';
@@ -189,6 +189,19 @@ export class ObjectComponent implements OnInit, AfterViewInit {
     }
     return undefined;
   }
+
+  getRepairItems(object: SevenDaysObject): RepairItem[] | undefined {
+    const items = [];
+    for (const [name, count] of object.block.RepairItems.entries()) {
+      items.push({name, count});
+    }
+    return items ? items : undefined;
+  }
+}
+
+interface RepairItem {
+  name: string;
+  count: number;
 }
 
 enum AlignMode {
