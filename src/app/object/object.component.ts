@@ -197,7 +197,7 @@ export class ObjectComponent implements OnInit, AfterViewInit {
         items.push({name, count});
       }
     }
-    return items ? items : undefined;
+    return items.length ? items : undefined;
   }
 }
 
