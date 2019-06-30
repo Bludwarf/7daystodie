@@ -2639,7 +2639,7 @@ buffElementWetDesc,buffs,Buff,KgNone,You are wet which will make you colder. Thi
 buffElementWetTooltip,buffs,Buff,KgNone,You are wet.,Vous êtes humide.,Du bist nass.,,Estás mojado.,
 wellnessDecreased,buffs,Tooltip,KgNone,Wellness ({0}): Maximum health and stamina cap decreased to {1},Bien-être ({0}) : santé et endurance maximales réduites de {1},Wohlbefinden ({0}): Obergrenze für maximale Gesundheit und Ausdauer ist auf {1} gesunken,,Bienestar ({0}): La salud máxima y el límite de resistencia se han reducido a {1}.,
 wellnessIncreased,buffs,Tooltip,KgNone,Wellness (+{0}): Maximum health and stamina cap increased to {1},Bien-être (+{0}) : santé et endurance maximales augmentées de {1},Wohlbefinden (+{0}): Obergrenze für maximale Gesundheit und Ausdauer ist auf {1} gestiegen,,Bienestar (+{0}): La salud máxima y el límite de resistencia han aumentado a {1}.,
-entitycommand_drive,entities,Radial,New,Drive,,Fahren,,,
+Entity Damagecommand_drive,entities,Radial,New,Drive,,Fahren,,,
 entitycommand_horn,entities,Radial,New,Honk horn,,Hupe betätigen,,,
 entitycommand_keypad,entities,Radial,New,Enter code,,Code eingeben,,,
 entitycommand_lock,entities,Radial,New,Lock,,Abschließen,,,

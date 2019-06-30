@@ -20,47 +20,47 @@
             </tr>
 
             <tr>
-              <th colspan="2">Entity</th>
+              <th colspan="2">{{ 'Entity' | translate }}</th>
             </tr>
 
             <!-- Item details -->
             <ng-container *ngIf="object.item">
 
               <tr>
-                <td>Item ID</td>
+                <td>{{ 'Item ID' | translate}}Item ID</td>
                 <td></td>
               </tr>
               <tr>
-                <td>Group</td>
+                <td>{{ 'lblGroup' | translate }}</td>
                 <td>{{object.item.Group}}</td>
               </tr>
               <tr>
-                <td>Category</td>
+                <td>{{ 'Category' | translate }}</td>
                 <td></td>
               </tr>
 
               <tr>
-                <th colspan="2">Characteristics</th>
+                <th colspan="2">{{ 'Characteristics' | translate }}</th>
               </tr>
 
               <tr>
-                <td><a [href]="localization.getWikiUrl('Durability')">Durability (Level 1)</a></td>
+                <td><a [href]="localization.getWikiUrl('Durability')">{{ 'statDegradationMax' | translate }} (Level 1)</a></td>
                 <td>{{object.item.getDegradationMax(1)}}</td>
               </tr>
 
               <tr>
-                <td><a [href]="localization.getWikiUrl('Durability')">Durability (Level 6)</a></td>
+                <td><a [href]="localization.getWikiUrl('Durability')">{{ 'statDegradationMax' | translate }} (Level 6)</a></td>
                 <td>{{object.item.getDegradationMax(6)}}</td>
               </tr>
 
               <tr>
-                <th colspan="2">Attack Statistics</th>
+                <th colspan="2">{{ 'Attack Statistics' | translate }}</th>
               </tr>
 
               <ng-container *ngIf="object.item.MagazineItemNames">
 
                 <tr>
-                  <td>Magazine Size</td>
+                  <td>{{ 'statMagazineSize' | translate }}</td>
                   <td>{{object.item.MagazineSize}}</td>
                 </tr>
 
@@ -76,7 +76,7 @@
               </ng-container>
 
               <tr>
-                <td><a [href]="localization.getWikiUrl('Entity_Damage')">Entity Damage</a></td>
+                <td><a [href]="localization.getWikiUrl('Entity_Damage')">{{ 'lblAttributeEntityDamage' | translate }}</a></td>
 
                 <td>
                   <ng-template [ngIf]="!object.item.MagazineItemNames" [ngIfElse]="entityDamageMagazineItems">
@@ -89,7 +89,7 @@
               </tr>
 
               <tr>
-                <td><a [href]="localization.getWikiUrl('Block_Damage')">Block Damage</a></td>
+                <td><a [href]="localization.getWikiUrl('Block_Damage')">{{ 'lblBlkDmg' | translate }}</a></td>
                 <td>
                   <ng-template [ngIf]="!object.item.MagazineItemNames" [ngIfElse]="blockDamageMagazineItems">
                     {{object.item.BlockDamage}}
@@ -101,34 +101,34 @@
               </tr>
 
               <tr>
-                <td><a [href]="localization.getWikiUrl('Range')">Range Effective</a></td>
+                <td><a [href]="localization.getWikiUrl('Range')">{{ 'statDamageFalloffRange' | translate }}</a></td>
                 <td>{{object.item.DamageFalloffRange}}</td>
               </tr>
 
               <tr>
-                <td><a [href]="localization.getWikiUrl('Range')">Range Max</a></td>
+                <td><a [href]="localization.getWikiUrl('Range')">{{ 'statMaxRange' | translate }}</a></td>
                 <td>{{object.item.MaxRange}}</td>
               </tr>
 
               <tr>
-                <td>Recoil</td>
+                <td>{{ 'statKickDegreesVertical' | translate }}</td>
                 <td>{{object.item.recoil}}</td>
               </tr>
 
               <tr>
-                <td><a [href]="localization.getWikiUrl('Handling')">Handling</a></td>
+                <td><a [href]="localization.getWikiUrl('Handling')">{{ 'statWeaponHandling' | translate }}</a></td>
                 <td>{{object.item.handling}}</td>
               </tr>
 
               <tr>
-                <td>Reload Speed</td>
+                <td>{{ 'xuiSkillReloadSpeed' | translate }}</td>
                 <td>{{object.item.reloadTime}}s</td>
               </tr>
 
             </ng-container>
 
             <tr>
-              <th colspan="2">Obtained through</th>
+              <th colspan="2">{{ 'Obtained through' | translate }}</th>
             </tr>
 
             <tr>
@@ -149,7 +149,7 @@
           </table><!-- details -->
         </div>
 
-        <h2>Description</h2>
+        <h2>{{ 'Description' | translate }}</h2>
 
         <p [innerHTML]="object | describe"></p>
 
@@ -226,10 +226,10 @@
 
           <table>
             <tr>
-              <th>Event</th>
-              <th>Block</th>
-              <th>Prob. (%)</th>
-              <th>Count</th>
+              <th>{{ 'Event' | translate }}</th>
+              <th>{{ 'Block' | translate }}</th>
+              <th>{{ 'Prob.' | translate }} (%)</th>
+              <th>{{ 'Count' | translate }}</th>
             </tr>
 
             <tr *ngFor="let drop of drops">
@@ -246,16 +246,16 @@
 
         <!-- Block frequency -->
         <ng-container *ngIf="getResourceOccurences(object) as resourceOccurences">
-          <h2>Block frequency</h2>
+          <h2>{{ 'Block frequency' | translate }}</h2>
 
           <table>
             <tr>
-              <th>Map</th>
-              <th>Biome</th>
-              <th>Sub Biome</th>
-              <th>Layer</th>
-              <th>Block</th><!-- Default layer block -->
-              <th>Prob. (%)</th>
+              <th>{{ 'Map' | translate }}</th>
+              <th>{{ 'Biome' | translate }}</th>
+              <th>{{ 'Sub Biome' | translate }}</th>
+              <th>{{ 'Layer' | translate }}</th>
+              <th>{{ 'Block' | translate }}</th><!-- Default layer block -->
+              <th>{{ 'Prob.' | translate }} (%)</th>
             </tr>
 
             <tr *ngFor="let resourceOccurence of resourceOccurences">

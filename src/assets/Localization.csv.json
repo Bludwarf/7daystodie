@@ -1,4 +1,9 @@
 {
+  "Attack Statistics": {
+    "Key": "Attack Statistics",
+    "English": "Attack Statistics",
+    "French": "Statistiques de combat"
+  },
   "ammunition": {
     "Key": "ammunition",
     "English": "Ammunition",
@@ -14,6 +19,31 @@
     "English": "After attaining",
     "French": "Après avoir obtenu"
   },
+  "Biome": {
+    "Key": "Biome",
+    "English": "Biome",
+    "French": "Biome"
+  },
+  "Block": {
+    "Key": "Block",
+    "English": "Block",
+    "French": "Bloc"
+  },
+  "Block frequency": {
+    "Key": "Block frequency",
+    "English": "Block frequency",
+    "French": "Fréquence du bloc"
+  },
+  "Category": {
+    "Key": "Category",
+    "English": "Category",
+    "French": "Catégorie"
+  },
+  "Characteristics": {
+    "Key": "Characteristics",
+    "English": "Characteristics",
+    "French": "Caractéristiques"
+  },
   "compatibleItems": {
     "Key": "compatibleItems",
     "English": "Compatible Items",
@@ -24,10 +54,30 @@
     "English": "Compatible Modifications",
     "French": "Modifications compatibles"
   },
+  "Count": {
+    "Key": "Count",
+    "English": "Count",
+    "French": "Nombre"
+  },
+  "Description": {
+    "Key": "Description",
+    "English": "Description",
+    "French": "Description"
+  },
   "Discard changes?": {
     "Key": "Discard changes?",
     "English": "Discard changes?",
     "French": "Abandonner les modifications ?"
+  },
+  "Entity": {
+    "Key": "Entity",
+    "English": "Entity",
+    "French": "Entité"
+  },
+  "Event": {
+    "Key": "Event",
+    "English": "Event",
+    "French": "Évènement"
   },
   "harvesting": {
     "Key": "harvesting",
@@ -39,6 +89,21 @@
     "English": "Name filter",
     "French": "Filtre sur le nom"
   },
+  "Item ID": {
+    "Key": "Item ID",
+    "English": "Item ID",
+    "French": "ID élément"
+  },
+  "Layer": {
+    "Key": "Layer",
+    "English": "Layer",
+    "French": "Couche"
+  },
+  "Map": {
+    "Key": "Map",
+    "English": "Map",
+    "French": "Carte"
+  },
   "No": {
     "Key": "No",
     "English": "No",
@@ -48,6 +113,11 @@
     "Key": "ok?",
     "English": "Is it OK?",
     "French": "Est-ce bon ?"
+  },
+  "Obtained through": {
+    "Key": "Obtained through",
+    "English": "Obtained through",
+    "French": "Obtenu via"
   },
   "pageList_of_weapons": {
     "Key": "pageList_of_weapons",
@@ -63,6 +133,11 @@
     "Key": "pageRecipe",
     "English": "Recipe",
     "French": "Recette"
+  },
+  "Prob.": {
+    "Key": "Prob.",
+    "English": "Prob.",
+    "French": "Prob."
   },
   "requiredItems": {
     "Key": "requiredItems",
@@ -103,6 +178,11 @@
     "Key": "shoppingListColCount",
     "English": "Count",
     "French": "Quantité"
+  },
+  "Sub Biome": {
+    "Key": "Sub Biome",
+    "English": "Sub Biome",
+    "French": "Sous biome"
   },
   "To obtain": {
     "Key": "To obtain",

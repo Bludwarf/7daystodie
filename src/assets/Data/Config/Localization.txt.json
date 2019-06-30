@@ -21801,8 +21801,8 @@
     "German": "Wohlbefinden (+{0}): Obergrenze für maximale Gesundheit und Ausdauer ist auf {1} gestiegen",
     "Spanish": "Bienestar (+{0}): La salud máxima y el límite de resistencia han aumentado a {1}."
   },
-  "entitycommand_drive": {
-    "Key": "entitycommand_drive",
+  "Entity Damagecommand_drive": {
+    "Key": "Entity Damagecommand_drive",
     "Source": "entities",
     "Context": "Radial",
     "Changes": "New",
