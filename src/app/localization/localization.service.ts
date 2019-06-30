@@ -47,13 +47,10 @@ export class LocalizationService {
   describe(object: NamedAndDescribed, lang = DEFAULT_LANG): string {
     if (object.descriptionKey) {
       const desc = translate(object.descriptionKey, lang);
-      console.log('object.descriptionKey='+object.descriptionKey);
-      console.log('desc='+desc);
       if (desc && desc !== object.descriptionKey) {
         return desc;
       }
     }
-    console.log('object.name='+object.name);
     return translate(object.name, lang);
   }
 
