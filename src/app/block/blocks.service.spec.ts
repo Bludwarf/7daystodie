@@ -46,9 +46,6 @@ describe('BlocksService', () => {
             Item: resourceWood
     */
     const parent = service.get('woodFrameMaster');
-    expect(parent.RepairItems.get('resourceWood')).toBe(2);
-    expect(parent.UpgradeBlock.toBlock).toBe('woodMaster');
-    expect(parent.UpgradeBlock.item).toBe('resourceWood');
 
     /*
          woodFrameGableInvertedSteep
@@ -57,7 +54,15 @@ describe('BlocksService', () => {
     */
     const child = service.get('woodFrameGableInvertedSteep');
     expect(child.RepairItems.get('resourceWood')).toBe(parent.RepairItems.get('resourceWood'));
-    expect(child.UpgradeBlock.toBlock).toBe('woodGableInvertedSteep');
+    expect(child.UpgradeBlock.toBlock).not.toBe(parent.UpgradeBlock.toBlock);
     expect(child.UpgradeBlock.item).toBe(parent.UpgradeBlock.item);
+  });
+
+  it('should get repair items', () => {
+    const service: BlocksService = TestBed.get(BlocksService);
+    const block = service.get('cntCabinetBottomFiller');
+    expect(block.RepairItems.size).toBe(2);
+    expect(block.RepairItems.get('resourceWood')).toBe(10);
+    expect(block.RepairItems.get('resourceCobblestones')).toBe(5);
   });
 });

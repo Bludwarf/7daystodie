@@ -1,5 +1,5 @@
 import {Interval} from '../common/interval';
-import {XmlObject} from '../common/xml-object';
+import {XmlMapOfNumbers, XmlObject} from '../common/xml-object';
 import {XmlTopObject} from '../common/xml-top-object';
 
 export class Block extends XmlTopObject {
@@ -34,7 +34,7 @@ export class UpgradeBlock extends XmlObject {
   }
 }
 
-export class RepairItems extends XmlObject {
+export class RepairItems extends XmlMapOfNumbers {
   constructor(protected xmlElement: any) {
     super(xmlElement);
   }

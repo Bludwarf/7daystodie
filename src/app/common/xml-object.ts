@@ -225,6 +225,10 @@ export class XmlObject {
     return this.$.name;
   }
 
+  get value(): string {
+    return this.$.value;
+  }
+
   compareTo<T extends XmlObject>(other: T, translateFunction: (key: string) => string = ident): number {
     const thisName = translateFunction(this.name).toLocaleLowerCase();
     const otherName = translateFunction(other.name).toLocaleLowerCase();
@@ -234,5 +238,82 @@ export class XmlObject {
   getPropertyValue(name: string): string {
     const property = this.getFirst('property', name);
     return property && property.$ ? property.$.value : undefined;
+  }
+}
+
+abstract class XmlMap<V> extends XmlObject implements Map<string, V> {
+
+  abstract parseValue(value: string): V;
+
+  * [Symbol.iterator](): IterableIterator<[string, V]> {
+    const children = this.getChildren('property');
+    for (const child of children) {
+      yield [child.name, this.parseValue(child.value)];
+    }
+  }
+
+  clear(): void {
+    // NOP
+  }
+
+  delete(key: string): boolean {
+    // NOP
+    return false;
+  }
+
+  * entries(): IterableIterator<[string, V]> {
+    yield* this;
+  }
+
+  forEach(callbackfn: (value: V, key: string, map: Map<string, V>) => void, thisArg?: any): void {
+    // TODO thisArg ?
+    for (const [key, value] of this) {
+      callbackfn(value, key, this);
+    }
+  }
+
+  get(key: string): V | undefined {
+    const value = this.getPropertyValue(key);
+    return value ? this.parseValue(value) : undefined;
+  }
+
+  has(key: string): boolean {
+    return this.getFirst('property', key) !== undefined;
+  }
+
+  * keys(): IterableIterator<string> {
+    for (const [key, value] of this) {
+      yield key;
+    }
+  }
+
+  set(key: string, value: V): this {
+    // NOP
+    return this;
+  }
+
+  * values(): IterableIterator<V> {
+    for (const [key, value] of this) {
+      yield value;
+    }
+  }
+
+  get size(): number {
+    return this.getChildren('property').length;
+  }
+
+  get [Symbol.toStringTag]() {
+    return 'XmlMap';
+  }
+}
+
+export class XmlMapOfNumbers extends XmlMap<number> {
+  parseValue(value: string): number {
+    return +value;
+  }
+
+  get(key: string): number | undefined {
+    const value = this.getPropertyValue(key);
+    return value !== undefined ? +value : undefined;
   }
 }
